@@ -4,7 +4,8 @@ import { useParams } from 'react-router-dom';
 import { Post, findBySlug } from './../../services/post';
 import NotFound from './../NotFound';
 
-import Header from '../../components/Header';
+import AppBar from '../../components/AppBar';
+import Footer from '../../components/Footer';
 import Markdown from '../../components/Markdown';
 import './style.css';
 
@@ -29,7 +30,7 @@ const Article = () => {
   
   return (
     <>
-      <Header />
+      <AppBar />
       <main>
         <ul>{post.tags.map(tag => 
           <li key={tag}>
@@ -41,6 +42,7 @@ const Article = () => {
         
         <Markdown fileName={post.fileName} />
       </main>
+      <Footer />
     </>
   );
 }

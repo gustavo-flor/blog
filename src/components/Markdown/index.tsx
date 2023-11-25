@@ -18,9 +18,11 @@ const Markdown = ({ fileName }: Props) => {
   }, [fileName]);
 
   return (
-    <ReactMarkdown>
-      {content}
-    </ReactMarkdown>
+    <article className='markdown'>
+      <ReactMarkdown>
+        {content}
+      </ReactMarkdown>
+    </article>
   );
 }
 
