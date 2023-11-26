@@ -33,8 +33,8 @@ const Article = () => {
   return (
     <>
       <AppBar />
-      <main className='max-w-4xl container mx-auto px-8 py-8 sm:py-16 md:py-20'>
-        <header className='mb-8 sm:mb-16'>
+      <main className='container lg:max-w-4xl mx-auto px-8 py-8 sm:py-16 md:py-20'>
+        <header className='mb-8 sm:mb-16 lg:bg-red-400'>
           <Tags tags={post.tags} />
           <h1 className='text-3xl sm:text-5xl font-bold mt-4'>{post.title}</h1>
           <div className='flex items-center gap-x-2 mt-8'>
