@@ -32,7 +32,7 @@ const Article = () => {
   
   return (
     <>
-      <AppBar />
+      <AppBar alwaysCenter={true} />
       <main className='container lg:max-w-4xl mx-auto px-8 py-8 sm:py-16 md:py-20'>
         <header className='mb-8 sm:mb-16'>
           <Tags tags={post.tags} />
@@ -51,7 +51,7 @@ const Article = () => {
         </header>
         <Markdown fileName={post.fileName} />
       </main>
-      <Footer />
+      <Footer alwaysCenter={true} />
     </>
   );
 }
