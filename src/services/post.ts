@@ -7,15 +7,16 @@ export interface Post {
   createdAt: Date;
 }
 
-const posts: Post[] = [
-  { 
-    title: '🥏 O que é HATEOAS e qual sua relação com REST?', 
-    description: 'Falamos recentemente sobre REST, o que é e quais suas principais características, porém, um tema ficou em aberto para conversarmos, e chegou o momento de fazer isto, vamos falar sobre o que é HATEOAS…',
-    slug: 'o-que-e-hateoas',
-    tags: ['rest'],
-    fileName: '4-o-que-e-hateoas',
-    createdAt: new Date(2023, 11, 23)
-  },
+const highlight: Post = { 
+  title: '🥏 O que é HATEOAS e qual sua relação com REST?', 
+  description: 'Falamos recentemente sobre REST, o que é e quais suas principais características, porém, um tema ficou em aberto para conversarmos, e chegou o momento de fazer isto, vamos falar sobre o que é HATEOAS…',
+  slug: 'o-que-e-hateoas',
+  tags: ['rest'],
+  fileName: '4-o-que-e-hateoas',
+  createdAt: new Date(2023, 11, 23)
+}
+
+const latest: Post[] = [
   { 
     title: '🌀 Coisas que você deveria saber sobre sistemas distribuídos: Teorema CAP', 
     description: 'O teorema CAP, também conhecido como teorema de Brewer, é um dos princípios fundamentais dos sistemas distribuídos. A premissa do teorema é que nenhum sistema com distribuição de dados pela rede…',
@@ -42,10 +43,20 @@ const posts: Post[] = [
   }
 ];
 
+const posts = [highlight, ...latest];
+
 export const findAll = (): Post[] => {
   return posts;
 }
 
 export const findBySlug = (slug: string): Post | undefined => {
   return posts.find(it => it.slug === slug);
+}
+
+export const getHighlight = (): Post => {
+  return highlight;
+}
+
+export const getLatest = (): Post[] => {
+  return latest;
 }
