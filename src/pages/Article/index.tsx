@@ -38,7 +38,7 @@ const Article = () => {
           <Tags tags={post.tags} />
           <h1 className='text-3xl sm:text-5xl font-bold mt-4'>{post.title}</h1>
           <div className='flex items-center gap-x-2 mt-8'>
-            <div className='w-12 rounded-full overflow-hidden opacity-80'>
+            <div className='w-12 rounded-full overflow-hidden'>
               <img src={Me} alt="Foto do autor feita por IA" />
             </div>
             <div className='flex flex-col text-gray-500'>
