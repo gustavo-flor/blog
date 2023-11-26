@@ -1,0 +1,77 @@
+.markdown {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+
+.markdown > pre {
+  width: 100%;
+  overflow-x: scroll;
+  border-radius: 1rem;
+  background-color: theme('colors.gray.100');
+  padding: 1rem;
+}
+
+.markdown > hr {
+  width: 4rem;
+  height: .125rem;
+  background-color: theme('colors.gray.100');
+  align-self: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.markdown > p {
+  font-size: 1.25rem;
+}
+
+.markdown > h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.markdown > h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.markdown > h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.markdown > h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.markdown code:not(pre > code) {
+  font-size: 1rem;
+  padding: .125rem;
+  border-radius: .25rem;
+  background-color: theme('colors.gray.100');
+}
+
+.markdown ul, .markdown ol {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  row-gap: .5rem;
+}
+
+.markdown ul {
+  list-style: disc;
+}
+
+.markdown ol {
+  list-style: decimal;
+}
+
+.markdown li {
+  font-size: 1.25rem;
+}
+
+.markdown a {
+  text-decoration: underline;
+}
