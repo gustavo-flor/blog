@@ -1,7 +1,7 @@
 import Brand from '../Brand';
 
 const Footer = () => (
-  <footer className='w-full flex items-center justify-between p-8 bg-zinc-900 text-gray-200'>
+  <footer className='w-full bg-zinc-900 text-gray-200'>
     {/* <div>
       <h4>Conecte-se</h4>
       <ul>
@@ -16,7 +16,9 @@ const Footer = () => (
         <li><a href="https://www.freepik.com/icon/rose_2926754">Ícones por Triberion</a></li>
       </ul>
     </div> */}
-    <p><Brand /> &copy; {new Date().getFullYear()}. Alguns direitos reservados.</p>
+    <div className='container mx-auto p-8'>
+      <p><Brand /> &copy; {new Date().getFullYear()}. Alguns direitos reservados.</p>
+    </div>
   </footer>
 );
 
