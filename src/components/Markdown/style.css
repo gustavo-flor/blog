@@ -58,6 +58,7 @@
   flex-flow: column wrap;
   align-items: flex-start;
   row-gap: .5rem;
+  padding-left: 1.5rem;
 }
 
 .markdown ul {
@@ -73,5 +74,6 @@
 }
 
 .markdown a {
+  word-break: break-all;
   text-decoration: underline;
 }
