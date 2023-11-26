@@ -5,6 +5,7 @@ export interface Post {
   tags: string[];
   fileName: string;
   createdAt: Date;
+  durationInMinutes: number;
 }
 
 const highlight: Post = { 
@@ -13,7 +14,8 @@ const highlight: Post = {
   slug: 'o-que-e-hateoas',
   tags: ['rest'],
   fileName: '4-o-que-e-hateoas',
-  createdAt: new Date(2023, 11, 23)
+  createdAt: new Date(2023, 11, 23),
+  durationInMinutes: 3
 }
 
 const latest: Post[] = [
@@ -23,7 +25,8 @@ const latest: Post[] = [
     slug: 'teorema-cap',
     tags: ['distributedsystems'],
     fileName: '3-teorema-cap',
-    createdAt: new Date(2023, 11, 20)
+    createdAt: new Date(2023, 11, 20),
+    durationInMinutes: 4
   },
   { 
     title: 'O que é JSON? 🏒', 
@@ -31,7 +34,8 @@ const latest: Post[] = [
     slug: 'o-que-e-json',
     tags: ['json'],
     fileName: '2-o-que-e-json',
-    createdAt: new Date(2023, 11, 11)
+    createdAt: new Date(2023, 11, 11),
+    durationInMinutes: 2
   },
   { 
     title: 'O que é REST? 😴', 
@@ -39,7 +43,8 @@ const latest: Post[] = [
     slug: 'o-que-e-rest',
     tags: ['rest', 'distributedsystems'],
     fileName: '1-o-que-e-rest',
-    createdAt: new Date(2023, 11, 5)
+    createdAt: new Date(2023, 11, 5),
+    durationInMinutes: 6
   }
 ];
 
