@@ -33,10 +33,10 @@ const Article = () => {
   return (
     <>
       <AppBar />
-      <main className='container mx-auto px-8 py-8 sm:py-16 md:py-20'>
+      <main className='max-w-4xl container mx-auto px-8 py-8 sm:py-16 md:py-20'>
         <header className='mb-8 sm:mb-16'>
           <Tags tags={post.tags} />
-          <h1 className='text-3xl sm:text-5xl font-bold mt-4 lg:w-5/6'>{post.title}</h1>
+          <h1 className='text-3xl sm:text-5xl font-bold mt-4'>{post.title}</h1>
           <div className='flex items-center gap-x-2 mt-8'>
             <div className='w-12 rounded-full overflow-hidden opacity-80'>
               <img src={Me} alt="Foto do autor feita por IA" />
