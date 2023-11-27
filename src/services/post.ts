@@ -1,9 +1,15 @@
-interface PublishedOn {
-  label: string;
+interface Author {
+  name: string;
   href: string;
 }
 
+interface Cover {
+  href: string;
+  author: Author;
+}
+
 export interface Post {
+  cover?: Cover;
   title: string;
   description: string;
   slug: string;
@@ -11,10 +17,17 @@ export interface Post {
   fileName: string;
   createdAt: Date;
   durationInMinutes: number;
-  publishedOn?: PublishedOn;
+  origin?: URL;
 }
 
 const highlight: Post = { 
+  cover: {
+    href: 'https://images.unsplash.com/photo-1596276122653-651a3898309f',
+    author: {
+      name: 'Florencia Potter',
+      href: 'https://unsplash.com/pt-br/@florenciapotter'
+    }
+  },
   title: '👋 Olá, eu sou o Flôr', 
   description: 'Este é o lugar em que escrevo o que gostaria de ler, falo sobre o que estou estudando e publico devaneios sobre sistemas que você utiliza todos os dias.',
   slug: 'hello-world',
@@ -26,6 +39,13 @@ const highlight: Post = {
 
 const latest: Post[] = [
   { 
+    cover: {
+      href: 'https://images.unsplash.com/photo-1519098901909-b1553a1190af',
+      author: {
+        name: 'Florencia Potter',
+        href: 'https://unsplash.com/pt-br/@florenciapotter'
+      }
+    },
     title: '🥏 O que é HATEOAS e qual sua relação com REST?', 
     description: 'Falamos recentemente sobre REST, o que é e quais suas principais características, porém, um tema ficou em aberto para conversarmos, e chegou o momento de fazer isto, vamos falar sobre o que é HATEOAS…',
     slug: 'o-que-e-hateoas',
@@ -33,10 +53,7 @@ const latest: Post[] = [
     fileName: '4-o-que-e-hateoas',
     createdAt: new Date(2023, 11, 23),
     durationInMinutes: 3,
-    publishedOn: {
-      label: 'gustavoflor.medium.com',
-      href: 'https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155'
-    }
+    origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155')
   },
   { 
     title: '🌀 Coisas que você deveria saber sobre sistemas distribuídos: Teorema CAP', 
@@ -46,12 +63,16 @@ const latest: Post[] = [
     fileName: '3-teorema-cap',
     createdAt: new Date(2023, 11, 20),
     durationInMinutes: 4,
-    publishedOn: {
-      label: 'gustavoflor.medium.com',
-      href: 'https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d'
-    }
+    origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d')
   },
   { 
+    cover: {
+      href: 'https://images.unsplash.com/photo-1522346513757-54c552451fdc',
+      author: {
+        name: 'Nik',
+        href: 'https://unsplash.com/pt-br/@helloimnik'
+      }
+    },
     title: 'O que é JSON? 🏒', 
     description: 'O acrônimo JSON vem de JavaScript Object Notation, é um formato leve de gravar e transportar dados, é utilizado comumente na comunicação entre aplicações cliente-servidor, é "auto descritivo" e fácil de entender.',
     slug: 'o-que-e-json',
@@ -59,12 +80,16 @@ const latest: Post[] = [
     fileName: '2-o-que-e-json',
     createdAt: new Date(2023, 11, 11),
     durationInMinutes: 2,
-    publishedOn: {
-      label: 'gustavoflor.medium.com',
-      href: 'https://gustavoflor.medium.com/o-que-e-json-02782fa508df'
-    }
+    origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df')
   },
   { 
+    cover: {
+      href: 'https://images.unsplash.com/photo-1541188495357-ad2dc89487f4',
+      author: {
+        name: 'Aleksandar Cvetanovic',
+        href: 'https://unsplash.com/pt-br/@lemonzandtea'
+      }
+    },
     title: 'O que é REST? 😴', 
     description: 'Se você pensou em descanso, lamento ter que informar, porém não será o tema do artigo de hoje, na verdade vamos falar sobre um estilo de arquitetura de software, em algumas literaturas também chamado…',
     slug: 'o-que-e-rest',
@@ -72,10 +97,7 @@ const latest: Post[] = [
     fileName: '1-o-que-e-rest',
     createdAt: new Date(2023, 11, 5),
     durationInMinutes: 6,
-    publishedOn: {
-      label: 'gustavoflor.medium.com',
-      href: 'https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd'
-    }
+    origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd')
   }
 ];
 
