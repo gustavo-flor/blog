@@ -7,10 +7,16 @@
 
 .markdown > pre {
   width: 100%;
-  overflow-x: scroll;
-  border-radius: 1rem;
   background-color: theme('colors.gray.100');
   padding: 1rem;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border-radius: 1rem;
+}
+
+.markdown > pre::-webkit-scrollbar {
+  display: none;
 }
 
 .markdown > hr {
