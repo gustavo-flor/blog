@@ -24,8 +24,8 @@ const highlight: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1596276122653-651a3898309f',
     author: {
-      name: 'Florencia Potter',
-      href: 'https://unsplash.com/pt-br/@florenciapotter'
+      name: 'Artem Bryzgalov',
+      href: 'https://unsplash.com/pt-br/@abrizgalov'
     }
   },
   title: '👋 Olá, eu sou o Flôr', 
