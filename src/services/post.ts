@@ -33,7 +33,7 @@ const highlight: Post = {
   slug: 'hello-world',
   tags: ['hello'],
   fileName: '5-hello-world',
-  createdAt: new Date(2023, 11, 27),
+  createdAt: new Date(2023, 10, 27),
   durationInMinutes: 1
 }
 
@@ -51,7 +51,7 @@ const latest: Post[] = [
     slug: 'o-que-e-hateoas',
     tags: ['rest'],
     fileName: '4-o-que-e-hateoas',
-    createdAt: new Date(2023, 11, 23),
+    createdAt: new Date(2023, 10, 23),
     durationInMinutes: 3,
     origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155')
   },
@@ -61,7 +61,7 @@ const latest: Post[] = [
     slug: 'teorema-cap',
     tags: ['distributedsystems'],
     fileName: '3-teorema-cap',
-    createdAt: new Date(2023, 11, 20),
+    createdAt: new Date(2023, 10, 20),
     durationInMinutes: 4,
     origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d')
   },
@@ -78,7 +78,7 @@ const latest: Post[] = [
     slug: 'o-que-e-json',
     tags: ['json'],
     fileName: '2-o-que-e-json',
-    createdAt: new Date(2023, 11, 11),
+    createdAt: new Date(2023, 10, 11),
     durationInMinutes: 2,
     origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df')
   },
@@ -95,7 +95,7 @@ const latest: Post[] = [
     slug: 'o-que-e-rest',
     tags: ['rest', 'distributedsystems'],
     fileName: '1-o-que-e-rest',
-    createdAt: new Date(2023, 11, 5),
+    createdAt: new Date(2023, 10, 5),
     durationInMinutes: 6,
     origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd')
   }
