@@ -49,7 +49,7 @@ const Article = () => {
               </span>
               {post.publishedOn != undefined && 
                 <span className='text-xs opacity-80'>
-                  Publicado em <Anchor className='text-purple-500 underline' target='_blank' href={post.publishedOn.href}>{post.publishedOn.label}</Anchor>
+                  Originalmente publicado em <Anchor className='text-purple-500 underline' target='_blank' href={post.publishedOn.href}>{post.publishedOn.label}</Anchor>
                 </span>
               }
             </div>
