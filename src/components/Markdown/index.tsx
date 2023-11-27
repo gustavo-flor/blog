@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
+import Anchor from '../Anchor';
+
 import './style.css';
 
 interface Props {
@@ -21,7 +23,7 @@ const Markdown = ({ fileName }: Props) => {
 
   return (
     <article className='markdown'>
-      <ReactMarkdown>
+      <ReactMarkdown components={{ a: Anchor }}>
         {content}
       </ReactMarkdown>
     </article>

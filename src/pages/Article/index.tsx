@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import Me from '../../assets/me.jpg';
+import Anchor from '../../components/Anchor';
 import AppBar from '../../components/AppBar';
 import Footer from '../../components/Footer';
 import Markdown from '../../components/Markdown';
@@ -38,7 +39,7 @@ const Article = () => {
           <Tags tags={post.tags} />
           <h1 className='text-3xl sm:text-5xl font-bold mt-4'>{post.title}</h1>
           <div className='flex items-center gap-x-2 mt-8'>
-            <div className='w-16 rounded-full overflow-hidden border-2 border-purple-500'>
+            <div className='w-20 rounded-full overflow-hidden border-2 border-purple-500 cursor-pointer'>
               <img src={Me} alt='Uma foto minha criada por IA' />
             </div>
             <div className='flex flex-col text-gray-500'>
@@ -46,6 +47,11 @@ const Article = () => {
               <span className='text-xs'>
                 {post.createdAt.toLocaleDateString('pt-BR')} - {post.durationInMinutes} minutos de leitura
               </span>
+              {post.publishedOn != undefined && 
+                <span className='text-xs opacity-80'>
+                  Publicado em <Anchor className='text-purple-500 underline' target='_blank' href={post.publishedOn.href}>{post.publishedOn.label}</Anchor>
+                </span>
+              }
             </div>
           </div>
         </header>

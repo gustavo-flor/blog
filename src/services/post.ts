@@ -1,3 +1,8 @@
+interface PublishedOn {
+  label: string;
+  href: string;
+}
+
 export interface Post {
   title: string;
   description: string;
@@ -6,6 +11,7 @@ export interface Post {
   fileName: string;
   createdAt: Date;
   durationInMinutes: number;
+  publishedOn?: PublishedOn;
 }
 
 const highlight: Post = { 
@@ -15,7 +21,11 @@ const highlight: Post = {
   tags: ['rest'],
   fileName: '4-o-que-e-hateoas',
   createdAt: new Date(2023, 11, 23),
-  durationInMinutes: 3
+  durationInMinutes: 3,
+  publishedOn: {
+    label: 'gustavoflor.medium.com',
+    href: 'https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155'
+  }
 }
 
 const latest: Post[] = [
@@ -26,7 +36,11 @@ const latest: Post[] = [
     tags: ['distributedsystems'],
     fileName: '3-teorema-cap',
     createdAt: new Date(2023, 11, 20),
-    durationInMinutes: 4
+    durationInMinutes: 4,
+    publishedOn: {
+      label: 'gustavoflor.medium.com',
+      href: 'https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d'
+    }
   },
   { 
     title: 'O que é JSON? 🏒', 
@@ -35,7 +49,11 @@ const latest: Post[] = [
     tags: ['json'],
     fileName: '2-o-que-e-json',
     createdAt: new Date(2023, 11, 11),
-    durationInMinutes: 2
+    durationInMinutes: 2,
+    publishedOn: {
+      label: 'gustavoflor.medium.com',
+      href: 'https://gustavoflor.medium.com/o-que-e-json-02782fa508df'
+    }
   },
   { 
     title: 'O que é REST? 😴', 
@@ -44,7 +62,11 @@ const latest: Post[] = [
     tags: ['rest', 'distributedsystems'],
     fileName: '1-o-que-e-rest',
     createdAt: new Date(2023, 11, 5),
-    durationInMinutes: 6
+    durationInMinutes: 6,
+    publishedOn: {
+      label: 'gustavoflor.medium.com',
+      href: 'https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd'
+    }
   }
 ];
 
