@@ -30,6 +30,11 @@ const Article = () => {
   if (post === undefined) {
     return <NotFound />
   }
+
+  const durantion = post.durationInMinutes;
+  const durationMessage = durantion == 1 
+    ? `${durantion} minuto de leitura` 
+    : `${durantion} minutos de leitura`;
   
   return (
     <>
@@ -45,7 +50,7 @@ const Article = () => {
             <div className='flex flex-col text-gray-500'>
               <span className='font-bold'>Gustavo Flôr</span>
               <span className='text-xs'>
-                {post.createdAt.toLocaleDateString('pt-BR')} - {post.durationInMinutes} minutos de leitura
+                {post.createdAt.toLocaleDateString('pt-BR')} - {durationMessage}
               </span>
               {post.publishedOn != undefined && 
                 <span className='text-xs opacity-80'>

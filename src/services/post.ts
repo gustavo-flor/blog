@@ -15,20 +15,29 @@ export interface Post {
 }
 
 const highlight: Post = { 
-  title: '🥏 O que é HATEOAS e qual sua relação com REST?', 
-  description: 'Falamos recentemente sobre REST, o que é e quais suas principais características, porém, um tema ficou em aberto para conversarmos, e chegou o momento de fazer isto, vamos falar sobre o que é HATEOAS…',
-  slug: 'o-que-e-hateoas',
-  tags: ['rest'],
-  fileName: '4-o-que-e-hateoas',
-  createdAt: new Date(2023, 11, 23),
-  durationInMinutes: 3,
-  publishedOn: {
-    label: 'gustavoflor.medium.com',
-    href: 'https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155'
-  }
+  title: '👋 Olá, eu sou o Flôr', 
+  description: 'Este é o lugar em que escrevo o que gostaria de ler, falo sobre o que estou estudando e publico devaneios sobre sistemas que você utiliza todos os dias.',
+  slug: 'hello-world',
+  tags: ['hello'],
+  fileName: '5-hello-world',
+  createdAt: new Date(2023, 11, 27),
+  durationInMinutes: 1
 }
 
 const latest: Post[] = [
+  { 
+    title: '🥏 O que é HATEOAS e qual sua relação com REST?', 
+    description: 'Falamos recentemente sobre REST, o que é e quais suas principais características, porém, um tema ficou em aberto para conversarmos, e chegou o momento de fazer isto, vamos falar sobre o que é HATEOAS…',
+    slug: 'o-que-e-hateoas',
+    tags: ['rest'],
+    fileName: '4-o-que-e-hateoas',
+    createdAt: new Date(2023, 11, 23),
+    durationInMinutes: 3,
+    publishedOn: {
+      label: 'gustavoflor.medium.com',
+      href: 'https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155'
+    }
+  },
   { 
     title: '🌀 Coisas que você deveria saber sobre sistemas distribuídos: Teorema CAP', 
     description: 'O teorema CAP, também conhecido como teorema de Brewer, é um dos princípios fundamentais dos sistemas distribuídos. A premissa do teorema é que nenhum sistema com distribuição de dados pela rede…',
