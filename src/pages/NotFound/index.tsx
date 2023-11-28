@@ -1,8 +1,6 @@
 import AppBar from '../../components/AppBar';
 import Footer from '../../components/Footer';
 
-import './style.css';
-
 const NotFound = () => (
   <>
     <AppBar />
