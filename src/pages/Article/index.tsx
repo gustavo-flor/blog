@@ -12,12 +12,8 @@ import NotFound from './../NotFound';
 
 import './style.css';
 
-type Params = {
-  slug: string;
-}
-
 const Article = () => {
-  const { slug } = useParams<Params>();
+  const { slug } = useParams();
   const [post, setPost] = useState<Post | undefined>();
 
   useEffect(() => {

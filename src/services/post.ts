@@ -107,6 +107,10 @@ export const findAll = (): Post[] => {
   return posts;
 }
 
+export const findAllByTag = (tag: string): Post[] => {
+  return posts.filter(it => it.tags.includes(tag));
+} 
+
 export const findBySlug = (slug: string): Post | undefined => {
   return posts.find(it => it.slug === slug);
 }

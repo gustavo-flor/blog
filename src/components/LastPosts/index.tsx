@@ -1,8 +1,12 @@
-import { findAll } from '../../services/post';
+import { findAll, findAllByTag } from '../../services/post';
 import Card from '../Card';
 
-const LastPosts = () => {
-  const posts = findAll();
+interface Props {
+  tag?: string;
+}
+
+const LastPosts = ({ tag }: Props) => {
+  const posts = tag != undefined ? findAllByTag(tag) : findAll();
 
   return (
     <section className='container mx-auto px-8 pt-8 pb-16 sm:py-16 md:py-20'>

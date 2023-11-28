@@ -3,8 +3,6 @@ import Footer from '../../components/Footer';
 import LastPosts from '../../components/LastPosts';
 import Presentation from '../../components/Presentation';
 
-import './style.css';
-
 const Home = () => (
   <>
     <AppBar />

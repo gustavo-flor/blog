@@ -1,11 +1,17 @@
+import { Link } from 'react-router-dom';
+
 interface Props {
   tags: string[];
 }
 
 const Tags = ({ tags }: Props) => (
   <ul className='flex flex-wrap gap-x-2'>{tags.map(tag =>
-    <li className='rounded-2xl bg-gray-50 text-zinc-700 px-2 py-1 opacity-80 hover:opacity-100 cursor-pointer' key={tag}>
-      <strong className='font-normal text-purple-500'>#</strong>{tag}
+    <li key={tag}>
+      <Link to={`/tags/${tag}`}>
+        <div className='rounded-2xl bg-gray-50 text-zinc-700 px-2 py-1 opacity-80 hover:opacity-100'>
+          <strong className='font-normal text-purple-500'>#</strong>{tag}
+        </div>
+      </Link>
     </li> 
   )}</ul>
 );
