@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import Anchor from '../Anchor';
+import CodeBlock from '../CodeBlock';
 
 import './style.css';
 
@@ -23,7 +24,10 @@ const Markdown = ({ fileName }: Props) => {
 
   return (
     <article className='markdown'>
-      <ReactMarkdown components={{ a: Anchor }}>
+      <ReactMarkdown components={{ 
+        a: Anchor,
+        code: CodeBlock
+      }}>
         {content}
       </ReactMarkdown>
     </article>
