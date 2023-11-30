@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 import Anchor from '../Anchor';
@@ -7,31 +6,18 @@ import CodeBlock from '../CodeBlock';
 import './style.css';
 
 interface Props {
-  fileName: string;
+  content: string;
 }
 
-const Markdown = ({ fileName }: Props) => {
-  const [content, setContent] = useState('');
-  useEffect(() => {
-    const loadContent = async () => {
-      const module = await import(`./../../assets/markdown/${fileName}.md`);
-      fetch(module.default)
-        .then(file => file.text())
-        .then(text => setContent(text));
-    }
-    loadContent();
-  }, [fileName]);
-
-  return (
-    <article className='markdown'>
-      <ReactMarkdown components={{ 
-        a: Anchor,
-        code: CodeBlock
-      }}>
-        {content}
-      </ReactMarkdown>
-    </article>
-  );
-}
+const Markdown = ({ content }: Props) => (
+  <article className='markdown'>
+    <ReactMarkdown components={{ 
+      a: Anchor,
+      code: CodeBlock
+    }}>
+      {content}
+    </ReactMarkdown>
+  </article>
+);
 
 export default Markdown;

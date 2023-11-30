@@ -15,6 +15,8 @@ import './style.css';
 const Article = () => {
   const { slug } = useParams();
   const [post, setPost] = useState<Post | undefined>();
+  const [content, setContent] = useState('');
+  const [readTime, setReadTime] = useState(1);
 
   useEffect(() => {
     if (slug === undefined) {
@@ -22,6 +24,26 @@ const Article = () => {
     }
     setPost(findBySlug(slug));
   }, [slug]);
+
+  useEffect(() => {
+    if (post === undefined) {
+      return;
+    }
+    const loadContent = async () => {
+      const module = await import(`./../../assets/markdown/${post.fileName}.md`);
+      fetch(module.default)
+        .then(file => file.text())
+        .then(text => setContent(text));
+    }
+    loadContent();
+  }, [post]);
+
+  useEffect(() => {
+    const wordsPerMinute = 265;
+    const numberOfWords = content.split(/\s/g).length;
+    const minutes = numberOfWords / wordsPerMinute;
+    setReadTime(Math.ceil(minutes));
+  }, [content]);
 
   if (post === undefined) {
     return <NotFound />
@@ -51,7 +73,7 @@ const Article = () => {
             <div className='flex flex-col text-gray-500'>
               <span className='font-bold'>Gustavo Flôr</span>
               <span className='text-xs'>
-                {post.createdAt.toLocaleDateString('pt-BR')} - {post.durationInMinutes} min. de leitura
+                {post.createdAt.toLocaleDateString('pt-BR')} - {readTime} min. de leitura
               </span>
               {post.origin != undefined && 
                 <span className='text-xs opacity-80'>
@@ -61,7 +83,7 @@ const Article = () => {
             </div>
           </div>
         </header>
-        <Markdown fileName={post.fileName} />
+        <Markdown content={content} />
       </main>
       <Footer alwaysCenter={true} />
     </>
