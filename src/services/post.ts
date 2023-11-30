@@ -16,7 +16,6 @@ export interface Post {
   tags: string[];
   fileName: string;
   createdAt: Date;
-  durationInMinutes: number;
   origin?: URL;
 }
 
@@ -33,8 +32,7 @@ const highlight: Post = {
   slug: 'hello-world',
   tags: ['hello'],
   fileName: '5-hello-world',
-  createdAt: new Date(2023, 10, 27),
-  durationInMinutes: 1
+  createdAt: new Date(2023, 10, 27)
 }
 
 const latest: Post[] = [
@@ -52,7 +50,6 @@ const latest: Post[] = [
     tags: ['rest'],
     fileName: '4-o-que-e-hateoas',
     createdAt: new Date(2023, 10, 23),
-    durationInMinutes: 3,
     origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155')
   },
   { 
@@ -62,7 +59,6 @@ const latest: Post[] = [
     tags: ['distributedsystems'],
     fileName: '3-teorema-cap',
     createdAt: new Date(2023, 10, 20),
-    durationInMinutes: 4,
     origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d')
   },
   { 
@@ -79,7 +75,6 @@ const latest: Post[] = [
     tags: ['json'],
     fileName: '2-o-que-e-json',
     createdAt: new Date(2023, 10, 11),
-    durationInMinutes: 2,
     origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df')
   },
   { 
@@ -96,7 +91,6 @@ const latest: Post[] = [
     tags: ['rest', 'distributedsystems'],
     fileName: '1-o-que-e-rest',
     createdAt: new Date(2023, 10, 5),
-    durationInMinutes: 6,
     origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd')
   }
 ];
