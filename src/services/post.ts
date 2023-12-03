@@ -32,7 +32,7 @@ const highlight: Post = {
   slug: 'hello-world',
   tags: ['hello'],
   fileName: '5-hello-world',
-  createdAt: new Date(2023, 10, 27)
+  createdAt: new Date(2023, 10, 27, 6)
 }
 
 const latest: Post[] = [
@@ -49,7 +49,7 @@ const latest: Post[] = [
     slug: 'o-que-e-hateoas',
     tags: ['rest'],
     fileName: '4-o-que-e-hateoas',
-    createdAt: new Date(2023, 10, 23),
+    createdAt: new Date(2023, 10, 23, 6),
     origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155')
   },
   { 
@@ -58,7 +58,7 @@ const latest: Post[] = [
     slug: 'teorema-cap',
     tags: ['distributedsystems'],
     fileName: '3-teorema-cap',
-    createdAt: new Date(2023, 10, 20),
+    createdAt: new Date(2023, 10, 20, 6),
     origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d')
   },
   { 
@@ -74,7 +74,7 @@ const latest: Post[] = [
     slug: 'o-que-e-json',
     tags: ['json'],
     fileName: '2-o-que-e-json',
-    createdAt: new Date(2023, 10, 11),
+    createdAt: new Date(2023, 10, 11, 6),
     origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df')
   },
   { 
@@ -90,7 +90,7 @@ const latest: Post[] = [
     slug: 'o-que-e-rest',
     tags: ['rest', 'distributedsystems'],
     fileName: '1-o-que-e-rest',
-    createdAt: new Date(2023, 10, 5),
+    createdAt: new Date(2023, 10, 5, 6),
     origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd')
   }
 ];
@@ -115,4 +115,26 @@ export const getHighlight = (): Post => {
 
 export const getLatest = (): Post[] => {
   return latest;
+}
+
+const isToday = (date: Date): boolean => {
+  return new Date().toDateString() == date.toDateString();
+}
+
+const isRecent = (date: Date): boolean => {
+  return new Date().getHours() - date.getHours() < 3;
+}
+
+export const getPublishedAt = (post: Post): string => {
+  if (isToday(post.createdAt)) {
+    return isRecent(post.createdAt) ? 'Agora mesmo' : 'Hoje';
+  }
+  return post.createdAt.toLocaleDateString('pt-BR');
+}
+
+export const getReadTime = (text: string) => {
+  const wordsPerMinute = 265;
+  const numberOfWords = text.split(/\s/g).length;
+  const minutes = numberOfWords / wordsPerMinute;
+  return Math.ceil(minutes);
 }
