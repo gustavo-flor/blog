@@ -32,7 +32,7 @@ const highlight: Post = {
   slug: 'code-review-best-practices',
   tags: ['softwaredevelopment'],
   fileName: '6-code-review',
-  createdAt: new Date(2023, 11, 3)
+  createdAt: new Date(2023, 11, 4)
 }
 
 const latest: Post[] = [
