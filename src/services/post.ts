@@ -28,7 +28,7 @@ const highlight: Post = {
     }
   },
   title: '🤝 Revisão de código: criando um ambiente de colaboração e aprendizado contínuo', 
-  description: 'A revisão de código é uma parte crucial do processo de desenvolvimento de software, é o momento onde desenvolvedores examinam o código fonte de outros desenvolvedores com objetivo de prover sugestões/_feedbacks_ sobre as alterações analisadas e...',
+  description: 'A revisão de código é uma parte crucial do processo de desenvolvimento de software, é o momento onde desenvolvedores examinam o código fonte de outros desenvolvedores com objetivo de prover sugestões sobre as alterações analisadas e...',
   slug: 'code-review-best-practices',
   tags: ['softwaredevelopment'],
   fileName: '6-code-review',
