@@ -7,7 +7,7 @@ import AppBar from '../../components/AppBar';
 import Footer from '../../components/Footer';
 import Markdown from '../../components/Markdown';
 import Tags from '../../components/Tags';
-import { Post, findBySlug } from './../../services/post';
+import { Post, findBySlug, getPublishedAt, getReadTime } from './../../services/post';
 import NotFound from './../NotFound';
 
 import './style.css';
@@ -39,10 +39,7 @@ const Article = () => {
   }, [post]);
 
   useEffect(() => {
-    const wordsPerMinute = 265;
-    const numberOfWords = content.split(/\s/g).length;
-    const minutes = numberOfWords / wordsPerMinute;
-    setReadTime(Math.ceil(minutes));
+    setReadTime(getReadTime(content));
   }, [content]);
 
   if (post === undefined) {
@@ -73,7 +70,7 @@ const Article = () => {
             <div className='flex flex-col text-gray-500'>
               <span className='font-bold'>Gustavo Flôr</span>
               <span className='text-xs'>
-                {post.createdAt.toLocaleDateString('pt-BR')} - {readTime} min. de leitura
+                {getPublishedAt(post)} - {readTime} min. de leitura
               </span>
               {post.origin != undefined && 
                 <span className='text-xs opacity-80'>
