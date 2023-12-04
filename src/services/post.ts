@@ -21,27 +21,42 @@ export interface Post {
 
 const highlight: Post = { 
   cover: {
-    href: 'https://images.unsplash.com/photo-1596276122653-651a3898309f',
+    href: 'https://images.unsplash.com/photo-1579987323085-529f1a806810',
     author: {
-      name: 'Artem Bryzgalov',
-      href: 'https://unsplash.com/pt-br/@abrizgalov'
+      name: 'Andrew Roberts',
+      href: 'https://unsplash.com/pt-br/@ar1428'
     }
   },
-  title: '👋 Olá, eu sou o Flôr', 
-  description: 'Este é o lugar em que escrevo o que gostaria de ler, falo sobre o que estou estudando e publico devaneios sobre sistemas que você utiliza todos os dias.',
-  slug: 'hello-world',
-  tags: ['hello'],
-  fileName: '5-hello-world',
-  createdAt: new Date(2023, 10, 27, 6)
+  title: '🤝 Revisão de código: criando um ambiente de colaboração e aprendizado contínuo', 
+  description: 'A revisão de código é uma parte crucial do processo de desenvolvimento de software, é o momento onde desenvolvedores examinam o código fonte de outros desenvolvedores com objetivo de prover sugestões sobre as alterações analisadas e...',
+  slug: 'code-review-best-practices',
+  tags: ['softwaredevelopment'],
+  fileName: '6-code-review',
+  createdAt: new Date(2023, 11, 4, 5, 30)
 }
 
 const latest: Post[] = [
   { 
     cover: {
+      href: 'https://images.unsplash.com/photo-1596276122653-651a3898309f',
+      author: {
+        name: 'Artem Bryzgalov',
+        href: 'https://unsplash.com/@abrizgalov'
+      }
+    },
+    title: '👋 Olá, eu sou o Flôr', 
+    description: 'Este é o lugar em que escrevo o que gostaria de ler, falo sobre o que estou estudando e publico devaneios sobre sistemas que você utiliza todos os dias.',
+    slug: 'hello-world',
+    tags: ['hello'],
+    fileName: '5-hello-world',
+    createdAt: new Date(2023, 10, 27, 6)
+  },
+  { 
+    cover: {
       href: 'https://images.unsplash.com/photo-1519098901909-b1553a1190af',
       author: {
         name: 'Florencia Potter',
-        href: 'https://unsplash.com/pt-br/@florenciapotter'
+        href: 'https://unsplash.com/@florenciapotter'
       }
     },
     title: '🥏 O que é HATEOAS e qual sua relação com REST?', 
@@ -66,7 +81,7 @@ const latest: Post[] = [
       href: 'https://images.unsplash.com/photo-1522346513757-54c552451fdc',
       author: {
         name: 'Nik',
-        href: 'https://unsplash.com/pt-br/@helloimnik'
+        href: 'https://unsplash.com/@helloimnik'
       }
     },
     title: 'O que é JSON? 🏒', 
@@ -82,7 +97,7 @@ const latest: Post[] = [
       href: 'https://images.unsplash.com/photo-1541188495357-ad2dc89487f4',
       author: {
         name: 'Aleksandar Cvetanovic',
-        href: 'https://unsplash.com/pt-br/@lemonzandtea'
+        href: 'https://unsplash.com/@lemonzandtea'
       }
     },
     title: 'O que é REST? 😴', 
