@@ -21,10 +21,10 @@ export interface Post {
 
 const highlight: Post = { 
   cover: {
-    href: 'https://images.unsplash.com/photo-1579987323085-529f1a806810',
+    href: 'https://images.unsplash.com/photo-1600232943169-3fe49a6f4071',
     author: {
-      name: 'Andrew Roberts',
-      href: 'https://unsplash.com/pt-br/@ar1428'
+      name: 'Nicolas Noonan',
+      href: 'https://unsplash.com/@nikolasnoonan'
     }
   },
   title: '🤝 Revisão de código: criando um ambiente de colaboração e aprendizado contínuo', 
@@ -32,7 +32,7 @@ const highlight: Post = {
   slug: 'code-review-best-practices',
   tags: ['softwaredevelopment'],
   fileName: '6-code-review',
-  createdAt: new Date(2023, 11, 4, 5, 30)
+  createdAt: new Date(2023, 11, 4, 5, 2)
 }
 
 const latest: Post[] = [
