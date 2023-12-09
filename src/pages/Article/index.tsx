@@ -7,7 +7,7 @@ import AppBar from '../../components/AppBar';
 import Footer from '../../components/Footer';
 import Markdown from '../../components/Markdown';
 import Tags from '../../components/Tags';
-import { Post, findBySlug, getPublishedAt, getReadTime } from './../../services/post';
+import { Post, findBySlug, getNumberOfWords, getPublishedAt, getReadTime } from './../../services/post';
 import NotFound from './../NotFound';
 
 import './style.css';
@@ -16,6 +16,7 @@ const Article = () => {
   const { slug } = useParams();
   const [post, setPost] = useState<Post | undefined>();
   const [content, setContent] = useState('');
+  const [numberOfWords, setNumberOfWords] = useState(0);
   const [readTime, setReadTime] = useState(1);
 
   useEffect(() => {
@@ -39,6 +40,7 @@ const Article = () => {
   }, [post]);
 
   useEffect(() => {
+    setNumberOfWords(getNumberOfWords(content));
     setReadTime(getReadTime(content));
   }, [content]);
 
@@ -70,7 +72,7 @@ const Article = () => {
             <div className='flex flex-col text-gray-500'>
               <span className='font-bold'>Gustavo Flôr</span>
               <span className='text-xs'>
-                {getPublishedAt(post)} - {readTime} min. de leitura
+                {getPublishedAt(post)} | {numberOfWords} palavras | {readTime} min. de leitura
               </span>
               {post.origin != undefined && 
                 <span className='text-xs opacity-80'>

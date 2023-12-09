@@ -147,9 +147,13 @@ export const getPublishedAt = (post: Post): string => {
   return post.createdAt.toLocaleDateString('pt-BR');
 }
 
+export const getNumberOfWords = (text: string) => {
+  return text.split(/\s/g).length;
+}
+
 export const getReadTime = (text: string) => {
   const wordsPerMinute = 265;
-  const numberOfWords = text.split(/\s/g).length;
+  const numberOfWords = getNumberOfWords(text);
   const minutes = numberOfWords / wordsPerMinute;
   return Math.ceil(minutes);
 }
