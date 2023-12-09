@@ -62,23 +62,26 @@ const Article = () => {
             }
           </figure>
         }
-        <header className='mb-8 sm:mb-16 pt-8'>
+        <header className='mb-8 pt-8'>
           <Tags tags={post.tags} />
           <h1 className='text-3xl sm:text-5xl font-bold mt-4'>{post.title}</h1>
+          {post.origin != undefined && 
+            <span className='text-xs opacity-40 mt-4 block'>
+              Publicado em <Anchor className='text-purple-500 underline' target='_blank' href={post.origin.href}>{post.origin.hostname}</Anchor>
+            </span>
+          }
           <div className='flex items-center gap-x-2 mt-8'>
             <div className='w-20 rounded-full overflow-hidden border-2 border-purple-500 cursor-pointer'>
               <img src={Me} alt='Uma foto minha criada por IA' />
             </div>
             <div className='flex flex-col text-gray-500'>
               <span className='font-bold'>Gustavo Flôr</span>
-              <span className='text-xs'>
-                {getPublishedAt(post)} | {numberOfWords} palavras | {readTime} min. de leitura
+              <span className='text-xs opacity-80'>
+                {getPublishedAt(post)}
               </span>
-              {post.origin != undefined && 
-                <span className='text-xs opacity-80'>
-                  Publicado em <Anchor className='text-purple-500 underline' target='_blank' href={post.origin.href}>{post.origin.hostname}</Anchor>
-                </span>
-              }
+              <span className='text-xs '>
+                {numberOfWords} palavras | {readTime} min. de leitura
+              </span>
             </div>
           </div>
         </header>
