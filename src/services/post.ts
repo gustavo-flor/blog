@@ -21,21 +21,36 @@ export interface Post {
 
 const highlight: Post = { 
   cover: {
-    href: 'https://images.unsplash.com/photo-1600232943169-3fe49a6f4071',
+    href: 'https://images.unsplash.com/photo-1606011334315-025e4baab810',
     author: {
-      name: 'Nicolas Noonan',
-      href: 'https://unsplash.com/@nikolasnoonan'
+      name: 'Roberto Huczek',
+      href: 'https://unsplash.com/@tamoio'
     }
   },
-  title: '🤝 Revisão de código: criando um ambiente de colaboração e aprendizado contínuo', 
-  description: 'A revisão de código é uma parte crucial do processo de desenvolvimento de software, é o momento onde desenvolvedores examinam o código fonte de outros desenvolvedores com objetivo de prover sugestões sobre as alterações analisadas e...',
-  slug: 'code-review-best-practices',
+  title: '🚫 PARE de usar exceções para controle de fluxo', 
+  description: 'As exceções podem estar causando impacto de performance desnecessário na sua aplicação — se você as utiliza para controle de fluxo. Entenda...',
+  slug: 'avoid-exceptions-as-control-flow',
   tags: ['softwaredevelopment'],
-  fileName: '6-code-review',
-  createdAt: new Date(2023, 11, 4, 5, 2)
+  fileName: '7-avoid-exceptions',
+  createdAt: new Date(2023, 11, 11, 6, 0)
 }
 
 const latest: Post[] = [
+  { 
+    cover: {
+      href: 'https://images.unsplash.com/photo-1600232943169-3fe49a6f4071',
+      author: {
+        name: 'Nicolas Noonan',
+        href: 'https://unsplash.com/@nikolasnoonan'
+      }
+    },
+    title: '🤝 Revisão de código: criando um ambiente de colaboração e aprendizado contínuo', 
+    description: 'A revisão de código é uma parte crucial do processo de desenvolvimento de software, é o momento onde desenvolvedores examinam o código fonte de outros desenvolvedores com objetivo de prover sugestões sobre as alterações analisadas e...',
+    slug: 'code-review-best-practices',
+    tags: ['softwaredevelopment'],
+    fileName: '6-code-review',
+    createdAt: new Date(2023, 11, 4, 5, 2)
+  },
   { 
     cover: {
       href: 'https://images.unsplash.com/photo-1596276122653-651a3898309f',
