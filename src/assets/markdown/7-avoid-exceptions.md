@@ -8,7 +8,7 @@ Capturar a *stack trace* envolve inspecionar a *thread* atual e registrar inform
 
 Esse processo de captura pode ser significativo, especialmente se a *stack* for profunda, consumindo CPU e memória, por consequência causando impacto de performance.
 
-## Para ir mais fundo
+## Em detalhes
 
 Quando lançamos uma exceção, inicia-se a busca por um mecanismo para manipulação do erro (`try-catch`).
 
@@ -52,7 +52,7 @@ Utilizá-las para isso pode causar problemas de performance, diminuir a legibili
 
 Em resumo, opte sempre por utilizar as ferramentas de controle de fluxo que sua linguagem oferece (`if-else`, `switch`, `break`, etc), utilize exceções para casos realmente inesperados.
 
-## Referências
+## Para ir mais fundo
 
 - <https://medium.com/appsflyerengineering/railway-oriented-programming-clojure-and-exception-handling-why-and-how-89d75cc94c58>
 - <https://blog.logrocket.com/what-is-railway-oriented-programming/>
