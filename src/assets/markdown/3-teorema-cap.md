@@ -32,11 +32,17 @@ Tolerância de partição é sobre saber lidar com falhas na comunicação entre
 
 Quando ocorre uma partição, precisamos necessariamente escolher se vamos garantir consistência ou disponibilidade. Segue algumas ilustrações para exemplificar:
 
+![image](/cap-theorem/partition-tolerance.jpg)
+
 Considere uma situação semelhante a apresentada na imagem acima, temos 1 cluster com 3 nós, as setas representam suas conexões de rede (em vermelho a partição), neste cenário, temos duas possibilidades.
 
 A primeira é escolher garantir consistência, neste cenário indisponibilidade todas as escritas no sistema, ou seja, como não podemos garantir que todos os nós tenham a mesma informação atualizada, vamos impedir que seja possível publicar novas versões de um dado. Note que essa escolha fere a característica de disponibilidade (já que as respostas de escrita deverão retornar erro).
 
+![image](/cap-theorem/partition-tolerance-consistency.jpg)
+
 Por outro lado, podemos também optar por garantir disponibilidade, permitindo assim que escrita e leitura ocorram normalmente, porém, neste caso não conseguimos garantir consistência, já que a atualização feita em um dos nós não poderá ser replicada nos demais.
+
+![image](/cap-theorem/partition-tolerance-availability.jpg)
 
 ## Trade-offs: Ganhos e consequências de cada escolha
 
