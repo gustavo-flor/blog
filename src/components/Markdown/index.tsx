@@ -1,4 +1,5 @@
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 import Anchor from '../Anchor';
 import CodeBlock from '../CodeBlock';
@@ -11,7 +12,7 @@ interface Props {
 
 const Markdown = ({ content }: Props) => (
   <article className='markdown'>
-    <ReactMarkdown components={{ 
+    <ReactMarkdown remarkPlugins={[remarkGfm]} components={{ 
       a: Anchor,
       code: CodeBlock
     }}>
