@@ -32,7 +32,7 @@ const highlight: Post = {
   slug: 'git-commands',
   tags: ['softwaredevelopment'],
   fileName: '8-git-commands',
-  createdAt: new Date(2023, 11, 15, 7, 45)
+  createdAt: new Date(2023, 11, 15, 18, 30)
 }
 
 const latest: Post[] = [
