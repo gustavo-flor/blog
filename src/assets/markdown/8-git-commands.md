@@ -36,7 +36,7 @@ git branch -D branchName
 
 #### Em detalhes: 
 
-- [**Git Branch Delete Option Docs.**](https://git-scm.com/docs/git-branch#Documentation/git-branch.txt--d)
+- [Git Branch Delete Option Docs.](https://git-scm.com/docs/git-branch#Documentation/git-branch.txt--d)
 
 ## 3. Renomear uma branch
 
@@ -92,7 +92,7 @@ Se você pretende utilizar o '*stash*' múltiplas vezes, recomendo dar uma olhad
 
 #### Em detalhes: 
 
-- [**Git Stash Docs.**](https://git-scm.com/docs/git-stash)
+- Git Stash Docs.](https://git-scm.com/docs/git-stash)
 
 ## 6.  Reverter um commit
 
@@ -110,7 +110,7 @@ Uma curiosidade é que você pode executar o comando utilizando apenas os 6 prim
 
 #### Em detalhes: 
 
-- [**Git Revert Docs.**](https://git-scm.com/docs/git-revert)
+- [Git Revert Docs.](https://git-scm.com/docs/git-revert)
 
 ## Moral da história
 
