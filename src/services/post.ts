@@ -21,21 +21,36 @@ export interface Post {
 
 const highlight: Post = { 
   cover: {
-    href: 'https://images.unsplash.com/photo-1606011334315-025e4baab810',
+    href: 'https://images.unsplash.com/photo-1595511890410-3b8dc237a537',
     author: {
-      name: 'Roberto Huczek',
-      href: 'https://unsplash.com/@tamoio'
+      name: 'Dietmar Ludmann',
+      href: 'https://unsplash.com/@d13n'
     }
   },
-  title: '🚫 PARE de usar exceções para controle de fluxo', 
-  description: 'As exceções podem estar causando impacto de performance desnecessário na sua aplicação — se você as utiliza para controle de fluxo. Entenda...',
-  slug: 'avoid-exceptions-as-control-flow',
+  title: '😸 Git: Comandos chave para devs', 
+  description: 'Para desenvolvedores modernos, o Git é uma ferramenta indispensável. Dominar seus comandos é essencial para otimizar o fluxo de trabalho. Esta leitura contém algum dos comandos que mais utilizo durante meu fluxo de desenvolvimento.',
+  slug: 'git-commands',
   tags: ['softwaredevelopment'],
-  fileName: '7-avoid-exceptions',
-  createdAt: new Date(2023, 11, 11, 6, 0)
+  fileName: '8-git-commands',
+  createdAt: new Date(2023, 11, 15, 18, 30)
 }
 
 const latest: Post[] = [
+  { 
+    cover: {
+      href: 'https://images.unsplash.com/photo-1606011334315-025e4baab810',
+      author: {
+        name: 'Roberto Huczek',
+        href: 'https://unsplash.com/@tamoio'
+      }
+    },
+    title: '🚫 PARE de usar exceções para controle de fluxo', 
+    description: 'As exceções podem estar causando impacto de performance desnecessário na sua aplicação — se você as utiliza para controle de fluxo. Entenda...',
+    slug: 'avoid-exceptions-as-control-flow',
+    tags: ['softwaredevelopment'],
+    fileName: '7-avoid-exceptions',
+    createdAt: new Date(2023, 11, 11, 6, 0)
+  },
   { 
     cover: {
       href: 'https://images.unsplash.com/photo-1600232943169-3fe49a6f4071',
