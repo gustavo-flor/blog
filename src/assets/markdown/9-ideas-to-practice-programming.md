@@ -50,9 +50,13 @@ A melhor forma de praticar programação é praticando. Essa afirmação pode pa
 
 Repita e aprimore as 6 ideias acima e você ficará bem. **Nota:** Você não precisa aplicar as 6 ideias; encontre o que faz sentido para você e repita.
 
+## Agradecimentos
+
+E pra finalizar, um agradecimento especial ao meu amigo Felipe Passig que sugeriu esse tema 🫶.
+
 ## Para ir mais fundo
 
-Pra finalizar, separei alguns vídeos do [@FilipeDeschamps](https://www.youtube.com/@FilipeDeschamps) sobre o tema.
+Separei alguns vídeos do [@FilipeDeschamps](https://www.youtube.com/@FilipeDeschamps) sobre o tema.
 
 - <https://www.youtube.com/watch?v=fYR9L2ZmodM>
 - <https://www.youtube.com/watch?v=H4CCPaYLTWg>
