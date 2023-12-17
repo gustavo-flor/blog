@@ -21,21 +21,36 @@ export interface Post {
 
 const highlight: Post = { 
   cover: {
-    href: 'https://images.unsplash.com/photo-1595511890410-3b8dc237a537',
+    href: 'https://images.unsplash.com/photo-1605379399642-870262d3d051',
     author: {
-      name: 'Dietmar Ludmann',
-      href: 'https://unsplash.com/@d13n'
+      name: 'Fotis Fotopoulos',
+      href: 'https://unsplash.com/@ffstop'
     }
   },
-  title: '😸 Git: Comandos chave para devs', 
-  description: 'Para desenvolvedores modernos, o Git é uma ferramenta indispensável. Dominar seus comandos é essencial para otimizar o fluxo de trabalho. Esta leitura contém algum dos comandos que mais utilizo durante meu fluxo de desenvolvimento.',
-  slug: 'git-commands',
-  tags: ['softwaredevelopment'],
-  fileName: '8-git-commands',
-  createdAt: new Date(2023, 11, 15, 18, 30)
+  title: '💡 6 ideias para praticar programação', 
+  description: 'Escrito por um programador e para programadores ou interessados, este texto oferece formas e estratégias para pôr em prática a escrita de código, desde desafios de codificação até projetos colaborativos.',
+  slug: 'ideias-para-praticar-programacao',
+  tags: ['beginners', 'community'],
+  fileName: '9-ideas-to-practice-programming',
+  createdAt: new Date(2023, 11, 18, 5, 30)
 }
 
 const latest: Post[] = [
+  { 
+    cover: {
+      href: 'https://images.unsplash.com/photo-1595511890410-3b8dc237a537',
+      author: {
+        name: 'Dietmar Ludmann',
+        href: 'https://unsplash.com/@d13n'
+      }
+    },
+    title: '😸 Git: Comandos chave para devs', 
+    description: 'Para desenvolvedores modernos, o Git é uma ferramenta indispensável. Dominar seus comandos é essencial para otimizar o fluxo de trabalho. Esta leitura contém algum dos comandos que mais utilizo durante meu fluxo de desenvolvimento.',
+    slug: 'git-commands',
+    tags: ['softwaredevelopment'],
+    fileName: '8-git-commands',
+    createdAt: new Date(2023, 11, 15, 18, 30)
+  },
   { 
     cover: {
       href: 'https://images.unsplash.com/photo-1606011334315-025e4baab810',
