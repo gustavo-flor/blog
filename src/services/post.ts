@@ -21,21 +21,36 @@ export interface Post {
 
 const highlight: Post = { 
   cover: {
-    href: 'https://images.unsplash.com/photo-1605379399642-870262d3d051',
+    href: 'https://images.unsplash.com/photo-1682448169828-039868860001',
     author: {
-      name: 'Fotis Fotopoulos',
-      href: 'https://unsplash.com/@ffstop'
+      name: 'Lakindu Sepala',
+      href: 'https://unsplash.com/@lakindu_sepala'
     }
   },
-  title: '💡 6 ideias para praticar programação', 
-  description: 'Escrito por um programador e para programadores ou interessados, este texto oferece formas e estratégias para pôr em prática a escrita de código, desde desafios de codificação até projetos colaborativos.',
-  slug: 'ideias-para-praticar-programacao',
-  tags: ['beginners', 'community'],
-  fileName: '9-ideas-to-practice-programming',
+  title: '☀️ Arrays e listas encadeadas', 
+  description: 'Arrays e listas encadeadas (linked lists) são estruturas de dados que armazenam coleções de elementos, mas fazem isso de diferentes formas, com suas respectivas vantagens e desvantagens.',
+  slug: 'arrays-e-listas-encadeadas',
+  tags: ['datastructures', 'softwaredevelopment'],
+  fileName: '10-arrays-and-linked-lists',
   createdAt: new Date(2023, 11, 18, 5, 30)
 }
 
 const latest: Post[] = [
+  { 
+    cover: {
+      href: 'https://images.unsplash.com/photo-1605379399642-870262d3d051',
+      author: {
+        name: 'Fotis Fotopoulos',
+        href: 'https://unsplash.com/@ffstop'
+      }
+    },
+    title: '💡 6 ideias para praticar programação', 
+    description: 'Escrito por um programador e para programadores ou interessados, este texto oferece formas e estratégias para pôr em prática a escrita de código, desde desafios de codificação até projetos colaborativos.',
+    slug: 'ideias-para-praticar-programacao',
+    tags: ['beginners', 'community'],
+    fileName: '9-ideas-to-practice-programming',
+    createdAt: new Date(2023, 11, 18, 5, 30)
+  },
   { 
     cover: {
       href: 'https://images.unsplash.com/photo-1595511890410-3b8dc237a537',
