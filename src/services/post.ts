@@ -32,7 +32,7 @@ const highlight: Post = {
   slug: 'arrays-e-listas-encadeadas',
   tags: ['datastructures', 'softwaredevelopment'],
   fileName: '10-arrays-and-linked-lists',
-  createdAt: new Date(2023, 11, 18, 5, 30)
+  createdAt: new Date(2023, 11, 21, 6, 00)
 }
 
 const latest: Post[] = [
