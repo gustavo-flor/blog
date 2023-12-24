@@ -17,9 +17,27 @@ export interface Post {
   fileName: string;
   createdAt: Date;
   origin?: URL;
+  suggestions: string[];
 }
 
-const highlight: Post = { 
+const queuesAndStacks: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1506774518161-b710d10e2733',
+    author: {
+      name: 'Michał Parzuchowski',
+      href: 'https://unsplash.com/@mparzuchowski'
+    }
+  },
+  title: '🦉 Filas e pilhas', 
+  description: 'Filas e pilhas são estruturas de dados muito utilizadas quando precisamos encadear elementos em uma coleção, são muito semelhantes a filas encadeadas, porém, mais restritas e específicas para seus casos de uso, vamos entender…',
+  slug: 'filas-e-pilhas',
+  tags: ['datastructures', 'softwaredevelopment'],
+  fileName: '11-queues-and-stacks',
+  createdAt: new Date(2023, 11, 25, 6, 0),
+  suggestions: []
+}
+
+const arraysAndLinkedLists: Post = { 
   cover: {
     href: 'https://images.unsplash.com/photo-1682448169828-039868860001',
     author: {
@@ -32,145 +50,175 @@ const highlight: Post = {
   slug: 'arrays-e-listas-encadeadas',
   tags: ['datastructures', 'softwaredevelopment'],
   fileName: '10-arrays-and-linked-lists',
-  createdAt: new Date(2023, 11, 21, 6, 0)
+  createdAt: new Date(2023, 11, 21, 6, 0),
+  suggestions: []
 }
 
-const latest: Post[] = [
-  { 
-    cover: {
-      href: 'https://images.unsplash.com/photo-1605379399642-870262d3d051',
-      author: {
-        name: 'Fotis Fotopoulos',
-        href: 'https://unsplash.com/@ffstop'
-      }
-    },
-    title: '💡 6 ideias para praticar programação', 
-    description: 'Escrito por um programador e para programadores ou interessados, este texto oferece formas e estratégias para pôr em prática a escrita de código, desde desafios de codificação até projetos colaborativos.',
-    slug: 'ideias-para-praticar-programacao',
-    tags: ['beginners', 'community'],
-    fileName: '9-ideas-to-practice-programming',
-    createdAt: new Date(2023, 11, 18, 5, 30)
+const ideasToPracticeProgramming: Post = { 
+  cover: {
+    href: 'https://images.unsplash.com/photo-1605379399642-870262d3d051',
+    author: {
+      name: 'Fotis Fotopoulos',
+      href: 'https://unsplash.com/@ffstop'
+    }
   },
-  { 
-    cover: {
-      href: 'https://images.unsplash.com/photo-1595511890410-3b8dc237a537',
-      author: {
-        name: 'Dietmar Ludmann',
-        href: 'https://unsplash.com/@d13n'
-      }
-    },
-    title: '😸 Git: Comandos chave para devs', 
-    description: 'Para desenvolvedores modernos, o Git é uma ferramenta indispensável. Dominar seus comandos é essencial para otimizar o fluxo de trabalho. Esta leitura contém algum dos comandos que mais utilizo durante meu fluxo de desenvolvimento.',
-    slug: 'git-commands',
-    tags: ['softwaredevelopment'],
-    fileName: '8-git-commands',
-    createdAt: new Date(2023, 11, 15, 18, 30)
+  title: '💡 6 ideias para praticar programação', 
+  description: 'Escrito por um programador e para programadores ou interessados, este texto oferece formas e estratégias para pôr em prática a escrita de código, desde desafios de codificação até projetos colaborativos.',
+  slug: 'ideias-para-praticar-programacao',
+  tags: ['beginners', 'community'],
+  fileName: '9-ideas-to-practice-programming',
+  createdAt: new Date(2023, 11, 18, 5, 30),
+  suggestions: []
+}
+
+const gitCommands: Post = { 
+  cover: {
+    href: 'https://images.unsplash.com/photo-1595511890410-3b8dc237a537',
+    author: {
+      name: 'Dietmar Ludmann',
+      href: 'https://unsplash.com/@d13n'
+    }
   },
-  { 
-    cover: {
-      href: 'https://images.unsplash.com/photo-1606011334315-025e4baab810',
-      author: {
-        name: 'Roberto Huczek',
-        href: 'https://unsplash.com/@tamoio'
-      }
-    },
-    title: '🚫 PARE de usar exceções para controle de fluxo', 
-    description: 'As exceções podem estar causando impacto de performance desnecessário na sua aplicação — se você as utiliza para controle de fluxo. Entenda...',
-    slug: 'avoid-exceptions-as-control-flow',
-    tags: ['softwaredevelopment'],
-    fileName: '7-avoid-exceptions',
-    createdAt: new Date(2023, 11, 11, 6, 0)
+  title: '😸 Git: Comandos chave para devs', 
+  description: 'Para desenvolvedores modernos, o Git é uma ferramenta indispensável. Dominar seus comandos é essencial para otimizar o fluxo de trabalho. Esta leitura contém algum dos comandos que mais utilizo durante meu fluxo de desenvolvimento.',
+  slug: 'git-commands',
+  tags: ['softwaredevelopment'],
+  fileName: '8-git-commands',
+  createdAt: new Date(2023, 11, 15, 18, 30),
+  suggestions: []
+}
+
+const avoidExceptions = { 
+  cover: {
+    href: 'https://images.unsplash.com/photo-1606011334315-025e4baab810',
+    author: {
+      name: 'Roberto Huczek',
+      href: 'https://unsplash.com/@tamoio'
+    }
   },
-  { 
-    cover: {
-      href: 'https://images.unsplash.com/photo-1600232943169-3fe49a6f4071',
-      author: {
-        name: 'Nicolas Noonan',
-        href: 'https://unsplash.com/@nikolasnoonan'
-      }
-    },
-    title: '🤝 Revisão de código: criando um ambiente de colaboração e aprendizado contínuo', 
-    description: 'A revisão de código é uma parte crucial do processo de desenvolvimento de software, é o momento onde desenvolvedores examinam o código fonte de outros desenvolvedores com objetivo de prover sugestões sobre as alterações analisadas e...',
-    slug: 'code-review-best-practices',
-    tags: ['softwaredevelopment'],
-    fileName: '6-code-review',
-    createdAt: new Date(2023, 11, 4, 5, 2)
+  title: '🚫 PARE de usar exceções para controle de fluxo', 
+  description: 'As exceções podem estar causando impacto de performance desnecessário na sua aplicação — se você as utiliza para controle de fluxo. Entenda...',
+  slug: 'avoid-exceptions-as-control-flow',
+  tags: ['softwaredevelopment'],
+  fileName: '7-avoid-exceptions',
+  createdAt: new Date(2023, 11, 11, 6, 0),
+  suggestions: []
+}
+
+const codeReview: Post = { 
+  cover: {
+    href: 'https://images.unsplash.com/photo-1600232943169-3fe49a6f4071',
+    author: {
+      name: 'Nicolas Noonan',
+      href: 'https://unsplash.com/@nikolasnoonan'
+    }
   },
-  { 
-    cover: {
-      href: 'https://images.unsplash.com/photo-1596276122653-651a3898309f',
-      author: {
-        name: 'Artem Bryzgalov',
-        href: 'https://unsplash.com/@abrizgalov'
-      }
-    },
-    title: '👋 Olá, eu sou o Flôr', 
-    description: 'Este é o lugar em que escrevo o que gostaria de ler, falo sobre o que estou estudando e publico devaneios sobre sistemas que você utiliza todos os dias.',
-    slug: 'hello-world',
-    tags: ['hello'],
-    fileName: '5-hello-world',
-    createdAt: new Date(2023, 10, 27, 6)
+  title: '🤝 Revisão de código: criando um ambiente de colaboração e aprendizado contínuo', 
+  description: 'A revisão de código é uma parte crucial do processo de desenvolvimento de software, é o momento onde desenvolvedores examinam o código fonte de outros desenvolvedores com objetivo de prover sugestões sobre as alterações analisadas e...',
+  slug: 'code-review-best-practices',
+  tags: ['softwaredevelopment'],
+  fileName: '6-code-review',
+  createdAt: new Date(2023, 11, 4, 5, 2),
+  suggestions: []
+}
+
+const helloWorld: Post = { 
+  cover: {
+    href: 'https://images.unsplash.com/photo-1596276122653-651a3898309f',
+    author: {
+      name: 'Artem Bryzgalov',
+      href: 'https://unsplash.com/@abrizgalov'
+    }
   },
-  { 
-    cover: {
-      href: 'https://images.unsplash.com/photo-1519098901909-b1553a1190af',
-      author: {
-        name: 'Florencia Potter',
-        href: 'https://unsplash.com/@florenciapotter'
-      }
-    },
-    title: '🥏 O que é HATEOAS e qual sua relação com REST?', 
-    description: 'Falamos recentemente sobre REST, o que é e quais suas principais características, porém, um tema ficou em aberto para conversarmos, e chegou o momento de fazer isto, vamos falar sobre o que é HATEOAS…',
-    slug: 'o-que-e-hateoas',
-    tags: ['rest'],
-    fileName: '4-o-que-e-hateoas',
-    createdAt: new Date(2023, 10, 23, 6),
-    origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155')
+  title: '👋 Olá, eu sou o Flôr', 
+  description: 'Este é o lugar em que escrevo o que gostaria de ler, falo sobre o que estou estudando e publico devaneios sobre sistemas que você utiliza todos os dias.',
+  slug: 'hello-world',
+  tags: ['hello'],
+  fileName: '5-hello-world',
+  createdAt: new Date(2023, 10, 27, 6),
+  suggestions: []
+}
+
+const hateoas = { 
+  cover: {
+    href: 'https://images.unsplash.com/photo-1519098901909-b1553a1190af',
+    author: {
+      name: 'Florencia Potter',
+      href: 'https://unsplash.com/@florenciapotter'
+    }
   },
-  { 
-    title: '🌀 Coisas que você deveria saber sobre sistemas distribuídos: Teorema CAP', 
-    description: 'O teorema CAP, também conhecido como teorema de Brewer, é um dos princípios fundamentais dos sistemas distribuídos. A premissa do teorema é que nenhum sistema com distribuição de dados pela rede…',
-    slug: 'teorema-cap',
-    tags: ['distributedsystems'],
-    fileName: '3-teorema-cap',
-    createdAt: new Date(2023, 10, 20, 6),
-    origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d')
+  title: '🥏 O que é HATEOAS e qual sua relação com REST?', 
+  description: 'Falamos recentemente sobre REST, o que é e quais suas principais características, porém, um tema ficou em aberto para conversarmos, e chegou o momento de fazer isto, vamos falar sobre o que é HATEOAS…',
+  slug: 'o-que-e-hateoas',
+  tags: ['rest'],
+  fileName: '4-o-que-e-hateoas',
+  createdAt: new Date(2023, 10, 23, 6),
+  origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155'),
+  suggestions: []
+}
+
+const capTheorem: Post = { 
+  title: '🌀 Coisas que você deveria saber sobre sistemas distribuídos: Teorema CAP', 
+  description: 'O teorema CAP, também conhecido como teorema de Brewer, é um dos princípios fundamentais dos sistemas distribuídos. A premissa do teorema é que nenhum sistema com distribuição de dados pela rede…',
+  slug: 'teorema-cap',
+  tags: ['distributedsystems'],
+  fileName: '3-teorema-cap',
+  createdAt: new Date(2023, 10, 20, 6),
+  origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d'),
+  suggestions: []
+}
+
+const json: Post = { 
+  cover: {
+    href: 'https://images.unsplash.com/photo-1522346513757-54c552451fdc',
+    author: {
+      name: 'Nik',
+      href: 'https://unsplash.com/@helloimnik'
+    }
   },
-  { 
-    cover: {
-      href: 'https://images.unsplash.com/photo-1522346513757-54c552451fdc',
-      author: {
-        name: 'Nik',
-        href: 'https://unsplash.com/@helloimnik'
-      }
-    },
-    title: 'O que é JSON? 🏒', 
-    description: 'O acrônimo JSON vem de JavaScript Object Notation, é um formato leve de gravar e transportar dados, é utilizado comumente na comunicação entre aplicações cliente-servidor, é "auto descritivo" e fácil de entender.',
-    slug: 'o-que-e-json',
-    tags: ['json'],
-    fileName: '2-o-que-e-json',
-    createdAt: new Date(2023, 10, 11, 6),
-    origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df')
+  title: 'O que é JSON? 🏒', 
+  description: 'O acrônimo JSON vem de JavaScript Object Notation, é um formato leve de gravar e transportar dados, é utilizado comumente na comunicação entre aplicações cliente-servidor, é "auto descritivo" e fácil de entender.',
+  slug: 'o-que-e-json',
+  tags: ['json'],
+  fileName: '2-o-que-e-json',
+  createdAt: new Date(2023, 10, 11, 6),
+  origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df'),
+  suggestions: []
+}
+
+const rest: Post = { 
+  cover: {
+    href: 'https://images.unsplash.com/photo-1541188495357-ad2dc89487f4',
+    author: {
+      name: 'Aleksandar Cvetanovic',
+      href: 'https://unsplash.com/@lemonzandtea'
+    }
   },
-  { 
-    cover: {
-      href: 'https://images.unsplash.com/photo-1541188495357-ad2dc89487f4',
-      author: {
-        name: 'Aleksandar Cvetanovic',
-        href: 'https://unsplash.com/@lemonzandtea'
-      }
-    },
-    title: 'O que é REST? 😴', 
-    description: 'Se você pensou em descanso, lamento ter que informar, porém não será o tema do artigo de hoje, na verdade vamos falar sobre um estilo de arquitetura de software, em algumas literaturas também chamado…',
-    slug: 'o-que-e-rest',
-    tags: ['rest', 'distributedsystems'],
-    fileName: '1-o-que-e-rest',
-    createdAt: new Date(2023, 10, 5, 6),
-    origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd')
-  }
+  title: 'O que é REST? 😴', 
+  description: 'Se você pensou em descanso, lamento ter que informar, porém não será o tema do artigo de hoje, na verdade vamos falar sobre um estilo de arquitetura de software, em algumas literaturas também chamado…',
+  slug: 'o-que-e-rest',
+  tags: ['rest', 'distributedsystems'],
+  fileName: '1-o-que-e-rest',
+  createdAt: new Date(2023, 10, 5, 6),
+  origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd'),
+  suggestions: []
+}
+
+const posts: Post[] = [
+  queuesAndStacks,
+  arraysAndLinkedLists,
+  ideasToPracticeProgramming,
+  gitCommands,
+  avoidExceptions,
+  codeReview,
+  helloWorld,
+  hateoas,
+  capTheorem,
+  json,
+  rest
 ];
 
-const posts = [highlight, ...latest];
+const highlight = posts[0];
 
 export const findAll = (): Post[] => {
   return posts;
@@ -186,10 +234,6 @@ export const findBySlug = (slug: string): Post | undefined => {
 
 export const getHighlight = (): Post => {
   return highlight;
-}
-
-export const getLatest = (): Post[] => {
-  return latest;
 }
 
 const isToday = (date: Date): boolean => {
