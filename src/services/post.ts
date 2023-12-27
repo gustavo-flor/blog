@@ -22,10 +22,10 @@ export interface Post {
 
 const inversionOfControl: Post = {
   cover: {
-    href: 'https://images.unsplash.com/photo-1506774518161-b710d10e2733',
+    href: 'https://images.unsplash.com/photo-1616093875201-cc5b7a6e9c8a',
     author: {
-      name: 'Michał Parzuchowski',
-      href: 'https://unsplash.com/@mparzuchowski'
+      name: 'Franz Hajak',
+      href: 'https://unsplash.com/@riofranz'
     }
   },
   title: '🕺 O que é IoC?', 
