@@ -20,6 +20,23 @@ export interface Post {
   suggestions: string[];
 }
 
+const inversionOfControl: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1506774518161-b710d10e2733',
+    author: {
+      name: 'Michał Parzuchowski',
+      href: 'https://unsplash.com/@mparzuchowski'
+    }
+  },
+  title: '🕺 O que é IoC?', 
+  description: 'IoC, acrônimo de Inversion of Control (Inversão de Controle), é um princípio da engenharia de software que incentiva a inversão do controle do fluxo da aplicação, mas o que significa isso?',
+  slug: 'o-que-e-ioc',
+  tags: ['softwaredevelopment'],
+  fileName: '12-inversion-of-control',
+  createdAt: new Date(2023, 11, 28, 6, 0),
+  suggestions: []
+}
+
 const queuesAndStacks: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1506774518161-b710d10e2733',
@@ -205,6 +222,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  inversionOfControl,
   queuesAndStacks,
   arraysAndLinkedLists,
   ideasToPracticeProgramming,
@@ -218,7 +236,7 @@ const posts: Post[] = [
   rest
 ];
 
-const highlight = posts[0];
+const highlight = inversionOfControl;
 
 export const findAll = (): Post[] => {
   return posts;
