@@ -33,7 +33,13 @@
   font-size: 1.25rem;
 }
 
+.markdown > blockquote {
+  border-left: .25rem solid theme('colors.gray.500');
+  padding-left: 1rem;
+}
+
 .markdown > .callout {
+  width: 100%;
   display: grid;
   grid-template: "icon content" auto / 2rem auto;
   font-size: 1rem;

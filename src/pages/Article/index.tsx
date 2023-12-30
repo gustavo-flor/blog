@@ -54,7 +54,7 @@ const Article = () => {
       <main className='container lg:max-w-3xl mx-auto px-8 py-8 sm:py-16 md:pb-20'>
         {post.cover != undefined && 
           <figure>
-            <img src={`${post.cover.href}?w=768`} />
+            <img src={post.cover.href} />
             {post.cover.author != undefined && 
               <figcaption className='text-center text-gray-400 text-sm mt-4'>
                 Fotografia de <a className='underline text-purple-500' href={post.cover.author.href}>{post.cover.author.name}</a>
@@ -75,7 +75,7 @@ const Article = () => {
               <img src={Me} alt='Uma foto minha criada por IA' />
             </div>
             <div className='flex flex-col text-gray-500'>
-              <span className='font-bold'>Gustavo Flôr</span>
+              <span className='font-bold text-gray-700'>Gustavo Flôr</span>
               <span className='text-xs opacity-80'>
                 {getPublishedAt(post)}
               </span>
