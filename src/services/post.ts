@@ -20,6 +20,23 @@ export interface Post {
   suggestions: string[];
 }
 
+const howSpringProvidesDependencyInjection: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1581888227599-779811939961',
+    author: {
+      name: 'Jamie Street',
+      href: 'https://unsplash.com/@jamie452'
+    }
+  },
+  title: '🍃 Como o Spring provê a injeção de dependências?', 
+  description: 'Que a injeção “automágica” de dependências do Spring proporciona agilidade e simplicidade na escrita de aplicações todos nós já sabemos, mas você sabe como o Spring gerencia e provê essa funcionalidade para nós desenvolvedores?',
+  slug: 'como-o-spring-prove-a-injecao-de-dependencias',
+  tags: ['softwaredevelopment'],
+  fileName: '13-how-spring-provides-di',
+  createdAt: new Date(2024, 0, 1, 5, 30),
+  suggestions: []
+}
+
 const inversionOfControl: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1616093875201-cc5b7a6e9c8a',
@@ -222,6 +239,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  howSpringProvidesDependencyInjection,
   inversionOfControl,
   queuesAndStacks,
   arraysAndLinkedLists,
@@ -236,7 +254,7 @@ const posts: Post[] = [
   rest
 ];
 
-const highlight = inversionOfControl;
+const highlight = howSpringProvidesDependencyInjection;
 
 export const findAll = (): Post[] => {
   return posts;
