@@ -17,7 +17,22 @@ export interface Post {
   fileName: string;
   createdAt: Date;
   origin?: URL;
-  suggestions: string[];
+}
+
+const distributedTracing: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1514984879728-be0aff75a6e8',
+    author: {
+      name: 'Jamie Street',
+      href: 'https://unsplash.com/@jamie452'
+    }
+  },
+  title: '🧶 Coisas que você deveria saber sobre sistemas distribuídos: Distributed Tracing', 
+  description: 'Distributed Tracing, em tradução livre rastreamento distribuído, é um padrão arquitetural de microserviços utilizado para facilitar e otimizar a observabilidade em sistemas distribuídos.',
+  slug: 'distributed-tracing',
+  tags: ['distributedsystems', 'observability'],
+  fileName: '14-distributed-tracing',
+  createdAt: new Date(2024, 0, 4, 6, 0)
 }
 
 const howSpringProvidesDependencyInjection: Post = {
@@ -33,8 +48,7 @@ const howSpringProvidesDependencyInjection: Post = {
   slug: 'como-o-spring-prove-a-injecao-de-dependencias',
   tags: ['softwaredevelopment'],
   fileName: '13-how-spring-provides-di',
-  createdAt: new Date(2024, 0, 1, 5, 30),
-  suggestions: []
+  createdAt: new Date(2024, 0, 1, 5, 30)
 }
 
 const inversionOfControl: Post = {
@@ -50,8 +64,7 @@ const inversionOfControl: Post = {
   slug: 'o-que-e-ioc',
   tags: ['softwaredevelopment'],
   fileName: '12-inversion-of-control',
-  createdAt: new Date(2023, 11, 28, 6, 0),
-  suggestions: []
+  createdAt: new Date(2023, 11, 28, 6, 0)
 }
 
 const queuesAndStacks: Post = {
@@ -67,8 +80,7 @@ const queuesAndStacks: Post = {
   slug: 'filas-e-pilhas',
   tags: ['datastructures', 'softwaredevelopment'],
   fileName: '11-queues-and-stacks',
-  createdAt: new Date(2023, 11, 25, 6, 0),
-  suggestions: []
+  createdAt: new Date(2023, 11, 25, 6, 0)
 }
 
 const arraysAndLinkedLists: Post = { 
@@ -84,8 +96,7 @@ const arraysAndLinkedLists: Post = {
   slug: 'arrays-e-listas-encadeadas',
   tags: ['datastructures', 'softwaredevelopment'],
   fileName: '10-arrays-and-linked-lists',
-  createdAt: new Date(2023, 11, 21, 6, 0),
-  suggestions: []
+  createdAt: new Date(2023, 11, 21, 6, 0)
 }
 
 const ideasToPracticeProgramming: Post = { 
@@ -101,8 +112,7 @@ const ideasToPracticeProgramming: Post = {
   slug: 'ideias-para-praticar-programacao',
   tags: ['beginners', 'community'],
   fileName: '9-ideas-to-practice-programming',
-  createdAt: new Date(2023, 11, 18, 5, 30),
-  suggestions: []
+  createdAt: new Date(2023, 11, 18, 5, 30)
 }
 
 const gitCommands: Post = { 
@@ -118,8 +128,7 @@ const gitCommands: Post = {
   slug: 'git-commands',
   tags: ['softwaredevelopment'],
   fileName: '8-git-commands',
-  createdAt: new Date(2023, 11, 15, 18, 30),
-  suggestions: []
+  createdAt: new Date(2023, 11, 15, 18, 30)
 }
 
 const avoidExceptions = { 
@@ -135,8 +144,7 @@ const avoidExceptions = {
   slug: 'avoid-exceptions-as-control-flow',
   tags: ['softwaredevelopment'],
   fileName: '7-avoid-exceptions',
-  createdAt: new Date(2023, 11, 11, 6, 0),
-  suggestions: []
+  createdAt: new Date(2023, 11, 11, 6, 0)
 }
 
 const codeReview: Post = { 
@@ -152,8 +160,7 @@ const codeReview: Post = {
   slug: 'code-review-best-practices',
   tags: ['softwaredevelopment'],
   fileName: '6-code-review',
-  createdAt: new Date(2023, 11, 4, 5, 2),
-  suggestions: []
+  createdAt: new Date(2023, 11, 4, 5, 2)
 }
 
 const helloWorld: Post = { 
@@ -169,8 +176,7 @@ const helloWorld: Post = {
   slug: 'hello-world',
   tags: ['hello'],
   fileName: '5-hello-world',
-  createdAt: new Date(2023, 10, 27, 6),
-  suggestions: []
+  createdAt: new Date(2023, 10, 27, 6)
 }
 
 const hateoas = { 
@@ -187,8 +193,7 @@ const hateoas = {
   tags: ['rest'],
   fileName: '4-o-que-e-hateoas',
   createdAt: new Date(2023, 10, 23, 6),
-  origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155'),
-  suggestions: []
+  origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155')
 }
 
 const capTheorem: Post = { 
@@ -198,8 +203,7 @@ const capTheorem: Post = {
   tags: ['distributedsystems'],
   fileName: '3-teorema-cap',
   createdAt: new Date(2023, 10, 20, 6),
-  origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d'),
-  suggestions: []
+  origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d')
 }
 
 const json: Post = { 
@@ -216,8 +220,7 @@ const json: Post = {
   tags: ['json'],
   fileName: '2-o-que-e-json',
   createdAt: new Date(2023, 10, 11, 6),
-  origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df'),
-  suggestions: []
+  origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df')
 }
 
 const rest: Post = { 
@@ -234,11 +237,11 @@ const rest: Post = {
   tags: ['rest', 'distributedsystems'],
   fileName: '1-o-que-e-rest',
   createdAt: new Date(2023, 10, 5, 6),
-  origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd'),
-  suggestions: []
+  origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd')
 }
 
 const posts: Post[] = [
+  distributedTracing,
   howSpringProvidesDependencyInjection,
   inversionOfControl,
   queuesAndStacks,
