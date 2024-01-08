@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const designPatterns: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a',
+    author: {
+      name: 'Jamie Street',
+      href: 'https://unsplash.com/@jamie452'
+    }
+  },
+  title: '🥷 Design Patterns em 1 minuto', 
+  description: 'Os padrões de projeto são uma forma padronizada de solucionar um problema comum existente no desenvolvimento de software...',
+  slug: 'design-patterns-em-1-minuto',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '15-design-patterns',
+  createdAt: new Date(2024, 0, 8, 6, 0)
+}
+
 const distributedTracing: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1514984879728-be0aff75a6e8',
@@ -241,6 +257,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  designPatterns,
   distributedTracing,
   howSpringProvidesDependencyInjection,
   inversionOfControl,
