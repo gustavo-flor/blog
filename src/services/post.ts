@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const builderDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d',
+    author: {
+      name: 'James Barker',
+      href: 'https://unsplash.com/@barkernotbaker'
+    }
+  },
+  title: '👷 Design Patterns em 1 minuto: Builder #1', 
+  description: 'Builder é o padrão de projeto que tem como objetivo principal permitir a criação de objetos complexos de maneira simplificada e estruturada...',
+  slug: 'design-patterns-em-1-minuto-builder',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '16-builder-design-pattern',
+  createdAt: new Date(2024, 0, 9, 7, 30)
+}
+
 const designPatterns: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a',
@@ -257,6 +273,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  builderDesignPattern,
   designPatterns,
   distributedTracing,
   howSpringProvidesDependencyInjection,
