@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const observerDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1516222338250-863216ce01ea',
+    author: {
+      name: 'Josh Rakower',
+      href: 'https://unsplash.com/@joshrako'
+    }
+  },
+  title: '👀 Design Patterns em 1 minuto: Observer #2', 
+  description: 'O Design Pattern Observer permite criar um mecanismo — pub/sub — de processamento orientado a eventos...',
+  slug: 'design-patterns-em-1-minuto-observer',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '17-observer-design-pattern',
+  createdAt: new Date(2024, 0, 10, 5, 30)
+}
+
 const builderDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d',
@@ -273,6 +289,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  observerDesignPattern,
   builderDesignPattern,
   designPatterns,
   distributedTracing,
