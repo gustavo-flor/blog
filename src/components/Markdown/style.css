@@ -50,8 +50,8 @@
 
 .markdown > .callout > .icon {
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   grid-area: icon;
 } 
 

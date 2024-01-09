@@ -25,3 +25,5 @@ Para saber quando e como utilizar, é importante conhecer cada um deles e entend
     <p>Em construção…</p>
   </div>
 </aside>
+
+- [👷 Builder #1](https://gustavoflor.dev/posts/design-patterns-em-1-minuto-builder)
