@@ -26,5 +26,5 @@ Para saber quando e como utilizar, é importante conhecer cada um deles e entend
   </div>
 </aside>
 
-- [👷 Builder #1](https://gustavoflor.dev/posts/design-patterns-em-1-minuto-builder)
-- [👀 Observer #2](https://gustavoflor.dev/posts/design-patterns-em-1-minuto-observer)
+- [👷 Builder #1](./design-patterns-em-1-minuto-builder)
+- [👀 Observer #2](./design-patterns-em-1-minuto-observer)
