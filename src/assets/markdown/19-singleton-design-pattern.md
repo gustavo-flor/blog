@@ -10,7 +10,7 @@ Como resolver este problema?
 
 ## A solução
 
-A ideia aqui é que a própria classe gerencie a criação do objeto, (`1`) guardando sua instância em uma propriedade estática e (`2`) disponibilizando um método que irá servir de construtor/acessor da instância que será guardada e re-utilizada.
+A ideia aqui é que a própria classe gerencie a criação do objeto, (`1`) guardando sua instância em uma propriedade estática e (`2`) disponibilizando um método que irá servir de construtor/acessor da instância que será guardada e reutilizada.
 
 - É importante garantir que os construtores da classe são privados (`3`).
 
