@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const adapterDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1550782674-fa597ecc1bfd',
+    author: {
+      name: 'Kyle Johnson',
+      href: 'https://unsplash.com/@kylejeffreys'
+    }
+  },
+  title: '🧬 Design Patterns em 1 minuto: Adapter #3', 
+  description: 'O Adapter é um Design Pattern que permite que interfaces incompatíveis trabalhem juntas adequadamente...',
+  slug: 'design-patterns-em-1-minuto-adapter',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '18-adapter-design-pattern',
+  createdAt: new Date(2024, 0, 11, 6, 0)
+}
+
 const observerDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1516222338250-863216ce01ea',
@@ -289,6 +305,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  adapterDesignPattern,
   observerDesignPattern,
   builderDesignPattern,
   designPatterns,
