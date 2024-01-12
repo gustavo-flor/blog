@@ -29,3 +29,4 @@ Para saber quando e como utilizar, é importante conhecer cada um deles e entend
 - [👷 Builder #1](./design-patterns-em-1-minuto-builder)
 - [👀 Observer #2](./design-patterns-em-1-minuto-observer)
 - [🧬 Adapter #3](./design-patterns-em-1-minuto-adapter)
+- [🔮 Singleton #4](./design-patterns-em-1-minuto-singleton)

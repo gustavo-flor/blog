@@ -54,7 +54,7 @@ const Article = () => {
       <main className='container lg:max-w-3xl mx-auto px-8 py-8 sm:py-16 md:pb-20'>
         {post.cover != undefined && 
           <figure>
-            <img src={post.cover.href} />
+            <img src={`${post.cover.href}?q=80&w=768`} alt={`Fotografia de ${post.cover.author.name}`} />
             {post.cover.author != undefined && 
               <figcaption className='text-center text-gray-400 text-sm mt-4'>
                 Fotografia de <a className='underline text-purple-500' href={post.cover.author.href}>{post.cover.author.name}</a>

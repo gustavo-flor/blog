@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const singletonDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1673439782481-c02fd9688391',
+    author: {
+      name: 'Dominik Kempf',
+      href: 'https://unsplash.com/@dominik_kempf'
+    }
+  },
+  title: '🔮 Design Patterns em 1 minuto: Singleton #4', 
+  description: 'O Design Pattern Singleton garante que uma classe possua uma única (single) instância compartilhada por toda a aplicação....',
+  slug: 'design-patterns-em-1-minuto-singleton',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '19-singleton-design-pattern',
+  createdAt: new Date(2024, 0, 12, 6, 0)
+}
+
 const adapterDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1550782674-fa597ecc1bfd',
@@ -305,6 +321,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  singletonDesignPattern,
   adapterDesignPattern,
   observerDesignPattern,
   builderDesignPattern,
