@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const commandDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1492376791813-ee6dbb35caa3',
+    author: {
+      name: 'Bradley Pisney',
+      href: 'https://unsplash.com/@bradleypisney'
+    }
+  },
+  title: '📮 Design Patterns em 1 minuto: Command #7', 
+  description: 'O padrão de projeto Command possibilita que você agrupe todos os dados de sua requisição em um único objeto...',
+  slug: 'design-patterns-em-1-minuto-command',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '22-command-design-pattern',
+  createdAt: new Date(2024, 0, 15, 6, 0)
+}
+
 const decoratorDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1466921583968-f07aa80c526e',
@@ -353,6 +369,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  commandDesignPattern,
   decoratorDesignPattern,
   chainOfResponsibilityDesignPattern,
   singletonDesignPattern,
