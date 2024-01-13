@@ -32,7 +32,7 @@ const chainOfResponsibilityDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-chain-of-responsibility',
   tags: ['designpatterns', 'softwaredevelopment'],
   fileName: '20-chain-of-responsibility-design-pattern',
-  createdAt: new Date(2024, 0, 12, 6, 0)
+  createdAt: new Date(2024, 0, 13, 5, 0)
 }
 
 const singletonDesignPattern: Post = {
