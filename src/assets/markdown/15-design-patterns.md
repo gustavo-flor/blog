@@ -30,3 +30,4 @@ Para saber quando e como utilizar, é importante conhecer cada um deles e entend
 - [👀 Observer #2](./design-patterns-em-1-minuto-observer)
 - [🧬 Adapter #3](./design-patterns-em-1-minuto-adapter)
 - [🔮 Singleton #4](./design-patterns-em-1-minuto-singleton)
+- [🔗 Chain of Responsibility #5](./design-patterns-em-1-minuto-chain-of-responsibility)

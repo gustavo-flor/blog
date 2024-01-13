@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const chainOfResponsibilityDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1555008872-f03b347ffb53',
+    author: {
+      name: 'Hannah Reding',
+      href: 'https://unsplash.com/@hannahrdg'
+    }
+  },
+  title: '🔗 Design Patterns em 1 minuto: Chain of Responsibility #5', 
+  description: 'O Chain of Responsibility é um padrão de projeto que permite desacoplar o controle do fluxo de código repassando a responsabilidade para uma cadeia que...',
+  slug: 'design-patterns-em-1-minuto-chain-of-responsibility',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '20-chain-of-responsibility-design-pattern',
+  createdAt: new Date(2024, 0, 12, 6, 0)
+}
+
 const singletonDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1673439782481-c02fd9688391',
@@ -28,7 +44,7 @@ const singletonDesignPattern: Post = {
     }
   },
   title: '🔮 Design Patterns em 1 minuto: Singleton #4', 
-  description: 'O Design Pattern Singleton garante que uma classe possua uma única (single) instância compartilhada por toda a aplicação....',
+  description: 'O Design Pattern Singleton garante que uma classe possua uma única (single) instância compartilhada por toda a aplicação...',
   slug: 'design-patterns-em-1-minuto-singleton',
   tags: ['designpatterns', 'softwaredevelopment'],
   fileName: '19-singleton-design-pattern',
@@ -321,6 +337,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  chainOfResponsibilityDesignPattern,
   singletonDesignPattern,
   adapterDesignPattern,
   observerDesignPattern,
