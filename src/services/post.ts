@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const decoratorDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1466921583968-f07aa80c526e',
+    author: {
+      name: 'Braydon Anderson',
+      href: 'https://unsplash.com/@braydona'
+    }
+  },
+  title: '🪆 Design Patterns em 1 minuto: Decorator #6', 
+  description: 'O Design Pattern Decorator permite customizar os comportamentos de seus objetos sem sobrescrevê-los...',
+  slug: 'design-patterns-em-1-minuto-decorator',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '21-decorator-design-pattern',
+  createdAt: new Date(2024, 0, 14, 6, 0)
+}
+
 const chainOfResponsibilityDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1555008872-f03b347ffb53',
@@ -337,6 +353,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  decoratorDesignPattern,
   chainOfResponsibilityDesignPattern,
   singletonDesignPattern,
   adapterDesignPattern,
