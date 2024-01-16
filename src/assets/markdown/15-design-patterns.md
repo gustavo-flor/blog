@@ -33,3 +33,4 @@ Para saber quando e como utilizar, é importante conhecer cada um deles e entend
 - [🔗 Chain of Responsibility #5](./design-patterns-em-1-minuto-chain-of-responsibility)
 - [🪆 Decorator #6](./design-patterns-em-1-minuto-decorator)
 - [📮 Command #7](./design-patterns-em-1-minuto-command)
+- [🤖 Prototype / Clone #8](./design-patterns-em-1-minuto-prototype)

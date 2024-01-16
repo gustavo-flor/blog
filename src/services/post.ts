@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const prototypeDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1517331156700-3c241d2b4d83',
+    author: {
+      name: 'Jari Hytönen',
+      href: 'https://unsplash.com/@jarispics'
+    }
+  },
+  title: '🤖 Design Patterns em 1 minuto: Prototype / Clone #8', 
+  description: 'Prototype (também conhecido por Clone) é o padrão de projeto que permite a clonagem de um objeto...',
+  slug: 'design-patterns-em-1-minuto-prototype',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '23-prototype-design-pattern',
+  createdAt: new Date(2024, 0, 16, 6, 0)
+}
+
 const commandDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1492376791813-ee6dbb35caa3',
@@ -369,6 +385,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  prototypeDesignPattern,
   commandDesignPattern,
   decoratorDesignPattern,
   chainOfResponsibilityDesignPattern,
