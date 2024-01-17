@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const facadeDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1542665093852-744c79500d45',
+    author: {
+      name: 'Tomas Tuma',
+      href: 'https://unsplash.com/@tomastuma'
+    }
+  },
+  title: '🏛️ Design Patterns em 1 minuto: Facade #9', 
+  description: 'O padrão de projeto Facade provê uma interface de uso simplificada para uma biblioteca, framework ou qualquer outro conjunto complexo de classes...',
+  slug: 'design-patterns-em-1-minuto-facade',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '24-facade-design-pattern',
+  createdAt: new Date(2024, 0, 17, 6, 0)
+}
+
 const prototypeDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1517331156700-3c241d2b4d83',
@@ -385,6 +401,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  facadeDesignPattern,
   prototypeDesignPattern,
   commandDesignPattern,
   decoratorDesignPattern,
