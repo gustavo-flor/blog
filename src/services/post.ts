@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const strategyDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1494913148647-353ae514b35e',
+    author: {
+      name: 'Alvan Nee',
+      href: 'https://unsplash.com/@alvannee'
+    }
+  },
+  title: '🛣️ Design Patterns em 1 minuto: Strategy #10', 
+  description: 'O padrão de projeto Strategy permite definir o comportamento de um algoritmo durante a execução da aplicação...',
+  slug: 'design-patterns-em-1-minuto-strategy',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '25-strategy-design-pattern',
+  createdAt: new Date(2024, 0, 18, 6, 0)
+}
+
 const facadeDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1542665093852-744c79500d45',
@@ -401,6 +417,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  strategyDesignPattern,
   facadeDesignPattern,
   prototypeDesignPattern,
   commandDesignPattern,
