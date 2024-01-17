@@ -28,7 +28,7 @@ const proxyDesignPattern: Post = {
     }
   },
   title: '🎩 Design Patterns em 1 minuto: Proxy #12', 
-  description: 'O padrão de projeto State permite que seu objeto mude os comportamentos quando altera seu estado interno...',
+  description: 'O Design Pattern Proxy provê uma camada de controle de acesso a um objeto. Essa camada pode ser utilizada para evitar...',
   slug: 'design-patterns-em-1-minuto-proxy',
   tags: ['designpatterns', 'softwaredevelopment'],
   fileName: '27-proxy-design-pattern',
