@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const stateDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1537151641189-e685b67326c5',
+    author: {
+      name: 'Alvan Nee',
+      href: 'https://unsplash.com/@alvannee'
+    }
+  },
+  title: '🧑‍🔬 Design Patterns em 1 minuto: State #11', 
+  description: 'O padrão de projeto State permite que seu objeto mude os comportamentos quando altera seu estado interno...',
+  slug: 'design-patterns-em-1-minuto-state',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '26-state-design-pattern',
+  createdAt: new Date(2024, 0, 19, 6, 0)
+}
+
 const strategyDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1494913148647-353ae514b35e',
@@ -417,6 +433,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  stateDesignPattern,
   strategyDesignPattern,
   facadeDesignPattern,
   prototypeDesignPattern,
