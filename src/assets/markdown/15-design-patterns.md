@@ -29,3 +29,4 @@ Para saber quando e como utilizar, é importante conhecer cada um deles e entend
 - [🤖 Prototype / Clone #8](./design-patterns-em-1-minuto-prototype)
 - [🏛️ Facade #9](./design-patterns-em-1-minuto-facade)
 - [🛣️ Strategy #10](./design-patterns-em-1-minuto-strategy)
+- [🧑‍🔬 State #11](./design-patterns-em-1-minuto-state)
