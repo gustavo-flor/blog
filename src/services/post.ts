@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const iteratorDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1634609243366-ddd646c1b241',
+    author: {
+      name: 'Joshua J. Cotten',
+      href: 'https://unsplash.com/@jcotten'
+    }
+  },
+  title: '🔄 Design Patterns em 1 minuto: Iterator #17', 
+  description: 'O padrão de projeto Iterator permite percorrer uma coleção de elementos sem precisar expor sua implementação...',
+  slug: 'design-patterns-em-1-minuto-iterator',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '32-iterator-design-pattern',
+  createdAt: new Date(2024, 0, 25, 6, 0)
+}
+
 const visitorDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1601247387326-f8bcb5a234d4',
@@ -28,7 +44,7 @@ const visitorDesignPattern: Post = {
     }
   },
   title: '🚶 Design Patterns em 1 minuto: Visitor #16', 
-  description: 'O Design Pattern Visitor permite separar o comportamento do objeto em que é executado, aumentando assim a modularidade e adaptabilidade da sua aplicação....',
+  description: 'O Design Pattern Visitor permite separar o comportamento do objeto em que é executado, aumentando assim a modularidade e adaptabilidade da sua aplicação...',
   slug: 'design-patterns-em-1-minuto-visitor',
   tags: ['designpatterns', 'softwaredevelopment'],
   fileName: '31-visitor-design-pattern',
@@ -513,6 +529,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  iteratorDesignPattern,
   visitorDesignPattern,
   compositeDesignPattern,
   abstractFactoryDesignPattern,
