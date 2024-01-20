@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const mementoDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1514373941175-0a141072bbc8',
+    author: {
+      name: 'Ron Fung',
+      href: 'https://unsplash.com/@oriz'
+    }
+  },
+  title: '📃 Design Patterns em 1 minuto: Memento #13', 
+  description: 'O padrão de projeto Memento permite que você restaure estados passados do seu objeto de forma prática sem revelar sua estrutura interna...',
+  slug: 'design-patterns-em-1-minuto-memento',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '28-memento-design-pattern',
+  createdAt: new Date(2024, 0, 21, 6, 0)
+}
+
 const proxyDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1511694009171-3cdddf4484ff',
@@ -449,6 +465,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  mementoDesignPattern,
   proxyDesignPattern,
   stateDesignPattern,
   strategyDesignPattern,
