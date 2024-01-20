@@ -32,3 +32,4 @@ Para saber quando e como utilizar, é importante conhecer cada um deles e entend
 - [🧑‍🔬 State #11](./design-patterns-em-1-minuto-state)
 - [🎩 Proxy #12](./design-patterns-em-1-minuto-proxy)
 - [📃 Memento #13](./design-patterns-em-1-minuto-memento)
+- [🏭 Abstract Factory #14](./design-patterns-em-1-minuto-abstract-factory)
