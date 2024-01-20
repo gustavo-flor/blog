@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const proxyDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1511694009171-3cdddf4484ff',
+    author: {
+      name: 'Chunli Ju',
+      href: 'https://unsplash.com/@chunlea'
+    }
+  },
+  title: '🎩 Design Patterns em 1 minuto: Proxy #12', 
+  description: 'O Design Pattern Proxy provê uma camada de controle de acesso a um objeto. Essa camada pode ser utilizada para evitar...',
+  slug: 'design-patterns-em-1-minuto-proxy',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '27-proxy-design-pattern',
+  createdAt: new Date(2024, 0, 20, 6, 0)
+}
+
 const stateDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1537151641189-e685b67326c5',
@@ -433,6 +449,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  proxyDesignPattern,
   stateDesignPattern,
   strategyDesignPattern,
   facadeDesignPattern,
