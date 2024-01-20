@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const visitorDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1601247387326-f8bcb5a234d4',
+    author: {
+      name: 'Joshua J. Cotten',
+      href: 'https://unsplash.com/@jcotten'
+    }
+  },
+  title: '🚶 Design Patterns em 1 minuto: Visitor #16', 
+  description: 'O Design Pattern Visitor permite separar o comportamento do objeto em que é executado, aumentando assim a modularidade e adaptabilidade da sua aplicação....',
+  slug: 'design-patterns-em-1-minuto-visitor',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '31-visitor-design-pattern',
+  createdAt: new Date(2024, 0, 24, 6, 0)
+}
+
 const compositeDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1503951164464-cfc904b89299',
@@ -497,6 +513,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  visitorDesignPattern,
   compositeDesignPattern,
   abstractFactoryDesignPattern,
   mementoDesignPattern,
