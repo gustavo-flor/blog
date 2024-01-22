@@ -27,7 +27,7 @@ const factoryMethodDesignPattern: Post = {
       href: 'https://unsplash.com/@claymanche'
     }
   },
-  title: '🚚 Design Patterns em 1 minuto: Factory Method #20', 
+  title: '🛋️ Design Patterns em 1 minuto: Factory Method #20', 
   description: 'O padrão de projeto Factory Method provê um meio de criação de objetos que permite que classes filhas possam definir o tipo do objeto que será criado em um método definido na classe pai...',
   slug: 'design-patterns-em-1-minuto-factory-method',
   tags: ['designpatterns', 'softwaredevelopment'],

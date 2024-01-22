@@ -38,4 +38,4 @@ Para saber quando e como utilizar, é importante conhecer cada um deles e entend
 - [🔄 Iterator #17](./design-patterns-em-1-minuto-iterator)
 - [🌉 Bridge #18](./design-patterns-em-1-minuto-bridge)
 - [🍽️ Template Method #19](./design-patterns-em-1-minuto-template-method)
-- [🚚 Factory Method #20](./design-patterns-em-1-minuto-factory-method)
+- [🛋️ Factory Method #20](./design-patterns-em-1-minuto-factory-method)
