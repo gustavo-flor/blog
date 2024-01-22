@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const abstractFactoryDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1502083896352-259ab9e342d7',
+    author: {
+      name: 'Caleb Woods',
+      href: 'https://unsplash.com/@caleb_woods'
+    }
+  },
+  title: '🏭 Design Patterns em 1 minuto: Abstract Factory #14', 
+  description: 'O Abstract Factory é um padrão de projeto que permite desacoplar a criação de famílias de objetos relacionados e/ou dependentes sem especificar suas classes concretas...',
+  slug: 'design-patterns-em-1-minuto-abstract-factory',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '29-abstract-factory-design-pattern',
+  createdAt: new Date(2024, 0, 22, 6, 0)
+}
+
 const mementoDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1514373941175-0a141072bbc8',
@@ -465,6 +481,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  abstractFactoryDesignPattern,
   mementoDesignPattern,
   proxyDesignPattern,
   stateDesignPattern,
