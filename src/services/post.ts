@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const factoryMethodDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1595374322552-c464f0e8125e',
+    author: {
+      name: 'Clayton Manche',
+      href: 'https://unsplash.com/@claymanche'
+    }
+  },
+  title: '🚚 Design Patterns em 1 minuto: Factory Method #20', 
+  description: 'O padrão de projeto Factory Method provê um meio de criação de objetos que permite que classes filhas possam definir o tipo do objeto que será criado em um método definido na classe pai...',
+  slug: 'design-patterns-em-1-minuto-factory-method',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '35-factory-method-design-pattern',
+  createdAt: new Date(2024, 0, 28, 6, 0)
+}
+
 const templateMethodDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1531220847861-69e336daffa0',
@@ -561,6 +577,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  factoryMethodDesignPattern,
   templateMethodDesignPattern,
   bridgeDesignPattern,
   iteratorDesignPattern,
