@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const bridgeDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1552071379-041b32707fed',
+    author: {
+      name: 'Dušan veverkolog',
+      href: 'https://unsplash.com/@veverkolog'
+    }
+  },
+  title: '🌉 Design Patterns em 1 minuto: Bridge #18', 
+  description: 'O padrão de projeto Bridge propõe a separação das responsabilidades de uma classe em duas camadas: abstração e implementação...',
+  slug: 'design-patterns-em-1-minuto-bridge',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '33-bridge-design-pattern',
+  createdAt: new Date(2024, 0, 26, 6, 0)
+}
+
 const iteratorDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1634609243366-ddd646c1b241',
@@ -529,6 +545,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  bridgeDesignPattern,
   iteratorDesignPattern,
   visitorDesignPattern,
   compositeDesignPattern,
