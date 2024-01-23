@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const compositeDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1503951164464-cfc904b89299',
+    author: {
+      name: 'Samuel Foster',
+      href: 'https://unsplash.com/@samuelfoster_co_uk'
+    }
+  },
+  title: '🌳 Design Patterns em 1 minuto: Composite #15', 
+  description: 'O padrão de projeto Composite propõe que conjuntos de objetos sejam compostos em estruturas de árvore e que cada objeto agrupador delegue o comportamento para seus nós...',
+  slug: 'design-patterns-em-1-minuto-composite',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '30-composite-design-pattern',
+  createdAt: new Date(2024, 0, 23, 6, 0)
+}
+
 const abstractFactoryDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1502083896352-259ab9e342d7',
@@ -481,6 +497,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  compositeDesignPattern,
   abstractFactoryDesignPattern,
   mementoDesignPattern,
   proxyDesignPattern,
