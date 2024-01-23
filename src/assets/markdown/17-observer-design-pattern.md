@@ -19,3 +19,4 @@ Essa é a principal ideia do **Observer**, um objeto fonte permite que outros ob
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/observer>
+- <https://sourcemaking.com/design_patterns/observer>

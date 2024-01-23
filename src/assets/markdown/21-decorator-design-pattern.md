@@ -46,3 +46,4 @@ public class PersonDecorator {
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/decorator>
+- <https://sourcemaking.com/design_patterns/decorator>

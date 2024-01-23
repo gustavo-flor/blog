@@ -19,3 +19,4 @@ Com as classes prontas, basta gerenciar o estado interno do seu objeto utilizand
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/state>
+- <https://sourcemaking.com/design_patterns/state>

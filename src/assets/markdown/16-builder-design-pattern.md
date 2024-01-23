@@ -21,3 +21,4 @@ Essa classe especializada deve disponibilizar métodos que preparem a criação 
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/builder>
+- <https://sourcemaking.com/design_patterns/builder>

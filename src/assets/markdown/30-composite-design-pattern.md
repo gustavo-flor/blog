@@ -23,3 +23,4 @@ Com os elementos criados, basta iterar sobre os objetos em mais alto nível util
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/composite>
+- <https://sourcemaking.com/design_patterns/composite>

@@ -24,3 +24,4 @@ Vamos disponibilizar uma classe chamada `FurnitureFactory` com os métodos `crea
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/factory-method>
+- <https://sourcemaking.com/design_patterns/factory_method>

@@ -44,3 +44,4 @@ public class MySingleton {
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/singleton>
+- <https://sourcemaking.com/design_patterns/singleton>

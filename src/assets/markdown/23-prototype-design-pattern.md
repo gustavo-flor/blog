@@ -30,3 +30,4 @@ Com a interface criada, basta implementar nas classes que necessitam ser clonada
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/prototype>
+- <https://sourcemaking.com/design_patterns/prototype>

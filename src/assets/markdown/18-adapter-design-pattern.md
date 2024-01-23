@@ -26,3 +26,4 @@ Em outras palavras, a ideia é criar uma classe que adapte — por isso nome do 
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/adapter>
+- <https://sourcemaking.com/design_patterns/adapter>

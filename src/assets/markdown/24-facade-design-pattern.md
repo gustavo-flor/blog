@@ -23,3 +23,4 @@ Isso diminui o acoplamento e aumenta a manutenabilidade e legibilidade do códig
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/facade>
+- <https://sourcemaking.com/design_patterns/facade>

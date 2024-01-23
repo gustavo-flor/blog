@@ -19,3 +19,4 @@ Basicamente, a ideia consiste em 3 elementos chave:
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/memento>
+- <https://sourcemaking.com/design_patterns/memento>
