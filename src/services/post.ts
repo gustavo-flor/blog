@@ -19,16 +19,32 @@ export interface Post {
   origin?: URL;
 }
 
+const mediatorDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1598188306155-25e400eb5078',
+    author: {
+      name: 'Malek Dridi',
+      href: 'https://unsplash.com/@malek_dridi'
+    }
+  },
+  title: '🚦 Design Patterns em 1 minuto: Mediator #22', 
+  description: 'O Mediator é um padrão de projeto que ajuda a reduzir a complexidade entre a comunicação de múltiplos objetos...',
+  slug: 'design-patterns-em-1-minuto-mediator',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '37-mediator-design-pattern',
+  createdAt: new Date(2024, 0, 30, 6, 0)
+}
+
 const flyweightDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1598223456174-1215efd9adbe',
     author: {
       name: 'Brent Olson',
-      href: 'https://unsplash.com/@helixgamese'
+      href: 'https://unsplash.com/@helixgames'
     }
   },
   title: '🏗️ Design Patterns em 1 minuto: Flyweight #21', 
-  description: 'O Design Pattern Flyweight permite otimizar o uso de memória em casos onde nossa aplicação precisa disponibilizar uma grande quantidade de objetos contendo conteúdos semelhantes....',
+  description: 'O Design Pattern Flyweight permite otimizar o uso de memória em casos onde nossa aplicação precisa disponibilizar uma grande quantidade de objetos contendo conteúdos semelhantes...',
   slug: 'design-patterns-em-1-minuto-flyweight',
   tags: ['designpatterns', 'softwaredevelopment'],
   fileName: '36-flyweight-design-pattern',
@@ -593,6 +609,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  mediatorDesignPattern,
   flyweightDesignPattern,
   factoryMethodDesignPattern,
   templateMethodDesignPattern,
