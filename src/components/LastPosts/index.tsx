@@ -21,6 +21,7 @@ const LastPosts = ({ tag }: Props) => {
     setNextPageNumber(page.nextPage);
     setPosts([...posts, ...page.items]);
     setLoading(false);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pageNumber]);
 
   const nextPage = () => {
