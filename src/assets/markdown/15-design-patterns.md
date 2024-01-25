@@ -35,3 +35,4 @@ Para saber quando e como utilizar, é importante conhecer cada um deles e entend
 - [🏭 Abstract Factory #14](./design-patterns-em-1-minuto-abstract-factory)
 - [🌳 Composite #15](./design-patterns-em-1-minuto-composite)
 - [🚶 Visitor #16](./design-patterns-em-1-minuto-visitor)
+- [🔄 Iterator #17](./design-patterns-em-1-minuto-iterator)
