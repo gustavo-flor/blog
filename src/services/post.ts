@@ -13,7 +13,7 @@ export interface Post {
   title: string;
   description: string;
   slug: string;
-  tags: Tag[];
+  tags: string[];
   fileName: string;
   createdAt: Date;
   origin?: URL;
