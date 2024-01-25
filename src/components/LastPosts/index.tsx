@@ -15,7 +15,9 @@ const LastPosts = ({ tag }: Props) => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    const page = tag != undefined ? findAllByTag(tag, pageNumber) : findAll(pageNumber);
+    const page = tag != undefined 
+      ? findAllByTag(tag, pageNumber) 
+      : findAll(pageNumber);
     setNextPageNumber(page.nextPage);
     setPosts([...posts, ...page.items]);
     setLoading(false);
