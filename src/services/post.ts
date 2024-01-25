@@ -41,7 +41,7 @@ const interpreterDesignPattern: Post = {
     }
   },
   title: '🤹 Design Patterns em 1 minuto: Interpreter #23', 
-  description: 'O padrão de projeto **Interpreter** provê uma forma dinâmica e clara de transformar em ações determinadas linguagens ou expressões...',
+  description: 'O padrão de projeto Interpreter provê uma forma dinâmica e clara de transformar em ações determinadas linguagens ou expressões...',
   slug: 'design-patterns-em-1-minuto-interpreter',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '38-interpreter-design-pattern',
