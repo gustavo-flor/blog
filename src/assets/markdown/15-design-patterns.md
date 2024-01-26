@@ -36,3 +36,4 @@ Para saber quando e como utilizar, é importante conhecer cada um deles e entend
 - [🌳 Composite #15](./design-patterns-em-1-minuto-composite)
 - [🚶 Visitor #16](./design-patterns-em-1-minuto-visitor)
 - [🔄 Iterator #17](./design-patterns-em-1-minuto-iterator)
+- [🌉 Bridge #18](./design-patterns-em-1-minuto-bridge)
