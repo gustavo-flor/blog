@@ -22,6 +22,8 @@ Após isso, basta implementar cada fábrica concreta para uma família em espec�
 
 Com as classes implementadas, sua aplicação deve apenas configurar qual classe concreta pretende usar de acordo suas regras e problema resolvido.
 
+> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/1ebb1acd4972a5a3a53c508d53f302968ff9ec09/src/main/java/com/github/gustavoflor/dpho/creational/abstractfactory)
+
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/abstract-factory>
