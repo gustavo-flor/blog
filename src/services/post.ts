@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const templateMethodDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1531220847861-69e336daffa0',
+    author: {
+      name: 'Malcolm Lightbody',
+      href: 'https://unsplash.com/@mlightbody'
+    }
+  },
+  title: '🍽️ Design Patterns em 1 minuto: Template Method #19', 
+  description: 'O Template Method é o padrão de projeto que propõe que subclasses possam sobrescrever etapas de um comportamento da superclasse de forma estruturada e adaptável...',
+  slug: 'design-patterns-em-1-minuto-template-method',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '34-template-method-design-pattern',
+  createdAt: new Date(2024, 0, 27, 6, 0)
+}
+
 const bridgeDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1552071379-041b32707fed',
@@ -545,6 +561,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  templateMethodDesignPattern,
   bridgeDesignPattern,
   iteratorDesignPattern,
   visitorDesignPattern,
