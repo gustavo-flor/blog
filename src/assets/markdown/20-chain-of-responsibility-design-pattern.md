@@ -21,3 +21,4 @@ Após a implementação, basta conectar todas as classes na ordem esperada e exe
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/chain-of-responsibility>
+- <https://sourcemaking.com/design_patterns/chain_of_responsibility>

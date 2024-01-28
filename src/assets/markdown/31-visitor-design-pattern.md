@@ -22,3 +22,4 @@ Note que o elemento principal foi alterado — pois foi necessário criar o mét
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/visitor>
+- <https://sourcemaking.com/design_patterns/visitor>

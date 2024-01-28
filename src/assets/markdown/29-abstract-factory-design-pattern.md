@@ -27,3 +27,4 @@ Com as classes implementadas, sua aplicação deve apenas configurar qual classe
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/abstract-factory>
+- <https://sourcemaking.com/design_patterns/abstract_factory>

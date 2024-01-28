@@ -26,3 +26,4 @@ Além disso, a superclasse deve conter um método público que execute todos os 
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/template-method>
+- <https://sourcemaking.com/design_patterns/template_method>

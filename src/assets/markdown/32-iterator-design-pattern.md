@@ -29,3 +29,4 @@ A ideia aqui é simples, cada coleção deve disponibilizar um **Iterator**:
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/iterator>
+- <https://sourcemaking.com/design_patterns/iterator>

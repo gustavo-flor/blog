@@ -23,3 +23,4 @@ Nessa classe, saberíamos quando fazer cache do resultado para então reutilizá
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/proxy>
+- <https://sourcemaking.com/design_patterns/proxy>

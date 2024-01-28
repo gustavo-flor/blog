@@ -26,3 +26,4 @@ Por fim, a ideia central do padrão de projeto **Bridge** é optar pelo uso de c
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/bridge>
+- <https://sourcemaking.com/design_patterns/bridge>

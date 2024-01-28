@@ -27,3 +27,4 @@ A nossa classe `Button` continua existindo; porém, ela não mais implementa a l
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/command>
+- <https://sourcemaking.com/design_patterns/command>

@@ -27,3 +27,4 @@ No código principal, gerencie qual estratégia deve ser utilizada com base em s
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/strategy>
+- <https://sourcemaking.com/design_patterns/strategy>
