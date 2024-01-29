@@ -19,6 +19,22 @@ export interface Post {
   origin?: URL;
 }
 
+const flyweightDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1598223456174-1215efd9adbe',
+    author: {
+      name: 'Brent Olson',
+      href: 'https://unsplash.com/@helixgamese'
+    }
+  },
+  title: '🏗️ Design Patterns em 1 minuto: Flyweight #21', 
+  description: 'O Design Pattern Flyweight permite otimizar o uso de memória em casos onde nossa aplicação precisa disponibilizar uma grande quantidade de objetos contendo conteúdos semelhantes....',
+  slug: 'design-patterns-em-1-minuto-flyweight',
+  tags: ['designpatterns', 'softwaredevelopment'],
+  fileName: '36-flyweight-design-pattern',
+  createdAt: new Date(2024, 0, 29, 6, 0)
+}
+
 const factoryMethodDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1595374322552-c464f0e8125e',
@@ -577,6 +593,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  flyweightDesignPattern,
   factoryMethodDesignPattern,
   templateMethodDesignPattern,
   bridgeDesignPattern,

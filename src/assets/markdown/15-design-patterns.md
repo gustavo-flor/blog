@@ -12,13 +12,6 @@ Para saber quando e como utilizar, é importante conhecer cada um deles e entend
 
 ## Para ir mais fundo
 
-<aside class="callout">
-  <div class="icon">🚧</div>
-  <div class="content">
-    <p>Em construção…</p>
-  </div>
-</aside>
-
 - [👷 Builder #1](./design-patterns-em-1-minuto-builder)
 - [👀 Observer #2](./design-patterns-em-1-minuto-observer)
 - [🧬 Adapter #3](./design-patterns-em-1-minuto-adapter)
@@ -39,3 +32,4 @@ Para saber quando e como utilizar, é importante conhecer cada um deles e entend
 - [🌉 Bridge #18](./design-patterns-em-1-minuto-bridge)
 - [🍽️ Template Method #19](./design-patterns-em-1-minuto-template-method)
 - [🛋️ Factory Method #20](./design-patterns-em-1-minuto-factory-method)
+- [🏗️ Flyweight / Cache #21](./design-patterns-em-1-minuto-flyweight)
