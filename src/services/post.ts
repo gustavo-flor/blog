@@ -19,6 +19,14 @@ export interface Post {
   origin?: URL;
 }
 
+interface Page<I> {
+  previousPage: number | null;
+  nextPage: number | null;
+  total: number;
+  totalPages: number;
+  items: I[];
+}
+
 export enum Tags {
   DESIGN_PATTERNS = "designpatterns",
   SOFTWARE_DEVELOPMENT = "softwaredevelopment",
@@ -680,13 +688,28 @@ const posts: Post[] = [
 
 const highlight = howSpringProvidesDependencyInjection;
 
-export const findAll = (): Post[] => {
-  return posts;
+const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
+  const offset = size * (page - 1);
+  const totalPages = Math.ceil(posts.length / size);
+  const paginatedItems = posts.slice(offset, size * page);
+
+  return {
+    previousPage: page - 1 ? page - 1 : null,
+    nextPage: (totalPages > page) ? page + 1 : null,
+    total: posts.length,
+    totalPages: totalPages,
+    items: paginatedItems
+  };
 }
 
-export const findAllByTag = (tag: string): Post[] => {
-  return posts.filter(it => it.tags.includes(tag));
-} 
+export const findAll = (page?: number, size?: number): Page<Post> => {
+  return paginate(posts, page, size);
+}
+
+export const findAllByTag = (tag: string, page?: number, size?: number): Page<Post> => {
+  const filteredPosts = posts.filter(it => it.tags.includes(tag));
+  return paginate(filteredPosts, page, size);
+}
 
 export const findBySlug = (slug: string): Post | undefined => {
   return posts.find(it => it.slug === slug);
