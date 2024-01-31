@@ -34,3 +34,4 @@ Para saber quando e como utilizar, é importante conhecer cada um deles e entend
 - [🛋️ Factory Method #20](./design-patterns-em-1-minuto-factory-method)
 - [🏗️ Flyweight #21](./design-patterns-em-1-minuto-flyweight)
 - [🚦 Mediator #22](./design-patterns-em-1-minuto-mediator)
+- [🤹 Interpreter #23](./design-patterns-em-1-minuto-interpreter)

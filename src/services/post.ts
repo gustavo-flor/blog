@@ -19,6 +19,35 @@ export interface Post {
   origin?: URL;
 }
 
+export enum Tags {
+  DESIGN_PATTERNS = "designpatterns",
+  SOFTWARE_DEVELOPMENT = "softwaredevelopment",
+  DISTRIBUTED_SYSTEMS = "distributedsystems",
+  REST = "rest",
+  JSON = "json",
+  HELLO = "hello",
+  DATA_STRUCTURES = "datastructures",
+  BEGINNERS = "beginners",
+  COMMUNITY = "community",
+  OBSERVABILITY = "observability",
+}
+
+const interpreterDesignPattern: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1518443855757-dfadac7101ae',
+    author: {
+      name: 'Grégoire Bertaud',
+      href: 'https://unsplash.com/@sirtook'
+    }
+  },
+  title: '🤹 Design Patterns em 1 minuto: Interpreter #23', 
+  description: 'O padrão de projeto Interpreter provê uma forma dinâmica e clara de transformar em ações determinadas linguagens ou expressões...',
+  slug: 'design-patterns-em-1-minuto-interpreter',
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  fileName: '38-interpreter-design-pattern',
+  createdAt: new Date(2024, 0, 31, 6, 0)
+}
+
 const mediatorDesignPattern: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1598188306155-25e400eb5078',
@@ -30,7 +59,7 @@ const mediatorDesignPattern: Post = {
   title: '🚦 Design Patterns em 1 minuto: Mediator #22', 
   description: 'O Mediator é um padrão de projeto que ajuda a reduzir a complexidade entre a comunicação de múltiplos objetos...',
   slug: 'design-patterns-em-1-minuto-mediator',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '37-mediator-design-pattern',
   createdAt: new Date(2024, 0, 30, 6, 0)
 }
@@ -46,7 +75,7 @@ const flyweightDesignPattern: Post = {
   title: '🏗️ Design Patterns em 1 minuto: Flyweight #21', 
   description: 'O Design Pattern Flyweight permite otimizar o uso de memória em casos onde nossa aplicação precisa disponibilizar uma grande quantidade de objetos contendo conteúdos semelhantes...',
   slug: 'design-patterns-em-1-minuto-flyweight',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '36-flyweight-design-pattern',
   createdAt: new Date(2024, 0, 29, 6, 0)
 }
@@ -62,7 +91,7 @@ const factoryMethodDesignPattern: Post = {
   title: '🛋️ Design Patterns em 1 minuto: Factory Method #20', 
   description: 'O padrão de projeto Factory Method provê um meio de criação de objetos que permite que classes filhas possam definir o tipo do objeto que será criado em um método definido na classe pai...',
   slug: 'design-patterns-em-1-minuto-factory-method',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '35-factory-method-design-pattern',
   createdAt: new Date(2024, 0, 28, 6, 0)
 }
@@ -78,7 +107,7 @@ const templateMethodDesignPattern: Post = {
   title: '🍽️ Design Patterns em 1 minuto: Template Method #19', 
   description: 'O Template Method é o padrão de projeto que propõe que subclasses possam sobrescrever etapas de um comportamento da superclasse de forma estruturada e adaptável...',
   slug: 'design-patterns-em-1-minuto-template-method',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '34-template-method-design-pattern',
   createdAt: new Date(2024, 0, 27, 6, 0)
 }
@@ -94,7 +123,7 @@ const bridgeDesignPattern: Post = {
   title: '🌉 Design Patterns em 1 minuto: Bridge #18', 
   description: 'O padrão de projeto Bridge propõe a separação das responsabilidades de uma classe em duas camadas: abstração e implementação...',
   slug: 'design-patterns-em-1-minuto-bridge',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '33-bridge-design-pattern',
   createdAt: new Date(2024, 0, 26, 6, 0)
 }
@@ -110,7 +139,7 @@ const iteratorDesignPattern: Post = {
   title: '🔄 Design Patterns em 1 minuto: Iterator #17', 
   description: 'O padrão de projeto Iterator permite percorrer uma coleção de elementos sem precisar expor sua implementação...',
   slug: 'design-patterns-em-1-minuto-iterator',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '32-iterator-design-pattern',
   createdAt: new Date(2024, 0, 25, 6, 0)
 }
@@ -126,7 +155,7 @@ const visitorDesignPattern: Post = {
   title: '🚶 Design Patterns em 1 minuto: Visitor #16', 
   description: 'O Design Pattern Visitor permite separar o comportamento do objeto em que é executado, aumentando assim a modularidade e adaptabilidade da sua aplicação...',
   slug: 'design-patterns-em-1-minuto-visitor',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '31-visitor-design-pattern',
   createdAt: new Date(2024, 0, 24, 6, 0)
 }
@@ -142,7 +171,7 @@ const compositeDesignPattern: Post = {
   title: '🌳 Design Patterns em 1 minuto: Composite #15', 
   description: 'O padrão de projeto Composite propõe que conjuntos de objetos sejam compostos em estruturas de árvore e que cada objeto agrupador delegue o comportamento para seus nós...',
   slug: 'design-patterns-em-1-minuto-composite',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '30-composite-design-pattern',
   createdAt: new Date(2024, 0, 23, 6, 0)
 }
@@ -158,7 +187,7 @@ const abstractFactoryDesignPattern: Post = {
   title: '🏭 Design Patterns em 1 minuto: Abstract Factory #14', 
   description: 'O Abstract Factory é um padrão de projeto que permite desacoplar a criação de famílias de objetos relacionados e/ou dependentes sem especificar suas classes concretas...',
   slug: 'design-patterns-em-1-minuto-abstract-factory',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '29-abstract-factory-design-pattern',
   createdAt: new Date(2024, 0, 22, 6, 0)
 }
@@ -174,7 +203,7 @@ const mementoDesignPattern: Post = {
   title: '📃 Design Patterns em 1 minuto: Memento #13', 
   description: 'O padrão de projeto Memento permite que você restaure estados passados do seu objeto de forma prática sem revelar sua estrutura interna...',
   slug: 'design-patterns-em-1-minuto-memento',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '28-memento-design-pattern',
   createdAt: new Date(2024, 0, 21, 6, 0)
 }
@@ -190,7 +219,7 @@ const proxyDesignPattern: Post = {
   title: '🎩 Design Patterns em 1 minuto: Proxy #12', 
   description: 'O Design Pattern Proxy provê uma camada de controle de acesso a um objeto. Essa camada pode ser utilizada para evitar...',
   slug: 'design-patterns-em-1-minuto-proxy',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '27-proxy-design-pattern',
   createdAt: new Date(2024, 0, 20, 6, 0)
 }
@@ -206,7 +235,7 @@ const stateDesignPattern: Post = {
   title: '🧑‍🔬 Design Patterns em 1 minuto: State #11', 
   description: 'O padrão de projeto State permite que seu objeto mude os comportamentos quando altera seu estado interno...',
   slug: 'design-patterns-em-1-minuto-state',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '26-state-design-pattern',
   createdAt: new Date(2024, 0, 19, 6, 0)
 }
@@ -222,7 +251,7 @@ const strategyDesignPattern: Post = {
   title: '🛣️ Design Patterns em 1 minuto: Strategy #10', 
   description: 'O padrão de projeto Strategy permite definir o comportamento de um algoritmo durante a execução da aplicação...',
   slug: 'design-patterns-em-1-minuto-strategy',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '25-strategy-design-pattern',
   createdAt: new Date(2024, 0, 18, 6, 0)
 }
@@ -238,7 +267,7 @@ const facadeDesignPattern: Post = {
   title: '🏛️ Design Patterns em 1 minuto: Facade #9', 
   description: 'O padrão de projeto Facade provê uma interface de uso simplificada para uma biblioteca, framework ou qualquer outro conjunto complexo de classes...',
   slug: 'design-patterns-em-1-minuto-facade',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '24-facade-design-pattern',
   createdAt: new Date(2024, 0, 17, 6, 0)
 }
@@ -254,7 +283,7 @@ const prototypeDesignPattern: Post = {
   title: '🤖 Design Patterns em 1 minuto: Prototype / Clone #8', 
   description: 'Prototype (também conhecido por Clone) é o padrão de projeto que permite a clonagem de um objeto...',
   slug: 'design-patterns-em-1-minuto-prototype',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '23-prototype-design-pattern',
   createdAt: new Date(2024, 0, 16, 6, 0)
 }
@@ -270,7 +299,7 @@ const commandDesignPattern: Post = {
   title: '📮 Design Patterns em 1 minuto: Command #7', 
   description: 'O padrão de projeto Command possibilita que você agrupe todos os dados de sua requisição em um único objeto...',
   slug: 'design-patterns-em-1-minuto-command',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '22-command-design-pattern',
   createdAt: new Date(2024, 0, 15, 6, 0)
 }
@@ -286,7 +315,7 @@ const decoratorDesignPattern: Post = {
   title: '🪆 Design Patterns em 1 minuto: Decorator #6', 
   description: 'O Design Pattern Decorator permite customizar os comportamentos de seus objetos sem sobrescrevê-los...',
   slug: 'design-patterns-em-1-minuto-decorator',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '21-decorator-design-pattern',
   createdAt: new Date(2024, 0, 14, 6, 0)
 }
@@ -302,7 +331,7 @@ const chainOfResponsibilityDesignPattern: Post = {
   title: '🔗 Design Patterns em 1 minuto: Chain of Responsibility #5', 
   description: 'O Chain of Responsibility é um padrão de projeto que permite desacoplar o controle do fluxo de código repassando a responsabilidade para uma cadeia que...',
   slug: 'design-patterns-em-1-minuto-chain-of-responsibility',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '20-chain-of-responsibility-design-pattern',
   createdAt: new Date(2024, 0, 13, 5, 0)
 }
@@ -318,7 +347,7 @@ const singletonDesignPattern: Post = {
   title: '🔮 Design Patterns em 1 minuto: Singleton #4', 
   description: 'O Design Pattern Singleton garante que uma classe possua uma única (single) instância compartilhada por toda a aplicação...',
   slug: 'design-patterns-em-1-minuto-singleton',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '19-singleton-design-pattern',
   createdAt: new Date(2024, 0, 12, 6, 0)
 }
@@ -334,7 +363,7 @@ const adapterDesignPattern: Post = {
   title: '🧬 Design Patterns em 1 minuto: Adapter #3', 
   description: 'O Adapter é um Design Pattern que permite que interfaces incompatíveis trabalhem juntas adequadamente...',
   slug: 'design-patterns-em-1-minuto-adapter',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '18-adapter-design-pattern',
   createdAt: new Date(2024, 0, 11, 6, 0)
 }
@@ -350,7 +379,7 @@ const observerDesignPattern: Post = {
   title: '👀 Design Patterns em 1 minuto: Observer #2', 
   description: 'O Design Pattern Observer permite criar um mecanismo — pub/sub — de processamento orientado a eventos...',
   slug: 'design-patterns-em-1-minuto-observer',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '17-observer-design-pattern',
   createdAt: new Date(2024, 0, 10, 5, 30)
 }
@@ -366,7 +395,7 @@ const builderDesignPattern: Post = {
   title: '👷 Design Patterns em 1 minuto: Builder #1', 
   description: 'Builder é o padrão de projeto que tem como objetivo principal permitir a criação de objetos complexos de maneira simplificada e estruturada...',
   slug: 'design-patterns-em-1-minuto-builder',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '16-builder-design-pattern',
   createdAt: new Date(2024, 0, 9, 7, 30)
 }
@@ -382,7 +411,7 @@ const designPatterns: Post = {
   title: '🥷 Design Patterns em 1 minuto', 
   description: 'Os padrões de projeto são uma forma padronizada de solucionar um problema comum existente no desenvolvimento de software...',
   slug: 'design-patterns-em-1-minuto',
-  tags: ['designpatterns', 'softwaredevelopment'],
+  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '15-design-patterns',
   createdAt: new Date(2024, 0, 8, 6, 0)
 }
@@ -398,7 +427,7 @@ const distributedTracing: Post = {
   title: '🧶 Coisas que você deveria saber sobre sistemas distribuídos: Distributed Tracing', 
   description: 'Distributed Tracing, em tradução livre rastreamento distribuído, é um padrão arquitetural de microserviços utilizado para facilitar e otimizar a observabilidade em sistemas distribuídos.',
   slug: 'distributed-tracing',
-  tags: ['distributedsystems', 'observability'],
+  tags: [Tags.DISTRIBUTED_SYSTEMS, Tags.OBSERVABILITY],
   fileName: '14-distributed-tracing',
   createdAt: new Date(2024, 0, 4, 6, 0)
 }
@@ -414,7 +443,7 @@ const howSpringProvidesDependencyInjection: Post = {
   title: '🍃 Como o Spring provê a injeção de dependências?', 
   description: 'Que a injeção “automágica” de dependências do Spring proporciona agilidade e simplicidade na escrita de aplicações todos nós já sabemos, mas você sabe como o Spring gerencia e provê essa funcionalidade para nós desenvolvedores?',
   slug: 'como-o-spring-prove-a-injecao-de-dependencias',
-  tags: ['softwaredevelopment'],
+  tags: [Tags.SOFTWARE_DEVELOPMENT],
   fileName: '13-how-spring-provides-di',
   createdAt: new Date(2024, 0, 1, 5, 30)
 }
@@ -430,7 +459,7 @@ const inversionOfControl: Post = {
   title: '🕺 O que é IoC?', 
   description: 'IoC, acrônimo de Inversion of Control (Inversão de Controle), é um princípio da engenharia de software que incentiva a inversão do controle do fluxo da aplicação, mas o que significa isso?',
   slug: 'o-que-e-ioc',
-  tags: ['softwaredevelopment'],
+  tags: [Tags.SOFTWARE_DEVELOPMENT],
   fileName: '12-inversion-of-control',
   createdAt: new Date(2023, 11, 28, 6, 0)
 }
@@ -446,7 +475,7 @@ const queuesAndStacks: Post = {
   title: '🦉 Filas e pilhas', 
   description: 'Filas e pilhas são estruturas de dados muito utilizadas quando precisamos encadear elementos em uma coleção, são muito semelhantes a filas encadeadas, porém, mais restritas e específicas para seus casos de uso, vamos entender…',
   slug: 'filas-e-pilhas',
-  tags: ['datastructures', 'softwaredevelopment'],
+  tags: [Tags.DATA_STRUCTURES, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '11-queues-and-stacks',
   createdAt: new Date(2023, 11, 25, 6, 0)
 }
@@ -462,7 +491,7 @@ const arraysAndLinkedLists: Post = {
   title: '☀️ Arrays e listas encadeadas', 
   description: 'Arrays e listas encadeadas (linked lists) são estruturas de dados que armazenam coleções de elementos, mas fazem isso de diferentes formas, com suas respectivas vantagens e desvantagens.',
   slug: 'arrays-e-listas-encadeadas',
-  tags: ['datastructures', 'softwaredevelopment'],
+  tags: [Tags.DATA_STRUCTURES, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '10-arrays-and-linked-lists',
   createdAt: new Date(2023, 11, 21, 6, 0)
 }
@@ -478,7 +507,7 @@ const ideasToPracticeProgramming: Post = {
   title: '💡 6 ideias para praticar programação', 
   description: 'Escrito por um programador e para programadores ou interessados, este texto oferece formas e estratégias para pôr em prática a escrita de código, desde desafios de codificação até projetos colaborativos.',
   slug: 'ideias-para-praticar-programacao',
-  tags: ['beginners', 'community'],
+  tags: [Tags.BEGINNERS, Tags.COMMUNITY],
   fileName: '9-ideas-to-practice-programming',
   createdAt: new Date(2023, 11, 18, 5, 30)
 }
@@ -494,7 +523,7 @@ const gitCommands: Post = {
   title: '😸 Git: Comandos chave para devs', 
   description: 'Para desenvolvedores modernos, o Git é uma ferramenta indispensável. Dominar seus comandos é essencial para otimizar o fluxo de trabalho. Esta leitura contém algum dos comandos que mais utilizo durante meu fluxo de desenvolvimento.',
   slug: 'git-commands',
-  tags: ['softwaredevelopment'],
+  tags: [Tags.SOFTWARE_DEVELOPMENT],
   fileName: '8-git-commands',
   createdAt: new Date(2023, 11, 15, 18, 30)
 }
@@ -510,7 +539,7 @@ const avoidExceptions = {
   title: '🚫 PARE de usar exceções para controle de fluxo', 
   description: 'As exceções podem estar causando impacto de performance desnecessário na sua aplicação — se você as utiliza para controle de fluxo. Entenda...',
   slug: 'avoid-exceptions-as-control-flow',
-  tags: ['softwaredevelopment'],
+  tags: [Tags.SOFTWARE_DEVELOPMENT],
   fileName: '7-avoid-exceptions',
   createdAt: new Date(2023, 11, 11, 6, 0)
 }
@@ -526,7 +555,7 @@ const codeReview: Post = {
   title: '🤝 Revisão de código: criando um ambiente de colaboração e aprendizado contínuo', 
   description: 'A revisão de código é uma parte crucial do processo de desenvolvimento de software, é o momento onde desenvolvedores examinam o código fonte de outros desenvolvedores com objetivo de prover sugestões sobre as alterações analisadas e...',
   slug: 'code-review-best-practices',
-  tags: ['softwaredevelopment'],
+  tags: [Tags.SOFTWARE_DEVELOPMENT],
   fileName: '6-code-review',
   createdAt: new Date(2023, 11, 4, 5, 2)
 }
@@ -542,7 +571,7 @@ const helloWorld: Post = {
   title: '👋 Olá, eu sou o Flôr', 
   description: 'Este é o lugar em que escrevo o que gostaria de ler, falo sobre o que estou estudando e publico devaneios sobre sistemas que você utiliza todos os dias.',
   slug: 'hello-world',
-  tags: ['hello'],
+  tags: [Tags.HELLO, Tags.COMMUNITY],
   fileName: '5-hello-world',
   createdAt: new Date(2023, 10, 27, 6)
 }
@@ -558,7 +587,7 @@ const hateoas = {
   title: '🥏 O que é HATEOAS e qual sua relação com REST?', 
   description: 'Falamos recentemente sobre REST, o que é e quais suas principais características, porém, um tema ficou em aberto para conversarmos, e chegou o momento de fazer isto, vamos falar sobre o que é HATEOAS…',
   slug: 'o-que-e-hateoas',
-  tags: ['rest'],
+  tags: [Tags.REST],
   fileName: '4-o-que-e-hateoas',
   createdAt: new Date(2023, 10, 23, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155')
@@ -568,7 +597,7 @@ const capTheorem: Post = {
   title: '🌀 Coisas que você deveria saber sobre sistemas distribuídos: Teorema CAP', 
   description: 'O teorema CAP, também conhecido como teorema de Brewer, é um dos princípios fundamentais dos sistemas distribuídos. A premissa do teorema é que nenhum sistema com distribuição de dados pela rede…',
   slug: 'teorema-cap',
-  tags: ['distributedsystems'],
+  tags: [Tags.DISTRIBUTED_SYSTEMS],
   fileName: '3-teorema-cap',
   createdAt: new Date(2023, 10, 20, 6),
   origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d')
@@ -585,7 +614,7 @@ const json: Post = {
   title: 'O que é JSON? 🏒', 
   description: 'O acrônimo JSON vem de JavaScript Object Notation, é um formato leve de gravar e transportar dados, é utilizado comumente na comunicação entre aplicações cliente-servidor, é "auto descritivo" e fácil de entender.',
   slug: 'o-que-e-json',
-  tags: ['json'],
+  tags: [Tags.JSON],
   fileName: '2-o-que-e-json',
   createdAt: new Date(2023, 10, 11, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df')
@@ -602,13 +631,14 @@ const rest: Post = {
   title: 'O que é REST? 😴', 
   description: 'Se você pensou em descanso, lamento ter que informar, porém não será o tema do artigo de hoje, na verdade vamos falar sobre um estilo de arquitetura de software, em algumas literaturas também chamado…',
   slug: 'o-que-e-rest',
-  tags: ['rest', 'distributedsystems'],
+  tags: [Tags.REST, Tags.DISTRIBUTED_SYSTEMS],
   fileName: '1-o-que-e-rest',
   createdAt: new Date(2023, 10, 5, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd')
 }
 
 const posts: Post[] = [
+  interpreterDesignPattern,
   mediatorDesignPattern,
   flyweightDesignPattern,
   factoryMethodDesignPattern,
