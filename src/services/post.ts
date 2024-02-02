@@ -38,7 +38,24 @@ export enum Tags {
   BEGINNERS = "beginners",
   COMMUNITY = "community",
   OBSERVABILITY = "observability",
+  OBJECT_ORIENTED_PROGRAMMING = "oop"
 }
+
+const javaEncapsulation: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1518443855757-dfadac7101ae',
+    author: {
+      name: 'Grégoire Bertaud',
+      href: 'https://unsplash.com/@sirtook'
+    }
+  },
+  title: '🎯 Java: Encapsulamento', 
+  description: 'Encapsulamento é um dos pilares da Programação Orientada a Objetos (POO). Refere-se à ação de agrupar dados (atributos) e comportamentos (métodos) em uma única unidade, denominada objeto...',
+  slug: 'java-encapsulamento',
+  tags: [Tags.OBJECT_ORIENTED_PROGRAMMING],
+  fileName: '39-java-encapsulation',
+  createdAt: new Date(2024, 1, 5, 6, 0)
+} 
 
 const interpreterDesignPattern: Post = {
   cover: {
@@ -646,6 +663,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  javaEncapsulation,
   interpreterDesignPattern,
   mediatorDesignPattern,
   flyweightDesignPattern,
