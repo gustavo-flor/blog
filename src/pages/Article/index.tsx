@@ -72,7 +72,7 @@ const Article = () => {
           }
           <div className='flex items-center gap-x-2 mt-8'>
             <div className='w-20 rounded-full overflow-hidden border-2 border-purple-500 cursor-pointer'>
-              <img src={Me} alt='Uma foto minha criada por IA' />
+              <img src={Me} alt='Ilustração do autor criada por uma IA' />
             </div>
             <div className='flex flex-col text-gray-500'>
               <span className='font-bold text-gray-700'>Gustavo Flôr</span>
