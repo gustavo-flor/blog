@@ -55,7 +55,8 @@ const javaEncapsulation: Post = {
   slug: 'java-encapsulamento',
   tags: [Tags.OBJECT_ORIENTED_PROGRAMMING],
   fileName: '39-java-encapsulation',
-  createdAt: new Date(2024, 1, 5, 6, 0)
+  createdAt: new Date(2024, 1, 5, 6, 0),
+  listed: true
 } 
 
 const interpreterDesignPattern: Post = {
