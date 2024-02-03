@@ -17,6 +17,7 @@ export interface Post {
   fileName: string;
   createdAt: Date;
   origin?: URL;
+  listed: boolean;
 }
 
 interface Page<I> {
@@ -70,7 +71,8 @@ const interpreterDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-interpreter',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '38-interpreter-design-pattern',
-  createdAt: new Date(2024, 0, 31, 6, 0)
+  createdAt: new Date(2024, 0, 31, 6, 0),
+  listed: false
 }
 
 const mediatorDesignPattern: Post = {
@@ -86,7 +88,8 @@ const mediatorDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-mediator',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '37-mediator-design-pattern',
-  createdAt: new Date(2024, 0, 30, 6, 0)
+  createdAt: new Date(2024, 0, 30, 6, 0),
+  listed: false
 }
 
 const flyweightDesignPattern: Post = {
@@ -102,7 +105,8 @@ const flyweightDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-flyweight',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '36-flyweight-design-pattern',
-  createdAt: new Date(2024, 0, 29, 6, 0)
+  createdAt: new Date(2024, 0, 29, 6, 0),
+  listed: false
 }
 
 const factoryMethodDesignPattern: Post = {
@@ -118,7 +122,8 @@ const factoryMethodDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-factory-method',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '35-factory-method-design-pattern',
-  createdAt: new Date(2024, 0, 28, 6, 0)
+  createdAt: new Date(2024, 0, 28, 6, 0),
+  listed: false
 }
 
 const templateMethodDesignPattern: Post = {
@@ -134,7 +139,8 @@ const templateMethodDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-template-method',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '34-template-method-design-pattern',
-  createdAt: new Date(2024, 0, 27, 6, 0)
+  createdAt: new Date(2024, 0, 27, 6, 0),
+  listed: false
 }
 
 const bridgeDesignPattern: Post = {
@@ -150,7 +156,8 @@ const bridgeDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-bridge',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '33-bridge-design-pattern',
-  createdAt: new Date(2024, 0, 26, 6, 0)
+  createdAt: new Date(2024, 0, 26, 6, 0),
+  listed: false
 }
 
 const iteratorDesignPattern: Post = {
@@ -166,7 +173,8 @@ const iteratorDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-iterator',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '32-iterator-design-pattern',
-  createdAt: new Date(2024, 0, 25, 6, 0)
+  createdAt: new Date(2024, 0, 25, 6, 0),
+  listed: false
 }
 
 const visitorDesignPattern: Post = {
@@ -182,7 +190,8 @@ const visitorDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-visitor',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '31-visitor-design-pattern',
-  createdAt: new Date(2024, 0, 24, 6, 0)
+  createdAt: new Date(2024, 0, 24, 6, 0),
+  listed: false
 }
 
 const compositeDesignPattern: Post = {
@@ -198,7 +207,8 @@ const compositeDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-composite',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '30-composite-design-pattern',
-  createdAt: new Date(2024, 0, 23, 6, 0)
+  createdAt: new Date(2024, 0, 23, 6, 0),
+  listed: false
 }
 
 const abstractFactoryDesignPattern: Post = {
@@ -214,7 +224,8 @@ const abstractFactoryDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-abstract-factory',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '29-abstract-factory-design-pattern',
-  createdAt: new Date(2024, 0, 22, 6, 0)
+  createdAt: new Date(2024, 0, 22, 6, 0),
+  listed: false
 }
 
 const mementoDesignPattern: Post = {
@@ -230,7 +241,8 @@ const mementoDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-memento',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '28-memento-design-pattern',
-  createdAt: new Date(2024, 0, 21, 6, 0)
+  createdAt: new Date(2024, 0, 21, 6, 0),
+  listed: false
 }
 
 const proxyDesignPattern: Post = {
@@ -246,7 +258,8 @@ const proxyDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-proxy',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '27-proxy-design-pattern',
-  createdAt: new Date(2024, 0, 20, 6, 0)
+  createdAt: new Date(2024, 0, 20, 6, 0),
+  listed: false
 }
 
 const stateDesignPattern: Post = {
@@ -262,7 +275,8 @@ const stateDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-state',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '26-state-design-pattern',
-  createdAt: new Date(2024, 0, 19, 6, 0)
+  createdAt: new Date(2024, 0, 19, 6, 0),
+  listed: false
 }
 
 const strategyDesignPattern: Post = {
@@ -278,7 +292,8 @@ const strategyDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-strategy',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '25-strategy-design-pattern',
-  createdAt: new Date(2024, 0, 18, 6, 0)
+  createdAt: new Date(2024, 0, 18, 6, 0),
+  listed: false
 }
 
 const facadeDesignPattern: Post = {
@@ -294,7 +309,8 @@ const facadeDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-facade',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '24-facade-design-pattern',
-  createdAt: new Date(2024, 0, 17, 6, 0)
+  createdAt: new Date(2024, 0, 17, 6, 0),
+  listed: false
 }
 
 const prototypeDesignPattern: Post = {
@@ -310,7 +326,8 @@ const prototypeDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-prototype',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '23-prototype-design-pattern',
-  createdAt: new Date(2024, 0, 16, 6, 0)
+  createdAt: new Date(2024, 0, 16, 6, 0),
+  listed: false
 }
 
 const commandDesignPattern: Post = {
@@ -326,7 +343,8 @@ const commandDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-command',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '22-command-design-pattern',
-  createdAt: new Date(2024, 0, 15, 6, 0)
+  createdAt: new Date(2024, 0, 15, 6, 0),
+  listed: false
 }
 
 const decoratorDesignPattern: Post = {
@@ -342,7 +360,8 @@ const decoratorDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-decorator',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '21-decorator-design-pattern',
-  createdAt: new Date(2024, 0, 14, 6, 0)
+  createdAt: new Date(2024, 0, 14, 6, 0),
+  listed: false
 }
 
 const chainOfResponsibilityDesignPattern: Post = {
@@ -358,7 +377,8 @@ const chainOfResponsibilityDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-chain-of-responsibility',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '20-chain-of-responsibility-design-pattern',
-  createdAt: new Date(2024, 0, 13, 5, 0)
+  createdAt: new Date(2024, 0, 13, 5, 0),
+  listed: false
 }
 
 const singletonDesignPattern: Post = {
@@ -374,7 +394,8 @@ const singletonDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-singleton',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '19-singleton-design-pattern',
-  createdAt: new Date(2024, 0, 12, 6, 0)
+  createdAt: new Date(2024, 0, 12, 6, 0),
+  listed: false
 }
 
 const adapterDesignPattern: Post = {
@@ -390,7 +411,8 @@ const adapterDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-adapter',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '18-adapter-design-pattern',
-  createdAt: new Date(2024, 0, 11, 6, 0)
+  createdAt: new Date(2024, 0, 11, 6, 0),
+  listed: false
 }
 
 const observerDesignPattern: Post = {
@@ -406,7 +428,8 @@ const observerDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-observer',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '17-observer-design-pattern',
-  createdAt: new Date(2024, 0, 10, 5, 30)
+  createdAt: new Date(2024, 0, 10, 5, 30),
+  listed: false
 }
 
 const builderDesignPattern: Post = {
@@ -422,7 +445,8 @@ const builderDesignPattern: Post = {
   slug: 'design-patterns-em-1-minuto-builder',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '16-builder-design-pattern',
-  createdAt: new Date(2024, 0, 9, 7, 30)
+  createdAt: new Date(2024, 0, 9, 7, 30),
+  listed: false
 }
 
 const designPatterns: Post = {
@@ -438,7 +462,8 @@ const designPatterns: Post = {
   slug: 'design-patterns-em-1-minuto',
   tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '15-design-patterns',
-  createdAt: new Date(2024, 0, 8, 6, 0)
+  createdAt: new Date(2024, 0, 8, 6, 0),
+  listed: true
 }
 
 const distributedTracing: Post = {
@@ -454,7 +479,8 @@ const distributedTracing: Post = {
   slug: 'distributed-tracing',
   tags: [Tags.DISTRIBUTED_SYSTEMS, Tags.OBSERVABILITY],
   fileName: '14-distributed-tracing',
-  createdAt: new Date(2024, 0, 4, 6, 0)
+  createdAt: new Date(2024, 0, 4, 6, 0),
+  listed: true
 }
 
 const howSpringProvidesDependencyInjection: Post = {
@@ -470,7 +496,8 @@ const howSpringProvidesDependencyInjection: Post = {
   slug: 'como-o-spring-prove-a-injecao-de-dependencias',
   tags: [Tags.SOFTWARE_DEVELOPMENT],
   fileName: '13-how-spring-provides-di',
-  createdAt: new Date(2024, 0, 1, 5, 30)
+  createdAt: new Date(2024, 0, 1, 5, 30),
+  listed: true
 }
 
 const inversionOfControl: Post = {
@@ -486,7 +513,8 @@ const inversionOfControl: Post = {
   slug: 'o-que-e-ioc',
   tags: [Tags.SOFTWARE_DEVELOPMENT],
   fileName: '12-inversion-of-control',
-  createdAt: new Date(2023, 11, 28, 6, 0)
+  createdAt: new Date(2023, 11, 28, 6, 0),
+  listed: true
 }
 
 const queuesAndStacks: Post = {
@@ -502,7 +530,8 @@ const queuesAndStacks: Post = {
   slug: 'filas-e-pilhas',
   tags: [Tags.DATA_STRUCTURES, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '11-queues-and-stacks',
-  createdAt: new Date(2023, 11, 25, 6, 0)
+  createdAt: new Date(2023, 11, 25, 6, 0),
+  listed: true
 }
 
 const arraysAndLinkedLists: Post = { 
@@ -518,7 +547,8 @@ const arraysAndLinkedLists: Post = {
   slug: 'arrays-e-listas-encadeadas',
   tags: [Tags.DATA_STRUCTURES, Tags.SOFTWARE_DEVELOPMENT],
   fileName: '10-arrays-and-linked-lists',
-  createdAt: new Date(2023, 11, 21, 6, 0)
+  createdAt: new Date(2023, 11, 21, 6, 0),
+  listed: true
 }
 
 const ideasToPracticeProgramming: Post = { 
@@ -534,7 +564,8 @@ const ideasToPracticeProgramming: Post = {
   slug: 'ideias-para-praticar-programacao',
   tags: [Tags.BEGINNERS, Tags.COMMUNITY],
   fileName: '9-ideas-to-practice-programming',
-  createdAt: new Date(2023, 11, 18, 5, 30)
+  createdAt: new Date(2023, 11, 18, 5, 30),
+  listed: true
 }
 
 const gitCommands: Post = { 
@@ -550,7 +581,8 @@ const gitCommands: Post = {
   slug: 'git-commands',
   tags: [Tags.SOFTWARE_DEVELOPMENT],
   fileName: '8-git-commands',
-  createdAt: new Date(2023, 11, 15, 18, 30)
+  createdAt: new Date(2023, 11, 15, 18, 30),
+  listed: true
 }
 
 const avoidExceptions = { 
@@ -566,7 +598,8 @@ const avoidExceptions = {
   slug: 'avoid-exceptions-as-control-flow',
   tags: [Tags.SOFTWARE_DEVELOPMENT],
   fileName: '7-avoid-exceptions',
-  createdAt: new Date(2023, 11, 11, 6, 0)
+  createdAt: new Date(2023, 11, 11, 6, 0),
+  listed: true
 }
 
 const codeReview: Post = { 
@@ -582,7 +615,8 @@ const codeReview: Post = {
   slug: 'code-review-best-practices',
   tags: [Tags.SOFTWARE_DEVELOPMENT],
   fileName: '6-code-review',
-  createdAt: new Date(2023, 11, 4, 5, 2)
+  createdAt: new Date(2023, 11, 4, 5, 2),
+  listed: true
 }
 
 const helloWorld: Post = { 
@@ -598,7 +632,8 @@ const helloWorld: Post = {
   slug: 'hello-world',
   tags: [Tags.HELLO, Tags.COMMUNITY],
   fileName: '5-hello-world',
-  createdAt: new Date(2023, 10, 27, 6)
+  createdAt: new Date(2023, 10, 27, 6),
+  listed: true
 }
 
 const hateoas = { 
@@ -615,7 +650,8 @@ const hateoas = {
   tags: [Tags.REST],
   fileName: '4-o-que-e-hateoas',
   createdAt: new Date(2023, 10, 23, 6),
-  origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155')
+  origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155'),
+  listed: true
 }
 
 const capTheorem: Post = { 
@@ -625,7 +661,8 @@ const capTheorem: Post = {
   tags: [Tags.DISTRIBUTED_SYSTEMS],
   fileName: '3-teorema-cap',
   createdAt: new Date(2023, 10, 20, 6),
-  origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d')
+  origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d'),
+  listed: true
 }
 
 const json: Post = { 
@@ -642,7 +679,8 @@ const json: Post = {
   tags: [Tags.JSON],
   fileName: '2-o-que-e-json',
   createdAt: new Date(2023, 10, 11, 6),
-  origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df')
+  origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df'),
+  listed: true
 }
 
 const rest: Post = { 
@@ -659,7 +697,8 @@ const rest: Post = {
   tags: [Tags.REST, Tags.DISTRIBUTED_SYSTEMS],
   fileName: '1-o-que-e-rest',
   createdAt: new Date(2023, 10, 5, 6),
-  origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd')
+  origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd'),
+  listed: true
 }
 
 const posts: Post[] = [
@@ -720,12 +759,14 @@ const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post>
   };
 }
 
+const listedPosts = posts.filter(it => it.listed);
+
 export const findAll = (page?: number, size?: number): Page<Post> => {
-  return paginate(posts, page, size);
+  return paginate(listedPosts, page, size);
 }
 
 export const findAllByTag = (tag: string, page?: number, size?: number): Page<Post> => {
-  const filteredPosts = posts.filter(it => it.tags.includes(tag));
+  const filteredPosts = listedPosts.filter(it => it.tags.includes(tag));
   return paginate(filteredPosts, page, size);
 }
 
