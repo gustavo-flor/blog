@@ -9,7 +9,7 @@ const Presentation = () => (
         </h1>
       </div>
       <div className='w-20 rounded-full overflow-hidden border-2 hover:border-purple-500 mb-[-5rem] transition-all hover:scale-150 cursor-pointer'>
-        <img src={Me} alt='Uma foto minha criada por IA' />
+        <img src={Me} alt='Ilustração do autor criada por uma IA' />
       </div>
     </div>
   </main>
