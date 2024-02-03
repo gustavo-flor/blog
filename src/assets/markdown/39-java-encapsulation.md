@@ -79,7 +79,9 @@ Este modificador define que seus recursos podem ser acessados por qualquer class
 
 Dos 4 modificadores de acesso existentes, este é o único que não possui palavra-chave, e por isso é chamado de _default_ (padrão) — também conhecido como _package private_.
 
-> Se ficou na dúvida sobre como utilizar esse modificador, dê uma olhada no método `isOn` da classe `RemoteControl` no exemplo anterior.
+O Java irá considerar o uso do modificador de acesso *default* nos casos em que não definimos nenhum outro modificador de acesso.
+
+> Se ficou na dúvida sobre seu funcionamento, dê uma olhada no método `isOn` da classe `RemoteControl` no exemplo anterior.
 
 Este modificador concede acesso total aos recursos para as classes do mesmo pacote.
 

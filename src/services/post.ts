@@ -43,10 +43,10 @@ export enum Tags {
 
 const javaEncapsulation: Post = {
   cover: {
-    href: 'https://images.unsplash.com/photo-1518443855757-dfadac7101ae',
+    href: 'https://images.unsplash.com/photo-1597250388001-fc5a96b307eb',
     author: {
-      name: 'Grégoire Bertaud',
-      href: 'https://unsplash.com/@sirtook'
+      name: 'Zach Zook',
+      href: 'https://unsplash.com/@zachzook'
     }
   },
   title: '🎯 Java: Encapsulamento', 
