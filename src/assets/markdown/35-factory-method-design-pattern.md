@@ -21,7 +21,7 @@ Voltando para o nosso exemplo, imagine uma classe base `Furniture` (mobília) e 
 
 Vamos disponibilizar uma classe chamada `FurnitureFactory` com os métodos `createChair()` e `createCouch()`, cada uma das classes especializadas deve prover uma extensão para `FurnitureFactory` e seus métodos.
 
-> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/1ebb1acd4972a5a3a53c508d53f302968ff9ec09/src/main/java/com/github/gustavoflor/dpho/creational/factorymethod)
+> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/main/src/main/java/com/github/gustavoflor/dpho/creational/factorymethod)
 
 ## Para ir mais fundo
 

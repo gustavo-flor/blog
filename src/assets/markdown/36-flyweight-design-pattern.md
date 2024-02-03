@@ -20,6 +20,8 @@ Temos 3 componentes chave:
 - **Flyweight Factory**: Este componente é responsável por gerenciar a criação do Flyweight. Quando solicitada uma nova instância, ele deve verificar se o objeto já existe em memória. Se não existir, deve criar e armazenar em sua memória interna; em seguida, retornar o objeto.
 - **Context**: Este componente é responsável por armazenar os dados distintos/únicos e deve associar-se a um Flyweight através de composição. Se necessário, solicita a criação do Flyweight via Flyweight Factory.
 
+> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/main/src/main/java/com/github/gustavoflor/dpho/structural/flyweight)
+
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/flyweight>
