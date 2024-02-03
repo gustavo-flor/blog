@@ -18,7 +18,9 @@ O padrão apresenta 3 elementos chave:
 - **Composite**: Esse elemento representa o agrupador, ele é responsável por armazenar objetos individuais ou outros agrupadores. Além disso, deve implementar a interface **Component**.
 - **Leaf**: Esse elemento representa o objeto individual e não deve agrupar mais nenhum outro objeto. A **Leaf** também deve implementar a interface **Component**. 
 
-Com os elementos criados, basta iterar sobre os objetos em mais alto nível utilizando o método disponibilizado pela interface **Component**, e então o **Composite** irá delegar seu comportamento para seus nós (*nodes*).
+Agora basta iterar sobre os objetos em mais alto nível utilizando o método disponibilizado pela interface **Component**, e então o **Composite** irá delegar seu comportamento para seus nós (*nodes*).
+
+> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/main/src/main/java/com/github/gustavoflor/dpho/structural/composite)
 
 ## Para ir mais fundo
 

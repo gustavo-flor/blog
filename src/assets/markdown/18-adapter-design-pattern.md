@@ -23,6 +23,8 @@ Em outras palavras, a ideia é criar uma classe que adapte — por isso nome do 
   </div>
 </aside>
 
+> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/main/src/main/java/com/github/gustavoflor/dpho/structural/adapter)
+
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/adapter>

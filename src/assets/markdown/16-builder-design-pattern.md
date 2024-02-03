@@ -18,7 +18,7 @@ O **Builder** sugere que a responsabilidade de construção dessa classe seja ex
 
 Essa classe especializada deve disponibilizar métodos que preparem a criação do objeto de forma separada (passo a passo) e, por fim, disponibilizar um método que realize a construção de nossa classe.
 
-> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/1ebb1acd4972a5a3a53c508d53f302968ff9ec09/src/main/java/com/github/gustavoflor/dpho/creational/builder)
+> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/main/src/main/java/com/github/gustavoflor/dpho/creational/builder)
 
 ## Para ir mais fundo
 
