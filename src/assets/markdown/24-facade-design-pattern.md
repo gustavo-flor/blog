@@ -20,6 +20,8 @@ Essa camada será responsável por abstrair toda a complexidade dessa biblioteca
 
 Isso diminui o acoplamento e aumenta a manutenabilidade e legibilidade do código.
 
+> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/main/src/main/java/com/github/gustavoflor/dpho/structural/facade)
+
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/facade>

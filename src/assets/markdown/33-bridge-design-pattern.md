@@ -23,6 +23,8 @@ Como mencionado anteriormente, a ideia aqui é separar sua classe em duas camada
 
 Por fim, a ideia central do padrão de projeto **Bridge** é optar pelo uso de composição ao invés de extensão (herança).
 
+> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/main/src/main/java/com/github/gustavoflor/dpho/structural/bridge)
+
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/bridge>

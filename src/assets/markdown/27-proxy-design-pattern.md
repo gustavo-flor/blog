@@ -20,6 +20,8 @@ Continuando o exemplo acima, a ideia seria criar a classe invólucro.
 
 Nessa classe, saberíamos quando fazer cache do resultado para então reutilizá-lo.
 
+> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/main/src/main/java/com/github/gustavoflor/dpho/structural/proxy)
+
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/proxy>

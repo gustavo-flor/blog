@@ -43,6 +43,8 @@ public class PersonDecorator {
 }
 ```
 
+> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/main/src/main/java/com/github/gustavoflor/dpho/structural/decorator)
+
 ## Para ir mais fundo
 
 - <https://refactoring.guru/design-patterns/decorator>

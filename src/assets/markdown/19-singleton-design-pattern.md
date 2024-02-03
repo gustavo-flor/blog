@@ -41,7 +41,7 @@ public class MySingleton {
   </div>
 </aside>
 
-> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/1ebb1acd4972a5a3a53c508d53f302968ff9ec09/src/main/java/com/github/gustavoflor/dpho/creational/singleton)
+> [Código Fonte](https://github.com/gustavo-flor/design-patterns-hands-on/tree/main/src/main/java/com/github/gustavoflor/dpho/creational/singleton)
 
 ## Para ir mais fundo
 
