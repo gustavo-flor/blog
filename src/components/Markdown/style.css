@@ -43,7 +43,7 @@
   display: grid;
   grid-template: "icon content" auto / 2rem auto;
   font-size: 1rem;
-  background-color: theme('colors.gray.100');
+  background-color: theme('colors.gray.50');
   padding: 1.5rem;
   border-radius: .375rem;
 }
