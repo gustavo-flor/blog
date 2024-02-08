@@ -42,6 +42,23 @@ export enum Tags {
   OBJECT_ORIENTED_PROGRAMMING = "oop"
 }
 
+const aggregationAndComposition: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1619017236031-6f55d516f49a',
+    author: {
+      name: 'Federico Di Dio',
+      href: 'https://unsplash.com/@didiofederico_photographer'
+    }
+  },
+  title: '☕️ Agregação e Composição', 
+  description: 'Agregação e composição são dois tipos de relacionamento da programação orientada a objetos (POO). Ambos representam associações de propriedade entre objetos, porém...',
+  slug: 'agregacao-e-composicao',
+  tags: [Tags.OBJECT_ORIENTED_PROGRAMMING],
+  fileName: '40-aggregation-and-composition',
+  createdAt: new Date(2024, 1, 12, 6, 0),
+  listed: true
+}
+
 const javaEncapsulation: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1597250388001-fc5a96b307eb',
@@ -703,6 +720,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  aggregationAndComposition,
   javaEncapsulation,
   interpreterDesignPattern,
   mediatorDesignPattern,
