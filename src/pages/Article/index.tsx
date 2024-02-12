@@ -55,11 +55,6 @@ const Article = () => {
         {post.cover != undefined && 
           <figure>
             <img src={`${post.cover.href}?q=80&w=768`} alt={`Fotografia de ${post.cover.author.name}`} />
-            {post.cover.author != undefined && 
-              <figcaption className='text-center text-gray-400 text-sm mt-4'>
-                Fotografia de <a className='underline text-purple-500' href={post.cover.author.href}>{post.cover.author.name}</a>
-              </figcaption>
-            }
           </figure>
         }
         <header className='mb-8 pt-8'>

@@ -9,7 +9,7 @@ interface Cover {
 }
 
 export interface Post {
-  cover?: Cover;
+  cover: Cover;
   title: string;
   description: string;
   slug: string;
@@ -673,6 +673,13 @@ const hateoas = {
 }
 
 const capTheorem: Post = { 
+  cover: {
+    href: 'https://images.unsplash.com/photo-1569449047196-cebeecbc6b6b',
+    author: {
+      name: 'Yuriy Chemerys',
+      href: 'https://unsplash.com/@ychemerys'
+    }
+  },
   title: '🌀 Coisas que você deveria saber sobre sistemas distribuídos: Teorema CAP', 
   description: 'O teorema CAP, também conhecido como teorema de Brewer, é um dos princípios fundamentais dos sistemas distribuídos. A premissa do teorema é que nenhum sistema com distribuição de dados pela rede…',
   slug: 'teorema-cap',

@@ -32,13 +32,13 @@ const LastPosts = ({ tag }: Props) => {
   }
 
   const LoadingButton = () => (
-    <Button className='animate-spin' title='Loading...'>
+    <Button className='animate-spin' title='Loading...' disabled variant='key-button'>
       <CircleNotch size={48} />
     </Button>
   );
 
   const LoadMoreButton = () => (
-    <Button onClick={() => nextPage()} className='animate-bounce' title='Load More'>
+    <Button onClick={() => nextPage()} className='animate-bounce' title='Load More' variant='key-button'>
       <ArrowCircleDown size={48} />
     </Button>
   );
