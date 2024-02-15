@@ -1,4 +1,4 @@
-O **Quicksort** é um eficiente algoritmo de ordenação, baseia-se em dividir o problema em partes menores — técnica conhecida por _Dividir e Conquistar_ ou _DC_ — utilizando da recursão para resolver esta tarefa.
+O **Quicksort**, um eficiente algoritmo de ordenação, baseia-se em dividir o problema em partes menores — técnica conhecida por _Dividir e Conquistar_ ou _DC_ — utilizando da recursão para resolver esta tarefa.
 
 ## Panorama geral
 
@@ -22,7 +22,7 @@ Agora voltamos ao **Quicksort**, o algoritmo de ordenação utiliza essencialmen
 Particionar refere-se ao ato de selecionar um número qualquer presente no _array_ — denominamos esse número de pivô (_pivot_) — e então posicionar o pivô de modo que todos os números à sua esquerda sejam menores do que ele e todos os números à sua direita sejam maiores do que ele.
 
 <aside class="callout">
-  <div class="icon">💡</div>
+  <div class="icon">🎯</div>
   <div class="content">
     <p>Apesar dos números à esquerda serem menores e os números à direita maiores, isso não significa necessariamente que os elementos estarão ordenados. Mas podemos garantir que o pivô está na posição correta; ou seja, agora precisamos apenas ordenar os números à esquerda e à direita do pivô.</p>
   </div>
@@ -55,6 +55,15 @@ Note que nessa representação temos dois _arrays_ não ordenados ([2, 0] e [7, 
 Agora temos a representação do nosso _array_ como: [0, 2] + [3] + [4, 7] = [0, 2, 3, 4, 7].
 
 Perceba que nesse exemplo o _array_ já está ordenado, porém, imagine um cenário onde ainda reste _arrays_ não ordenados à esquerda ou à direita do seu pivô, a estratégia deve ser sempre a mesma: seguimos particionando até não sobrar nenhum caso.
+
+<aside class="callout">
+  <div class="icon">🤹</div>
+  <div class="content">
+    <p>Existem diversas formas de realizar a ordenação dos números no momento do particionamento. As duas abordagens mais utilizadas são <i>Lomuto</i> e <i>Hoare</i>, ambas estratégias serão abordadas em um próximo texto individualmente, apresentando seus pontos positivos e negativos.</p>
+    </br>
+    <p>Você pode dar uma espiada nas implementações através do código fonte disponibilizado ao fim do texto.</p>
+  </div>
+</aside>
 
 ---
 
