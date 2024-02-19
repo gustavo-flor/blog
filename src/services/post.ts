@@ -36,10 +36,28 @@ export enum Tags {
   JSON = "json",
   HELLO = "hello",
   DATA_STRUCTURES = "datastructures",
+  ALGORITHMS = "algorithms",
   BEGINNERS = "beginners",
   COMMUNITY = "community",
   OBSERVABILITY = "observability",
   OBJECT_ORIENTED_PROGRAMMING = "oop"
+}
+
+const quicksort: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1494947665470-20322015e3a8',
+    author: {
+      name: 'Matt Nelson',
+      href: 'https://unsplash.com/@mnelson'
+    }
+  },
+  title: '⛵️ Algoritmos: Quicksort', 
+  description: 'O Quicksort é um eficiente algoritmo de ordenação, baseia-se em dividir o problema em partes menores, para resolver esta tarefa...',
+  slug: 'algoritmos-quicksort',
+  tags: [Tags.ALGORITHMS],
+  fileName: '41-quicksort',
+  createdAt: new Date(2024, 1, 19, 6, 0),
+  listed: true
 }
 
 const aggregationAndComposition: Post = {
@@ -727,6 +745,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  quicksort,
   aggregationAndComposition,
   javaEncapsulation,
   interpreterDesignPattern,
@@ -769,7 +788,7 @@ const posts: Post[] = [
   rest
 ];
 
-const highlight = howSpringProvidesDependencyInjection;
+const highlight = quicksort;
 
 const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
   const offset = size * (page - 1);
