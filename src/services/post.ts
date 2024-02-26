@@ -40,7 +40,25 @@ export enum Tags {
   BEGINNERS = "beginners",
   COMMUNITY = "community",
   OBSERVABILITY = "observability",
-  OBJECT_ORIENTED_PROGRAMMING = "oop"
+  OBJECT_ORIENTED_PROGRAMMING = "oop",
+  TEST = "test"
+}
+
+const testcontainers: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55',
+    author: {
+      name: 'Kate Stone Matheson',
+      href: 'https://unsplash.com/@kstonematheson'
+    }
+  },
+  title: '🪢 O que é Testcontainers', 
+  description: 'Testcontainers é uma biblioteca de código aberto, que disponibiliza instâncias de qualquer aplicação que possa ser executada em um container...',
+  slug: 'o-que-e-testcontainers',
+  tags: [Tags.DISTRIBUTED_SYSTEMS, Tags.TEST],
+  fileName: '42-testcontainers',
+  createdAt: new Date(2024, 1, 26, 6, 0),
+  listed: true
 }
 
 const quicksort: Post = {
@@ -745,6 +763,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  testcontainers,
   quicksort,
   aggregationAndComposition,
   javaEncapsulation,
@@ -788,7 +807,7 @@ const posts: Post[] = [
   rest
 ];
 
-const highlight = quicksort;
+const highlight = testcontainers;
 
 const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
   const offset = size * (page - 1);
