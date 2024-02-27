@@ -38,13 +38,13 @@ Você pode fazer alterações sem precisar ajustar a última linha, o que pode r
 
 Abaixo está a comparação das alterações necessárias ao remover o último item da lista. 
 
-#### **Sem vírgula**
+#### Sem vírgula
 
 Note como foi necessário alterar a linha 3 ao remover a linha 4:
 
 ![Exemplo sem vírgula](/trailing-comma-java/0-no-comma.png)
 
-#### **Com vírgula**
+#### Com vírgula
 
 Aqui apenas uma linha é alterada:
 
@@ -56,13 +56,13 @@ Em sistemas de controle de versão, como o Git, diffs mais limpos podem ser gera
 
 Abaixo está a comparação do diff gerado ao adicionar um novo elemento ao final de um enum:
 
-#### **Sem vírgula**
+#### Sem vírgula
 
 Neste exemplo podemos ver as múltiplas linhas sendo apresentadas no diff:
 
 ![Exemplo sem vírgula](/trailing-comma-java/1-no-comma.png)
 
-#### **Com vírgula**
+#### Com vírgula
 
 Aqui apenas uma linha apresentada no diff:
 
