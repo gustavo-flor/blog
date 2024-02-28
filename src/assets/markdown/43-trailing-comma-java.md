@@ -78,7 +78,7 @@ Particularmente, se estou trabalhando com um código que pode ser modificado com
 
 ## Para ir mais fundo
 
-Decidi escrever sobre esse tema porque, recentemente, fui questionado sobre essa abordagem e não encontrei nenhum artigo em português ao buscar um material sobre Java que mencionasse esses benefícios.
+Decidi escrever sobre esse tema porque, recentemente, fui questionado sobre essa abordagem e, ao buscar um material sobre Java que mencionasse esses benefícios, não encontrei nenhum texto em português sobre o tema.
 
 A seguir, deixo alguns dos textos que utilizei como referência:
 
