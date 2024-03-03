@@ -41,7 +41,25 @@ export enum Tags {
   COMMUNITY = "community",
   OBSERVABILITY = "observability",
   OBJECT_ORIENTED_PROGRAMMING = "oop",
-  TEST = "test"
+  TEST = "test",
+  JAVA = "java",
+}
+
+const trailingCommaJava: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1644270489776-217a353eb842',
+    author: {
+      name: 'Luca Dugaro',
+      href: 'https://unsplash.com/@lucadgr'
+    }
+  },
+  title: '☕️ Benefícios de utilizar vírgula ao fim de expressões multilinha', 
+  description: 'Neste texto, pretendo apresentar os motivos pelos quais a vírgula ao final de expressões multilinha é mais do que apenas uma convenção de estilo...',
+  slug: 'java-beneficios-virgula-em-expressoes-multilinha',
+  tags: [Tags.JAVA, Tags.SOFTWARE_DEVELOPMENT],
+  fileName: '43-trailing-comma-java',
+  createdAt: new Date(2024, 2, 4, 6, 0),
+  listed: true
 }
 
 const testcontainers: Post = {
@@ -763,6 +781,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  trailingCommaJava,
   testcontainers,
   quicksort,
   aggregationAndComposition,
