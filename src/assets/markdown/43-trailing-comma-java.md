@@ -70,7 +70,7 @@ Aqui apenas uma linha apresentada no diff:
 
 ## Moral da história
 
-No entanto, é importante notar que a vírgula no final das expressões multilinhas não é estritamente necessária para o compilador Java.
+É importante notar que a vírgula no final das expressões multilinhas não é estritamente necessária para o compilador Java.
 
 Portanto, se os benefícios citados não apresentam valor suficiente para você e/ou sua equipe, você não é obrigado a utilizá-los.
 
