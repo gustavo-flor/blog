@@ -53,7 +53,7 @@ const trailingCommaJava: Post = {
       href: 'https://unsplash.com/@lucadgr'
     }
   },
-  title: '☕️ Benefícios de utilizar vírgula ao fim de expressões multilinha', 
+  title: '☕️ Vantagens da vírgula no fim de expressões multilinha', 
   description: 'Neste texto, pretendo apresentar os motivos pelos quais a vírgula ao final de expressões multilinha é mais do que apenas uma convenção de estilo...',
   slug: 'java-beneficios-virgula-em-expressoes-multilinha',
   tags: [Tags.JAVA, Tags.SOFTWARE_DEVELOPMENT],
