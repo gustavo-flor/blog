@@ -43,6 +43,24 @@ export enum Tags {
   OBJECT_ORIENTED_PROGRAMMING = "oop",
   TEST = "test",
   JAVA = "java",
+  BEST_PRACTICES = "bestpractices",
+}
+
+const solid: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1591867833879-1285ba2b206d',
+    author: {
+      name: 'Quentin Grignet',
+      href: 'https://unsplash.com/@qgrignet'
+    }
+  },
+  title: '🧱 O que é SOLID?', 
+  description: 'SOLID é um acrônimo para cinco princípios da programação orientada a objetos que visam a produção de um software sólido (🥸)...',
+  slug: 'o-que-solid',
+  tags: [Tags.BEGINNERS, Tags.SOFTWARE_DEVELOPMENT, Tags.BEST_PRACTICES],
+  fileName: '44-o-que-solid',
+  createdAt: new Date(2024, 2, 11, 6, 0),
+  listed: true
 }
 
 const trailingCommaJava: Post = {
@@ -781,6 +799,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  solid,
   trailingCommaJava,
   testcontainers,
   quicksort,
@@ -826,7 +845,7 @@ const posts: Post[] = [
   rest
 ];
 
-const highlight = testcontainers;
+const highlight = solid;
 
 const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
   const offset = size * (page - 1);
