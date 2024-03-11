@@ -18,7 +18,7 @@ Este princípio ajuda a manter as classes focadas, tornando-as mais fáceis de e
 
 O **Princípio Aberto/Fechado** afirma que as entidades de software (classes, módulos, funções, etc.) devem estar abertas para extensão, mas fechadas para modificação. 
 
-Isso significa que você deve poder adicionar nova funcionalidade a um sistema sem alterar o código existente. 
+Isso significa que você deve poder adicionar uma nova funcionalidade a um sistema sem alterar o código existente. 
 
 Esse princípio promove a robustez e facilita a manutenção e escalabilidade.
 
@@ -36,13 +36,15 @@ Isso garante que um programa possa usar uma classe derivada onde uma classe base
 
 O **Princípio da Segregação de Interfaces** afirma que um cliente não deve ser forçado a depender de interfaces que ele não utiliza. 
 
-Esse princípio incentiva a criação de interfaces menores e mais específicas em vez de interfaces grandes e monolíticas, o que ajuda a reduzir o impacto das mudanças e a manter o sistema mais fácil de manter.
+Esse princípio incentiva a criação de interfaces menores e mais específicas em vez de interfaces grandes e especializadas, o que ajuda a reduzir o impacto das mudanças e a manter o sistema mais fácil de manter.
 
 ### Dependency Inversion Principle — DIP
 
 - 🇧🇷: Princípio da Inversão de Dependências — PID
 
 O **Princípio da Inversão de Dependência** afirma que módulos de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações. Além disso, abstrações não devem depender de detalhes. Detalhes devem depender de abstrações. 
+
+Em outras palavras, suas classes e ou comportamentos não devem depender de detalhes de implementação de outras classes, mas sim de abstrações (interfaces).
 
 Este princípio ajuda a reduzir o acoplamento entre módulos e permite mais flexibilidade e testes mais fáceis.
 
