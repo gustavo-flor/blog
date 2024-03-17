@@ -44,6 +44,24 @@ export enum Tags {
   TEST = "test",
   JAVA = "java",
   BEST_PRACTICES = "bestpractices",
+  DATABASE_SYSTEMS = "databasesystems",
+}
+
+const acidTransactions: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1497910091122-9f8a7746eb33',
+    author: {
+      name: 'Nathan Riley',
+      href: 'https://unsplash.com/@nrly'
+    }
+  },
+  title: '🕯️ O que são transações ACID?', 
+  description: 'Em um sistema de banco de dados, uma transação representa uma unidade de trabalho (operação lógica)...',
+  slug: 'o-que-sao-transacoes-acid',
+  tags: [Tags.DATABASE_SYSTEMS],
+  fileName: '45-acid-transactions',
+  createdAt: new Date(2024, 2, 18, 6, 0),
+  listed: true
 }
 
 const solid: Post = {
@@ -799,6 +817,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  acidTransactions,
   solid,
   trailingCommaJava,
   testcontainers,
@@ -845,7 +864,7 @@ const posts: Post[] = [
   rest
 ];
 
-const highlight = solid;
+const highlight = acidTransactions;
 
 const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
   const offset = size * (page - 1);
