@@ -47,6 +47,23 @@ export enum Tags {
   DATABASE_SYSTEMS = "databasesystems",
 }
 
+const concurrencyAndParallelism: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1604398907654-ec2bf7108b4a',
+    author: {
+      name: 'Kelly',
+      href: 'https://unsplash.com/@kelly104'
+    }
+  },
+  title: '🏎️ Concorrência e Paralelismo', 
+  description: 'Concorrência e paralelismo são conceitos relacionados na computação, frequentemente utilizados como sinônimos. No entanto, eles têm significados diferentes. Entender essa diferença pode ser crucial no design eficiente de um software.',
+  slug: 'concorrencia-e-paralelismo',
+  tags: [Tags.SOFTWARE_DEVELOPMENT, Tags.BEGINNERS],
+  fileName: '46-concurrency-and-parallelism',
+  createdAt: new Date(2024, 2, 25, 6, 0),
+  listed: true
+}
+
 const acidTransactions: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1497910091122-9f8a7746eb33',
@@ -817,6 +834,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  concurrencyAndParallelism,
   acidTransactions,
   solid,
   trailingCommaJava,
@@ -864,7 +882,7 @@ const posts: Post[] = [
   rest
 ];
 
-const highlight = acidTransactions;
+const highlight = concurrencyAndParallelism;
 
 const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
   const offset = size * (page - 1);
