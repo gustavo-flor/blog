@@ -43,8 +43,26 @@ export enum Tags {
   OBJECT_ORIENTED_PROGRAMMING = "oop",
   TEST = "test",
   JAVA = "java",
+  SPRING = "spring",
   BEST_PRACTICES = "bestpractices",
   DATABASE_SYSTEMS = "databasesystems",
+}
+
+const springMail: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1618230305526-48435ece521f',
+    author: {
+      name: 'Oscar Fickel',
+      href: 'https://unsplash.com/@oscarfickel3'
+    }
+  },
+  title: '📮 Envio de e-mails com Spring Mail', 
+  description: 'O envio de e-mails é um aspecto crucial para diversas aplicações, sendo utilizado para enviar notificações, alertas ou comunicações para os usuários.',
+  slug: 'envio-de-emails-com-spring-mail',
+  tags: [Tags.JAVA, Tags.SPRING, Tags.BEGINNERS],
+  fileName: '47-spring-mail',
+  createdAt: new Date(2024, 3, 8, 6, 0),
+  listed: true
 }
 
 const concurrencyAndParallelism: Post = {
@@ -834,6 +852,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  springMail,
   concurrencyAndParallelism,
   acidTransactions,
   solid,
@@ -882,7 +901,7 @@ const posts: Post[] = [
   rest
 ];
 
-const highlight = concurrencyAndParallelism;
+const highlight = springMail;
 
 const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
   const offset = size * (page - 1);
