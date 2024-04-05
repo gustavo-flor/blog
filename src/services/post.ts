@@ -48,6 +48,23 @@ export enum Tags {
   DATABASE_SYSTEMS = "databasesystems",
 }
 
+const springAndOpenAPI: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1671900599250-5f6a1ff85762',
+    author: {
+      name: 'Felicia Montenegro',
+      href: 'https://unsplash.com/@feliciamontenegro'
+    }
+  },
+  title: '📝 Spring: Documentando sua API HTTP com OpenAPI', 
+  description: 'O OpenAPI, também conhecido como Swagger, é uma forma de especificar e documentar sua API HTTP. É uma forma padronizada e agnóstica à linguagem que permite expor os padrões e comportamentos de um serviço...',
+  slug: 'documentando-sua-app-spring-com-open-api',
+  tags: [Tags.JAVA, Tags.SPRING, Tags.BEGINNERS],
+  fileName: '48-spring-and-openapi',
+  createdAt: new Date(2024, 3, 15, 6, 0),
+  listed: true
+}
+
 const springMail: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1618230305526-48435ece521f',
@@ -852,6 +869,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  springAndOpenAPI,
   springMail,
   concurrencyAndParallelism,
   acidTransactions,
