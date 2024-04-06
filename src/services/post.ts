@@ -46,6 +46,24 @@ export enum Tags {
   SPRING = "spring",
   BEST_PRACTICES = "bestpractices",
   DATABASE_SYSTEMS = "databasesystems",
+  TOOLS = "tools",
+}
+
+const sdkman: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1547270785-e11cb938d594',
+    author: {
+      name: 'nrd',
+      href: 'https://unsplash.com/@nicotitto'
+    }
+  },
+  title: '🧑‍💼 SDKMan: Ferramenta para gerenciamento de SDKs', 
+  description: 'Vamos falar sobre o SDKMan, o que é a essa ferramenta e suas vantagem de utilizar. SDKMan é um gerenciador de SDKs...',
+  slug: 'sdkman',
+  tags: [Tags.TOOLS, Tags.BEGINNERS],
+  fileName: '49-sdkman',
+  createdAt: new Date(2024, 3, 22, 6, 0),
+  listed: true
 }
 
 const springAndOpenAPI: Post = {
@@ -869,6 +887,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  sdkman,
   springAndOpenAPI,
   springMail,
   concurrencyAndParallelism,
