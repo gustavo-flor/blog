@@ -46,6 +46,41 @@ export enum Tags {
   SPRING = "spring",
   BEST_PRACTICES = "bestpractices",
   DATABASE_SYSTEMS = "databasesystems",
+  TOOLS = "tools",
+}
+
+const sdkman: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1547270785-e11cb938d594',
+    author: {
+      name: 'nrd',
+      href: 'https://unsplash.com/@nicotitto'
+    }
+  },
+  title: '🧑‍💼 SDKMan: Ferramenta para gerenciamento de SDKs', 
+  description: 'Vamos falar sobre o SDKMan, o que é a essa ferramenta e suas vantagem de utilizar. SDKMan é um gerenciador de SDKs...',
+  slug: 'sdkman',
+  tags: [Tags.TOOLS, Tags.BEGINNERS],
+  fileName: '49-sdkman',
+  createdAt: new Date(2024, 3, 22, 6, 0),
+  listed: true
+}
+
+const springAndOpenAPI: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1671900599250-5f6a1ff85762',
+    author: {
+      name: 'Felicia Montenegro',
+      href: 'https://unsplash.com/@feliciamontenegro'
+    }
+  },
+  title: '📝 Spring: Documentando sua API HTTP com OpenAPI', 
+  description: 'O OpenAPI, também conhecido como Swagger, é uma forma de especificar e documentar sua API HTTP. É uma forma padronizada e agnóstica à linguagem que permite expor os padrões e comportamentos de um serviço...',
+  slug: 'documentando-sua-app-spring-com-open-api',
+  tags: [Tags.JAVA, Tags.SPRING, Tags.BEGINNERS],
+  fileName: '48-spring-and-openapi',
+  createdAt: new Date(2024, 3, 15, 6, 0),
+  listed: true
 }
 
 const springAndOpenAPI: Post = {
@@ -869,6 +904,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  sdkman,
   springAndOpenAPI,
   springMail,
   concurrencyAndParallelism,
