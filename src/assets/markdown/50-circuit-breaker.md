@@ -17,11 +17,11 @@ Antes de começar, vamos definir algumas nomenclaturas que iremos utilizar:
 - **Circuit Breaker**/Disjuntor: Componente responsável por monitor e gerenciar as chamadas remotas de uma aplicação.
 - **Circuito**: Refere-se a integração da aplicação com o serviço remoto.
 
-Sabendo disso, o Circuit Breaker consegue gerenciar os comportamentos de um **circuito** através de seus três possíveis estados:
-
 ### Estados do circuito
 
-#### **Closed** (Fechado)
+O Circuit Breaker gerencia os comportamentos de um **circuito** através de seus três possíveis estados:
+
+#### Closed (Fechado)
 
 ![Ilustração representando o circuito em estado Fechado (Closed)](/circuit-breaker/closed-state.png)
 
@@ -31,7 +31,7 @@ Neste estado assumimos que a saúde das aplicações está ok e apenas monitoram
 
 Caso a aplicação ultrapasse os limites desejados de taxa de erro ou latência, o disjuntor deve abrir o circuito. Em outras palavras, devemos alterar o estado do circuito para **Open**.
 
-#### **Open** (Aberto)
+#### Open (Aberto)
 
 ![Ilustração representando o circuito em estado Aberto (Open)](/circuit-breaker/open-state.png)
 
@@ -41,7 +41,7 @@ Quando o circuito está aberto, ele previni que requisições sejam realizadas p
 
 Durante este estado, o Circuit Breaker normalmente entra em um período de timeout, aguardando assim um determinado período de tempo para que o serviço remoto se estabilize novamente, após este período o disjuntor irá alterar o estado do circuito para **Half-Open**.
 
-#### **Half-Open** (Meio Aberto)
+#### Half-Open (Meio Aberto)
 
 ![Ilustração representando o circuito em estado Meio Aberto (Half-Open)](/circuit-breaker/half-open-state.png)
 
@@ -62,7 +62,7 @@ Existem 2 possíveis tipos de Circuit Breaker, que em resumo definem como será 
 
 Neste texto vou apresentar como implementar e configurar o Circuit Breaker através da biblioteca [Resilience4J](https://resilience4j.readme.io/) em conjunto com o *framework* [Spring](https://spring.io/) (Java / Kotlin).
 
-<aside>
+<aside class="callout">
     <div class="icon">💡</div>
     <div class="content">
         <p>Se você utiliza outra linguagem ou <i>framework</i>, a ideia geral de configuração será muito parecida, a maior diferença será na sintaxe e formas de configuração da biblioteca que escolher, neste caso recomendo a leitura da documentação da biblioteca.</p>
