@@ -49,6 +49,23 @@ export enum Tags {
   TOOLS = "tools",
 }
 
+const circuitBreaker: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1560948799-e17458123a9a',
+    author: {
+      name: 'Azat Kilinç',
+      href: 'https://unsplash.com/@kilincazat'
+    }
+  },
+  title: '🎒 Como utilizar Circuit Breaker para tornar seu serviço mais resiliente', 
+  description: 'O padrão Circuit Breaker, na arquitetura de microsserviços, possibilita que uma aplicação consiga se manter de pé, evitando falhas em cascata, ao enfretar problemas de comunicação com chamadas remotas...',
+  slug: 'como-utilizar-circuit-breaker-para-tornar-seu-servico-resiliente',
+  tags: [Tags.BEST_PRACTICES, Tags.DISTRIBUTED_SYSTEMS],
+  fileName: '50-circuit-breaker',
+  createdAt: new Date(2024, 4, 13, 6, 0),
+  listed: true
+}
+
 const sdkman: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1547270785-e11cb938d594',
@@ -887,6 +904,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  circuitBreaker,
   sdkman,
   springAndOpenAPI,
   springMail,
@@ -938,7 +956,7 @@ const posts: Post[] = [
   rest
 ];
 
-const highlight = springMail;
+const highlight = circuitBreaker;
 
 const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
   const offset = size * (page - 1);
