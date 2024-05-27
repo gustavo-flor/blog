@@ -42,11 +42,29 @@ export enum Tags {
   OBSERVABILITY = "observability",
   OBJECT_ORIENTED_PROGRAMMING = "oop",
   TEST = "test",
+  KOTLIN = "kotlin",
   JAVA = "java",
   SPRING = "spring",
   BEST_PRACTICES = "bestpractices",
   DATABASE_SYSTEMS = "databasesystems",
   TOOLS = "tools",
+}
+
+const kotlinIntroduction: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1494256997604-768d1f608cac',
+    author: {
+      name: 'Mikhail Vasilyev',
+      href: 'https://unsplash.com/@miklevasilyev'
+    }
+  },
+  title: '🧚‍♀️ Kotlin: Vantagens, mitos, dicas e conceitos fundamentais', 
+  description: 'Vamos falar sobre Kotlin! Neste texto, quero compartilhar algumas coisas que aprendi nas últimas semanas, desvendar alguns mitos sobre a linguagem e fornecer exemplos práticos para quem está começando...',
+  slug: 'kotlin-vantagens-mitos-dicas-e-conceitos-fundamentais',
+  tags: [Tags.KOTLIN, Tags.BEGINNERS],
+  fileName: '51-kotlin-introduction',
+  createdAt: new Date(2024, 4, 27, 6, 0),
+  listed: true
 }
 
 const circuitBreaker: Post = {
@@ -904,6 +922,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  kotlinIntroduction,
   circuitBreaker,
   sdkman,
   springAndOpenAPI,
@@ -956,7 +975,7 @@ const posts: Post[] = [
   rest
 ];
 
-const highlight = circuitBreaker;
+const highlight = kotlinIntroduction;
 
 const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
   const offset = size * (page - 1);
