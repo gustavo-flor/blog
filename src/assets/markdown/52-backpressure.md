@@ -1,35 +1,41 @@
-Backpressure é uma técnica para garantir o funcionamento correto de um software ao processar um fluxo de dados, permitindo que a aplicação consiga processar a quantidade esperada de requisições sem sobrecarregar o sistema ou prejudicar seu desempenho.
+Backpressure é uma técnica para garantir o funcionamento correto de um software ao processar um fluxo de dados. 
+
+Ela permite que a aplicação gerencie a quantidade esperada de requisições sem sobrecarregar o sistema ou prejudicar seu desempenho.
 
 ## Em detalhes
 
-Imagine que temos um componente produzindo dados e outro consumindo-os, os componentes estão trabalhando em conjunto sem nenhum problema.
+Imagine que temos um componente produzindo dados e outro consumindo-os, e que ambos estão trabalhando em conjunto sem nenhum problema.
 
-Porém, em determinado momento a quantidade de mensagens que o consumidor consegue processar, em um determinado período, começa a alcançar seu limite.
+Porém, em determinado momento, a quantidade de mensagens que o consumidor consegue processar, em um dado período, começa a alcançar seu limite.
 
-O que devemos fazer nesse caso para evitar que o limite seja ultrapassado, impactando na performance do seu serviço e até mesmo causando instabilidade e por fim queda do sistema?
+O que devemos fazer nesse caso para evitar que o limite seja ultrapassado, impactando na performance do serviço e até mesmo causando instabilidade e, por fim, queda do sistema?
+
+---
 
 <aside class="callout">
   <div class="icon">💡</div>
   <div class="content">
-    <p>É importante notar que os componentes apresentados podem estar em qualquer nível de abstração de sua arquitetura.</p>
-    </br>
-    <p>Isto significa, o produtor e o consumidor podem representar um API gateway e um microserviço, um message broker e um listener, componentes internos de um serviço e etc.</p>
+    <p>É importante notar que os componentes apresentados podem estar em qualquer nível de abstração da sua arquitetura. Isso significa, o produtor e o consumidor podem representar um API Gateway e um microserviço, um message broker e um listener, componentes internos de um serviço, etc.</p>
   </div>
 </aside>
 
-É aqui que o *backpressure* entra na jogada, ele serve como um mecanismo de feedback para informar ao produtor que o consumidor está chegando ao seu limite e que a produção de dados deve ser reduzida até que que os dados possam ser novamente consumidos.
+---
 
-Em outras palavras, *backpressure* serve para balancear a produção e o consumo dos dados, de forma que ambos os componentes funcionem corretamente.
+É aqui que o backpressure entra na jogada. Ele serve como um mecanismo de feedback para informar ao produtor que o consumidor está chegando ao seu limite e que a produção de dados deve ser reduzida até que os dados possam ser novamente consumidos.
+
+Em outras palavras, o backpressure serve para balancear a produção e o consumo dos dados, garantindo que ambos os componentes funcionem corretamente e de forma eficiente.
 
 ## Na prática
 
-Imagine que tenhamos um componente chamado coletor que seja responsável por buscar dados de uma determina API. 
+Imagine que tenhamos um componente, chamado coletor, responsável por buscar dados de uma determina API. 
 
-O coletor busca a cada dez segundos novos registros e envia os dados para outro componente chamado executor. 
+O coletor busca novos registros a cada dez segundos e envia os dados para outro componente chamado executor. 
 
-O executor pode processar no máximo `X` execuções de forma simultânea, além disso, disponibiliza uma fila que pode armazenar até `Y` dados a serem processados.
+O executor pode processar no máximo `X` execuções de forma simultânea e disponibiliza uma fila que pode armazenar até `Y` dados a serem processados.
 
-Para garantir que o executor não atinja seu limite, precisamos de um mecanismo que informe ao coletor qual a capacidade restante do executor, assim o componente pode saber se deve ou não buscar mais dados.
+Para garantir que o executor não atinja seu limite, precisamos de um mecanismo que informe ao coletor qual a capacidade restante do executor.
+
+Desta forma, o coletor pode saber se deve ou não buscar mais dados. Veja um exemplo de implementação do mecanismo:
 
 - **Executor**: Componente responsável por processar os dados
 
@@ -134,9 +140,11 @@ Acesse o código fonte em: [repo.gustavoflor.dev/backpressure-hands-on](https://
 
 Acredito que nesse texto tenhamos conseguido ver uma forma simples de garantir a eficiência de nossa aplicação, evitando a exaustão dos recursos no cenário de consumo de fluxo de dados.
 
-Estou disponibilizando alguns links para se aprofundar mais se tiver vontade, agradeço seu tempo e até breve! 👋
+Agradeço seu tempo e até breve! 👋
 
 ## Para ir mais fundo
+
+Se ficou curioso e quer saber mais, leia também:
 
 - <https://www.c-sharpcorner.com/article/backpressure-pattern-design-principle/>
 - <https://medium.com/@jayphelps/backpressure-explained-the-flow-of-data-through-software-2350b3e77ce7>
