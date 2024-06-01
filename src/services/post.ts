@@ -50,6 +50,23 @@ export enum Tags {
   TOOLS = "tools",
 }
 
+const backpressure: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1631472608403-2c8d6f61a08e',
+    author: {
+      name: 'aisvri',
+      href: 'https://unsplash.com/@aisvri'
+    }
+  },
+  title: '⛲️ Controle de fluxo de dados e gerenciamento de recursos com backpressure', 
+  description: 'Backpressure é uma técnica para garantir o funcionamento correto de um software ao processar um fluxo de dados, permitindo que a aplicação consiga processar a quantidade esperada de requisições sem sobrecarregar o sistema ou prejudicar seu desempenho....',
+  slug: 'o-que-e-backpressure',
+  tags: [Tags.KOTLIN, Tags.DISTRIBUTED_SYSTEMS],
+  fileName: '52-backpressure',
+  createdAt: new Date(2024, 5, 3, 6, 0),
+  listed: true
+}
+
 const kotlinIntroduction: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1494256997604-768d1f608cac',
@@ -922,6 +939,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  backpressure,
   kotlinIntroduction,
   circuitBreaker,
   sdkman,
@@ -975,7 +993,7 @@ const posts: Post[] = [
   rest
 ];
 
-const highlight = kotlinIntroduction;
+const highlight = backpressure;
 
 const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
   const offset = size * (page - 1);
