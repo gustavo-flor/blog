@@ -58,10 +58,10 @@ const backpressure: Post = {
       href: 'https://unsplash.com/@aisvri'
     }
   },
-  title: '🦀 Controle de fluxo de dados e gerenciamento de recursos com backpressure', 
+  title: '🦀 Gerenciamento de fluxo e recursos com backpressure', 
   description: 'Backpressure é uma técnica para garantir o funcionamento correto de um software ao processar um fluxo de dados. Ela permite que a aplicação gerencie...',
   slug: 'o-que-e-backpressure',
-  tags: [Tags.SOFTWARE_DEVELOPMENT, Tags.DISTRIBUTED_SYSTEMS],
+  tags: [Tags.DISTRIBUTED_SYSTEMS],
   fileName: '52-backpressure',
   createdAt: new Date(2024, 5, 3, 6, 0),
   listed: true
