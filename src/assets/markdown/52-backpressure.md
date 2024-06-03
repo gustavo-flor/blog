@@ -134,7 +134,7 @@ fun main() {
 }
 ```
 
-Acesse o código fonte em: [repo.gustavoflor.dev/backpressure-hands-on](https://github.com/gustavo-flor/backpressure-hands-on)
+Acesse o código fonte em: [github.com/gustavo-flor/backpressure-hands-on](https://github.com/gustavo-flor/backpressure-hands-on)
 
 ## Moral da história
 
