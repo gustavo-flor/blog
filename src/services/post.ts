@@ -50,6 +50,23 @@ export enum Tags {
   TOOLS = "tools",
 }
 
+const idempotentApi: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1516446589542-81d7ca527b82',
+    author: {
+      name: 'Danny Trujillo',
+      href: 'https://unsplash.com/@panoramablack'
+    }
+  },
+  title: '🧦 Idempotência em sua API', 
+  description: 'Idempotência é um termo utilizado na computação para definir operações que, de acordo com o input inicial, são executadas múltiplas vezes sem alterar seu resultado final. Entenda...',
+  slug: 'como-garantir-idempotencia-em-sua-api',
+  tags: [Tags.DISTRIBUTED_SYSTEMS, Tags.REST],
+  fileName: '53-idempotent-api',
+  createdAt: new Date(2024, 5, 17, 6, 0),
+  listed: true
+}
+
 const backpressure: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1631472608403-2c8d6f61a08e',
@@ -939,6 +956,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  idempotentApi,
   backpressure,
   kotlinIntroduction,
   circuitBreaker,
@@ -993,7 +1011,7 @@ const posts: Post[] = [
   rest
 ];
 
-const highlight = backpressure;
+const highlight = idempotentApi;
 
 const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
   const offset = size * (page - 1);
