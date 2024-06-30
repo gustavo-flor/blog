@@ -27,7 +27,7 @@ Para que essa comunicação seja realizada através de webhooks, será necessár
 
 Vamos supor que a plataforma de e-commerce disponibilize o seguinte endpoint para configuração de webhooks: 
 
-- `http://ecommerce.com/v1/webhooks/register`. 
+- `https://ecommerce.com/v1/webhooks/register`. 
 
 A aplicação cliente pode enviar uma requisição POST para este endpoint com a URL do webhook, como mostrado abaixo:
 
