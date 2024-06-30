@@ -50,6 +50,23 @@ export enum Tags {
   TOOLS = "tools",
 }
 
+const webhook: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1520038410233-7141be7e6f97',
+    author: {
+      name: 'Erda Estremera',
+      href: 'https://unsplash.com/@erdaest'
+    }
+  },
+  title: '📟 O que é webhook?', 
+  description: 'Webhook é uma forma de comunicação entre sistemas através de callbacks...',
+  slug: 'o-que-e-webhook',
+  tags: [Tags.DISTRIBUTED_SYSTEMS, Tags.REST],
+  fileName: '54-o-que-e-webhook',
+  createdAt: new Date(2024, 6, 1, 6, 0),
+  listed: true
+}
+
 const idempotentApi: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1516446589542-81d7ca527b82',
@@ -956,6 +973,7 @@ const rest: Post = {
 }
 
 const posts: Post[] = [
+  webhook,
   idempotentApi,
   backpressure,
   kotlinIntroduction,
@@ -1011,7 +1029,7 @@ const posts: Post[] = [
   rest
 ];
 
-const highlight = idempotentApi;
+const highlight = webhook;
 
 const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
   const offset = size * (page - 1);
