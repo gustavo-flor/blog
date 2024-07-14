@@ -50,6 +50,23 @@ export enum Tags {
   TOOLS = "tools",
 }
 
+const loadTests: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1535696588143-945e1379f1b0',
+    author: {
+      name: 'riis riiiis',
+      href: 'https://unsplash.com/@riiiis'
+    }
+  },
+  title: '🚚 O que é teste de carga?', 
+  description: 'Simulando diferentes cargas de uso em um sistema, os testes de carga nos ajudam a identificar possíveis gargalos antes mesmo que eles ocorram em produção...',
+  slug: 'o-que-e-teste-de-carga',
+  tags: [Tags.TEST],
+  fileName: '55-o-que-e-teste-de-carga',
+  createdAt: new Date(2024, 6, 15, 6, 0),
+  listed: true
+}
+
 const webhook: Post = {
   cover: {
     href: 'https://images.unsplash.com/photo-1520038410233-7141be7e6f97',
@@ -972,7 +989,10 @@ const rest: Post = {
   listed: true
 }
 
+const highlight = loadTests;
+
 const posts: Post[] = [
+  loadTests,
   webhook,
   idempotentApi,
   backpressure,
@@ -1028,8 +1048,6 @@ const posts: Post[] = [
   json,
   rest
 ];
-
-const highlight = webhook;
 
 const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
   const offset = size * (page - 1);
