@@ -57,7 +57,7 @@ Como é possível perceber, com ações proativas é possível identificar probl
 <aside class="callout">
   <div class="icon">💡</div>
   <div class="content">
-    <p>Se está se perguntando sobre uma ferramenta de testes de carga, fique de olho por aqui, pois estou preparando um material sobre o assunto.</p>
+    <p>Se está se perguntando sobre uma ferramenta de testes de carga, de uma olhada em <a href="https://k6.io" target="_blank">k6.io</a>.</p>
   </div>
 </aside>
 
