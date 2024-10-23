@@ -8,7 +8,7 @@ const Presentation = () => (
           Olá, este é o lugar em que <strong className='text-purple-500'>escrevo o que gostaria de ler</strong>, falo sobre o que estou estudando e publico <s>devaneios</s> sobre sistemas que você utiliza todos os dias. 🦎
         </h1>
       </div>
-      <div className='w-20 h-20 flex items-center rounded-full overflow-hidden border-2 mb-[-5rem] transition-all hover:scale-150 cursor-pointer'>
+      <div className='w-20 h-20 flex relative items-center rounded-full overflow-hidden border-2 mb-[-5rem] transition-all hover:scale-150 cursor-pointer'>
         <img src={Me} alt='Ilustração do autor criada por uma IA' />
       </div>
     </div>
