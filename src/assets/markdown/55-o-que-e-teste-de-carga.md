@@ -36,7 +36,7 @@ A duração deste teste é de aproximadamente 5 a 10 minutos.
 
 Verifica a funcionalidade do sistema sob uma carga superior à média esperada; sua duração é semelhante à do **load** **test**.
 
-- **Spike tes**t
+- **Spike test**
 
 Tem como objetivo principal entender como o sistema se comporta com uma alta taxa de requisições em um curto período de tempo, testando volumes muito acima da média esperada em um período de alguns segundos.
 
