@@ -5,7 +5,7 @@ import Me from '../../assets/me-in-purple.jpg';
 import Anchor from '../../components/Anchor';
 import AppBar from '../../components/AppBar';
 import Footer from '../../components/Footer';
-import Markdown from '../../components/Markdown';
+import Markdown from '../../components/LazyMarkdown';
 import Tags from '../../components/Tags';
 import { Post, findBySlug, getNumberOfWords, getPublishedAt, getReadTime } from './../../services/post';
 import NotFound from './../NotFound';
