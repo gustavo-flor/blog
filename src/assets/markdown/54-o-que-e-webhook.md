@@ -31,7 +31,7 @@ Vamos supor que a plataforma de e-commerce disponibilize o seguinte endpoint par
 
 A aplicação cliente pode enviar uma requisição POST para este endpoint com a URL do webhook, como mostrado abaixo:
 
-```shell
+```bash
 POST /v1/webhooks/register HTTP/1.1
 Host: ecommerce.com
 Content-Type: application/json
@@ -43,7 +43,7 @@ Content-Type: application/json
 
 Quando uma compra for realizada, a plataforma de e-commerce enviará uma requisição para a URL configurada:
 
-```shell
+```bash
 POST /v1/new-purchase HTTP/1.1
 Host: aplicacao.com
 Content-Type: application/json
