@@ -48,6 +48,24 @@ export enum Tags {
   BEST_PRACTICES = "bestpractices",
   DATABASE_SYSTEMS = "databasesystems",
   TOOLS = "tools",
+  CLOUD = "cloud",
+}
+
+const scalabilityAndElasticity: Post = {
+  cover: {
+    href: 'https://images.unsplash.com/photo-1515073883629-5e2924e3e106',
+    author: {
+      name: 'Lodewijk Hertog',
+      href: 'https://unsplash.com/@lue101'
+    }
+  },
+  title: '🪀 Escalabilidade e Elasticidade', 
+  description: 'Now let\'s see the differences main definitions and differences between scalability and elasticity...',
+  slug: 'escalabilidade-e-elasticidade',
+  tags: [Tags.CLOUD, Tags.DISTRIBUTED_SYSTEMS],
+  fileName: '56-escalabilidade-e-elasticidade',
+  createdAt: new Date(2024, 9, 28, 6, 0),
+  listed: true
 }
 
 const loadTests: Post = {
@@ -989,9 +1007,10 @@ const rest: Post = {
   listed: true
 }
 
-const highlight = loadTests;
+const highlight = scalabilityAndElasticity;
 
 const posts: Post[] = [
+  scalabilityAndElasticity,
   loadTests,
   webhook,
   idempotentApi,
