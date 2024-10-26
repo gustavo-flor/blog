@@ -64,7 +64,7 @@ const scalabilityAndElasticity: Post = {
   slug: 'escalabilidade-e-elasticidade',
   tags: [Tags.CLOUD, Tags.DISTRIBUTED_SYSTEMS],
   fileName: '56-escalabilidade-e-elasticidade',
-  createdAt: new Date(2024, 9, 28, 6, 0),
+  createdAt: new Date(2024, 9, 26, 18, 30),
   listed: true
 }
 
