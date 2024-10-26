@@ -29,7 +29,7 @@ Abaixo listei algumas das linguagens atualmente suportadas:
 <aside class="callout">
   <div class="icon">💡</div>
   <div class="content">
-    <p>Se sua linguagem não foi listada, <a href="https://testcontainers.com/getting-started/#supported-languages-and-prerequisites" target="_blank" rel="noreferrer">clique aqui e consulte a lista oficial e atualizada</a>.</p>
+    <p>Se sua linguagem não foi listada, <a href="https://testcontainers.com/getting-started/#supported-languages-and-prerequisites">clique aqui e consulte a lista oficial e atualizada</a>.</p>
   </div>
 </aside>
 
