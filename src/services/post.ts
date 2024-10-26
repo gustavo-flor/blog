@@ -60,7 +60,7 @@ const scalabilityAndElasticity: Post = {
     }
   },
   title: '🪀 Escalabilidade e Elasticidade', 
-  description: 'Now let\'s see the differences main definitions and differences between scalability and elasticity...',
+  description: 'Vamos falar sobre escalabilidade e elasticidade — conceitos relacionados, porém distintos, que muitas vezes são utilizados de forma incorreta como sinônimos....',
   slug: 'escalabilidade-e-elasticidade',
   tags: [Tags.CLOUD, Tags.DISTRIBUTED_SYSTEMS],
   fileName: '56-escalabilidade-e-elasticidade',

@@ -56,7 +56,7 @@ const Article = () => {
           <figure>
             <img src={`${post.cover.href}?q=85&w=768`} alt={`Fotografia de ${post.cover.author.name}`} />
             <figcaption className='text-center text-gray-400 text-sm mt-4'>
-              Fotografia de <a className='underline text-purple-500' href={post.cover.author.href}>{post.cover.author.name}</a>
+              Fotografia de <a className='underline text-purple-500' href={post.cover.author.href} target='_blank'>{post.cover.author.name}</a>
             </figcaption>
           </figure>
         }
