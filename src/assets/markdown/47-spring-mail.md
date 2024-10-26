@@ -191,7 +191,7 @@ Vamos entender as principais alterações:
 <aside class="callout">
     <div class="icon">💡</div>
     <div class="content">
-        <p>Para criar um template de e-mail, você pode utilizar o Thymeleaf em conjunto com a funcionalidade de envio de HTML. <a href="https://www.thymeleaf.org/doc/articles/springmail.html" target="_blank" rel="noreferrer">Clique aqui e saiba mais</a>.</p>
+        <p>Para criar um template de e-mail, você pode utilizar o Thymeleaf em conjunto com a funcionalidade de envio de HTML. <a href="https://www.thymeleaf.org/doc/articles/springmail.html">Clique aqui e saiba mais</a>.</p>
     </div>
 </aside>
 

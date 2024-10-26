@@ -21,7 +21,7 @@ Vimos anteriormente que o Spring gerencia suas Beans através de um componente c
 <aside class="callout">
   <span class="icon">💡</span>
   <div class="content">
-    <p>Se você não sabe o que é <strong>IoC</strong>, <a href="./o-que-e-ioc" target="_blank" rel="noreferrer">clique aqui</a> e entenda.</p>
+    <p>Se você não sabe o que é <strong>IoC</strong>, <a href="./o-que-e-ioc">clique aqui</a> e entenda.</p>
   </div>
 </aside>
 

@@ -56,7 +56,7 @@ const Article = () => {
           <figure>
             <img src={`${post.cover.href}?q=85&w=768`} alt={`Fotografia de ${post.cover.author.name}`} />
             <figcaption className='text-center text-gray-400 text-sm mt-4'>
-              Fotografia de <a className='underline text-purple-500' href={post.cover.author.href} target='_blank'>{post.cover.author.name}</a>
+              Fotografia de <Anchor className='text-purple-500 underline' href={post.cover.author.href}>{post.cover.author.name}</Anchor>
             </figcaption>
           </figure>
         }
@@ -65,7 +65,7 @@ const Article = () => {
           <h1 className='text-3xl sm:text-5xl font-bold mt-4'>{post.title}</h1>
           {post.origin != undefined && 
             <span className='text-xs opacity-40 mt-4 block'>
-              Publicado em <Anchor className='text-purple-500 underline' target='_blank' href={post.origin.href}>{post.origin.hostname}</Anchor>
+              Publicado em <Anchor className='text-purple-500 underline' href={post.origin.href}>{post.origin.hostname}</Anchor>
             </span>
           }
           <div className='flex items-center gap-x-2 mt-8'>
