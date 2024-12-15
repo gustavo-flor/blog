@@ -15,7 +15,7 @@ As operações de uma fila consistem basicamente em:
 - **Enqueue**: Adicionar um elemento ao fim da coleção
 - **Dequeue**: Consultar e remover um elemento do início da coleção
 
-![image](/queues-and-stacks/queue.png)
+![image](/images/queues-and-stacks/queue.png)
 
 Casos onde precisamos processar elementos em ordem são comuns na utilização de filas. Se preciso executar uma sequência de tarefas, posso guardá-las em uma fila e executar um loop sobre essa coleção.
 
@@ -32,7 +32,7 @@ As operações de uma pilha consistem basicamente em:
 - **Push**: Adicionar um elemento ao topo da pilha
 - **Pop**: Consultar e remover o último elemento adicionado
 
-![image](/queues-and-stacks/stack.png)
+![image](/images/queues-and-stacks/stack.png)
 
 É comum sua utilização em casos onde precisamos processar elementos em ordem reversa, por exemplo a funcionalidade de desfazer uma alteração em um documento de texto: as mudanças são adicionadas em uma pilha e a cada ação de desfazer remover a última edição da pilha.
 

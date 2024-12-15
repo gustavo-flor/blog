@@ -33,8 +33,7 @@ const Article = () => {
       return;
     }
     const loadContent = async () => {
-      const module = await import(`./../../assets/markdown/${lang}/${post.fileName}.md`);
-      fetch(module.default)
+      fetch(`/markdown/${lang}/${post.fileName}.md`)
         .then(file => file.text())
         .then(text => setContent(text));
     }
