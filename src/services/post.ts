@@ -1,3 +1,5 @@
+import { LanguageCode } from "./lang";
+
 interface Author {
   name: string;
   href: string;
@@ -17,6 +19,7 @@ export interface Post {
   createdAt: Date;
   origin?: URL;
   listed: boolean;
+  availableLanguages: LanguageCode[];
 }
 
 interface Page<I> {
@@ -63,7 +66,8 @@ const scalabilityAndElasticity: Post = {
   tags: [Tag.CLOUD, Tag.DISTRIBUTED_SYSTEMS],
   fileName: '56-scalability-and-elasticity',
   createdAt: new Date(2024, 9, 26, 18, 30),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const loadTests: Post = {
@@ -79,7 +83,8 @@ const loadTests: Post = {
   tags: [Tag.TEST],
   fileName: '55-what-is-load-test',
   createdAt: new Date(2024, 6, 15, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const webhook: Post = {
@@ -95,7 +100,8 @@ const webhook: Post = {
   tags: [Tag.DISTRIBUTED_SYSTEMS, Tag.REST],
   fileName: '54-what-is-webhook',
   createdAt: new Date(2024, 6, 1, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const idempotentApi: Post = {
@@ -111,7 +117,8 @@ const idempotentApi: Post = {
   tags: [Tag.DISTRIBUTED_SYSTEMS, Tag.REST],
   fileName: '53-idempotent-api',
   createdAt: new Date(2024, 5, 17, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const backpressure: Post = {
@@ -127,7 +134,8 @@ const backpressure: Post = {
   tags: [Tag.DISTRIBUTED_SYSTEMS],
   fileName: '52-backpressure',
   createdAt: new Date(2024, 5, 3, 10, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const kotlinIntroduction: Post = {
@@ -143,7 +151,8 @@ const kotlinIntroduction: Post = {
   tags: [Tag.KOTLIN, Tag.BEGINNERS],
   fileName: '51-kotlin-introduction',
   createdAt: new Date(2024, 4, 27, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const circuitBreaker: Post = {
@@ -159,7 +168,8 @@ const circuitBreaker: Post = {
   tags: [Tag.BEST_PRACTICES, Tag.DISTRIBUTED_SYSTEMS],
   fileName: '50-circuit-breaker',
   createdAt: new Date(2024, 4, 13, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const sdkman: Post = {
@@ -175,7 +185,8 @@ const sdkman: Post = {
   tags: [Tag.TOOLS, Tag.BEGINNERS],
   fileName: '49-sdkman',
   createdAt: new Date(2024, 3, 22, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const springAndOpenAPI: Post = {
@@ -191,7 +202,8 @@ const springAndOpenAPI: Post = {
   tags: [Tag.JAVA, Tag.SPRING, Tag.BEGINNERS],
   fileName: '48-spring-and-openapi',
   createdAt: new Date(2024, 3, 15, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const springMail: Post = {
@@ -207,7 +219,8 @@ const springMail: Post = {
   tags: [Tag.JAVA, Tag.SPRING, Tag.BEGINNERS],
   fileName: '47-spring-mail',
   createdAt: new Date(2024, 3, 8, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const concurrencyAndParallelism: Post = {
@@ -223,7 +236,8 @@ const concurrencyAndParallelism: Post = {
   tags: [Tag.SOFTWARE_DEVELOPMENT, Tag.BEGINNERS],
   fileName: '46-concurrency-and-parallelism',
   createdAt: new Date(2024, 2, 25, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const acidTransactions: Post = {
@@ -239,7 +253,8 @@ const acidTransactions: Post = {
   tags: [Tag.DATABASE_SYSTEMS],
   fileName: '45-acid-transactions',
   createdAt: new Date(2024, 2, 18, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const solid: Post = {
@@ -255,7 +270,8 @@ const solid: Post = {
   tags: [Tag.BEGINNERS, Tag.SOFTWARE_DEVELOPMENT, Tag.BEST_PRACTICES],
   fileName: '44-what-is-solid',
   createdAt: new Date(2024, 2, 11, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const trailingCommaJava: Post = {
@@ -271,7 +287,8 @@ const trailingCommaJava: Post = {
   tags: [Tag.JAVA, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '43-trailing-comma-java',
   createdAt: new Date(2024, 2, 4, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const testcontainers: Post = {
@@ -287,7 +304,8 @@ const testcontainers: Post = {
   tags: [Tag.DISTRIBUTED_SYSTEMS, Tag.TEST],
   fileName: '42-testcontainers',
   createdAt: new Date(2024, 1, 26, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const quicksort: Post = {
@@ -303,7 +321,8 @@ const quicksort: Post = {
   tags: [Tag.ALGORITHMS],
   fileName: '41-quicksort',
   createdAt: new Date(2024, 1, 19, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const aggregationAndComposition: Post = {
@@ -319,7 +338,8 @@ const aggregationAndComposition: Post = {
   tags: [Tag.OBJECT_ORIENTED_PROGRAMMING],
   fileName: '40-aggregation-and-composition',
   createdAt: new Date(2024, 1, 12, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const javaEncapsulation: Post = {
@@ -335,7 +355,8 @@ const javaEncapsulation: Post = {
   tags: [Tag.OBJECT_ORIENTED_PROGRAMMING],
   fileName: '39-java-encapsulation',
   createdAt: new Date(2024, 1, 5, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 } 
 
 const interpreterDesignPattern: Post = {
@@ -351,7 +372,8 @@ const interpreterDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '38-interpreter-design-pattern',
   createdAt: new Date(2024, 0, 31, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const mediatorDesignPattern: Post = {
@@ -367,7 +389,8 @@ const mediatorDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '37-mediator-design-pattern',
   createdAt: new Date(2024, 0, 30, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const flyweightDesignPattern: Post = {
@@ -383,7 +406,8 @@ const flyweightDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '36-flyweight-design-pattern',
   createdAt: new Date(2024, 0, 29, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const factoryMethodDesignPattern: Post = {
@@ -399,7 +423,8 @@ const factoryMethodDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '35-factory-method-design-pattern',
   createdAt: new Date(2024, 0, 28, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const templateMethodDesignPattern: Post = {
@@ -415,7 +440,8 @@ const templateMethodDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '34-template-method-design-pattern',
   createdAt: new Date(2024, 0, 27, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const bridgeDesignPattern: Post = {
@@ -431,7 +457,8 @@ const bridgeDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '33-bridge-design-pattern',
   createdAt: new Date(2024, 0, 26, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const iteratorDesignPattern: Post = {
@@ -447,7 +474,8 @@ const iteratorDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '32-iterator-design-pattern',
   createdAt: new Date(2024, 0, 25, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const visitorDesignPattern: Post = {
@@ -463,7 +491,8 @@ const visitorDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '31-visitor-design-pattern',
   createdAt: new Date(2024, 0, 24, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const compositeDesignPattern: Post = {
@@ -479,7 +508,8 @@ const compositeDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '30-composite-design-pattern',
   createdAt: new Date(2024, 0, 23, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const abstractFactoryDesignPattern: Post = {
@@ -495,7 +525,8 @@ const abstractFactoryDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '29-abstract-factory-design-pattern',
   createdAt: new Date(2024, 0, 22, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const mementoDesignPattern: Post = {
@@ -511,7 +542,8 @@ const mementoDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '28-memento-design-pattern',
   createdAt: new Date(2024, 0, 21, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const proxyDesignPattern: Post = {
@@ -527,7 +559,8 @@ const proxyDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '27-proxy-design-pattern',
   createdAt: new Date(2024, 0, 20, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const stateDesignPattern: Post = {
@@ -543,7 +576,8 @@ const stateDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '26-state-design-pattern',
   createdAt: new Date(2024, 0, 19, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const strategyDesignPattern: Post = {
@@ -559,7 +593,8 @@ const strategyDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '25-strategy-design-pattern',
   createdAt: new Date(2024, 0, 18, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const facadeDesignPattern: Post = {
@@ -575,7 +610,8 @@ const facadeDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '24-facade-design-pattern',
   createdAt: new Date(2024, 0, 17, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const prototypeDesignPattern: Post = {
@@ -591,7 +627,8 @@ const prototypeDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '23-prototype-design-pattern',
   createdAt: new Date(2024, 0, 16, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const commandDesignPattern: Post = {
@@ -607,7 +644,8 @@ const commandDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '22-command-design-pattern',
   createdAt: new Date(2024, 0, 15, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const decoratorDesignPattern: Post = {
@@ -623,7 +661,8 @@ const decoratorDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '21-decorator-design-pattern',
   createdAt: new Date(2024, 0, 14, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const chainOfResponsibilityDesignPattern: Post = {
@@ -639,7 +678,8 @@ const chainOfResponsibilityDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '20-chain-of-responsibility-design-pattern',
   createdAt: new Date(2024, 0, 13, 5, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const singletonDesignPattern: Post = {
@@ -655,7 +695,8 @@ const singletonDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '19-singleton-design-pattern',
   createdAt: new Date(2024, 0, 12, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const adapterDesignPattern: Post = {
@@ -671,7 +712,8 @@ const adapterDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '18-adapter-design-pattern',
   createdAt: new Date(2024, 0, 11, 6, 0),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const observerDesignPattern: Post = {
@@ -687,7 +729,8 @@ const observerDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '17-observer-design-pattern',
   createdAt: new Date(2024, 0, 10, 5, 30),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const builderDesignPattern: Post = {
@@ -703,7 +746,8 @@ const builderDesignPattern: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '16-builder-design-pattern',
   createdAt: new Date(2024, 0, 9, 7, 30),
-  listed: false
+  listed: false,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const designPatterns: Post = {
@@ -719,7 +763,8 @@ const designPatterns: Post = {
   tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '15-design-patterns',
   createdAt: new Date(2024, 0, 8, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const distributedTracing: Post = {
@@ -735,7 +780,8 @@ const distributedTracing: Post = {
   tags: [Tag.DISTRIBUTED_SYSTEMS, Tag.OBSERVABILITY],
   fileName: '14-distributed-tracing',
   createdAt: new Date(2024, 0, 4, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const howSpringProvidesDependencyInjection: Post = {
@@ -751,7 +797,8 @@ const howSpringProvidesDependencyInjection: Post = {
   tags: [Tag.SOFTWARE_DEVELOPMENT],
   fileName: '13-how-spring-provides-di',
   createdAt: new Date(2024, 0, 1, 5, 30),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const inversionOfControl: Post = {
@@ -767,7 +814,8 @@ const inversionOfControl: Post = {
   tags: [Tag.SOFTWARE_DEVELOPMENT],
   fileName: '12-inversion-of-control',
   createdAt: new Date(2023, 11, 28, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const queuesAndStacks: Post = {
@@ -783,7 +831,8 @@ const queuesAndStacks: Post = {
   tags: [Tag.DATA_STRUCTURES, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '11-queues-and-stacks',
   createdAt: new Date(2023, 11, 25, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const arraysAndLinkedLists: Post = { 
@@ -799,7 +848,8 @@ const arraysAndLinkedLists: Post = {
   tags: [Tag.DATA_STRUCTURES, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '10-arrays-and-linked-lists',
   createdAt: new Date(2023, 11, 21, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const ideasToPracticeProgramming: Post = { 
@@ -815,7 +865,8 @@ const ideasToPracticeProgramming: Post = {
   tags: [Tag.BEGINNERS, Tag.COMMUNITY],
   fileName: '9-ideas-to-practice-programming',
   createdAt: new Date(2023, 11, 18, 5, 30),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const gitCommands: Post = { 
@@ -831,7 +882,8 @@ const gitCommands: Post = {
   tags: [Tag.SOFTWARE_DEVELOPMENT],
   fileName: '8-git-commands',
   createdAt: new Date(2023, 11, 15, 18, 30),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const avoidExceptions: Post = { 
@@ -847,7 +899,8 @@ const avoidExceptions: Post = {
   tags: [Tag.SOFTWARE_DEVELOPMENT],
   fileName: '7-avoid-exceptions',
   createdAt: new Date(2023, 11, 11, 6, 0),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const codeReview: Post = { 
@@ -863,7 +916,8 @@ const codeReview: Post = {
   tags: [Tag.SOFTWARE_DEVELOPMENT],
   fileName: '6-code-review',
   createdAt: new Date(2023, 11, 4, 5, 2),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const helloWorld: Post = { 
@@ -879,7 +933,8 @@ const helloWorld: Post = {
   tags: [Tag.HELLO, Tag.COMMUNITY],
   fileName: '5-hello-world',
   createdAt: new Date(2023, 10, 27, 6),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const hateoas: Post = { 
@@ -896,7 +951,8 @@ const hateoas: Post = {
   fileName: '4-what-is-hateoas',
   createdAt: new Date(2023, 10, 23, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155'),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const capTheorem: Post = { 
@@ -913,7 +969,8 @@ const capTheorem: Post = {
   fileName: '3-cap-theorem',
   createdAt: new Date(2023, 10, 20, 6),
   origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d'),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const json: Post = { 
@@ -930,7 +987,8 @@ const json: Post = {
   fileName: '2-what-is-json',
   createdAt: new Date(2023, 10, 11, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df'),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const rest: Post = { 
@@ -947,7 +1005,8 @@ const rest: Post = {
   fileName: '1-what-is-rest',
   createdAt: new Date(2023, 10, 5, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd'),
-  listed: true
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR]
 }
 
 const highlight = scalabilityAndElasticity;

@@ -7,7 +7,7 @@ import AppBar from '../../components/AppBar';
 import Footer from '../../components/Footer';
 import Markdown from '../../components/LazyMarkdown';
 import Tags from '../../components/Tags';
-import { getLanguage } from './../../services/lang';
+import { defaultLanguage, getLanguage } from './../../services/lang';
 import { Post, findBySlug, getNumberOfWords, getPublishedAt, getReadTime } from './../../services/post';
 import NotFound from './../NotFound';
 
@@ -33,7 +33,9 @@ const Article = () => {
       return;
     }
     const loadContent = async () => {
-      fetch(`/markdown/${lang.code}/${post.fileName}.md`)
+      const supportsLang = post.availableLanguages.includes(lang.code)
+      const supportedLang = supportsLang ? lang : defaultLanguage
+      fetch(`/markdown/${supportedLang.code}/${post.fileName}.md`)
         .then(file => file.text())
         .then(text => setContent(text));
     }

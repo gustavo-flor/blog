@@ -3,10 +3,12 @@ export enum LanguageCode {
   EN_US = "en-US"
 }
 
-interface Language {
+export interface Language {
   code: LanguageCode;
   label: string
 }
+
+const preferredLangCodeStorageKey = "Preferred-Lang-Code"
 
 export const languages: Language[] = [
   { 
@@ -21,4 +23,7 @@ export const languages: Language[] = [
 
 export const defaultLanguage = languages.find(it => it.code === LanguageCode.PT_BR)!
 
-export const getLanguage = (defaultValue: Language = defaultLanguage) => defaultValue
+export const getLanguage = (defaultValue: Language = defaultLanguage) => {
+  const preferredLangCode = localStorage.getItem(preferredLangCodeStorageKey)
+  return languages.find(it => it.code === preferredLangCode) ?? defaultValue
+}
