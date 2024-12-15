@@ -27,7 +27,7 @@ interface Page<I> {
   items: I[];
 }
 
-export enum Tags {
+export enum Tag {
   DESIGN_PATTERNS = "designpatterns",
   SOFTWARE_DEVELOPMENT = "softwaredevelopment",
   DISTRIBUTED_SYSTEMS = "distributedsystems",
@@ -60,7 +60,7 @@ const scalabilityAndElasticity: Post = {
   },
   title: '🪀 Escalabilidade e Elasticidade', 
   description: 'Vamos falar sobre escalabilidade e elasticidade — conceitos relacionados, porém distintos, que muitas vezes são utilizados de forma incorreta como sinônimos....',
-  tags: [Tags.CLOUD, Tags.DISTRIBUTED_SYSTEMS],
+  tags: [Tag.CLOUD, Tag.DISTRIBUTED_SYSTEMS],
   fileName: '56-scalability-and-elasticity',
   createdAt: new Date(2024, 9, 26, 18, 30),
   listed: true
@@ -76,7 +76,7 @@ const loadTests: Post = {
   },
   title: '🚚 O que é teste de carga?', 
   description: 'Simulando diferentes cargas de uso em um sistema, os testes de carga nos ajudam a identificar possíveis gargalos antes mesmo que eles ocorram em produção...',
-  tags: [Tags.TEST],
+  tags: [Tag.TEST],
   fileName: '55-what-is-load-test',
   createdAt: new Date(2024, 6, 15, 6, 0),
   listed: true
@@ -92,7 +92,7 @@ const webhook: Post = {
   },
   title: '📟 O que é webhook?', 
   description: 'Webhook é uma forma de comunicação entre sistemas através de callbacks...',
-  tags: [Tags.DISTRIBUTED_SYSTEMS, Tags.REST],
+  tags: [Tag.DISTRIBUTED_SYSTEMS, Tag.REST],
   fileName: '54-what-is-webhook',
   createdAt: new Date(2024, 6, 1, 6, 0),
   listed: true
@@ -108,7 +108,7 @@ const idempotentApi: Post = {
   },
   title: '🧦 Idempotência em sua API', 
   description: 'Idempotência é um termo utilizado na computação para definir operações que, de acordo com o input inicial, são executadas múltiplas vezes sem alterar seu resultado final. Entenda...',
-  tags: [Tags.DISTRIBUTED_SYSTEMS, Tags.REST],
+  tags: [Tag.DISTRIBUTED_SYSTEMS, Tag.REST],
   fileName: '53-idempotent-api',
   createdAt: new Date(2024, 5, 17, 6, 0),
   listed: true
@@ -124,7 +124,7 @@ const backpressure: Post = {
   },
   title: '🦀 Gerenciamento de fluxo e recursos com backpressure', 
   description: 'Backpressure é uma técnica para garantir o funcionamento correto de um software ao processar um fluxo de dados. Ela permite que a aplicação gerencie...',
-  tags: [Tags.DISTRIBUTED_SYSTEMS],
+  tags: [Tag.DISTRIBUTED_SYSTEMS],
   fileName: '52-backpressure',
   createdAt: new Date(2024, 5, 3, 10, 0),
   listed: true
@@ -140,7 +140,7 @@ const kotlinIntroduction: Post = {
   },
   title: '🧚‍♀️ Kotlin: Vantagens, mitos, dicas e conceitos fundamentais', 
   description: 'Vamos falar sobre Kotlin! Neste texto, quero compartilhar algumas coisas que aprendi nas últimas semanas, desvendar alguns mitos sobre a linguagem e fornecer exemplos práticos para quem está começando...',
-  tags: [Tags.KOTLIN, Tags.BEGINNERS],
+  tags: [Tag.KOTLIN, Tag.BEGINNERS],
   fileName: '51-kotlin-introduction',
   createdAt: new Date(2024, 4, 27, 6, 0),
   listed: true
@@ -156,7 +156,7 @@ const circuitBreaker: Post = {
   },
   title: '🎒 Como utilizar Circuit Breaker para tornar seu serviço mais resiliente', 
   description: 'O padrão Circuit Breaker, na arquitetura de microsserviços, possibilita que uma aplicação consiga se manter de pé, evitando falhas em cascata, ao enfretar problemas de comunicação com chamadas remotas...',
-  tags: [Tags.BEST_PRACTICES, Tags.DISTRIBUTED_SYSTEMS],
+  tags: [Tag.BEST_PRACTICES, Tag.DISTRIBUTED_SYSTEMS],
   fileName: '50-circuit-breaker',
   createdAt: new Date(2024, 4, 13, 6, 0),
   listed: true
@@ -172,7 +172,7 @@ const sdkman: Post = {
   },
   title: '🧑‍💼 SDKMan: Ferramenta para gerenciamento de SDKs', 
   description: 'Vamos falar sobre o SDKMan, o que é a essa ferramenta e suas vantagem de utilizar. SDKMan é um gerenciador de SDKs...',
-  tags: [Tags.TOOLS, Tags.BEGINNERS],
+  tags: [Tag.TOOLS, Tag.BEGINNERS],
   fileName: '49-sdkman',
   createdAt: new Date(2024, 3, 22, 6, 0),
   listed: true
@@ -188,7 +188,7 @@ const springAndOpenAPI: Post = {
   },
   title: '📝 Spring: Documentando sua API HTTP com OpenAPI', 
   description: 'O OpenAPI, também conhecido como Swagger, é uma forma de especificar e documentar sua API HTTP. É uma forma padronizada e agnóstica à linguagem que permite expor os padrões e comportamentos de um serviço...',
-  tags: [Tags.JAVA, Tags.SPRING, Tags.BEGINNERS],
+  tags: [Tag.JAVA, Tag.SPRING, Tag.BEGINNERS],
   fileName: '48-spring-and-openapi',
   createdAt: new Date(2024, 3, 15, 6, 0),
   listed: true
@@ -204,7 +204,7 @@ const springMail: Post = {
   },
   title: '📮 Envio de e-mails com Spring Mail', 
   description: 'O envio de e-mails é um aspecto crucial para diversas aplicações, sendo utilizado para enviar notificações, alertas ou comunicações para os usuários.',
-  tags: [Tags.JAVA, Tags.SPRING, Tags.BEGINNERS],
+  tags: [Tag.JAVA, Tag.SPRING, Tag.BEGINNERS],
   fileName: '47-spring-mail',
   createdAt: new Date(2024, 3, 8, 6, 0),
   listed: true
@@ -220,7 +220,7 @@ const concurrencyAndParallelism: Post = {
   },
   title: '🏎️ Concorrência e Paralelismo', 
   description: 'Concorrência e paralelismo são conceitos relacionados na computação, frequentemente utilizados como sinônimos. No entanto, eles têm significados diferentes. Entender essa diferença pode ser crucial no design eficiente de um software.',
-  tags: [Tags.SOFTWARE_DEVELOPMENT, Tags.BEGINNERS],
+  tags: [Tag.SOFTWARE_DEVELOPMENT, Tag.BEGINNERS],
   fileName: '46-concurrency-and-parallelism',
   createdAt: new Date(2024, 2, 25, 6, 0),
   listed: true
@@ -236,7 +236,7 @@ const acidTransactions: Post = {
   },
   title: '🕯️ O que são transações ACID?', 
   description: 'Em um sistema de banco de dados, uma transação representa uma unidade de trabalho (operação lógica)...',
-  tags: [Tags.DATABASE_SYSTEMS],
+  tags: [Tag.DATABASE_SYSTEMS],
   fileName: '45-acid-transactions',
   createdAt: new Date(2024, 2, 18, 6, 0),
   listed: true
@@ -252,7 +252,7 @@ const solid: Post = {
   },
   title: '🧱 O que é SOLID?', 
   description: 'SOLID é um acrônimo para cinco princípios da programação orientada a objetos que visam a produção de um software sólido (🥸)...',
-  tags: [Tags.BEGINNERS, Tags.SOFTWARE_DEVELOPMENT, Tags.BEST_PRACTICES],
+  tags: [Tag.BEGINNERS, Tag.SOFTWARE_DEVELOPMENT, Tag.BEST_PRACTICES],
   fileName: '44-what-is-solid',
   createdAt: new Date(2024, 2, 11, 6, 0),
   listed: true
@@ -268,7 +268,7 @@ const trailingCommaJava: Post = {
   },
   title: '☕️ Vantagens da vírgula no fim de expressões multilinha', 
   description: 'Neste texto, pretendo apresentar os motivos pelos quais a vírgula ao final de expressões multilinha é mais do que apenas uma convenção de estilo...',
-  tags: [Tags.JAVA, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.JAVA, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '43-trailing-comma-java',
   createdAt: new Date(2024, 2, 4, 6, 0),
   listed: true
@@ -284,7 +284,7 @@ const testcontainers: Post = {
   },
   title: '🪢 O que é Testcontainers?', 
   description: 'Testcontainers é uma biblioteca de código aberto, que disponibiliza instâncias de qualquer aplicação que possa ser executada em um container...',
-  tags: [Tags.DISTRIBUTED_SYSTEMS, Tags.TEST],
+  tags: [Tag.DISTRIBUTED_SYSTEMS, Tag.TEST],
   fileName: '42-testcontainers',
   createdAt: new Date(2024, 1, 26, 6, 0),
   listed: true
@@ -300,7 +300,7 @@ const quicksort: Post = {
   },
   title: '⛵️ Algoritmos: Quicksort', 
   description: 'O Quicksort é um eficiente algoritmo de ordenação, baseia-se em dividir o problema em partes menores, para resolver esta tarefa...',
-  tags: [Tags.ALGORITHMS],
+  tags: [Tag.ALGORITHMS],
   fileName: '41-quicksort',
   createdAt: new Date(2024, 1, 19, 6, 0),
   listed: true
@@ -316,7 +316,7 @@ const aggregationAndComposition: Post = {
   },
   title: '☕️ Agregação e Composição', 
   description: 'Agregação e composição são dois tipos de relacionamento da programação orientada a objetos (POO). Ambos representam associações de propriedade entre objetos, porém...',
-  tags: [Tags.OBJECT_ORIENTED_PROGRAMMING],
+  tags: [Tag.OBJECT_ORIENTED_PROGRAMMING],
   fileName: '40-aggregation-and-composition',
   createdAt: new Date(2024, 1, 12, 6, 0),
   listed: true
@@ -332,7 +332,7 @@ const javaEncapsulation: Post = {
   },
   title: '🎯 Java: Encapsulamento', 
   description: 'Encapsulamento é um dos pilares da Programação Orientada a Objetos (POO). Refere-se à ação de agrupar dados (atributos) e comportamentos (métodos) em uma única unidade, denominada objeto...',
-  tags: [Tags.OBJECT_ORIENTED_PROGRAMMING],
+  tags: [Tag.OBJECT_ORIENTED_PROGRAMMING],
   fileName: '39-java-encapsulation',
   createdAt: new Date(2024, 1, 5, 6, 0),
   listed: true
@@ -348,7 +348,7 @@ const interpreterDesignPattern: Post = {
   },
   title: '🤹 Design Patterns em 1 minuto: Interpreter #23', 
   description: 'O padrão de projeto Interpreter provê uma forma dinâmica e clara de transformar em ações determinadas linguagens ou expressões...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '38-interpreter-design-pattern',
   createdAt: new Date(2024, 0, 31, 6, 0),
   listed: false
@@ -364,7 +364,7 @@ const mediatorDesignPattern: Post = {
   },
   title: '🚦 Design Patterns em 1 minuto: Mediator #22', 
   description: 'O Mediator é um padrão de projeto que ajuda a reduzir a complexidade entre a comunicação de múltiplos objetos...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '37-mediator-design-pattern',
   createdAt: new Date(2024, 0, 30, 6, 0),
   listed: false
@@ -380,7 +380,7 @@ const flyweightDesignPattern: Post = {
   },
   title: '🏗️ Design Patterns em 1 minuto: Flyweight #21', 
   description: 'O Design Pattern Flyweight permite otimizar o uso de memória em casos onde nossa aplicação precisa disponibilizar uma grande quantidade de objetos contendo conteúdos semelhantes...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '36-flyweight-design-pattern',
   createdAt: new Date(2024, 0, 29, 6, 0),
   listed: false
@@ -396,7 +396,7 @@ const factoryMethodDesignPattern: Post = {
   },
   title: '🛋️ Design Patterns em 1 minuto: Factory Method #20', 
   description: 'O padrão de projeto Factory Method provê um meio de criação de objetos que permite que classes filhas possam definir o tipo do objeto que será criado em um método definido na classe pai...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '35-factory-method-design-pattern',
   createdAt: new Date(2024, 0, 28, 6, 0),
   listed: false
@@ -412,7 +412,7 @@ const templateMethodDesignPattern: Post = {
   },
   title: '🍽️ Design Patterns em 1 minuto: Template Method #19', 
   description: 'O Template Method é o padrão de projeto que propõe que subclasses possam sobrescrever etapas de um comportamento da superclasse de forma estruturada e adaptável...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '34-template-method-design-pattern',
   createdAt: new Date(2024, 0, 27, 6, 0),
   listed: false
@@ -428,7 +428,7 @@ const bridgeDesignPattern: Post = {
   },
   title: '🌉 Design Patterns em 1 minuto: Bridge #18', 
   description: 'O padrão de projeto Bridge propõe a separação das responsabilidades de uma classe em duas camadas: abstração e implementação...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '33-bridge-design-pattern',
   createdAt: new Date(2024, 0, 26, 6, 0),
   listed: false
@@ -444,7 +444,7 @@ const iteratorDesignPattern: Post = {
   },
   title: '🔄 Design Patterns em 1 minuto: Iterator #17', 
   description: 'O padrão de projeto Iterator permite percorrer uma coleção de elementos sem precisar expor sua implementação...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '32-iterator-design-pattern',
   createdAt: new Date(2024, 0, 25, 6, 0),
   listed: false
@@ -460,7 +460,7 @@ const visitorDesignPattern: Post = {
   },
   title: '🚶 Design Patterns em 1 minuto: Visitor #16', 
   description: 'O Design Pattern Visitor permite separar o comportamento do objeto em que é executado, aumentando assim a modularidade e adaptabilidade da sua aplicação...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '31-visitor-design-pattern',
   createdAt: new Date(2024, 0, 24, 6, 0),
   listed: false
@@ -476,7 +476,7 @@ const compositeDesignPattern: Post = {
   },
   title: '🌳 Design Patterns em 1 minuto: Composite #15', 
   description: 'O padrão de projeto Composite propõe que conjuntos de objetos sejam compostos em estruturas de árvore e que cada objeto agrupador delegue o comportamento para seus nós...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '30-composite-design-pattern',
   createdAt: new Date(2024, 0, 23, 6, 0),
   listed: false
@@ -492,7 +492,7 @@ const abstractFactoryDesignPattern: Post = {
   },
   title: '🏭 Design Patterns em 1 minuto: Abstract Factory #14', 
   description: 'O Abstract Factory é um padrão de projeto que permite desacoplar a criação de famílias de objetos relacionados e/ou dependentes sem especificar suas classes concretas...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '29-abstract-factory-design-pattern',
   createdAt: new Date(2024, 0, 22, 6, 0),
   listed: false
@@ -508,7 +508,7 @@ const mementoDesignPattern: Post = {
   },
   title: '📃 Design Patterns em 1 minuto: Memento #13', 
   description: 'O padrão de projeto Memento permite que você restaure estados passados do seu objeto de forma prática sem revelar sua estrutura interna...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '28-memento-design-pattern',
   createdAt: new Date(2024, 0, 21, 6, 0),
   listed: false
@@ -524,7 +524,7 @@ const proxyDesignPattern: Post = {
   },
   title: '🎩 Design Patterns em 1 minuto: Proxy #12', 
   description: 'O Design Pattern Proxy provê uma camada de controle de acesso a um objeto. Essa camada pode ser utilizada para evitar...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '27-proxy-design-pattern',
   createdAt: new Date(2024, 0, 20, 6, 0),
   listed: false
@@ -540,7 +540,7 @@ const stateDesignPattern: Post = {
   },
   title: '🧑‍🔬 Design Patterns em 1 minuto: State #11', 
   description: 'O padrão de projeto State permite que seu objeto mude os comportamentos quando altera seu estado interno...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '26-state-design-pattern',
   createdAt: new Date(2024, 0, 19, 6, 0),
   listed: false
@@ -556,7 +556,7 @@ const strategyDesignPattern: Post = {
   },
   title: '🛣️ Design Patterns em 1 minuto: Strategy #10', 
   description: 'O padrão de projeto Strategy permite definir o comportamento de um algoritmo durante a execução da aplicação...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '25-strategy-design-pattern',
   createdAt: new Date(2024, 0, 18, 6, 0),
   listed: false
@@ -572,7 +572,7 @@ const facadeDesignPattern: Post = {
   },
   title: '🏛️ Design Patterns em 1 minuto: Facade #9', 
   description: 'O padrão de projeto Facade provê uma interface de uso simplificada para uma biblioteca, framework ou qualquer outro conjunto complexo de classes...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '24-facade-design-pattern',
   createdAt: new Date(2024, 0, 17, 6, 0),
   listed: false
@@ -588,7 +588,7 @@ const prototypeDesignPattern: Post = {
   },
   title: '🤖 Design Patterns em 1 minuto: Prototype / Clone #8', 
   description: 'Prototype (também conhecido por Clone) é o padrão de projeto que permite a clonagem de um objeto...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '23-prototype-design-pattern',
   createdAt: new Date(2024, 0, 16, 6, 0),
   listed: false
@@ -604,7 +604,7 @@ const commandDesignPattern: Post = {
   },
   title: '📮 Design Patterns em 1 minuto: Command #7', 
   description: 'O padrão de projeto Command possibilita que você agrupe todos os dados de sua requisição em um único objeto...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '22-command-design-pattern',
   createdAt: new Date(2024, 0, 15, 6, 0),
   listed: false
@@ -620,7 +620,7 @@ const decoratorDesignPattern: Post = {
   },
   title: '🪆 Design Patterns em 1 minuto: Decorator #6', 
   description: 'O Design Pattern Decorator permite customizar os comportamentos de seus objetos sem sobrescrevê-los...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '21-decorator-design-pattern',
   createdAt: new Date(2024, 0, 14, 6, 0),
   listed: false
@@ -636,7 +636,7 @@ const chainOfResponsibilityDesignPattern: Post = {
   },
   title: '🔗 Design Patterns em 1 minuto: Chain of Responsibility #5', 
   description: 'O Chain of Responsibility é um padrão de projeto que permite desacoplar o controle do fluxo de código repassando a responsabilidade para uma cadeia que...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '20-chain-of-responsibility-design-pattern',
   createdAt: new Date(2024, 0, 13, 5, 0),
   listed: false
@@ -652,7 +652,7 @@ const singletonDesignPattern: Post = {
   },
   title: '🔮 Design Patterns em 1 minuto: Singleton #4', 
   description: 'O Design Pattern Singleton garante que uma classe possua uma única (single) instância compartilhada por toda a aplicação...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '19-singleton-design-pattern',
   createdAt: new Date(2024, 0, 12, 6, 0),
   listed: false
@@ -668,7 +668,7 @@ const adapterDesignPattern: Post = {
   },
   title: '🧬 Design Patterns em 1 minuto: Adapter #3', 
   description: 'O Adapter é um Design Pattern que permite que interfaces incompatíveis trabalhem juntas adequadamente...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '18-adapter-design-pattern',
   createdAt: new Date(2024, 0, 11, 6, 0),
   listed: false
@@ -684,7 +684,7 @@ const observerDesignPattern: Post = {
   },
   title: '👀 Design Patterns em 1 minuto: Observer #2', 
   description: 'O Design Pattern Observer permite criar um mecanismo — pub/sub — de processamento orientado a eventos...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '17-observer-design-pattern',
   createdAt: new Date(2024, 0, 10, 5, 30),
   listed: false
@@ -700,7 +700,7 @@ const builderDesignPattern: Post = {
   },
   title: '👷 Design Patterns em 1 minuto: Builder #1', 
   description: 'Builder é o padrão de projeto que tem como objetivo principal permitir a criação de objetos complexos de maneira simplificada e estruturada...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '16-builder-design-pattern',
   createdAt: new Date(2024, 0, 9, 7, 30),
   listed: false
@@ -716,7 +716,7 @@ const designPatterns: Post = {
   },
   title: '🥷 Design Patterns em 1 minuto', 
   description: 'Os padrões de projeto são uma forma padronizada de solucionar um problema comum existente no desenvolvimento de software...',
-  tags: [Tags.DESIGN_PATTERNS, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DESIGN_PATTERNS, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '15-design-patterns',
   createdAt: new Date(2024, 0, 8, 6, 0),
   listed: true
@@ -732,7 +732,7 @@ const distributedTracing: Post = {
   },
   title: '🧶 Coisas que você deveria saber sobre sistemas distribuídos: Distributed Tracing', 
   description: 'Distributed Tracing, em tradução livre rastreamento distribuído, é um padrão arquitetural de microserviços utilizado para facilitar e otimizar a observabilidade em sistemas distribuídos.',
-  tags: [Tags.DISTRIBUTED_SYSTEMS, Tags.OBSERVABILITY],
+  tags: [Tag.DISTRIBUTED_SYSTEMS, Tag.OBSERVABILITY],
   fileName: '14-distributed-tracing',
   createdAt: new Date(2024, 0, 4, 6, 0),
   listed: true
@@ -748,7 +748,7 @@ const howSpringProvidesDependencyInjection: Post = {
   },
   title: '🍃 Como o Spring provê a injeção de dependências?', 
   description: 'Que a injeção “automágica” de dependências do Spring proporciona agilidade e simplicidade na escrita de aplicações todos nós já sabemos, mas você sabe como o Spring gerencia e provê essa funcionalidade para nós desenvolvedores?',
-  tags: [Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.SOFTWARE_DEVELOPMENT],
   fileName: '13-how-spring-provides-di',
   createdAt: new Date(2024, 0, 1, 5, 30),
   listed: true
@@ -764,7 +764,7 @@ const inversionOfControl: Post = {
   },
   title: '🕺 O que é IoC?', 
   description: 'IoC, acrônimo de Inversion of Control (Inversão de Controle), é um princípio da engenharia de software que incentiva a inversão do controle do fluxo da aplicação, mas o que significa isso?',
-  tags: [Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.SOFTWARE_DEVELOPMENT],
   fileName: '12-inversion-of-control',
   createdAt: new Date(2023, 11, 28, 6, 0),
   listed: true
@@ -780,7 +780,7 @@ const queuesAndStacks: Post = {
   },
   title: '🦉 Filas e pilhas', 
   description: 'Filas e pilhas são estruturas de dados muito utilizadas quando precisamos encadear elementos em uma coleção, são muito semelhantes a filas encadeadas, porém, mais restritas e específicas para seus casos de uso, vamos entender…',
-  tags: [Tags.DATA_STRUCTURES, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DATA_STRUCTURES, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '11-queues-and-stacks',
   createdAt: new Date(2023, 11, 25, 6, 0),
   listed: true
@@ -796,7 +796,7 @@ const arraysAndLinkedLists: Post = {
   },
   title: '☀️ Arrays e listas encadeadas', 
   description: 'Arrays e listas encadeadas (linked lists) são estruturas de dados que armazenam coleções de elementos, mas fazem isso de diferentes formas, com suas respectivas vantagens e desvantagens.',
-  tags: [Tags.DATA_STRUCTURES, Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.DATA_STRUCTURES, Tag.SOFTWARE_DEVELOPMENT],
   fileName: '10-arrays-and-linked-lists',
   createdAt: new Date(2023, 11, 21, 6, 0),
   listed: true
@@ -812,7 +812,7 @@ const ideasToPracticeProgramming: Post = {
   },
   title: '💡 6 ideias para praticar programação', 
   description: 'Escrito por um programador e para programadores ou interessados, este texto oferece formas e estratégias para pôr em prática a escrita de código, desde desafios de codificação até projetos colaborativos.',
-  tags: [Tags.BEGINNERS, Tags.COMMUNITY],
+  tags: [Tag.BEGINNERS, Tag.COMMUNITY],
   fileName: '9-ideas-to-practice-programming',
   createdAt: new Date(2023, 11, 18, 5, 30),
   listed: true
@@ -828,7 +828,7 @@ const gitCommands: Post = {
   },
   title: '😸 Git: Comandos chave para devs', 
   description: 'Para desenvolvedores modernos, o Git é uma ferramenta indispensável. Dominar seus comandos é essencial para otimizar o fluxo de trabalho. Esta leitura contém algum dos comandos que mais utilizo durante meu fluxo de desenvolvimento.',
-  tags: [Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.SOFTWARE_DEVELOPMENT],
   fileName: '8-git-commands',
   createdAt: new Date(2023, 11, 15, 18, 30),
   listed: true
@@ -844,7 +844,7 @@ const avoidExceptions: Post = {
   },
   title: '🚫 PARE de usar exceções para controle de fluxo', 
   description: 'As exceções podem estar causando impacto de performance desnecessário na sua aplicação — se você as utiliza para controle de fluxo. Entenda...',
-  tags: [Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.SOFTWARE_DEVELOPMENT],
   fileName: '7-avoid-exceptions',
   createdAt: new Date(2023, 11, 11, 6, 0),
   listed: true
@@ -860,7 +860,7 @@ const codeReview: Post = {
   },
   title: '🤝 Revisão de código: criando um ambiente de colaboração e aprendizado contínuo', 
   description: 'A revisão de código é uma parte crucial do processo de desenvolvimento de software, é o momento onde desenvolvedores examinam o código fonte de outros desenvolvedores com objetivo de prover sugestões sobre as alterações analisadas e...',
-  tags: [Tags.SOFTWARE_DEVELOPMENT],
+  tags: [Tag.SOFTWARE_DEVELOPMENT],
   fileName: '6-code-review',
   createdAt: new Date(2023, 11, 4, 5, 2),
   listed: true
@@ -876,7 +876,7 @@ const helloWorld: Post = {
   },
   title: '👋 Olá, eu sou o Flôr', 
   description: 'Este é o lugar em que escrevo o que gostaria de ler, falo sobre o que estou estudando e publico devaneios sobre sistemas que você utiliza todos os dias.',
-  tags: [Tags.HELLO, Tags.COMMUNITY],
+  tags: [Tag.HELLO, Tag.COMMUNITY],
   fileName: '5-hello-world',
   createdAt: new Date(2023, 10, 27, 6),
   listed: true
@@ -892,7 +892,7 @@ const hateoas: Post = {
   },
   title: '🥏 O que é HATEOAS e qual sua relação com REST?', 
   description: 'Falamos recentemente sobre REST, o que é e quais suas principais características, porém, um tema ficou em aberto para conversarmos, e chegou o momento de fazer isto, vamos falar sobre o que é HATEOAS…',
-  tags: [Tags.REST],
+  tags: [Tag.REST],
   fileName: '4-what-is-hateoas',
   createdAt: new Date(2023, 10, 23, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155'),
@@ -909,7 +909,7 @@ const capTheorem: Post = {
   },
   title: '🌀 Coisas que você deveria saber sobre sistemas distribuídos: Teorema CAP', 
   description: 'O teorema CAP, também conhecido como teorema de Brewer, é um dos princípios fundamentais dos sistemas distribuídos. A premissa do teorema é que nenhum sistema com distribuição de dados pela rede…',
-  tags: [Tags.DISTRIBUTED_SYSTEMS],
+  tags: [Tag.DISTRIBUTED_SYSTEMS],
   fileName: '3-cap-theorem',
   createdAt: new Date(2023, 10, 20, 6),
   origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d'),
@@ -926,7 +926,7 @@ const json: Post = {
   },
   title: 'O que é JSON? 🏒', 
   description: 'O acrônimo JSON vem de JavaScript Object Notation, é um formato leve de gravar e transportar dados, é utilizado comumente na comunicação entre aplicações cliente-servidor, é "auto descritivo" e fácil de entender.',
-  tags: [Tags.JSON],
+  tags: [Tag.JSON],
   fileName: '2-what-is-json',
   createdAt: new Date(2023, 10, 11, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df'),
@@ -943,7 +943,7 @@ const rest: Post = {
   },
   title: 'O que é REST? 😴', 
   description: 'Se você pensou em descanso, lamento ter que informar, porém não será o tema do artigo de hoje, na verdade vamos falar sobre um estilo de arquitetura de software, em algumas literaturas também chamado…',
-  tags: [Tags.REST, Tags.DISTRIBUTED_SYSTEMS],
+  tags: [Tag.REST, Tag.DISTRIBUTED_SYSTEMS],
   fileName: '1-what-is-rest',
   createdAt: new Date(2023, 10, 5, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd'),

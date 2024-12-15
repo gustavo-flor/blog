@@ -33,7 +33,7 @@ const Article = () => {
       return;
     }
     const loadContent = async () => {
-      fetch(`/markdown/${lang}/${post.fileName}.md`)
+      fetch(`/markdown/${lang.code}/${post.fileName}.md`)
         .then(file => file.text())
         .then(text => setContent(text));
     }

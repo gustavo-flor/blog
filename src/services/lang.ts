@@ -1,11 +1,26 @@
-export enum Languages {
+export enum LanguageCode {
   PT_BR = "pt-BR",
-  EN_US = "en-US",
-  ES_ES = "es-ES"
+  EN_US = "en-US"
 }
 
-export const getDefaultLanguage = () => Languages.PT_BR
+interface Language {
+  code: LanguageCode;
+  label: string
+}
 
-export const getLanguage = (defaultValue: Languages = getDefaultLanguage()) => {
+export const languages: Language[] = [
+  { 
+    code: LanguageCode.PT_BR,
+    label: "🇧🇷"
+  },
+  { 
+    code: LanguageCode.EN_US,
+    label: "🇺🇸"
+  }
+]
+
+export const defaultLanguage = languages.find(it => it.code === LanguageCode.PT_BR)!
+
+export const getLanguage = (defaultValue: Language = defaultLanguage) => {
   return defaultValue
 }
