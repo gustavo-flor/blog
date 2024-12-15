@@ -63,7 +63,7 @@ const scalabilityAndElasticity: Post = {
   description: 'Vamos falar sobre escalabilidade e elasticidade — conceitos relacionados, porém distintos, que muitas vezes são utilizados de forma incorreta como sinônimos....',
   slug: 'escalabilidade-e-elasticidade',
   tags: [Tags.CLOUD, Tags.DISTRIBUTED_SYSTEMS],
-  fileName: '56-escalabilidade-e-elasticidade',
+  fileName: '56-scalability-and-elasticity',
   createdAt: new Date(2024, 9, 26, 18, 30),
   listed: true
 }
@@ -80,7 +80,7 @@ const loadTests: Post = {
   description: 'Simulando diferentes cargas de uso em um sistema, os testes de carga nos ajudam a identificar possíveis gargalos antes mesmo que eles ocorram em produção...',
   slug: 'o-que-e-teste-de-carga',
   tags: [Tags.TEST],
-  fileName: '55-o-que-e-teste-de-carga',
+  fileName: '55-what-is-load-test',
   createdAt: new Date(2024, 6, 15, 6, 0),
   listed: true
 }
@@ -97,7 +97,7 @@ const webhook: Post = {
   description: 'Webhook é uma forma de comunicação entre sistemas através de callbacks...',
   slug: 'o-que-e-webhook',
   tags: [Tags.DISTRIBUTED_SYSTEMS, Tags.REST],
-  fileName: '54-o-que-e-webhook',
+  fileName: '54-what-is-webhook',
   createdAt: new Date(2024, 6, 1, 6, 0),
   listed: true
 }
@@ -267,7 +267,7 @@ const solid: Post = {
   description: 'SOLID é um acrônimo para cinco princípios da programação orientada a objetos que visam a produção de um software sólido (🥸)...',
   slug: 'o-que-solid',
   tags: [Tags.BEGINNERS, Tags.SOFTWARE_DEVELOPMENT, Tags.BEST_PRACTICES],
-  fileName: '44-o-que-solid',
+  fileName: '44-what-is-solid',
   createdAt: new Date(2024, 2, 11, 6, 0),
   listed: true
 }
@@ -947,7 +947,7 @@ const hateoas = {
   description: 'Falamos recentemente sobre REST, o que é e quais suas principais características, porém, um tema ficou em aberto para conversarmos, e chegou o momento de fazer isto, vamos falar sobre o que é HATEOAS…',
   slug: 'o-que-e-hateoas',
   tags: [Tags.REST],
-  fileName: '4-o-que-e-hateoas',
+  fileName: '4-what-is-hateoas',
   createdAt: new Date(2023, 10, 23, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-hateoas-eddf9b093155'),
   listed: true
@@ -965,7 +965,7 @@ const capTheorem: Post = {
   description: 'O teorema CAP, também conhecido como teorema de Brewer, é um dos princípios fundamentais dos sistemas distribuídos. A premissa do teorema é que nenhum sistema com distribuição de dados pela rede…',
   slug: 'teorema-cap',
   tags: [Tags.DISTRIBUTED_SYSTEMS],
-  fileName: '3-teorema-cap',
+  fileName: '3-cap-theorem',
   createdAt: new Date(2023, 10, 20, 6),
   origin: new URL('https://gustavoflor.medium.com/coisas-que-voc%C3%AA-deveria-saber-sobre-sistemas-distribu%C3%ADdos-teorema-cap-39db9e0adf8d'),
   listed: true
@@ -983,7 +983,7 @@ const json: Post = {
   description: 'O acrônimo JSON vem de JavaScript Object Notation, é um formato leve de gravar e transportar dados, é utilizado comumente na comunicação entre aplicações cliente-servidor, é "auto descritivo" e fácil de entender.',
   slug: 'o-que-e-json',
   tags: [Tags.JSON],
-  fileName: '2-o-que-e-json',
+  fileName: '2-what-is-json',
   createdAt: new Date(2023, 10, 11, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df'),
   listed: true
@@ -1001,7 +1001,7 @@ const rest: Post = {
   description: 'Se você pensou em descanso, lamento ter que informar, porém não será o tema do artigo de hoje, na verdade vamos falar sobre um estilo de arquitetura de software, em algumas literaturas também chamado…',
   slug: 'o-que-e-rest',
   tags: [Tags.REST, Tags.DISTRIBUTED_SYSTEMS],
-  fileName: '1-o-que-e-rest',
+  fileName: '1-what-is-rest',
   createdAt: new Date(2023, 10, 5, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd'),
   listed: true
