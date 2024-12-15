@@ -17,7 +17,7 @@ Transações ACID são um conjunto de características que garantem que a confia
 
 O acrônimo ACID significa **Atomicidade**, **Consistência**, **Isolamento** e **Durabilidade**. 
 
-![Imagem com cada letra da palavra ACID e sua definição. A: Atomidade, C: Consistência, I: Isolamento e D: Durabilidade](/images/acid-transactions/banner.png)
+![Imagem com cada letra da palavra ACID e sua definição. A: Atomidade, C: Consistência, I: Isolamento e D: Durabilidade](/acid-transactions/banner.png)
 
 Agora vamos entender o que cada característica representa:
 

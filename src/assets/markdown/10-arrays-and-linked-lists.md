@@ -27,7 +27,7 @@ Diferentemente dos arrays, as listas encadeadas não precisam ter seus dados gua
 
 Ilustração retirada do livro “*Entendendo Algoritmos*”, demonstrando o comportamento de uma lista encadeada na memória:
 
-![image](/images/arrays-and-linked-lists/linked-lists-on-memory.png)
+![image](/arrays-and-linked-lists/linked-lists-on-memory.png)
 
 ### Em detalhes
 

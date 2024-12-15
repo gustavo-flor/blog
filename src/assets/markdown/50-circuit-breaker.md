@@ -1,6 +1,6 @@
 O padrão Circuit Breaker, na arquitetura de microsserviços, possibilita que uma aplicação consiga se manter de pé, evitando falhas em cascata, ao enfretar problemas de comunicação com chamadas remotas.
 
-![Título do artigo "Circuit Breaker" com os seus 3 estados (Close, Open e Half-Open)](/images/circuit-breaker/banner.png)
+![Título do artigo "Circuit Breaker" com os seus 3 estados (Close, Open e Half-Open)](/circuit-breaker/banner.png)
 
 ## Panorama geral
 
@@ -23,7 +23,7 @@ O Circuit Breaker gerencia os comportamentos de um **circuito** através de seus
 
 #### Closed (Fechado)
 
-![Ilustração representando o circuito em estado Fechado (Closed)](/images/circuit-breaker/closed-state.png)
+![Ilustração representando o circuito em estado Fechado (Closed)](/circuit-breaker/closed-state.png)
 
 Este é o estado onde o sistema opera normalmente, permitindo a comunicação entre os serviços.
 
@@ -33,7 +33,7 @@ Caso a aplicação ultrapasse os limites desejados de taxa de erro ou latência,
 
 #### Open (Aberto)
 
-![Ilustração representando o circuito em estado Aberto (Open)](/images/circuit-breaker/open-state.png)
+![Ilustração representando o circuito em estado Aberto (Open)](/circuit-breaker/open-state.png)
 
 Este é o estado em que o disjuntor detectou uma falha na integração que estava monitorando e então abriu o circuito, e por consequência, as requisições foram paradas temporariamente.
 
@@ -43,7 +43,7 @@ Durante este estado, o Circuit Breaker normalmente entra em um período de timeo
 
 #### Half-Open (Meio Aberto)
 
-![Ilustração representando o circuito em estado Meio Aberto (Half-Open)](/images/circuit-breaker/half-open-state.png)
+![Ilustração representando o circuito em estado Meio Aberto (Half-Open)](/circuit-breaker/half-open-state.png)
 
 Este é o estado em que vamos verificar se as chamadas podem voltar a acontecer normalmente. Quando um circuito está em **Half-Open**, ele permite que um número limitado de requisições sejam encaminhados para o serviço externo para checar se o serviço conseguiu se recuperar.
 

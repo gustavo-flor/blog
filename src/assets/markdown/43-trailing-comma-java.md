@@ -42,13 +42,13 @@ Abaixo está a comparação das alterações necessárias ao remover o último i
 
 Note como foi necessário alterar a linha 3 ao remover a linha 4:
 
-![Exemplo sem vírgula](/images/trailing-comma-java/0-no-comma.png)
+![Exemplo sem vírgula](/trailing-comma-java/0-no-comma.png)
 
 #### Com vírgula
 
 Aqui apenas uma linha é alterada:
 
-![Exemplo com vírgula](/images/trailing-comma-java/0-comma.png)
+![Exemplo com vírgula](/trailing-comma-java/0-comma.png)
 
 ### 2. Controle de versão com diffs mais limpos
 
@@ -60,13 +60,13 @@ Abaixo está a comparação do diff gerado ao adicionar um novo elemento ao fina
 
 Neste exemplo podemos ver as múltiplas linhas sendo apresentadas no diff:
 
-![Exemplo sem vírgula](/images/trailing-comma-java/1-no-comma.png)
+![Exemplo sem vírgula](/trailing-comma-java/1-no-comma.png)
 
 #### Com vírgula
 
 Aqui apenas uma linha apresentada no diff:
 
-![Exemplo com vírgula](/images/trailing-comma-java/1-comma.png)
+![Exemplo com vírgula](/trailing-comma-java/1-comma.png)
 
 ## Moral da história
 
