@@ -21,6 +21,4 @@ export const languages: Language[] = [
 
 export const defaultLanguage = languages.find(it => it.code === LanguageCode.PT_BR)!
 
-export const getLanguage = (defaultValue: Language = defaultLanguage) => {
-  return defaultValue
-}
+export const getLanguage = (defaultValue: Language = defaultLanguage) => defaultValue
