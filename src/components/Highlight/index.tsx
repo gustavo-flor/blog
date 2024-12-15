@@ -14,7 +14,7 @@ const Highlight = () => {
           <span className='text-xs opacity-80'>
             {getPublishedAt(post)}
           </span>
-          <Link to={`/posts/${post.fileName}`} className='hover:opacity-60'>
+          <Link to={`/posts/${post.slug}`} className='hover:opacity-60'>
             <h2 className='lg:w-11/12 text-3xl sm:text-5xl font-bold mt-4'>
               {post.title}
             </h2>
@@ -26,7 +26,7 @@ const Highlight = () => {
         <aside className='lg:w-[30%] lg:pl-8 flex flex-col justify-start mt-4 lg:mt-0'>
           <Tags tags={post.tags} />
           <p className='my-4'>{post.description}</p>
-          <Link to={`/posts/${post.fileName}`} className='transition-opacity hover:opacity-90 self-start'>
+          <Link to={`/posts/${post.slug}`} className='transition-opacity hover:opacity-90 self-start'>
             <Button className='w-full' title='Ler mais'><ArrowRight weight='bold' width={32} /></Button>
           </Link>
         </aside>

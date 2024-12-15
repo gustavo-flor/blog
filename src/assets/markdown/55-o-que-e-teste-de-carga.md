@@ -16,7 +16,7 @@ Para garantir que os cenários dos ambientes produtivos sejam simulados com maes
 
 ### Tipos de teste de carga
 
-![Gráfico com tipos de teste de carga e suas respectivas durações](/images/load-tests/types-of-load-test.png)
+![Gráfico com tipos de teste de carga e suas respectivas durações](/load-tests/types-of-load-test.png)
 
 A lista a seguir apresenta os 6 tipos de testes de carga mais comuns e o objetivo de cada um deles:
 
