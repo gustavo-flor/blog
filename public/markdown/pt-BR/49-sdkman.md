@@ -1,6 +1,6 @@
 Vamos falar sobre o SDKMan, o que é a essa ferramenta e suas vantagem de utilizar.
 
-![Utilização do SDKMan](/sdkman/sdk-version.png)
+![Utilização do SDKMan](/images/sdkman/sdk-version.png)
 
 ## O que é
 
@@ -26,7 +26,7 @@ Imagine um cenário em que você tem múltiplos projetos Java, com versões dife
 
 Com o SDKMan isso fica fácil, basta instalar as versões necessárias e realizar o switch entre elas quando necessário.
 
-![Demonstração da alteração de versões Java com SDKMan](/sdkman/sdk-usage.png)
+![Demonstração da alteração de versões Java com SDKMan](/images/sdkman/sdk-usage.png)
 
 ## Moral da história
 

@@ -58,7 +58,7 @@ JSON é leve considerando que não carrega consigo informações “desnecessár
 
 JSON é um formato bem similar a criar objetos no JavaScript, com algumas pequenas diferenças, por exemplo a obrigação de utilizar aspas duplas no nome dos atributos
 
-Comumente utilizado no estilo arquitetural REST, em conjunto do HTTP, não sabe o que é REST? [Clique aqui e saiba mais](./o-que-e-rest).
+Comumente utilizado no estilo arquitetural REST, em conjunto do HTTP, não sabe o que é REST? [Clique aqui e saiba mais](./1-what-is-rest.md).
 
 Mesmo com a similaridade com o JavaScript, qualquer linguagem de programação pode ler e escrever JSON, e essa sem dúvida é uma das principais razões da popularidade dessa tecnologia, em conjunto com a ideia de ser fácil de entender e ser auto descritivo, que ajuda muito também.
 

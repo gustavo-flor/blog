@@ -7,12 +7,14 @@ import AppBar from '../../components/AppBar';
 import Footer from '../../components/Footer';
 import Markdown from '../../components/LazyMarkdown';
 import Tags from '../../components/Tags';
+import { defaultLanguage, getLanguage } from './../../services/lang';
 import { Post, findBySlug, getNumberOfWords, getPublishedAt, getReadTime } from './../../services/post';
 import NotFound from './../NotFound';
 
 import './style.css';
 
 const Article = () => {
+  const lang = getLanguage()
   const { slug } = useParams();
   const [post, setPost] = useState<Post | undefined>();
   const [content, setContent] = useState('');
@@ -31,8 +33,9 @@ const Article = () => {
       return;
     }
     const loadContent = async () => {
-      const module = await import(`./../../assets/markdown/${post.fileName}.md`);
-      fetch(module.default)
+      const supportsLang = post.availableLanguages.includes(lang.code)
+      const supportedLang = supportsLang ? lang : defaultLanguage
+      fetch(`/markdown/${supportedLang.code}/${post.fileName}.md`)
         .then(file => file.text())
         .then(text => setContent(text));
     }
