@@ -7,14 +7,14 @@ import AppBar from '../../components/AppBar';
 import Footer from '../../components/Footer';
 import Markdown from '../../components/LazyMarkdown';
 import Tags from '../../components/Tags';
-import { defaultLanguage, getLanguage } from './../../services/lang';
+import { defaultLanguage, getPreferredLanguage } from './../../services/lang';
 import { Post, findBySlug, getNumberOfWords, getPublishedAt, getReadTime } from './../../services/post';
 import NotFound from './../NotFound';
 
 import './style.css';
 
 const Article = () => {
-  const lang = getLanguage()
+  const lang = getPreferredLanguage() ?? defaultLanguage
   const { slug } = useParams();
   const [post, setPost] = useState<Post | undefined>();
   const [content, setContent] = useState('');

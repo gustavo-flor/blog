@@ -23,7 +23,7 @@ export const languages: Language[] = [
 
 export const defaultLanguage = languages.find(it => it.code === LanguageCode.PT_BR)!
 
-export const getLanguage = (defaultValue: Language = defaultLanguage) => {
+export const getPreferredLanguage = () => {
   const preferredLangCode = localStorage.getItem(preferredLangCodeStorageKey)
-  return languages.find(it => it.code === preferredLangCode) ?? defaultValue
+  return languages.find(it => it.code === preferredLangCode)
 }
