@@ -45,7 +45,7 @@ A proposta de hipermídia como mecanismo de estado da aplicação, nada mais é 
 
 No exemplo acima temos o retorno de uma lista de filmes (utilizando JSON), para fins didáticos a lista contém apenas 1 filme.
 
-Não sabe o que é JSON? [Leia aqui](./o-que-e-json)
+Não sabe o que é JSON? [Leia aqui](./2-what-is-json)
 
 Vamos focar nas propriedades `_links` presentes nesse retorno, note que interessante, cada objeto existente dentro dessa propriedade representa uma possível navegação para aquele determinado recurso, ou seja, o _REST client_ que receber esta resposta consegue saber quais outras possíveis navegações são permitidas a partir de um recurso.
 
