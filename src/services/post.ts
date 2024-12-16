@@ -988,7 +988,7 @@ const json: Post = {
   createdAt: new Date(2023, 10, 11, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-json-02782fa508df'),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const rest: Post = { 
@@ -1006,7 +1006,7 @@ const rest: Post = {
   createdAt: new Date(2023, 10, 5, 6),
   origin: new URL('https://gustavoflor.medium.com/o-que-e-rest-8383ac3261cd'),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const highlight = scalabilityAndElasticity;

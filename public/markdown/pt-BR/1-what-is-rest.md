@@ -59,7 +59,7 @@ Os recursos (resources) são a principal abstração de uma informação no REST
 
 A representação de um recurso, nada mais é do que o estado atual ou desejado de um determinado recurso, esta representação deve ser transferida entre cliente e servidor, cada representação pode ter um formato específico: JSON, XML, etc. Por exemplo, posso representar o recurso animal através de um JSON que inclua os campos raça, nome, tamanho e seu identificador.
 
-O que é JSON? [Clique aqui e entenda](./2-what-is-json.md).
+O que é JSON? [Clique aqui e entenda](./2-what-is-json).
 
 ##### Metadata
 
