@@ -80,7 +80,7 @@ const Article = () => {
               <span className='text-xs opacity-80'>
                 {getPublishedAt(post)}
               </span>
-              <span className='text-xs '>
+              <span className='text-xs'>
                 {numberOfWords} palavras | {readTime} min. de leitura
               </span>
             </div>
