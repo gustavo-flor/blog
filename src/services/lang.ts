@@ -27,3 +27,5 @@ export const getPreferredLanguage = () => {
   const preferredLangCode = localStorage.getItem(preferredLangCodeStorageKey)
   return languages.find(it => it.code === preferredLangCode)
 }
+
+export const getSupportedLanguages = () => languages
