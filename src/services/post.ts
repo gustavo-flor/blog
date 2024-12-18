@@ -289,7 +289,7 @@ const quicksort: Post = {
   fileName: '41-quicksort',
   createdAt: new Date(2024, 1, 19, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const aggregationAndComposition: Post = {
@@ -304,7 +304,7 @@ const aggregationAndComposition: Post = {
   fileName: '40-aggregation-and-composition',
   createdAt: new Date(2024, 1, 12, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const javaEncapsulation: Post = {
@@ -319,7 +319,7 @@ const javaEncapsulation: Post = {
   fileName: '39-java-encapsulation',
   createdAt: new Date(2024, 1, 5, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 } 
 
 const interpreterDesignPattern: Post = {
@@ -334,7 +334,7 @@ const interpreterDesignPattern: Post = {
   fileName: '38-interpreter-design-pattern',
   createdAt: new Date(2024, 0, 31, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const mediatorDesignPattern: Post = {
@@ -349,7 +349,7 @@ const mediatorDesignPattern: Post = {
   fileName: '37-mediator-design-pattern',
   createdAt: new Date(2024, 0, 30, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const flyweightDesignPattern: Post = {
@@ -364,7 +364,7 @@ const flyweightDesignPattern: Post = {
   fileName: '36-flyweight-design-pattern',
   createdAt: new Date(2024, 0, 29, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const factoryMethodDesignPattern: Post = {
@@ -379,7 +379,7 @@ const factoryMethodDesignPattern: Post = {
   fileName: '35-factory-method-design-pattern',
   createdAt: new Date(2024, 0, 28, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const templateMethodDesignPattern: Post = {
@@ -394,7 +394,7 @@ const templateMethodDesignPattern: Post = {
   fileName: '34-template-method-design-pattern',
   createdAt: new Date(2024, 0, 27, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const bridgeDesignPattern: Post = {
@@ -409,7 +409,7 @@ const bridgeDesignPattern: Post = {
   fileName: '33-bridge-design-pattern',
   createdAt: new Date(2024, 0, 26, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const iteratorDesignPattern: Post = {
@@ -424,7 +424,7 @@ const iteratorDesignPattern: Post = {
   fileName: '32-iterator-design-pattern',
   createdAt: new Date(2024, 0, 25, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const visitorDesignPattern: Post = {
@@ -439,7 +439,7 @@ const visitorDesignPattern: Post = {
   fileName: '31-visitor-design-pattern',
   createdAt: new Date(2024, 0, 24, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const compositeDesignPattern: Post = {
@@ -454,7 +454,7 @@ const compositeDesignPattern: Post = {
   fileName: '30-composite-design-pattern',
   createdAt: new Date(2024, 0, 23, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const abstractFactoryDesignPattern: Post = {
@@ -469,7 +469,7 @@ const abstractFactoryDesignPattern: Post = {
   fileName: '29-abstract-factory-design-pattern',
   createdAt: new Date(2024, 0, 22, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const mementoDesignPattern: Post = {
@@ -484,7 +484,7 @@ const mementoDesignPattern: Post = {
   fileName: '28-memento-design-pattern',
   createdAt: new Date(2024, 0, 21, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const proxyDesignPattern: Post = {
@@ -499,7 +499,7 @@ const proxyDesignPattern: Post = {
   fileName: '27-proxy-design-pattern',
   createdAt: new Date(2024, 0, 20, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const stateDesignPattern: Post = {
@@ -514,7 +514,7 @@ const stateDesignPattern: Post = {
   fileName: '26-state-design-pattern',
   createdAt: new Date(2024, 0, 19, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const strategyDesignPattern: Post = {
@@ -529,7 +529,7 @@ const strategyDesignPattern: Post = {
   fileName: '25-strategy-design-pattern',
   createdAt: new Date(2024, 0, 18, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const facadeDesignPattern: Post = {
@@ -544,7 +544,7 @@ const facadeDesignPattern: Post = {
   fileName: '24-facade-design-pattern',
   createdAt: new Date(2024, 0, 17, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const prototypeDesignPattern: Post = {
@@ -559,7 +559,7 @@ const prototypeDesignPattern: Post = {
   fileName: '23-prototype-design-pattern',
   createdAt: new Date(2024, 0, 16, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const commandDesignPattern: Post = {
@@ -574,7 +574,7 @@ const commandDesignPattern: Post = {
   fileName: '22-command-design-pattern',
   createdAt: new Date(2024, 0, 15, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const decoratorDesignPattern: Post = {
@@ -589,7 +589,7 @@ const decoratorDesignPattern: Post = {
   fileName: '21-decorator-design-pattern',
   createdAt: new Date(2024, 0, 14, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const chainOfResponsibilityDesignPattern: Post = {
@@ -604,7 +604,7 @@ const chainOfResponsibilityDesignPattern: Post = {
   fileName: '20-chain-of-responsibility-design-pattern',
   createdAt: new Date(2024, 0, 13, 5, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const singletonDesignPattern: Post = {
@@ -619,7 +619,7 @@ const singletonDesignPattern: Post = {
   fileName: '19-singleton-design-pattern',
   createdAt: new Date(2024, 0, 12, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const adapterDesignPattern: Post = {
@@ -634,7 +634,7 @@ const adapterDesignPattern: Post = {
   fileName: '18-adapter-design-pattern',
   createdAt: new Date(2024, 0, 11, 6, 0),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const observerDesignPattern: Post = {
@@ -649,7 +649,7 @@ const observerDesignPattern: Post = {
   fileName: '17-observer-design-pattern',
   createdAt: new Date(2024, 0, 10, 5, 30),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const builderDesignPattern: Post = {
@@ -664,7 +664,7 @@ const builderDesignPattern: Post = {
   fileName: '16-builder-design-pattern',
   createdAt: new Date(2024, 0, 9, 7, 30),
   listed: false,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const designPatterns: Post = {
@@ -679,7 +679,7 @@ const designPatterns: Post = {
   fileName: '15-design-patterns',
   createdAt: new Date(2024, 0, 8, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const distributedTracing: Post = {
@@ -694,7 +694,7 @@ const distributedTracing: Post = {
   fileName: '14-distributed-tracing',
   createdAt: new Date(2024, 0, 4, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const howSpringProvidesDependencyInjection: Post = {
@@ -724,7 +724,7 @@ const inversionOfControl: Post = {
   fileName: '12-inversion-of-control',
   createdAt: new Date(2023, 11, 28, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const queuesAndStacks: Post = {

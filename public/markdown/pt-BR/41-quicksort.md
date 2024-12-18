@@ -11,7 +11,8 @@ Antes de nos aprofundarmos no **Quicksort**, é importante entendermos seus conc
 - **Recursão**:  
 
   **É quando uma função chama a si mesma**; Uma função recursiva é dividida em duas partes principais: caso recursivo e caso base. O caso recursivo refere-se ao ato de a função chamar a si mesma, e o caso base é a condição que encerra essa chamada recursiva, evitando assim um _loop_ infinito.
-    
+
+---   
 
 ## Em detalhes
 
@@ -71,8 +72,6 @@ Perceba que nesse exemplo o _array_ já está ordenado, porém, imagine um cená
 
 O ato de definir um pivô é uma das ações mais importantes do **Quicksort**, ao selecionar uma sequência ruim de pivôs afetamos diretamente a performance do algoritmo. 
 
-Vamos entender o que é um pivô ruim:
-
 #### O que é um pivô ruim?
 
 Como sabemos, o objetivo de um pivô é ser a divisão entre dois agrupamentos: números maiores e números menores que ele. 
@@ -117,8 +116,6 @@ Temos diversas formas de selecionar um pivô, entretanto, cada uma delas possui 
 Como pode perceber, não abordei o código em si do algoritmo **Quicksort** neste texto. 
 
 A ideia de fato aqui é entender o seu funcionamento e objetivo, até porque atualmente todas as grandes linguagens de programação já possuem sua implementação própria do algoritmo. 
-
-Portanto, não precisamos reinventar a roda e sim utilizar as implementações nativas. 
 
 Se mesmo assim você deseja visualizar a implementação desse algoritmo, segue abaixo o repositório com o código fonte:
 
