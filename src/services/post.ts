@@ -214,7 +214,7 @@ const concurrencyAndParallelism: Post = {
   fileName: '46-concurrency-and-parallelism',
   createdAt: new Date(2024, 2, 25, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const acidTransactions: Post = {
@@ -229,7 +229,7 @@ const acidTransactions: Post = {
   fileName: '45-acid-transactions',
   createdAt: new Date(2024, 2, 18, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const solid: Post = {
@@ -244,7 +244,7 @@ const solid: Post = {
   fileName: '44-what-is-solid',
   createdAt: new Date(2024, 2, 11, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const trailingCommaJava: Post = {
@@ -259,7 +259,7 @@ const trailingCommaJava: Post = {
   fileName: '43-trailing-comma-java',
   createdAt: new Date(2024, 2, 4, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const testcontainers: Post = {
@@ -274,7 +274,7 @@ const testcontainers: Post = {
   fileName: '42-testcontainers',
   createdAt: new Date(2024, 1, 26, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const quicksort: Post = {
