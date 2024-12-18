@@ -64,7 +64,7 @@ const scalabilityAndElasticity: Post = {
   fileName: '56-scalability-and-elasticity',
   createdAt: new Date(2024, 9, 26, 18, 30),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const loadTests: Post = {
@@ -79,7 +79,7 @@ const loadTests: Post = {
   fileName: '55-what-is-load-test',
   createdAt: new Date(2024, 6, 15, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const webhook: Post = {
@@ -94,7 +94,7 @@ const webhook: Post = {
   fileName: '54-what-is-webhook',
   createdAt: new Date(2024, 6, 1, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const idempotentApi: Post = {
@@ -109,7 +109,7 @@ const idempotentApi: Post = {
   fileName: '53-idempotent-api',
   createdAt: new Date(2024, 5, 17, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const backpressure: Post = {
@@ -124,7 +124,7 @@ const backpressure: Post = {
   fileName: '52-backpressure',
   createdAt: new Date(2024, 5, 3, 10, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const kotlinIntroduction: Post = {
@@ -139,7 +139,7 @@ const kotlinIntroduction: Post = {
   fileName: '51-kotlin-introduction',
   createdAt: new Date(2024, 4, 27, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const circuitBreaker: Post = {
@@ -169,7 +169,7 @@ const sdkman: Post = {
   fileName: '49-sdkman',
   createdAt: new Date(2024, 3, 22, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const springAndOpenAPI: Post = {
@@ -184,7 +184,7 @@ const springAndOpenAPI: Post = {
   fileName: '48-spring-and-openapi',
   createdAt: new Date(2024, 3, 15, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const springMail: Post = {
