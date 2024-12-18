@@ -154,7 +154,7 @@ Podemos concluir que a revisão de código é um processo importantíssimo no fl
 
 Espero que você consiga aplicar algum dos itens que comentei acima e que eles melhorem o seu fluxo de revisão de código.
 
-Com gratidão sincera, muito obrigado por ler até aqui, se ficou com dúvida e/ou tem alguma sugestão de melhoria para o post, entre em contato comigo `@gustavoflor_` no Instagram/Twitter.
+Com gratidão sincera, muito obrigado por ler até aqui, se ficou com dúvida e/ou tem alguma sugestão de melhoria para o post, entre em contato comigo `@gustavoflor.dev` no Instagram/Twitter.
 
 ## Referências
 

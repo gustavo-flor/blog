@@ -1,6 +1,16 @@
 import { LanguageCode } from '../services/lang';
 
-export const namespaces = ['common', 'presentation'];
+export const defaultNamespace = 'common';
+
+export const namespaces = [
+  defaultNamespace, 
+  'presentation', 
+  'article',
+  'posts',
+  'footer',
+  'last-posts',
+  'highlight'
+];
 
 export const resources = Object.fromEntries(
   await Promise.all(
