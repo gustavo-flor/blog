@@ -1,5 +1,6 @@
-import { translate } from './i18n';
-import { getPreferredLanguage, LanguageCode } from "./lang";
+import { t } from 'i18next';
+
+import { getPreferredLanguage, LanguageCode } from  './lang';
 
 interface Author {
   name: string;
@@ -1001,7 +1002,7 @@ const isRecent = (date: Date): boolean => {
 export const getPublishedAt = (post: Post): string => {
   const lang = getPreferredLanguage()
   if (isToday(post.createdAt)) {
-    return isRecent(post.createdAt) ? translate('justNow') : translate('today');
+    return isRecent(post.createdAt) ? t('justNow') : t('today');
   }
   return post.createdAt.toLocaleDateString(lang.code);
 }

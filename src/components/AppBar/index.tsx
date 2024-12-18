@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
+
 import Brand from '../Brand';
 
 import Lotus from './../../assets/lotus.svg';
 
 interface Props {
-  alwaysCenter?: boolean
+  alwaysCenter?: boolean;
 }
 
 const AppBar = ({ alwaysCenter = false }: Props) => {

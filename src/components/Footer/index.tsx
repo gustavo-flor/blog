@@ -1,4 +1,5 @@
-import { translate } from '../../services/i18n';
+import { useTranslation } from 'react-i18next';
+
 import Brand from '../Brand';
 
 interface Props {
@@ -8,7 +9,8 @@ interface Props {
 const ns = 'footer'
 
 const Footer = ({ alwaysCenter = false }: Props) => {
-  const copyright = translate('copyright', { ns })
+  const { t } = useTranslation()
+  const copyright = t('copyright', { ns })
   const justify = alwaysCenter ? 'md:justify-center' : 'md:justify-start';
   return (
     <footer className='w-full bg-zinc-900 text-gray-200'>

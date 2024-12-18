@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import Me from '../../assets/me-in-purple.jpg';
 import Anchor from '../../components/Anchor';
@@ -10,14 +11,14 @@ import Tags from '../../components/Tags';
 import { defaultLanguage, getPreferredLanguage } from './../../services/lang';
 import { Post, findBySlug, getKey, getNumberOfWords, getPublishedAt, getReadTime } from './../../services/post';
 import NotFound from './../NotFound';
+import Translate from '../../components/Translate';
 
 import './style.css';
-import { translate } from '../../services/i18n';
-import Translate from '../../components/Translate';
 
 const ns = 'article';
 
 const Article = () => {
+  const { t } = useTranslation()
   const lang = getPreferredLanguage()
   const { slug } = useParams();
   const [post, setPost] = useState<Post | undefined>();
@@ -44,7 +45,7 @@ const Article = () => {
         .then(text => setContent(text));
     }
     loadContent();
-  }, [post]);
+  }, [post, t]);
 
   useEffect(() => {
     setNumberOfWords(getNumberOfWords(content));
@@ -55,7 +56,7 @@ const Article = () => {
     return <NotFound />
   }
 
-  const postTitle = translate(`${getKey(post)}.title`, { ns: 'posts' })
+  const postTitle = t(`${getKey(post)}.title`, { ns: 'posts' })
 
   return (
     <>
@@ -65,7 +66,7 @@ const Article = () => {
           <figure>
             <img 
               src={`${post.cover.href}?q=85&w=768`} 
-              alt={translate('cover.alt', { ns, authorName: post.cover.author.name })} 
+              alt={t('cover.alt', { ns, authorName: post.cover.author.name })} 
             />
             <figcaption className='text-center text-gray-400 text-sm mt-4'>
               <Translate 
@@ -104,7 +105,7 @@ const Article = () => {
                 {getPublishedAt(post)}
               </span>
               <span className='text-xs'>
-                {translate('readTime', { ns, numberOfWords, readTime })}
+                {t('readTime', { ns, numberOfWords, readTime })}
               </span>
             </div>
           </div>

@@ -1,16 +1,18 @@
+import { useTranslation } from 'react-i18next';
+
 import { ArrowRight } from 'phosphor-react';
 import { Link } from 'react-router-dom';
 import { getHighlight, getKey, getPublishedAt } from '../../services/post';
 import Button from '../Button';
 import Tags from '../Tags';
-import { translate } from '../../services/i18n';
 
 const ns = 'highlight'
 
 const Highlight = () => {
+  const { t } = useTranslation()
   const post = getHighlight();
-  const postTitle = translate(`${getKey(post)}.title`, { ns: 'posts' });
-  const postDescription = translate(`${getKey(post)}.description`, { ns: 'posts' });
+  const postTitle = t(`${getKey(post)}.title`, { ns: 'posts' });
+  const postDescription = t(`${getKey(post)}.description`, { ns: 'posts' });
 
   return (
     <section className='border-b pb-16 lg:pb-0'>
@@ -27,7 +29,7 @@ const Highlight = () => {
           <figure className='mt-8'>
             <img 
               src={`${post.cover.href}?q=768&w=1024`} 
-              alt={translate('cover.alt', { ns, authorName: post.cover.author.name })} 
+              alt={t('cover.alt', { ns, authorName: post.cover.author.name })} 
             />
           </figure>
         </div>

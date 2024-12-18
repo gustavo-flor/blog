@@ -1,15 +1,17 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 import { getKey, Post } from '../../services/post';
 import Tags from '../Tags';
-import { translate } from '../../services/i18n';
 
 interface Props {
   post: Post
 }
 
 const Card = ({ post }: Props) => {
-  const postTitle = translate(`${getKey(post)}.title`, { ns: 'posts' });
-  const postDescription = translate(`${getKey(post)}.description`, { ns: 'posts' });
+  const { t } = useTranslation()
+  const postTitle = t(`${getKey(post)}.title`, { ns: 'posts' });
+  const postDescription = t(`${getKey(post)}.description`, { ns: 'posts' });
 
   return (
     <div>

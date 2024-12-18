@@ -25,12 +25,3 @@ i18next
   });
 
 export const i18n = i18next;
-
-interface TranslateProps {
-  ns: string,
-  [any: string]: any
-}
-
-export const translate = (key: string, { ns, ...rest }: TranslateProps = { ns: defaultNamespace }) => {
-  return t(key, { ns, ...rest })
-}
