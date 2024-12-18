@@ -739,7 +739,7 @@ const queuesAndStacks: Post = {
   fileName: '11-queues-and-stacks',
   createdAt: new Date(2023, 11, 25, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const arraysAndLinkedLists: Post = { 
@@ -754,7 +754,7 @@ const arraysAndLinkedLists: Post = {
   fileName: '10-arrays-and-linked-lists',
   createdAt: new Date(2023, 11, 21, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const ideasToPracticeProgramming: Post = { 
@@ -769,7 +769,7 @@ const ideasToPracticeProgramming: Post = {
   fileName: '9-ideas-to-practice-programming',
   createdAt: new Date(2023, 11, 18, 5, 30),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const gitCommands: Post = { 
@@ -784,7 +784,7 @@ const gitCommands: Post = {
   fileName: '8-git-commands',
   createdAt: new Date(2023, 11, 15, 18, 30),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const avoidExceptions: Post = { 
@@ -799,7 +799,7 @@ const avoidExceptions: Post = {
   fileName: '7-avoid-exceptions',
   createdAt: new Date(2023, 11, 11, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const codeReview: Post = { 

@@ -59,4 +59,4 @@ Muito obrigado por ler até aqui!
 
 ## Para ir mais fundo
 
-- https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf
+- <https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf>
