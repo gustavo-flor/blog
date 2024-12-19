@@ -18,8 +18,9 @@ i18next
     defaultNS: defaultNamespace,
     interpolation: { escapeValue: false },
     detection: {
-      order: ['localStorage'],
+      order: ['path', 'localStorage', 'navigator'],
       caches: ['localStorage'],
+      lookupFromPathIndex: 0,
       lookupLocalStorage: 'Preferred-Language'
     }
   });

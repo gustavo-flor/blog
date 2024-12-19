@@ -18,7 +18,7 @@ import './style.css';
 const ns = 'article';
 
 const Article = () => {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
   const lang = getPreferredLanguage()
   const { slug } = useParams();
   const [post, setPost] = useState<Post | undefined>();
@@ -45,7 +45,7 @@ const Article = () => {
         .then(text => setContent(text));
     }
     loadContent();
-  }, [post, t]);
+  }, [post, i18n.language]);
 
   useEffect(() => {
     setNumberOfWords(getNumberOfWords(content));
@@ -60,7 +60,7 @@ const Article = () => {
 
   return (
     <>
-      <AppBar alwaysCenter={true} />
+      <AppBar />
       <main className='container lg:max-w-3xl mx-auto px-8 py-8 sm:py-16 md:pb-20'>
         {post.cover != undefined && 
           <figure>
@@ -112,7 +112,7 @@ const Article = () => {
         </header>
         <Markdown content={content} />
       </main>
-      <Footer alwaysCenter={true} />
+      <Footer />
     </>
   );
 }

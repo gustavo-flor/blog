@@ -1,21 +1,21 @@
 import { useTranslation } from 'react-i18next';
 
 import Brand from '../Brand';
-
-interface Props {
-  alwaysCenter?: boolean
-}
+import LanguageSwitcher from '../LanguageSwitcher';
 
 const ns = 'footer'
 
-const Footer = ({ alwaysCenter = false }: Props) => {
+const Footer = () => {
   const { t } = useTranslation()
   const copyright = t('copyright', { ns })
-  const justify = alwaysCenter ? 'md:justify-center' : 'md:justify-start';
   return (
     <footer className='w-full bg-zinc-900 text-gray-200'>
-      <div className={`container mx-auto p-8 flex justify-center ${justify}`}>
-        <p><Brand /> &copy; {new Date().getFullYear()}. {copyright}.</p>
+      <div className='container mx-auto p-8 flex flex-row-reverse justify-between items-start sm:items-center'>
+        <LanguageSwitcher />
+        <div className='flex flex-col sm:flex-row gap-1'>
+          <p><Brand /> &copy; {new Date().getFullYear()}.</p>
+          <p>{copyright}.</p>
+        </div>
       </div>
     </footer>
   );
