@@ -1,3 +1,5 @@
+import { i18n } from "./i18n";
+
 export enum LanguageCode {
   PT_BR = "pt-BR",
   EN_US = "en-US"
@@ -5,25 +7,25 @@ export enum LanguageCode {
 
 export interface Language {
   code: LanguageCode;
-  label: string
+  flag: string
 }
 
-const preferredLangCodeStorageKey = "Preferred-Lang-Code"
+const portuguese = { 
+  code: LanguageCode.PT_BR,
+  flag: "🇧🇷"
+}
 
-export const languages: Language[] = [
-  { 
-    code: LanguageCode.PT_BR,
-    label: "🇧🇷"
-  },
-  { 
-    code: LanguageCode.EN_US,
-    label: "🇺🇸"
-  }
-]
+const english = { 
+  code: LanguageCode.EN_US,
+  flag: "🇺🇸"
+}
 
-export const defaultLanguage = languages.find(it => it.code === LanguageCode.PT_BR)!
+export const languages: Language[] = [portuguese, english]
+
+export const defaultLanguage = portuguese
 
 export const getPreferredLanguage = () => {
-  const preferredLangCode = localStorage.getItem(preferredLangCodeStorageKey)
-  return languages.find(it => it.code === preferredLangCode)
+  return languages.find(it => it.code === i18n.language) ?? defaultLanguage
 }
+
+export const getSupportedLanguages = () => languages

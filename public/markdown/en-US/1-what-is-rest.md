@@ -1,96 +1,70 @@
-If you thought of resting, I’m sorry to inform you, but that’s not the topic of today’s article. Instead, we’ll talk about a software architecture style, sometimes also referred to in literature as an architectural pattern. 
+If you thought about taking a rest, I’m sorry to say that’s not today’s topic. Instead, we’ll explore a software architecture style often referred to as an architectural pattern — though it’s not the same as a design pattern (like those in software engineering). An architectural style is a set of principles or constraints a system must follow to achieve a specific goal. So, let’s dive into what REST is all about…
 
-Let’s not confuse it with design patterns, though. 
+## Let’s Get Started
 
-An architectural style is essentially a guide of principles/restrictions a software must follow to achieve a specific goal. 
+REST stands for **REpresentational State Transfer**, a concept introduced by **Roy Fielding** in the early 2000s. It’s an architectural style for distributed hypermedia systems. Simply put, REST is a hybrid style combining multiple network-based architectural principles with specific rules to create a consistent web-based system architecture.
 
-Let’s now dive into understanding what REST is...
+Not sure what **hypermedia** means? Though less common today, it refers to connecting information through links or redirects, beyond just text. Think of HTML — HyperText Markup Language — found in every website. With hypermedia, we’re dealing with text, images, documents, and more.
 
-## Introduction
+## Key Principles
 
-REST is an acronym for REpresentational State Transfer. A loose translation would be "representational state transfer." The term was introduced by Roy Fielding in the 2000s. It’s an architectural style for distributed hypermedia systems. Simply put, REST is a hybrid architectural style, combining several other network-based software architectural styles with added rules and criteria, forming a unified contract for modern web software architecture.
-
-You might find the term hypermedia confusing. Although it’s not very common nowadays, it’s essentially the ability to connect information from different parts of the web using links or other forms of redirection. For example, HTML (a technology found on every website) is a HyperText Markup Language. When we talk about hypermedia, we go beyond just text, involving images, documents, etc.
-
-## Core Principles
-
-Services that adhere to these principles entirely are called RESTful. Such services are likely to enhance their performance, reliability, and reusability, as components can be incrementally modified without affecting the system as a whole.
+Services that adhere to these principles are called **RESTful**. Implementing all six can enhance performance, reliability, and reusability by allowing incremental modifications without disrupting the whole system.
 
 ### 1. Client-Server
 
-This principle states that we must decouple the service consumer from the service provider into two distinct entities: the client and the server. By separating these responsibilities, we ensure each can evolve independently without needing knowledge of the other's context.
+The system must separate the consumer (client) from the provider (server). This division ensures both sides evolve independently.
 
-The client is responsible for the user interface and experience, focusing on data presentation and handling user actions.
-
-The server manages business logic, data persistence, and how data is created or updated. It also provides an interface for the client to perform operations on stored data.
+- **Client**: Handles the user interface and experiences.
+- **Server**: Manages business logic, data persistence, and data operations.
 
 ### 2. Stateless
 
-In a RESTful service, every request (from the client) must contain all the information the server needs to complete the operation. The server does not retain any state in memory about previous requests. Each request is treated as new, with no session information stored server-side.
-
-This ensures requests can be understood and executed independently, making the application scalable and reliable.
-
-However, like any architectural decision, choosing stateless services involves trade-offs. While scalability improves, network performance may decrease as redundant data must be sent repeatedly (since the server doesn’t retain a shared context).
+Each request must include all the information the server needs to process it — no session state saved on the server. This approach boosts scalability but might reduce performance due to repeated data transmission.
 
 ### 3. Cache
 
-To optimize network efficiency, REST allows clients to cache responses. Responses should explicitly or implicitly indicate whether they are cacheable. If a response is cacheable, the client may (not must) reuse it for similar requests in the future. Caching can reduce client-server interactions, improving performance and scalability.
-
-The trade-off is that caching can lower application reliability if not well-managed. For example, if the cached response state differs significantly from a new request’s state. It’s a good practice to invalidate cache after a defined period, which can be server-specified or logically chosen by the client.
+Clients can cache server responses when explicitly allowed. This reduces network load and enhances performance but must be managed carefully to avoid stale data.
 
 ### 4. Uniform Interface
 
-This is a central principle of any RESTful system’s architecture. It further decouples client and server components, making them more independent. The idea is to define standardized and specific contracts for operations. By structuring a uniform contract both parties can understand, we ensure their independence.
-
-The trade-off is that such contracts might reduce network communication efficiency. Instead of transferring data in the most operation-specific way, data is transferred according to the predefined contract.
-
-We’ll discuss the elements these contracts should include later.
+The client and server must communicate through standardized contracts, ensuring a clear separation of concerns and enabling independent evolution.
 
 ### 5. Layered Systems
 
-This principle allows the architecture to have multiple layers between the client and server components, provided the client doesn’t know it isn’t communicating directly with the server. These layers must be transparent and adhere to the server’s contract. Examples include proxies, load balancers, gateways, and authentication services. This principle ensures greater decoupling between layers and benefits like scalability, reliability, and availability.
+Multiple intermediary layers (like proxies, gateways, load balancers) should operate transparently, adding scalability and reliability.
 
 ### 6. Code-On-Demand (Optional)
 
-This principle, the least used today, allows the server to transfer executable code to the client. It’s the only optional REST principle. This simplifies the client’s scope, as functionality parts can be delivered directly from the server via executable scripts.
+The server can transfer executable code to the client, simplifying the client-side logic — though rarely used today.
 
-#### Data Elements
+## Core Data Elements
 
-##### Resources
+### Resources
 
-Resources are the primary abstraction of information in REST. They represent any information that can be named: a document, image, a collection of resources, etc. Essentially, any concept that can be referenced can be defined as a resource. Each resource in REST must have a unique identifier for interaction within the architecture.
+Resources represent any identifiable information — documents, images, or collections. Each resource must have a unique identifier.
 
-##### Resource Representations
+### Resource Representations
 
-The representation of a resource is its current or desired state. This representation must be transferred between the client and server. Each representation may have a specific format, such as JSON or XML. For example, an animal resource could be represented by a JSON including fields like breed, name, size, and its identifier.
+A resource’s state is represented and transferred between the client and server, typically in JSON or XML formats.
 
-What is JSON? [Click here to understand](./2-what-is-json).
+**Learn More**: [What is JSON?](./2-what-is-json)
 
-##### Metadata
+### Metadata
 
-Metadata comprises key-value pair information, allowing additional details about a resource or its representation to be conveyed. For example, metadata might specify a resource’s representation format, links related to the resource (linked to the HATEOAS concept), and so on.
+Metadata provides additional information about resources, like format or related links.
 
-##### Control Data
+### Control Data
 
-Control data defines the purpose of the request between components, such as the operation being requested and the response’s meaning. It can also be used to parameterize the request and override default behaviors, like cache behavior or rate limits.
+This defines the purpose of the request — what operation to perform and how to behave (e.g., caching, rate limits).
 
-Control data may seem similar to metadata, but the difference is clear: metadata describes the resource or its representation, while control data pertains to the action being executed and its behaviors.
+## Moral of the Story
 
-## Conclusion
+REST isn’t a **silver bullet**, **HTTP + JSON**, or a **design pattern**. It’s an adaptable architectural style guiding communication in distributed systems.
 
-To wrap up, as mentioned earlier, REST is a hybrid architectural style. It evolved from other models and primarily focuses on scalability, reliability, and availability for network-based communication applications.
-
-What REST isn’t:
-
-- A silver bullet
-- HTTP + JSON
-- A design pattern
-
-What REST is:
-
+REST is:
 - An architectural style
 - Adaptable
-- A model for communication between distributed systems
+- A model for distributed system communication
 
 ## References
 

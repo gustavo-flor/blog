@@ -58,10 +58,14 @@ package com.github.gustavoflor.backpressure
 
 import java.util.concurrent.ThreadPoolExecutor
 
-class Backpressure(
+interface Backpressure {
+  fun shouldWait(): Boolean
+}
+
+class ReachCapacityBackpressure(
   private val threadPoolExecutor: ThreadPoolExecutor
-) {
-  fun shouldWait(): Boolean {
+) : Backpressure {
+  override fun shouldWait(): Boolean {
     val queue = threadPoolExecutor.queue
     val remainingCapacity = queue.remainingCapacity()
     println("Reaching capacity: $remainingCapacity")
@@ -117,8 +121,6 @@ import java.util.concurrent.Executors
 import java.util.concurrent.LinkedBlockingQueue
 import java.util.concurrent.ThreadPoolExecutor
 import java.util.concurrent.TimeUnit
-
-fun threadPoolExecutor() = 
 
 fun main() {
   val workQueue = LinkedBlockingQueue(3)

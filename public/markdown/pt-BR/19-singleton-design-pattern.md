@@ -10,14 +10,15 @@ Como resolver este problema?
 
 ## A solução
 
-A ideia aqui é que a própria classe gerencie a criação do objeto, (`1`) guardando sua instância em uma propriedade estática e (`2`) disponibilizando um método que irá servir de construtor/acessor da instância que será guardada e reutilizada.
+A ideia aqui é que a própria classe gerencie a criação do objeto, (`1`) guardando sua instância em uma propriedade estática e (`2`) disponibilizando um método que irá servir de construtor/acessor da instância que será guardada e reutilizada. 
 
-- É importante garantir que os construtores da classe são privados (`3`).
+Além disso, é importante garantir que os construtores da classe são privados (`3`).
 
 ```java
 public class MySingleton {
 
-  private static MySingleton INSTANCE; // 1
+  // 1
+  private static MySingleton INSTANCE;
 	
   // 3
   private MySingleton() {

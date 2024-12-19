@@ -1,0 +1,6 @@
+{
+  "cover": {
+    "description": "Fotografia de <author-anchor>{{authorName}}</author-anchor>",
+    "alt": "Fotografia de {{authorName}}"
+  }
+}
