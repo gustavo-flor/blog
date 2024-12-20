@@ -1,4 +1,4 @@
-import { Trans } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { defaultNamespace } from '../../locales';
 
 interface Props {
@@ -9,8 +9,10 @@ interface Props {
 }
 
 const Translate = ({ i18nKey, ns = defaultNamespace, values = {}, components = {} }: Props) => {
+  const { i18n } = useTranslation();
   return (
     <Trans
+      i18n={i18n}
       ns={ns}
       i18nKey={i18nKey}
       values={values}
