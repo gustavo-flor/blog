@@ -45,7 +45,7 @@ const Article = () => {
         .then(text => setContent(text));
     }
     loadContent();
-  }, [post, i18n.language]);
+  }, [post, i18n.language, lang]);
 
   useEffect(() => {
     setNumberOfWords(getNumberOfWords(content));
