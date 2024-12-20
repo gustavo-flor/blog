@@ -1,16 +1,16 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom'
 
 interface Props {
   tags: string[];
 }
 
 const Tags = ({ tags }: Props) => {
-  const { tag: query } = useParams();
-  const getLink = (tag: string) => !query || tag != query ? `/tags/${tag}` : '/';
-  const getLinkStyle = (tag: string) => query && tag != query ? 'cursor-text pointer-events-none' : '';
+  const { tag: query } = useParams()
+  const getLink = (tag: string) => !query || tag != query ? `/tags/${tag}` : '/'
+  const getLinkStyle = (tag: string) => query && tag != query ? 'cursor-text pointer-events-none' : ''
   const getStyle = (tag: string) => !query || tag != query 
     ? 'opacity-40 hover:opacity-100 hover:rounded-xl transition-all' 
-    : '';
+    : ''
   return (
     <ul className='flex flex-wrap gap-x-2'>{tags.map(tag =>
       <li key={tag}>
@@ -21,7 +21,7 @@ const Tags = ({ tags }: Props) => {
         </Link>
       </li> 
     )}</ul>
-  );
+  )
 }
 
-export default Tags;
+export default Tags

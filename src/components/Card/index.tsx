@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
-import { getKey, Post } from '../../services/post';
-import Tags from '../Tags';
+import { getKey, Post } from '../../services/post'
+import Tags from '../Tags'
 
 interface Props {
   post: Post
@@ -10,8 +10,8 @@ interface Props {
 
 const Card = ({ post }: Props) => {
   const { t } = useTranslation()
-  const postTitle = t(`${getKey(post)}.title`, { ns: 'posts' });
-  const postDescription = t(`${getKey(post)}.description`, { ns: 'posts' });
+  const postTitle = t(`${getKey(post)}.title`, { ns: 'posts' })
+  const postDescription = t(`${getKey(post)}.description`, { ns: 'posts' })
 
   return (
     <div>
@@ -21,7 +21,7 @@ const Card = ({ post }: Props) => {
       </Link>
       <p className='opacity-80'>{postDescription}</p>
     </div>
-  );
+  )
 }
 
-export default Card;
+export default Card

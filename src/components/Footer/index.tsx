@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 
-import Brand from '../Brand';
-import LanguageSwitcher from '../LanguageSwitcher';
+import Brand from '../Brand'
+import LanguageSwitcher from '../LanguageSwitcher'
 
 const ns = 'footer'
 
@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

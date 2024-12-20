@@ -2,6 +2,6 @@ const Anchor = ({ children, ...rest }: React.AnchorHTMLAttributes<HTMLAnchorElem
   <a {...rest} target='_blank' rel='noreferrer'>
     {children}
   </a>
-);
+)
 
-export default Anchor;
+export default Anchor

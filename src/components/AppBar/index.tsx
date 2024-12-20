@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
-import Brand from '../Brand';
-import LanguageSwitcher from '../LanguageSwitcher';
+import Brand from '../Brand'
+import LanguageSwitcher from '../LanguageSwitcher'
 
-import Lotus from './../../assets/lotus.svg';
+import Lotus from './../../assets/lotus.svg'
 
 const AppBar = () => {
   return (
@@ -16,7 +16,7 @@ const AppBar = () => {
         <LanguageSwitcher />
       </nav>
     </header>
-  );
+  )
 }
 
-export default AppBar;
+export default AppBar

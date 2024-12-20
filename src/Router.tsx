@@ -1,11 +1,11 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import Article from './pages/Article';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
-import PostsByTag from './pages/PostsByTag';
-import { getSupportedLanguages } from './services/lang';
-import React from 'react';
+import Article from './pages/Article'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
+import PostsByTag from './pages/PostsByTag'
+import { getSupportedLanguages } from './services/lang'
 
 const Router = () => {
   const supportedLanguages = getSupportedLanguages()
@@ -27,7 +27,7 @@ const Router = () => {
         <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default Router;
+export default Router

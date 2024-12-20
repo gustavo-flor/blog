@@ -1,7 +1,8 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 
-import Me from './../../assets/me-in-purple.jpg';
-import Translate from '../Translate';
+import Translate from '../Translate'
+
+import Me from './../../assets/me-in-purple.jpg'
 
 const ns = 'presentation'
 
@@ -27,7 +28,7 @@ const Presentation = () => {
         </div>
       </div>
     </main>
-  );
+  )
 }
 
-export default Presentation;
+export default Presentation

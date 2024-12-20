@@ -1,6 +1,6 @@
-import { t } from 'i18next';
+import { t } from 'i18next'
 
-import { getPreferredLanguage, LanguageCode } from  './lang';
+import { getPreferredLanguage, LanguageCode } from  './lang'
 
 interface Author {
   name: string;
@@ -31,26 +31,26 @@ interface Page<I> {
 }
 
 export enum Tag {
-  DESIGN_PATTERNS = "designpatterns",
-  SOFTWARE_DEVELOPMENT = "softwaredevelopment",
-  DISTRIBUTED_SYSTEMS = "distributedsystems",
-  REST = "rest",
-  JSON = "json",
-  HELLO = "hello",
-  DATA_STRUCTURES = "datastructures",
-  ALGORITHMS = "algorithms",
-  BEGINNERS = "beginners",
-  COMMUNITY = "community",
-  OBSERVABILITY = "observability",
-  OBJECT_ORIENTED_PROGRAMMING = "oop",
-  TEST = "test",
-  KOTLIN = "kotlin",
-  JAVA = "java",
-  SPRING = "spring",
-  BEST_PRACTICES = "bestpractices",
-  DATABASE_SYSTEMS = "databasesystems",
-  TOOLS = "tools",
-  CLOUD = "cloud",
+  DESIGN_PATTERNS = 'designpatterns',
+  SOFTWARE_DEVELOPMENT = 'softwaredevelopment',
+  DISTRIBUTED_SYSTEMS = 'distributedsystems',
+  REST = 'rest',
+  JSON = 'json',
+  HELLO = 'hello',
+  DATA_STRUCTURES = 'datastructures',
+  ALGORITHMS = 'algorithms',
+  BEGINNERS = 'beginners',
+  COMMUNITY = 'community',
+  OBSERVABILITY = 'observability',
+  OBJECT_ORIENTED_PROGRAMMING = 'oop',
+  TEST = 'test',
+  KOTLIN = 'kotlin',
+  JAVA = 'java',
+  SPRING = 'spring',
+  BEST_PRACTICES = 'bestpractices',
+  DATABASE_SYSTEMS = 'databasesystems',
+  TOOLS = 'tools',
+  CLOUD = 'cloud',
 }
 
 const scalabilityAndElasticity: Post = {
@@ -897,7 +897,7 @@ const rest: Post = {
   availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
-const highlight = scalabilityAndElasticity;
+const highlight = scalabilityAndElasticity
 
 const posts: Post[] = [
   scalabilityAndElasticity,
@@ -956,12 +956,12 @@ const posts: Post[] = [
   capTheorem,
   json,
   rest
-];
+]
 
 const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post> => {
-  const offset = size * (page - 1);
-  const totalPages = Math.ceil(posts.length / size);
-  const paginatedItems = posts.slice(offset, size * page);
+  const offset = size * (page - 1)
+  const totalPages = Math.ceil(posts.length / size)
+  const paginatedItems = posts.slice(offset, size * page)
 
   return {
     previousPage: page - 1 ? page - 1 : null,
@@ -969,57 +969,57 @@ const paginate = (posts: Post[], page: number = 1, size: number = 6): Page<Post>
     total: posts.length,
     totalPages: totalPages,
     items: paginatedItems
-  };
+  }
 }
 
-const listedPosts = posts.filter(it => it.listed);
+const listedPosts = posts.filter(it => it.listed)
 
 export const findAll = (page?: number, size?: number): Page<Post> => {
-  return paginate(listedPosts, page, size);
+  return paginate(listedPosts, page, size)
 }
 
 export const findAllByTag = (tag: string, page?: number, size?: number): Page<Post> => {
-  const filteredPosts = listedPosts.filter(it => it.tags.includes(tag));
-  return paginate(filteredPosts, page, size);
+  const filteredPosts = listedPosts.filter(it => it.tags.includes(tag))
+  return paginate(filteredPosts, page, size)
 }
 
 export const findBySlug = (slug: string): Post | undefined => {
-  return posts.find(it => it.fileName === slug);
+  return posts.find(it => it.fileName === slug)
 }
 
 export const getHighlight = (): Post => {
-  return highlight;
+  return highlight
 }
 
 const isToday = (date: Date): boolean => {
-  return new Date().toDateString() == date.toDateString();
+  return new Date().toDateString() == date.toDateString()
 }
 
 const isRecent = (date: Date): boolean => {
-  return new Date().getHours() - date.getHours() < 3;
+  return new Date().getHours() - date.getHours() < 3
 }
 
 export const getPublishedAt = (post: Post): string => {
   const lang = getPreferredLanguage()
   if (isToday(post.createdAt)) {
-    return isRecent(post.createdAt) ? t('justNow') : t('today');
+    return isRecent(post.createdAt) ? t('justNow') : t('today')
   }
-  return post.createdAt.toLocaleDateString(lang.code);
+  return post.createdAt.toLocaleDateString(lang.code)
 }
 
 export const getKey = (post: Post): string => {
   return post.fileName
     .replace(/^\d+-/, '')
-    .replace(/-([a-z])/g, (_, char) => char.toUpperCase());
+    .replace(/-([a-z])/g, (_, char) => char.toUpperCase())
 }
 
 export const getNumberOfWords = (text: string) => {
-  return text.split(/\s/g).length;
+  return text.split(/\s/g).length
 }
 
 export const getReadTime = (text: string) => {
-  const wordsPerMinute = 265;
-  const numberOfWords = getNumberOfWords(text);
-  const minutes = numberOfWords / wordsPerMinute;
-  return Math.ceil(minutes);
+  const wordsPerMinute = 265
+  const numberOfWords = getNumberOfWords(text)
+  const minutes = numberOfWords / wordsPerMinute
+  return Math.ceil(minutes)
 }

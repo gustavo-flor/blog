@@ -1,6 +1,7 @@
+import { CircleNotch } from 'phosphor-react'
 import React, { Suspense } from 'react'
-import Button from '../Button';
-import { CircleNotch } from 'phosphor-react';
+
+import Button from '../Button'
 
 const Markdown = React.lazy(() => import('./../Markdown'))
 
@@ -15,7 +16,7 @@ const LazyMarkdown = ({ content }: Props) => {
         <CircleNotch size={48} />
       </Button>
     </div>
-  );
+  )
   
   return (
     <Suspense fallback={<Loading />}>

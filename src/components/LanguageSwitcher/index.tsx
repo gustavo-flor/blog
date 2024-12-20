@@ -1,21 +1,21 @@
-import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
-import { getSupportedLanguages } from './../../services/lang';
+import { getSupportedLanguages } from './../../services/lang'
 
 const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
-  const supportedLanguages = getSupportedLanguages();
-  const [selected, setSelected] = useState(i18n.language);
+  const { i18n } = useTranslation()
+  const supportedLanguages = getSupportedLanguages()
+  const [selected, setSelected] = useState(i18n.language)
 
   const changeLanguage = (code: string) => {
-    setSelected(code);
-    i18n.changeLanguage(code);
+    setSelected(code)
+    i18n.changeLanguage(code)
   }
 
   useEffect(() => {
-    setSelected(i18n.language);
-  }, [i18n.language]);
+    setSelected(i18n.language)
+  }, [i18n.language])
 
   return (
     <select 
@@ -29,7 +29,7 @@ const LanguageSwitcher = () => {
         </option>
       )}
     </select>
-  );
+  )
 }
 
-export default LanguageSwitcher;
+export default LanguageSwitcher
