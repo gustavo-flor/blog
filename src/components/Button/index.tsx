@@ -8,14 +8,14 @@ const Button = ({ variant = 'default', children, className, ...rest }: Props) =>
       <button className={`${className} bg-purple-400 rounded-full`} {...rest}>
         {children}
       </button>
-    );
+    )
   }
 
   return (
     <button className={`${className} flex justify-center items-center bg-purple-500 text-white rounded-full px-4 py-2`} {...rest}>
       {children}
     </button>
-  );
+  )
 }
 
-export default Button;
+export default Button

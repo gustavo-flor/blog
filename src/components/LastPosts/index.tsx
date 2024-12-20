@@ -1,36 +1,37 @@
-import { ArrowCircleDown, CircleNotch } from 'phosphor-react';
-import { useEffect, useState } from 'react';
-import { Post, findAll, findAllByTag } from '../../services/post';
-import Button from '../Button';
-import Card from '../Card';
-import Translate from '../Translate';
+import { ArrowCircleDown, CircleNotch } from 'phosphor-react'
+import { useEffect, useState } from 'react'
+
+import { Post, findAll, findAllByTag } from '../../services/post'
+import Button from '../Button'
+import Card from '../Card'
+import Translate from '../Translate'
 
 interface Props {
   tag?: string;
 }
 
-const ns = 'last-posts';
+const ns = 'last-posts'
 
 const LastPosts = ({ tag }: Props) => {
-  const [pageNumber, setPageNumber] = useState(1);
-  const [nextPageNumber, setNextPageNumber] = useState<number | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [posts, setPosts] = useState<Post[]>([]);
+  const [pageNumber, setPageNumber] = useState(1)
+  const [nextPageNumber, setNextPageNumber] = useState<number | null>(null)
+  const [loading, setLoading] = useState(false)
+  const [posts, setPosts] = useState<Post[]>([])
 
   useEffect(() => {
     const page = tag != undefined 
       ? findAllByTag(tag, pageNumber) 
-      : findAll(pageNumber);
-    setNextPageNumber(page.nextPage);
-    setPosts([...posts, ...page.items]);
-    setLoading(false);
+      : findAll(pageNumber)
+    setNextPageNumber(page.nextPage)
+    setPosts([...posts, ...page.items])
+    setLoading(false)
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pageNumber]);
+  }, [pageNumber])
 
   const nextPage = () => {
     if (nextPageNumber) {
-      setLoading(true);
-      setPageNumber(nextPageNumber);
+      setLoading(true)
+      setPageNumber(nextPageNumber)
     }
   }
 
@@ -38,13 +39,13 @@ const LastPosts = ({ tag }: Props) => {
     <Button className='animate-spin' title='Loading...' disabled variant='key-button'>
       <CircleNotch size={48} />
     </Button>
-  );
+  )
 
   const LoadMoreButton = () => (
     <Button onClick={() => nextPage()} className='animate-bounce' title='Load More' variant='key-button'>
       <ArrowCircleDown size={48} />
     </Button>
-  );
+  )
 
   return (
     <section className='container mx-auto px-8 pt-8 pb-16 sm:py-16 md:py-20'>
@@ -69,4 +70,4 @@ const LastPosts = ({ tag }: Props) => {
   )
 }
 
-export default LastPosts;
+export default LastPosts

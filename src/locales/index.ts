@@ -1,6 +1,6 @@
-import { LanguageCode } from '../services/lang';
+import { LanguageCode } from '../services/lang'
 
-export const defaultNamespace = 'common';
+export const defaultNamespace = 'common'
 
 export const namespaces = [
   defaultNamespace, 
@@ -10,7 +10,7 @@ export const namespaces = [
   'footer',
   'last-posts',
   'highlight'
-];
+]
 
 export const resources = Object.fromEntries(
   await Promise.all(
@@ -18,7 +18,7 @@ export const resources = Object.fromEntries(
       lng,
       Object.fromEntries(
         await Promise.all(namespaces.map(async ns => [ns, await import(`./${lng}/${ns}.json`)]))
-      ),
+      )
     ])
   )
-);
+)

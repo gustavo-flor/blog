@@ -1,6 +1,7 @@
-import { useTranslation } from 'react-i18next';
-import AppBar from '../../components/AppBar';
-import Footer from '../../components/Footer';
+import { useTranslation } from 'react-i18next'
+
+import AppBar from '../../components/AppBar'
+import Footer from '../../components/Footer'
 
 const NotFound = () => {
   const { t } = useTranslation()
@@ -17,4 +18,4 @@ const NotFound = () => {
   )
 }
 
-export default NotFound;
+export default NotFound

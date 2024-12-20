@@ -1,18 +1,18 @@
-import { useTranslation } from 'react-i18next';
+import { ArrowRight } from 'phosphor-react'
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
-import { ArrowRight } from 'phosphor-react';
-import { Link } from 'react-router-dom';
-import { getHighlight, getKey, getPublishedAt } from '../../services/post';
-import Button from '../Button';
-import Tags from '../Tags';
+import { getHighlight, getKey, getPublishedAt } from '../../services/post'
+import Button from '../Button'
+import Tags from '../Tags'
 
 const ns = 'highlight'
 
 const Highlight = () => {
   const { t } = useTranslation()
-  const post = getHighlight();
-  const postTitle = t(`${getKey(post)}.title`, { ns: 'posts' });
-  const postDescription = t(`${getKey(post)}.description`, { ns: 'posts' });
+  const post = getHighlight()
+  const postTitle = t(`${getKey(post)}.title`, { ns: 'posts' })
+  const postDescription = t(`${getKey(post)}.description`, { ns: 'posts' })
 
   return (
     <section className='border-b pb-16 lg:pb-0'>
@@ -42,7 +42,7 @@ const Highlight = () => {
         </aside>
       </div>
     </section>
-  );
+  )
 }
 
-export default Highlight;
+export default Highlight

@@ -1,11 +1,11 @@
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
-import remarkGfm from 'remark-gfm';
+import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
+import remarkGfm from 'remark-gfm'
 
-import Anchor from '../Anchor';
-import CodeBlock from '../CodeBlock';
+import Anchor from '../Anchor'
+import CodeBlock from '../CodeBlock'
 
-import './style.css';
+import './style.css'
 
 interface Props {
   content: string;
@@ -24,6 +24,6 @@ const Markdown = ({ content }: Props) => (
       {content}
     </ReactMarkdown>
   </article>
-);
+)
 
-export default Markdown;
+export default Markdown

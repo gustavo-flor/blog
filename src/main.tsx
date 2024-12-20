@@ -1,12 +1,11 @@
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
-import App from './App.tsx';
+import App from './App.tsx'
 
-
-const root = document.getElementById('root')!;
+const root = document.getElementById('root')!
 
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
@@ -14,4 +13,4 @@ ReactDOM.createRoot(root).render(
     <Analytics />
     <SpeedInsights />
   </React.StrictMode>
-);
+)

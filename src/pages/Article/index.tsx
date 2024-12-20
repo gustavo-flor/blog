@@ -1,56 +1,57 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useParams } from 'react-router-dom'
 
-import Me from '../../assets/me-in-purple.jpg';
-import Anchor from '../../components/Anchor';
-import AppBar from '../../components/AppBar';
-import Footer from '../../components/Footer';
-import Markdown from '../../components/LazyMarkdown';
-import Tags from '../../components/Tags';
-import { defaultLanguage, getPreferredLanguage } from './../../services/lang';
-import { Post, findBySlug, getKey, getNumberOfWords, getPublishedAt, getReadTime } from './../../services/post';
-import NotFound from './../NotFound';
-import Translate from '../../components/Translate';
+import Me from '../../assets/me-in-purple.jpg'
+import Anchor from '../../components/Anchor'
+import AppBar from '../../components/AppBar'
+import Footer from '../../components/Footer'
+import Markdown from '../../components/LazyMarkdown'
+import Tags from '../../components/Tags'
+import Translate from '../../components/Translate'
 
-import './style.css';
+import { defaultLanguage, getPreferredLanguage } from './../../services/lang'
+import { Post, findBySlug, getKey, getNumberOfWords, getPublishedAt, getReadTime } from './../../services/post'
+import NotFound from './../NotFound'
 
-const ns = 'article';
+import './style.css'
+
+const ns = 'article'
 
 const Article = () => {
   const { i18n, t } = useTranslation()
   const lang = getPreferredLanguage()
-  const { slug } = useParams();
-  const [post, setPost] = useState<Post | undefined>();
-  const [content, setContent] = useState('');
-  const [numberOfWords, setNumberOfWords] = useState(0);
-  const [readTime, setReadTime] = useState(1);
+  const { slug } = useParams()
+  const [post, setPost] = useState<Post | undefined>()
+  const [content, setContent] = useState('')
+  const [numberOfWords, setNumberOfWords] = useState(0)
+  const [readTime, setReadTime] = useState(1)
 
   useEffect(() => {
     if (slug === undefined) {
-      return;
+      return
     }
-    setPost(findBySlug(slug));
-  }, [slug]);
+    setPost(findBySlug(slug))
+  }, [slug])
 
   useEffect(() => {
     if (post === undefined) {
-      return;
+      return
     }
     const loadContent = async () => {
       const supportsLang = post.availableLanguages.includes(lang.code)
       const supportedLang = supportsLang ? lang : defaultLanguage
       fetch(`/markdown/${supportedLang.code}/${post.fileName}.md`)
         .then(file => file.text())
-        .then(text => setContent(text));
+        .then(text => setContent(text))
     }
-    loadContent();
-  }, [post, i18n.language, lang]);
+    loadContent()
+  }, [post, i18n.language, lang])
 
   useEffect(() => {
-    setNumberOfWords(getNumberOfWords(content));
-    setReadTime(getReadTime(content));
-  }, [content]);
+    setNumberOfWords(getNumberOfWords(content))
+    setReadTime(getReadTime(content))
+  }, [content])
 
   if (post === undefined) {
     return <NotFound />
@@ -114,7 +115,7 @@ const Article = () => {
       </main>
       <Footer />
     </>
-  );
+  )
 }
 
-export default Article;
+export default Article

@@ -1,9 +1,9 @@
 import i18next from 'i18next'
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import LanguageDetector from 'i18next-browser-languagedetector'
+import { initReactI18next } from 'react-i18next'
 
-import { defaultLanguage, getSupportedLanguages } from './lang';
-import { resources, namespaces, defaultNamespace } from './../locales';
+import { resources, namespaces, defaultNamespace } from './../locales'
+import { defaultLanguage, getSupportedLanguages } from './lang'
 
 i18next
   .use(initReactI18next)
@@ -23,6 +23,6 @@ i18next
       lookupFromPathIndex: 0,
       lookupLocalStorage: 'Preferred-Language'
     }
-  });
+  })
 
-export const i18n = i18next;
+export const i18n = i18next
