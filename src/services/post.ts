@@ -155,7 +155,7 @@ const circuitBreaker: Post = {
   fileName: '50-circuit-breaker',
   createdAt: new Date(2024, 4, 13, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const sdkman: Post = {
@@ -200,7 +200,7 @@ const springMail: Post = {
   fileName: '47-spring-mail',
   createdAt: new Date(2024, 3, 8, 6, 0),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const concurrencyAndParallelism: Post = {
@@ -710,7 +710,7 @@ const howSpringProvidesDependencyInjection: Post = {
   fileName: '13-how-spring-provides-di',
   createdAt: new Date(2024, 0, 1, 5, 30),
   listed: true,
-  availableLanguages: [LanguageCode.PT_BR]
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
 }
 
 const inversionOfControl: Post = {
