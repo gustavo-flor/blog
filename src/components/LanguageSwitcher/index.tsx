@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { getSupportedLanguages } from './../../services/lang'
 
 const LanguageSwitcher = () => {
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const supportedLanguages = getSupportedLanguages()
   const [selected, setSelected] = useState(i18n.language)
 
@@ -22,9 +22,10 @@ const LanguageSwitcher = () => {
       value={selected}
       onChange={event => changeLanguage(event.target.value)}
       className='appearance-none bg-transparent outline-none text-xl py-1 px-1 md:px-4'
+      title={t('changeLanguage')}
     >
       {supportedLanguages.map(lang => 
-        <option key={lang.code} value={lang.code} aria-label={lang.displayName}>
+        <option key={lang.code} value={lang.code} title={lang.displayName}>
           {lang.flag}
         </option>
       )}
