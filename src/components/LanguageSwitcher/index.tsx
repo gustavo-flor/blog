@@ -24,7 +24,7 @@ const LanguageSwitcher = () => {
       className='appearance-none bg-transparent outline-none text-xl py-1 px-1 md:px-4'
     >
       {supportedLanguages.map(lang => 
-        <option key={lang.code} value={lang.code}>
+        <option key={lang.code} value={lang.code} aria-label={lang.displayName}>
           {lang.flag}
         </option>
       )}

@@ -7,17 +7,20 @@ export enum LanguageCode {
 
 export interface Language {
   code: LanguageCode;
-  flag: string
+  flag: string;
+  displayName: string;
 }
 
 const portuguese = { 
   code: LanguageCode.PT_BR,
-  flag: '🇧🇷'
+  flag: '🇧🇷',
+  displayName: 'Português'
 }
 
 const english = { 
   code: LanguageCode.EN_US,
-  flag: '🇺🇸'
+  flag: '🇺🇸',
+  displayName: 'English'
 }
 
 export const languages: Language[] = [portuguese, english]
