@@ -1,0 +1,10 @@
+{
+  "cover": {
+    "description": "<author-anchor>{{authorName}}</author-anchor>'s photography",
+    "alt": "{{authorName}}'s photography"
+  },
+  "origin": {
+    "description": "Published on <anchor>{{site}}</anchor>"
+  },
+  "readTime": "{{numberOfWords}} words | {{readTime}} min. read"
+}
