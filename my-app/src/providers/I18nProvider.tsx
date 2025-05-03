@@ -2,16 +2,19 @@
 
 import { I18nextProvider } from 'react-i18next'
 
-import { i18n } from '@/services/i18n'
+import { loadInstance } from '@/services/i18n'
 
 interface Props {
-  children?: React.ReactNode;
+  children: React.ReactNode,
 }
 
-const I18nProvider = ({ children }: Props) => (
-  <I18nextProvider i18n={i18n}>
-    {children}
-  </I18nextProvider>
-)
+const I18nProvider = ({ children }: Props) => {
+  const { i18n } = loadInstance()
+  return (
+    <I18nextProvider i18n={i18n}>
+      {children}
+    </I18nextProvider>
+  )
+}
 
 export default I18nProvider

@@ -15,13 +15,13 @@ const portuguese = {
   displayName: 'Português'
 }
 
-const english = { 
-  code: LanguageCode.EN_US,
-  flag: '🇺🇸',
-  displayName: 'English'
-}
+// const english = { 
+//   code: LanguageCode.EN_US,
+//   flag: '🇺🇸',
+//   displayName: 'English'
+// }
 
-export const supportedLanguages: Language[] = [portuguese, english]
+export const supportedLanguages: Language[] = [portuguese]
 
 export const defaultLanguage = portuguese
 

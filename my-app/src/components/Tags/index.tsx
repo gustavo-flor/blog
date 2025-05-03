@@ -1,11 +1,13 @@
 import Link from 'next/link'
+import { useParams } from 'next/navigation'
 
 interface Props {
-  selectedTag?: string;
   tags: string[];
 }
 
-const Tags = ({ selectedTag, tags }: Props) => {
+const Tags = ({ tags }: Props) => {
+  const params = useParams<{ tag?: string }>()
+  const selectedTag = params?.tag 
   const getLink = (tag: string) => !selectedTag || tag != selectedTag ? `/tags/${tag}` : '/'
   const getLinkStyle = (tag: string) => selectedTag && tag != selectedTag ? 'cursor-text pointer-events-none' : ''
   const getStyle = (tag: string) => !selectedTag || tag != selectedTag 

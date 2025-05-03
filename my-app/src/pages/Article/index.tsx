@@ -13,13 +13,12 @@ import Translate from '@/components/Translate'
 import NotFound from '@/pages/NotFound'
 import { defaultLanguage, getPreferredLanguage } from '@/services/lang'
 import { Post, findBySlug, getKey, getNumberOfWords, getPublishedAt, getReadTime } from '@/services/post'
-
 const ns = 'article'
 
 const Article = () => {
-  const { i18n, t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const lang = getPreferredLanguage()
-  const params = useParams<{ slug: string }>()
+  const params = useParams<{ slug?: string }>()
   const slug = params?.slug
   const [post, setPost] = useState<Post | undefined>()
   const [content, setContent] = useState('')
@@ -45,7 +44,7 @@ const Article = () => {
         .then(text => setContent(text))
     }
     loadContent()
-  }, [post, i18n.language, lang])
+  }, [post, lang])
 
   useEffect(() => {
     setNumberOfWords(getNumberOfWords(content))
@@ -70,6 +69,7 @@ const Article = () => {
             />
             <figcaption className='text-center text-gray-400 text-sm mt-4'>
               <Translate 
+                i18n={i18n}
                 i18nKey='cover.description'
                 ns={ns}
                 values={{ authorName: post.cover.author.name }}
@@ -86,6 +86,7 @@ const Article = () => {
           {post.origin != undefined && 
             <span className='text-xs opacity-40 mt-4 block'>
               <Translate 
+                i18n={i18n}
                 i18nKey='origin.description'
                 ns={ns}
                 values={{ site: post.origin.hostname }}

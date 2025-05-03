@@ -1,35 +1,29 @@
 import { useRouter, usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { supportedLanguages } from '@/services/lang'
 
 const LanguageSwitcher = () => {
+  const { i18n, t } = useTranslation()
   const router = useRouter()
   const pathname = usePathname()
-  const { t } = useTranslation()
-  const [currentLocale, setCurrentLocale] = useState<string>()
+  const currentLanguage = i18n.language
  
   const getResources = () => pathname?.split('/').slice(2) ?? []
 
-  useEffect(() => {
-    const locale = pathname?.split('/')[1]
-    setCurrentLocale(locale)
-  }, [pathname])
-
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const code = event.target.value
-    if (currentLocale !== code) {
+    if (currentLanguage !== code) {
       const target = [`/${code}`, ...getResources()].join('/')
+      i18n.changeLanguage(code)
       router.push(target)
     }
   }
 
-  if (!currentLocale) return null
-
   return (
     <select 
-      value={currentLocale}
+      disabled={supportedLanguages.length === 1}
+      value={currentLanguage}
       onChange={handleChange}
       className='appearance-none bg-transparent outline-none text-xl py-1 px-1 md:px-4'
       title={t('changeLanguage')}

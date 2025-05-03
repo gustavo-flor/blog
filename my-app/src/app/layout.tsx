@@ -3,6 +3,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react'
 import type { Metadata } from 'next'
 
 import I18nProvider from '@/providers/I18nProvider'
+import { defaultLanguage } from '@/services/lang'
 
 import './style.css'
 
@@ -19,13 +20,13 @@ export const metadata: Metadata = {
   description: 'Este é o lugar em que escrevo o que gostaria de ler, falo sobre o que estou estudando e publico sobre sistemas que você utiliza todos os dias.'
 }
 
-const RootLayout = ({
-  children
-}: Readonly<{
+interface LayoutProps {
   children: React.ReactNode;
-}>) => {
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
-    <html lang="pt-BR">
+    <html lang={defaultLanguage.code}>
       <body>
         <I18nProvider>
           {children}
@@ -37,4 +38,4 @@ const RootLayout = ({
   )
 }
 
-export default RootLayout
+export default Layout

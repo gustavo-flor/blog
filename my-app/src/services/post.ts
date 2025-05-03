@@ -1000,10 +1000,10 @@ const isRecent = (date: Date): boolean => {
 }
 
 export const getPublishedAt = (post: Post): string => {
-  const lang = getPreferredLanguage()
   if (isToday(post.createdAt)) {
     return isRecent(post.createdAt) ? t('justNow') : t('today')
   }
+  const lang = getPreferredLanguage()
   return post.createdAt.toLocaleDateString(lang.code)
 }
 

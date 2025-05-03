@@ -1,17 +1,17 @@
 import { useTranslation } from 'react-i18next'
 
 import Translate from '@/components/Translate'
-
 const ns = 'presentation'
 
 const Presentation = () => {
-  const { t } = useTranslation(ns)
+  const { t, i18n } = useTranslation(ns)
   return (
     <main>
       <div className='border-b flex flex-col items-center mb-10 pb-10'>
         <div className='container mx-auto flex items-center px-8 py-8 sm:py-16 md:py-20'>
           <h1 className='lg:w-2/3 text-2xl sm:text-3xl text-gray-400'>
             <Translate 
+              i18n={i18n}
               i18nKey='title'
               ns={ns} 
               components={{
