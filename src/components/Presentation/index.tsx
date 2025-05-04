@@ -8,7 +8,7 @@ const Presentation = () => {
           </h1>
         </div>
         <div className='w-20 h-20 flex relative items-center rounded-full overflow-hidden border-2 mb-[-5rem] transition-all hover:scale-150 cursor-pointer'>
-          <img src="/images/me-in-purple.jpg" alt="Fotografia do autor" />
+          <img src='/images/me-in-purple.jpg' alt='Fotografia do autor' />
         </div>
       </div>
     </main>
