@@ -17,6 +17,6 @@ interface PageProps {
 export default async function Page({ params }: PageProps) {
   const { tag } = await params
 
-  return <PostsByTag tag={tag} />
+  return <PostsByTag tag={tag.toLowerCase()} />
 }
 
