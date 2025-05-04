@@ -25,7 +25,4 @@ export const supportedLanguages: Language[] = [portuguese]
 
 export const defaultLanguage = portuguese
 
-export const getPreferredLanguage = () => {
-  // return supportedLanguages.find(it => it.code === i18n.language) ?? defaultLanguage
-  return defaultLanguage
-}
+export const getPreferredLanguage = () => defaultLanguage

@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import Brand from '@/components/Brand'
-import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 const AppBar = () => {
   return (
@@ -11,7 +10,6 @@ const AppBar = () => {
           <img src="/images/lotus.svg" width={32} height={32} alt='Lotus Icon' />
           <Brand className='text-2xl' />
         </Link>
-        <LanguageSwitcher />
       </nav>
     </header>
   )

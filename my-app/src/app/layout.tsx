@@ -2,7 +2,6 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 import type { Metadata } from 'next'
 
-import I18nProvider from '@/providers/I18nProvider'
 import { defaultLanguage } from '@/services/lang'
 
 import './style.css'
@@ -28,9 +27,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang={defaultLanguage.code}>
       <body>
-        <I18nProvider>
-          {children}
-        </I18nProvider>
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>
