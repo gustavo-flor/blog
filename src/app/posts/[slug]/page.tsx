@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import Article from '@/screens/Article'
@@ -7,7 +8,6 @@ import { findBySlug, posts } from '@/services/post'
 
 export const revalidate = false
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const generateStaticParams = async () => {
   return posts.map(({ slug }) => ({ slug }))
 }
@@ -30,4 +30,18 @@ export default async function Page({ params }: PageProps) {
   const content = await read(`/markdown/${lang.code}/${post.slug}.md`)
 
   return <Article post={post} content={content} />
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params
+  const post = findBySlug(slug)
+
+  if (post === undefined) {
+    return notFound()
+  }
+
+  return {
+    title: `${post.title} | Gustavo Flôr`,
+    description: post.description
+  }
 }

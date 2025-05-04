@@ -3,7 +3,6 @@ import { Tag } from '@/services/post'
 
 export const revalidate = false
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const generateStaticParams = async () => {
   return Object.values(Tag).map((tag) => ({ tag }))
 }

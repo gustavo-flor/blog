@@ -17,7 +17,7 @@ const Highlight = () => {
           </span>
           <Link href={`/posts/${post.slug}`} className='hover:opacity-60 cursor-pointer'>
             <h2 className='lg:w-11/12 text-3xl sm:text-5xl font-bold mt-4'>
-              {post.title}
+              {post.icon} {post.title}
             </h2>
           </Link>
           <figure className='mt-8'>

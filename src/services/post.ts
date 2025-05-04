@@ -11,6 +11,7 @@ interface Cover {
 }
 
 export interface Post {
+  icon: string;
   title: string;
   description: string;
   cover: Cover;
@@ -54,7 +55,8 @@ export enum Tag {
 }
 
 const scalabilityAndElasticity: Post = {
-  title: '🪀 Escalabilidade e Elasticidade',
+  icon: '🪀',
+  title: 'Escalabilidade e Elasticidade',
   description: 'Vamos falar sobre escalabilidade e elasticidade — conceitos relacionados, porém distintos, que muitas vezes são utilizados de forma incorreta como sinônimos....',
   cover: {
     href: 'https://images.unsplash.com/photo-1515073883629-5e2924e3e106',
@@ -71,7 +73,8 @@ const scalabilityAndElasticity: Post = {
 }
 
 const loadTests: Post = {
-  title: '🚚 O que é teste de carga?',
+  icon: '🚚',
+  title: 'O que é teste de carga?',
   description: 'Simulando diferentes cargas de uso em um sistema, os testes de carga nos ajudam a identificar possíveis gargalos antes mesmo que eles ocorram em produção...',
   cover: {
     href: 'https://images.unsplash.com/photo-1535696588143-945e1379f1b0',
@@ -88,7 +91,8 @@ const loadTests: Post = {
 }
 
 const webhook: Post = {
-  title: '📟 O que é webhook?',
+  icon: '📟',
+  title: 'O que é webhook?',
   description: 'Webhook é uma forma de comunicação entre sistemas através de callbacks...',
   cover: {
     href: 'https://images.unsplash.com/photo-1520038410233-7141be7e6f97',
@@ -105,7 +109,8 @@ const webhook: Post = {
 }
 
 const idempotentApi: Post = {
-  title: '🧦 Idempotência em sua API',
+  icon: '🧦',
+  title: 'Idempotência em sua API',
   description: 'Idempotência é um termo utilizado na computação para definir operações que, de acordo com o input inicial, são executadas múltiplas vezes sem alterar seu resultado final. Entenda...',
   cover: {
     href: 'https://images.unsplash.com/photo-1516446589542-81d7ca527b82',
@@ -122,7 +127,8 @@ const idempotentApi: Post = {
 }
 
 const backpressure: Post = {
-  title: '🦀 Gerenciamento de fluxo e recursos com backpressure',
+  icon: '🦀',
+  title: 'Gerenciamento de fluxo e recursos com backpressure',
   description: 'Backpressure é uma técnica para garantir o funcionamento correto de um software ao processar um fluxo de dados. Ela permite que a aplicação gerencie...',
   cover: {
     href: 'https://images.unsplash.com/photo-1631472608403-2c8d6f61a08e',
@@ -139,7 +145,8 @@ const backpressure: Post = {
 }
 
 const kotlinIntroduction: Post = {
-  title: '🧚‍♀️ Kotlin: Vantagens, mitos, dicas e conceitos fundamentais',
+  icon: '🧚‍♀️',
+  title: 'Kotlin: Vantagens, mitos, dicas e conceitos fundamentais',
   description: 'Vamos falar sobre Kotlin! Neste texto, quero compartilhar algumas coisas que aprendi nas últimas semanas, desvendar alguns mitos sobre a linguagem e fornecer exemplos práticos para quem está começando...',
   cover: {
     href: 'https://images.unsplash.com/photo-1494256997604-768d1f608cac',
@@ -156,7 +163,8 @@ const kotlinIntroduction: Post = {
 }
 
 const circuitBreaker: Post = {
-  title: '🎒 Como utilizar Circuit Breaker para tornar seu serviço mais resiliente',
+  icon: '🎒',
+  title: 'Como utilizar Circuit Breaker para tornar seu serviço mais resiliente',
   description: 'O padrão Circuit Breaker, na arquitetura de microsserviços, possibilita que uma aplicação consiga se manter de pé, evitando falhas em cascata, ao enfretar problemas de comunicação com chamadas remotas...',
   cover: {
     href: 'https://images.unsplash.com/photo-1560948799-e17458123a9a',
@@ -173,7 +181,8 @@ const circuitBreaker: Post = {
 }
 
 const sdkman: Post = {
-  title: '🧑‍💼 SDKMan: Ferramenta para gerenciamento de SDKs',
+  icon: '🧑‍💼',
+  title: 'SDKMan: Ferramenta para gerenciamento de SDKs',
   description: 'Vamos falar sobre o SDKMan, o que é a essa ferramenta e suas vantagem de utilizar. SDKMan é um gerenciador de SDKs...',
   cover: {
     href: 'https://images.unsplash.com/photo-1547270785-e11cb938d594',
@@ -190,7 +199,8 @@ const sdkman: Post = {
 }
 
 const springAndOpenAPI: Post = {
-  title: '📝 Spring: Documentando sua API HTTP com OpenAPI',
+  icon: '📝',
+  title: 'Spring: Documentando sua API HTTP com OpenAPI',
   description: 'O OpenAPI, também conhecido como Swagger, é uma forma de especificar e documentar sua API HTTP. É uma forma padronizada e agnóstica à linguagem que permite expor os padrões e comportamentos de um serviço...',
   cover: {
     href: 'https://images.unsplash.com/photo-1671900599250-5f6a1ff85762',
@@ -207,7 +217,8 @@ const springAndOpenAPI: Post = {
 }
 
 const springMail: Post = {
-  title: '📮 Envio de e-mails com Spring Mail',
+  icon: '📮',
+  title: 'Envio de e-mails com Spring Mail',
   description: 'O envio de e-mails é um aspecto crucial para diversas aplicações, sendo utilizado para enviar notificações, alertas ou comunicações para os usuários.',
   cover: {
     href: 'https://images.unsplash.com/photo-1618230305526-48435ece521f',
@@ -224,7 +235,8 @@ const springMail: Post = {
 }
 
 const concurrencyAndParallelism: Post = {
-  title: '🏎️ Concorrência e Paralelismo',
+  icon: '🏎️',
+  title: 'Concorrência e Paralelismo',
   description: 'Concorrência e paralelismo são conceitos relacionados na computação, frequentemente utilizados como sinônimos. No entanto, eles têm significados diferentes. Entender essa diferença pode ser crucial no design eficiente de um software.',
   cover: {
     href: 'https://images.unsplash.com/photo-1604398907654-ec2bf7108b4a',
@@ -241,7 +253,8 @@ const concurrencyAndParallelism: Post = {
 }
 
 const acidTransactions: Post = {
-  title: '🕯️ O que são transações ACID?',
+  icon: '🕯️',
+  title: 'O que são transações ACID?',
   description: 'Em um sistema de banco de dados, uma transação representa uma unidade de trabalho (operação lógica)...',
   cover: {
     href: 'https://images.unsplash.com/photo-1497910091122-9f8a7746eb33',
@@ -258,7 +271,8 @@ const acidTransactions: Post = {
 }
 
 const solid: Post = {
-  title: '🧱 O que é SOLID?',
+  icon: '🧱',
+  title: 'O que é SOLID?',
   description: 'SOLID é um acrônimo para cinco princípios da programação orientada a objetos que visam a produção de um software sólido (🥸)...',
   cover: {
     href: 'https://images.unsplash.com/photo-1591867833879-1285ba2b206d',
@@ -275,7 +289,8 @@ const solid: Post = {
 }
 
 const trailingCommaJava: Post = {
-  title: '☕️ Vantagens da vírgula no fim de expressões multilinha',
+  icon: '☕️',
+  title: 'Vantagens da vírgula no fim de expressões multilinha',
   description: 'Neste texto, pretendo apresentar os motivos pelos quais a vírgula ao final de expressões multilinha é mais do que apenas uma convenção de estilo...',
   cover: {
     href: 'https://images.unsplash.com/photo-1644270489776-217a353eb842',
@@ -292,7 +307,8 @@ const trailingCommaJava: Post = {
 }
 
 const testcontainers: Post = {
-  title: '🪢 O que é Testcontainers?',
+  icon: '🪢',
+  title: 'O que é Testcontainers?',
   description: 'Testcontainers é uma biblioteca de código aberto, que disponibiliza instâncias de qualquer aplicação que possa ser executada em um container...',
   cover: {
     href: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55',
@@ -309,7 +325,8 @@ const testcontainers: Post = {
 }
 
 const quicksort: Post = {
-  title: '⛵️ Algoritmos: Quicksort',
+  icon: '⛵️',
+  title: 'Algoritmos: Quicksort',
   description: 'O Quicksort é um eficiente algoritmo de ordenação, baseia-se em dividir o problema em partes menores, para resolver esta tarefa...',
   cover: {
     href: 'https://images.unsplash.com/photo-1494947665470-20322015e3a8',
@@ -326,7 +343,8 @@ const quicksort: Post = {
 }
 
 const aggregationAndComposition: Post = {
-  title: '☕️ Agregação e Composição',
+  icon: '☕️',
+  title: 'Agregação e Composição',
   description: 'Agregação e composição são dois tipos de relacionamento da programação orientada a objetos (POO). Ambos representam associações de propriedade entre objetos, porém...',
   cover: {
     href: 'https://images.unsplash.com/photo-1619017236031-6f55d516f49a',
@@ -343,7 +361,8 @@ const aggregationAndComposition: Post = {
 }
 
 const javaEncapsulation: Post = {
-  title: '🎯 Java: Encapsulamento',
+  icon: '🎯',
+  title: 'Java: Encapsulamento',
   description: 'Encapsulamento é um dos pilares da Programação Orientada a Objetos (POO). Refere-se à ação de agrupar dados (atributos) e comportamentos (métodos) em uma única unidade, denominada objeto...',
   cover: {
     href: 'https://images.unsplash.com/photo-1597250388001-fc5a96b307eb',
@@ -360,7 +379,8 @@ const javaEncapsulation: Post = {
 } 
 
 const interpreterDesignPattern: Post = {
-  title: '🤹 Design Patterns em 1 minuto: Interpreter #23',
+  icon: '🤹',
+  title: 'Design Patterns em 1 minuto: Interpreter #23',
   description: 'O padrão de projeto Interpreter provê uma forma dinâmica e clara de transformar em ações determinadas linguagens ou expressões...',
   cover: {
     href: 'https://images.unsplash.com/photo-1518443855757-dfadac7101ae',
@@ -377,7 +397,8 @@ const interpreterDesignPattern: Post = {
 }
 
 const mediatorDesignPattern: Post = {
-  title: '🚦 Design Patterns em 1 minuto: Mediator #22',
+  icon: '🚦',
+  title: 'Design Patterns em 1 minuto: Mediator #22',
   description: 'O Mediator é um padrão de projeto que ajuda a reduzir a complexidade entre a comunicação de múltiplos objetos...',
   cover: {
     href: 'https://images.unsplash.com/photo-1598188306155-25e400eb5078',
@@ -394,7 +415,8 @@ const mediatorDesignPattern: Post = {
 }
 
 const flyweightDesignPattern: Post = {
-  title: '🏗️ Design Patterns em 1 minuto: Flyweight #21',
+  icon: '🏗️',
+  title: 'Design Patterns em 1 minuto: Flyweight #21',
   description: 'O Design Pattern Flyweight permite otimizar o uso de memória em casos onde nossa aplicação precisa disponibilizar uma grande quantidade de objetos contendo conteúdos semelhantes...',
   cover: {
     href: 'https://images.unsplash.com/photo-1598223456174-1215efd9adbe',
@@ -411,7 +433,8 @@ const flyweightDesignPattern: Post = {
 }
 
 const factoryMethodDesignPattern: Post = {
-  title: '🛋️ Design Patterns em 1 minuto: Factory Method #20',
+  icon: '🛋️',
+  title: 'Design Patterns em 1 minuto: Factory Method #20',
   description: 'O padrão de projeto Factory Method provê um meio de criação de objetos que permite que classes filhas possam definir o tipo do objeto que será criado em um método definido na classe pai...',
   cover: {
     href: 'https://images.unsplash.com/photo-1595374322552-c464f0e8125e',
@@ -428,7 +451,8 @@ const factoryMethodDesignPattern: Post = {
 }
 
 const templateMethodDesignPattern: Post = {
-  title: '🍽️ Design Patterns em 1 minuto: Template Method #19',
+  icon: '🍽️',
+  title: 'Design Patterns em 1 minuto: Template Method #19',
   description: 'O Template Method é o padrão de projeto que propõe que subclasses possam sobrescrever etapas de um comportamento da superclasse de forma estruturada e adaptável...',
   cover: {
     href: 'https://images.unsplash.com/photo-1531220847861-69e336daffa0',
@@ -445,7 +469,8 @@ const templateMethodDesignPattern: Post = {
 }
 
 const bridgeDesignPattern: Post = {
-  title: '🌉 Design Patterns em 1 minuto: Bridge #18',
+  icon: '🌉',
+  title: 'Design Patterns em 1 minuto: Bridge #18',
   description: 'O padrão de projeto Bridge propõe a separação das responsabilidades de uma classe em duas camadas: abstração e implementação...',
   cover: {
     href: 'https://images.unsplash.com/photo-1552071379-041b32707fed',
@@ -462,7 +487,8 @@ const bridgeDesignPattern: Post = {
 }
 
 const iteratorDesignPattern: Post = {
-  title: '🔄 Design Patterns em 1 minuto: Iterator #17',
+  icon: '🔄',
+  title: 'Design Patterns em 1 minuto: Iterator #17',
   description: 'O padrão de projeto Iterator permite percorrer uma coleção de elementos sem precisar expor sua implementação...',
   cover: {
     href: 'https://images.unsplash.com/photo-1634609243366-ddd646c1b241',
@@ -479,7 +505,8 @@ const iteratorDesignPattern: Post = {
 }
 
 const visitorDesignPattern: Post = {
-  title: '🚶 Design Patterns em 1 minuto: Visitor #16',
+  icon: '🚶',
+  title: 'Design Patterns em 1 minuto: Visitor #16',
   description: 'O Design Pattern Visitor permite separar o comportamento do objeto em que é executado, aumentando assim a modularidade e adaptabilidade da sua aplicação...',
   cover: {
     href: 'https://images.unsplash.com/photo-1601247387326-f8bcb5a234d4',
@@ -496,7 +523,8 @@ const visitorDesignPattern: Post = {
 }
 
 const compositeDesignPattern: Post = {
-  title: '🌳 Design Patterns em 1 minuto: Composite #15',
+  icon: '🌳',
+  title: 'Design Patterns em 1 minuto: Composite #15',
   description: 'O padrão de projeto Composite propõe que conjuntos de objetos sejam compostos em estruturas de árvore e que cada objeto agrupador delegue o comportamento para seus nós...',
   cover: {
     href: 'https://images.unsplash.com/photo-1503951164464-cfc904b89299',
@@ -513,7 +541,8 @@ const compositeDesignPattern: Post = {
 }
 
 const abstractFactoryDesignPattern: Post = {
-  title: '🏭 Design Patterns em 1 minuto: Abstract Factory #14',
+  icon: '🏭',
+  title: 'Design Patterns em 1 minuto: Abstract Factory #14',
   description: 'O Abstract Factory é um padrão de projeto que permite desacoplar a criação de famílias de objetos relacionados e/ou dependentes sem especificar suas classes concretas...',
   cover: {
     href: 'https://images.unsplash.com/photo-1502083896352-259ab9e342d7',
@@ -530,7 +559,8 @@ const abstractFactoryDesignPattern: Post = {
 }
 
 const mementoDesignPattern: Post = {
-  title: '📃 Design Patterns em 1 minuto: Memento #13',
+  icon: '📃',
+  title: 'Design Patterns em 1 minuto: Memento #13',
   description: 'O padrão de projeto Memento permite que você restaure estados passados do seu objeto de forma prática sem revelar sua estrutura interna...',
   cover: {
     href: 'https://images.unsplash.com/photo-1514373941175-0a141072bbc8',
@@ -547,7 +577,8 @@ const mementoDesignPattern: Post = {
 }
 
 const proxyDesignPattern: Post = {
-  title: '🎩 Design Patterns em 1 minuto: Proxy #12',
+  icon: '🎩',
+  title: 'Design Patterns em 1 minuto: Proxy #12',
   description: 'O Design Pattern Proxy provê uma camada de controle de acesso a um objeto. Essa camada pode ser utilizada para evitar...',
   cover: {
     href: 'https://images.unsplash.com/photo-1511694009171-3cdddf4484ff',
@@ -564,7 +595,8 @@ const proxyDesignPattern: Post = {
 }
 
 const stateDesignPattern: Post = {
-  title: '🧑‍🔬 Design Patterns em 1 minuto: State #11',
+  icon: '🧑‍🔬',
+  title: 'Design Patterns em 1 minuto: State #11',
   description: 'O padrão de projeto State permite que seu objeto mude os comportamentos quando altera seu estado interno...',
   cover: {
     href: 'https://images.unsplash.com/photo-1537151641189-e685b67326c5',
@@ -581,7 +613,8 @@ const stateDesignPattern: Post = {
 }
 
 const strategyDesignPattern: Post = {
-  title: '🛣️ Design Patterns em 1 minuto: Strategy #10',
+  icon: '🛣️',
+  title: 'Design Patterns em 1 minuto: Strategy #10',
   description: 'O padrão de projeto Strategy permite definir o comportamento de um algoritmo durante a execução da aplicação...', 
   cover: {
     href: 'https://images.unsplash.com/photo-1494913148647-353ae514b35e',
@@ -598,7 +631,8 @@ const strategyDesignPattern: Post = {
 }
 
 const facadeDesignPattern: Post = {
-  title: '🏛️ Design Patterns em 1 minuto: Facade #9',
+  icon: '🏛️',
+  title: 'Design Patterns em 1 minuto: Facade #9',
   description: 'O padrão de projeto Facade provê uma interface de uso simplificada para uma biblioteca, framework ou qualquer outro conjunto complexo de classes...',
   cover: {
     href: 'https://images.unsplash.com/photo-1542665093852-744c79500d45',
@@ -615,7 +649,8 @@ const facadeDesignPattern: Post = {
 }
 
 const prototypeDesignPattern: Post = {
-  title: '🤖 Design Patterns em 1 minuto: Prototype / Clone #8',
+  icon: '🤖',
+  title: 'Design Patterns em 1 minuto: Prototype / Clone #8',
   description: 'Prototype (também conhecido por Clone) é o padrão de projeto que permite a clonagem de um objeto...',
   cover: {
     href: 'https://images.unsplash.com/photo-1517331156700-3c241d2b4d83',
@@ -632,7 +667,8 @@ const prototypeDesignPattern: Post = {
 }
 
 const commandDesignPattern: Post = {
-  title: '📮 Design Patterns em 1 minuto: Command #7',
+  icon: '📮',
+  title: 'Design Patterns em 1 minuto: Command #7',
   description: 'O padrão de projeto Command possibilita que você agrupe todos os dados de sua requisição em um único objeto...',
   cover: {
     href: 'https://images.unsplash.com/photo-1492376791813-ee6dbb35caa3',
@@ -649,7 +685,8 @@ const commandDesignPattern: Post = {
 }
 
 const decoratorDesignPattern: Post = {
-  title: '🪆 Design Patterns em 1 minuto: Decorator #6',
+  icon: '🪆',
+  title: 'Design Patterns em 1 minuto: Decorator #6',
   description: 'O Design Pattern Decorator permite customizar os comportamentos de seus objetos sem sobrescrevê-los...',
   cover: {
     href: 'https://images.unsplash.com/photo-1466921583968-f07aa80c526e',
@@ -666,7 +703,8 @@ const decoratorDesignPattern: Post = {
 }
 
 const chainOfResponsibilityDesignPattern: Post = {
-  title: '🔗 Design Patterns em 1 minuto: Chain of Responsibility #5',
+  icon: '🔗',
+  title: 'Design Patterns em 1 minuto: Chain of Responsibility #5',
   description: 'O Chain of Responsibility é um padrão de projeto que permite desacoplar o controle do fluxo de código repassando a responsabilidade para uma cadeia que...',
   cover: {
     href: 'https://images.unsplash.com/photo-1555008872-f03b347ffb53',
@@ -683,7 +721,8 @@ const chainOfResponsibilityDesignPattern: Post = {
 }
 
 const singletonDesignPattern: Post = {
-  title: '🔮 Design Patterns em 1 minuto: Singleton #4',
+  icon: '🔮',
+  title: 'Design Patterns em 1 minuto: Singleton #4',
   description: 'O Design Pattern Singleton garante que uma classe possua uma única (single) instância compartilhada por toda a aplicação...',
   cover: {
     href: 'https://images.unsplash.com/photo-1673439782481-c02fd9688391',
@@ -700,7 +739,8 @@ const singletonDesignPattern: Post = {
 }
 
 const adapterDesignPattern: Post = {
-  title: '🧬 Design Patterns em 1 minuto: Adapter #3',
+  icon: '🧬',
+  title: 'Design Patterns em 1 minuto: Adapter #3',
   description: 'O Adapter é um Design Pattern que permite que interfaces incompatíveis trabalhem juntas adequadamente...',
   cover: {
     href: 'https://images.unsplash.com/photo-1550782674-fa597ecc1bfd',
@@ -717,7 +757,8 @@ const adapterDesignPattern: Post = {
 }
 
 const observerDesignPattern: Post = {
-  title: '👀 Design Patterns em 1 minuto: Observer #2',
+  icon: '👀',
+  title: 'Design Patterns em 1 minuto: Observer #2',
   description: 'O Design Pattern Observer permite criar um mecanismo — pub/sub — de processamento orientado a eventos...',
   cover: {
     href: 'https://images.unsplash.com/photo-1516222338250-863216ce01ea',
@@ -734,7 +775,8 @@ const observerDesignPattern: Post = {
 }
 
 const builderDesignPattern: Post = {
-  title: '👷 Design Patterns em 1 minuto: Builder #1',
+  icon: '👷',
+  title: 'Design Patterns em 1 minuto: Builder #1',
   description: 'Builder é o padrão de projeto que tem como objetivo principal permitir a criação de objetos complexos de maneira simplificada e estruturada...',
   cover: {
     href: 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d',
@@ -751,7 +793,8 @@ const builderDesignPattern: Post = {
 }
 
 const designPatterns: Post = {
-  title: '🥷 Design Patterns em 1 minuto',
+  icon: '🥷',
+  title: 'Design Patterns em 1 minuto',
   description: 'Os padrões de projeto são uma forma padronizada de solucionar um problema comum existente no desenvolvimento de software...',
   cover: {
     href: 'https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a',
@@ -768,7 +811,8 @@ const designPatterns: Post = {
 }
 
 const distributedTracing: Post = {
-  title: '🧶 Coisas que você deveria saber sobre sistemas distribuídos: Distributed Tracing',
+  icon: '🧶',
+  title: 'Coisas que você deveria saber sobre sistemas distribuídos: Distributed Tracing',
   description: 'Distributed Tracing, em tradução livre rastreamento distribuído, é um padrão arquitetural de microserviços utilizado para facilitar e otimizar a observabilidade em sistemas distribuídos.',
   cover: {
     href: 'https://images.unsplash.com/photo-1514984879728-be0aff75a6e8',
@@ -785,7 +829,8 @@ const distributedTracing: Post = {
 }
 
 const howSpringProvidesDependencyInjection: Post = {
-  title: '🍃 Como o Spring provê a injeção de dependências?',
+  icon: '🍃',
+  title: 'Como o Spring provê a injeção de dependências?',
   description: 'Que a injeção “automágica” de dependências do Spring proporciona agilidade e simplicidade na escrita de aplicações todos nós já sabemos, mas você sabe como o Spring gerencia e provê essa funcionalidade para nós desenvolvedores?',
   cover: {
     href: 'https://images.unsplash.com/photo-1581888227599-779811939961',
@@ -802,7 +847,8 @@ const howSpringProvidesDependencyInjection: Post = {
 }
 
 const inversionOfControl: Post = {
-  title: '🕺 O que é IoC?',
+  icon: '🕺',
+  title: 'O que é IoC?',
   description: 'IoC, acrônimo de Inversion of Control (Inversão de Controle), é um princípio da engenharia de software que incentiva a inversão do controle do fluxo da aplicação, mas o que significa isso?',
   cover: {
     href: 'https://images.unsplash.com/photo-1616093875201-cc5b7a6e9c8a',
@@ -819,7 +865,8 @@ const inversionOfControl: Post = {
 }
 
 const queuesAndStacks: Post = {
-  title: '🦉 Filas e pilhas',
+  icon: '🦉',
+  title: 'Filas e pilhas',
   description: 'Filas e pilhas são estruturas de dados muito utilizadas quando precisamos encadear elementos em uma coleção, são muito semelhantes a filas encadeadas, porém, mais restritas e específicas para seus casos de uso, vamos entender…',
   cover: {
     href: 'https://images.unsplash.com/photo-1506774518161-b710d10e2733',
@@ -836,7 +883,8 @@ const queuesAndStacks: Post = {
 }
 
 const arraysAndLinkedLists: Post = { 
-  title: '☀️ Arrays e listas encadeadas',
+  icon: '☀️',
+  title: 'Arrays e listas encadeadas',
   description: 'Arrays e listas encadeadas (linked lists) são estruturas de dados que armazenam coleções de elementos, mas fazem isso de diferentes formas, com suas respectivas vantagens e desvantagens.',
   cover: {
     href: 'https://images.unsplash.com/photo-1682448169828-039868860001',
@@ -853,7 +901,8 @@ const arraysAndLinkedLists: Post = {
 }
 
 const ideasToPracticeProgramming: Post = { 
-  title: '💡 6 ideias para praticar programação',
+  icon: '💡',
+  title: '6 ideias para praticar programação',
   description: 'Escrito por um programador e para programadores ou interessados, este texto oferece formas e estratégias para pôr em prática a escrita de código, desde desafios de codificação até projetos colaborativos.',
   cover: {
     href: 'https://images.unsplash.com/photo-1605379399642-870262d3d051',
@@ -870,7 +919,8 @@ const ideasToPracticeProgramming: Post = {
 }
 
 const gitCommands: Post = { 
-  title: '😸 Git: Comandos chave para devs',
+  icon: '😸',
+  title: 'Git: Comandos chave para devs',
   description: 'Para desenvolvedores modernos, o Git é uma ferramenta indispensável. Dominar seus comandos é essencial para otimizar o fluxo de trabalho. Esta leitura contém algum dos comandos que mais utilizo durante meu fluxo de desenvolvimento.',
   cover: {
     href: 'https://images.unsplash.com/photo-1595511890410-3b8dc237a537',
@@ -887,7 +937,8 @@ const gitCommands: Post = {
 }
 
 const avoidExceptions: Post = { 
-  title: '🚫 PARE de usar exceções para controle de fluxo',
+  icon: '🚫',
+  title: 'PARE de usar exceções para controle de fluxo',
   description: 'As exceções podem estar causando impacto de performance desnecessário na sua aplicação — se você as utiliza para controle de fluxo. Entenda...',
   cover: {
     href: 'https://images.unsplash.com/photo-1606011334315-025e4baab810',
@@ -904,7 +955,8 @@ const avoidExceptions: Post = {
 }
 
 const codeReview: Post = { 
-  title: '🤝 Revisão de código: criando um ambiente de colaboração e aprendizado contínuo',
+  icon: '🤝',
+  title: 'Revisão de código: criando um ambiente de colaboração e aprendizado contínuo',
   description: 'A revisão de código é uma parte crucial do processo de desenvolvimento de software, é o momento onde desenvolvedores examinam o código fonte de outros desenvolvedores com objetivo de prover sugestões sobre as alterações analisadas e...',
   cover: {
     href: 'https://images.unsplash.com/photo-1600232943169-3fe49a6f4071',
@@ -921,7 +973,8 @@ const codeReview: Post = {
 }
 
 const helloWorld: Post = { 
-  title: '👋 Olá, eu sou o Flôr',
+  icon: '👋',
+  title: 'Olá, eu sou o Flôr',
   description: 'Este é o lugar em que escrevo o que gostaria de ler, falo sobre o que estou estudando e publico devaneios sobre sistemas que você utiliza todos os dias.',
   cover: {
     href: 'https://images.unsplash.com/photo-1596276122653-651a3898309f',
@@ -938,7 +991,8 @@ const helloWorld: Post = {
 }
 
 const hateoas: Post = { 
-  title: '🥏 O que é HATEOAS e qual sua relação com REST?',
+  icon: '🥏',
+  title: 'O que é HATEOAS e qual sua relação com REST?',
   description: 'Falamos recentemente sobre REST, o que é e quais suas principais características, porém, um tema ficou em aberto para conversarmos, e chegou o momento de fazer isto, vamos falar sobre o que é HATEOAS…',
   cover: {
     href: 'https://images.unsplash.com/photo-1519098901909-b1553a1190af',
@@ -956,6 +1010,7 @@ const hateoas: Post = {
 }
 
 const capTheorem: Post = {
+  icon: '🌀',
   title: 'Coisas que você deveria saber sobre sistemas distribuídos: Teorema CAP',
   description: 'O teorema CAP, também conhecido como teorema de Brewer, é um dos princípios fundamentais dos sistemas distribuídos. A premissa do teorema é que nenhum sistema com distribuição de dados pela rede…',
   cover: {
@@ -974,7 +1029,8 @@ const capTheorem: Post = {
 }
 
 const json: Post = {
-  title: 'O que é JSON? 🏒',
+  icon: '🏒',
+  title: 'O que é JSON?',
   description: 'O acrônimo JSON vem de JavaScript Object Notation, é um formato leve de gravar e transportar dados, é utilizado comumente na comunicação entre aplicações cliente-servidor, é "auto descritivo" e fácil de entender.',
   cover: {
     href: 'https://images.unsplash.com/photo-1522346513757-54c552451fdc',
@@ -992,7 +1048,8 @@ const json: Post = {
 }
 
 const rest: Post = {
-  title: 'O que é REST? 😴',
+  icon: '😴',
+  title: 'O que é REST?',
   description: 'Se você pensou em descanso, lamento ter que informar, porém não será o tema do artigo de hoje, na verdade vamos falar sobre um estilo de arquitetura de software, em algumas literaturas também chamado…',
   cover: {
     href: 'https://images.unsplash.com/photo-1541188495357-ad2dc89487f4',

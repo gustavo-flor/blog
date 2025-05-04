@@ -5,7 +5,6 @@ import { fixupConfigRules } from '@eslint/compat'
 import { FlatCompat } from '@eslint/eslintrc'
 import js from '@eslint/js'
 import tsParser from '@typescript-eslint/parser'
-import reactRefresh from 'eslint-plugin-react-refresh'
 import globals from 'globals'
 
 const __filename = fileURLToPath(import.meta.url)
@@ -29,19 +28,12 @@ const config = [
   }, 
   ...fixupConfigRules(configRules), 
   {
-    plugins: {
-      'react-refresh': reactRefresh
-    },
     languageOptions: {
       globals: { ...globals.browser },
       parser: tsParser
     },
     rules: {
       '@next/next/no-img-element': 'off',
-      'react-refresh/only-export-components': [
-        'warn', 
-        { allowConstantExport: true }
-      ],
       'quotes': ['error', 'single'],
       'comma-dangle': ['error', 'never'],
       'indent': ['error', 2],
