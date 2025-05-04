@@ -1,10 +1,10 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { MiddlewareConfig, NextRequest, NextResponse } from 'next/server'
 
-const lowercased = (str: string) => {
+const lowercased = (str: string): boolean => {
   return str === str.toLowerCase()
 }
 
-const middleware = (request: NextRequest) => {
+export const middleware = (request: NextRequest): NextResponse => {
   const { pathname } = request.nextUrl
 
   if (lowercased(pathname)) {
@@ -15,4 +15,6 @@ const middleware = (request: NextRequest) => {
   return NextResponse.redirect(request.nextUrl)
 }
 
-export default middleware
+export const config: MiddlewareConfig = {
+  matcher: '/((?!_next).*)'
+}
