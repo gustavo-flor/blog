@@ -40,7 +40,7 @@ const Article = ({ post, content }: ArticleProps) => {
         }
         <header className='mb-8 pt-8'>
           <Tags tags={post.tags} />
-          <h1 className='text-3xl sm:text-5xl font-bold mt-4'>{post.title}</h1>
+          <h1 className='text-3xl sm:text-5xl font-bold mt-4'>{post.icon} {post.title}</h1>
           {post.origin != undefined && 
             <span className='text-xs opacity-40 mt-4 block'>
               Publicado em <Anchor className='text-purple-500 underline' href={post.origin.href}>{post.origin.hostname}</Anchor>
