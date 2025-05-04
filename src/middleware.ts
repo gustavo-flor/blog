@@ -16,5 +16,8 @@ export const middleware = (request: NextRequest): NextResponse => {
 }
 
 export const config: MiddlewareConfig = {
-  matcher: '/((?!_next).*)'
+  matcher: [
+    '/((?!_next).*)',
+    '/((?!_vercel).*)'
+  ]
 }

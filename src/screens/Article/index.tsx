@@ -48,17 +48,19 @@ const Article = ({ post, content }: ArticleProps) => {
           }
           <div className='flex items-center gap-x-2 mt-8'>
             <div className='w-20 h-20 flex items-center rounded-full overflow-hidden border-2'>
-              <img src="/images/me-in-purple.jpg" alt="Fotografia do autor" />
+              <img src='/images/me-in-purple.jpg' alt='Fotografia do autor' />
             </div>
-            <div className='flex flex-col text-gray-500'>
-              <span className='font-bold text-gray-700'>Gustavo Flôr</span>
-              <span className='text-xs opacity-80'>
+            <ul className='flex flex-col text-gray-500'>
+              <li title='Autor' className='font-bold text-gray-700'>
+                Gustavo Flôr
+              </li>
+              <li title='Data de publicação' className='text-xs opacity-80'>
                 {getPublishedAt(post)}
-              </span>
-              <span className='text-xs'>
+              </li>
+              <li title='Número de palavras e tempo de leitura' className='text-xs'>
                 {`${numberOfWords} palavras | ${readTime} min. de leitura`}
-              </span>
-            </div>
+              </li>
+            </ul>
           </div>
         </header>
         <Markdown content={content} />
