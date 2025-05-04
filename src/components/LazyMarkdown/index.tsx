@@ -1,9 +1,9 @@
 import { CircleNotch } from 'phosphor-react'
 import React, { Suspense } from 'react'
 
-import Button from '../Button'
+import Button from '@/components/Button'
 
-const Markdown = React.lazy(() => import('./../Markdown'))
+const Markdown = React.lazy(() => import('@/components/Markdown'))
 
 interface Props {
   content: string;
