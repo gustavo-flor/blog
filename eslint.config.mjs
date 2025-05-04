@@ -25,7 +25,7 @@ const configRules = compat.extends(
 
 const config = [
   { 
-    ignores: ['node_modules', '.next', 'tailwind.config.js'] 
+    ignores: ['node_modules', '.next'] 
   }, 
   ...fixupConfigRules(configRules), 
   {
