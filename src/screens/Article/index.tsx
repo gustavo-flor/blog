@@ -25,7 +25,7 @@ const Article = ({ post, content }: ArticleProps) => {
 
   return (
     <>
-      <AppBar />
+      <AppBar center />
       <main className='container lg:max-w-3xl mx-auto px-8 py-8 sm:py-16 md:pb-20'>
         {post.cover != undefined && 
           <figure>

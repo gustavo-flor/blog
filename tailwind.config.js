@@ -1,7 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   darkMode: 'class',
-  content: ['./index.html', './src/**/*.tsx'],
+  content: [
+    './src/**/*.{tsx}'
+  ],
   theme: {
     extend: {
       screens: {
@@ -10,5 +12,4 @@ export default {
     }
   },
   plugins: []
-}
-
+} 

@@ -1,5 +1,3 @@
-import { i18n } from './i18n'
-
 export enum LanguageCode {
   PT_BR = 'pt-BR',
   EN_US = 'en-US'
@@ -17,18 +15,14 @@ const portuguese = {
   displayName: 'Português'
 }
 
-const english = { 
-  code: LanguageCode.EN_US,
-  flag: '🇺🇸',
-  displayName: 'English'
-}
+// const english = { 
+//   code: LanguageCode.EN_US,
+//   flag: '🇺🇸',
+//   displayName: 'English'
+// }
 
-export const languages: Language[] = [portuguese, english]
+export const supportedLanguages: Language[] = [portuguese]
 
 export const defaultLanguage = portuguese
 
-export const getPreferredLanguage = () => {
-  return languages.find(it => it.code === i18n.language) ?? defaultLanguage
-}
-
-export const getSupportedLanguages = () => languages
+export const getPreferredLanguage = () => defaultLanguage

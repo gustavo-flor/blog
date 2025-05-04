@@ -5,7 +5,6 @@ import { fixupConfigRules } from '@eslint/compat'
 import { FlatCompat } from '@eslint/eslintrc'
 import js from '@eslint/js'
 import tsParser from '@typescript-eslint/parser'
-import importChecker from 'eslint-plugin-import'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import globals from 'globals'
 
@@ -19,24 +18,26 @@ const compat = new FlatCompat({
 const configRules = compat.extends(
   'eslint:recommended',
   'plugin:@typescript-eslint/recommended',
-  'plugin:react-hooks/recommended'
+  'plugin:react-hooks/recommended',
+  'next/core-web-vitals',
+  'next/typescript'
 )
 
-export default [
+const config = [
   { 
-    ignores: ['**/dist'] 
+    ignores: ['node_modules', '.next', 'tailwind.config.js'] 
   }, 
   ...fixupConfigRules(configRules), 
   {
     plugins: {
-      'react-refresh': reactRefresh,
-      'import': importChecker
+      'react-refresh': reactRefresh
     },
     languageOptions: {
       globals: { ...globals.browser },
       parser: tsParser
     },
     rules: {
+      '@next/next/no-img-element': 'off',
       'react-refresh/only-export-components': [
         'warn', 
         { allowConstantExport: true }
@@ -56,3 +57,5 @@ export default [
     }
   }
 ]
+
+export default config
