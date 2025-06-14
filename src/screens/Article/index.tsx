@@ -1,28 +1,30 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { Trans } from 'react-i18next'
 
 import Anchor from '@/components/Anchor'
 import AppBar from '@/components/AppBar'
 import Footer from '@/components/Footer'
 import Markdown from '@/components/LazyMarkdown'
 import Tags from '@/components/Tags'
-import { Post, getNumberOfWords, getPublishedAt, getReadTime } from '@/services/post'
+import { useTranslation } from '@/hooks/useTranslation'
+import { getReadTime, getNumberOfWords } from '@/repositories/post'
+import { IPost } from '@/schemas/post'
+import { getPrettyDate } from '@/services/date'
+import { defaultLanguage } from '@/services/lang'
 
 interface ArticleProps {
-  post: Post,
-  content: string,
+  post: IPost,
+  content: string
 }
 
 const Article = ({ post, content }: ArticleProps) => {
-  const [numberOfWords, setNumberOfWords] = useState(0)
-  const [readTime, setReadTime] = useState(1)
-
-  useEffect(() => {
-    setNumberOfWords(getNumberOfWords(content))
-    setReadTime(getReadTime(content))
-  }, [content])
-
+  const { t, i18n } = useTranslation()
+  const title = t(`${post.slug}.title`, { ns: 'posts' })
+  const lang = defaultLanguage
+  const numberOfWords = getNumberOfWords(content)
+  const readTime = getReadTime(numberOfWords)
+  
   return (
     <>
       <AppBar center />
@@ -31,34 +33,50 @@ const Article = ({ post, content }: ArticleProps) => {
           <figure>
             <img 
               src={`${post.cover.href}?q=85&w=768`} 
-              alt={`Fotografia de ${post.cover.author.name}`} 
+              alt={t('cover.alt', { ns: 'article', values: { authorName: post.cover.author.name } })} 
             />
             <figcaption className='text-center text-gray-400 text-sm mt-4'>
-              Fotografia de <Anchor className='text-purple-500 underline' href={post.cover.author.href}>{post.cover.author.name}</Anchor>
+              <Trans 
+                i18n={i18n}
+                i18nKey="cover.description" 
+                ns="article"
+                values={{ authorName: post.cover.author.name }}
+                components={{
+                  link: <Anchor className='text-purple-500 underline' href={post.cover.author.href} />
+                }}
+              />
             </figcaption>
           </figure>
         }
         <header className='mb-8 pt-8'>
           <Tags tags={post.tags} />
-          <h1 className='text-3xl sm:text-5xl font-bold mt-4'>{post.icon} {post.title}</h1>
+          <h1 className='text-3xl sm:text-5xl font-bold mt-4'>{post.icon} {title}</h1>
           {post.origin != undefined && 
             <span className='text-xs opacity-40 mt-4 block'>
-              Publicado em <Anchor className='text-purple-500 underline' href={post.origin.href}>{post.origin.hostname}</Anchor>
+              <Trans 
+                i18n={i18n}
+                i18nKey="origin.description" 
+                ns="article"
+                values={{ site: post.origin.hostname }}
+                components={{
+                  'link': <Anchor className='text-purple-500 underline' href={post.origin.href} />
+                }}
+              />
             </span>
           }
           <div className='flex items-center gap-x-2 mt-8'>
             <div className='w-20 h-20 flex items-center rounded-full overflow-hidden border-2'>
-              <img src='/images/me-in-purple.jpg' alt='Fotografia do autor' />
+              <img src='/images/me-in-purple.jpg' alt={t('authorImage.alt', { ns: 'presentation' })} />
             </div>
             <ul className='flex flex-col text-gray-500'>
-              <li title='Autor' className='font-bold text-gray-700'>
+              <li title={t('tooltips.author')} className='font-bold text-gray-700'>
                 Gustavo Flôr
               </li>
-              <li title='Data de publicação' className='text-xs opacity-80'>
-                {getPublishedAt(post)}
+              <li title={t('tooltips.publishDate')} className='text-xs opacity-80'>
+                {getPrettyDate(post.publishedAt, lang, t)}
               </li>
-              <li title='Número de palavras e tempo de leitura' className='text-xs'>
-                {`${numberOfWords} palavras | ${readTime} min. de leitura`}
+              <li title={t('tooltips.readingInfo')} className='text-xs'>
+                {t('readTime', { ns: 'article', values: { numberOfWords, readTime } })}
               </li>
             </ul>
           </div>

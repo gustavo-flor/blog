@@ -2,7 +2,7 @@
 
 /* TODO: Migrate this to recommended way */
 
-@config "../../tailwind.config.js";
+@config "../../../tailwind.config.js";
 
 @layer base {
   *,

@@ -2,5 +2,13 @@
   "justNow": "Agora mesmo",
   "today": "Hoje",
   "pageNotFound": "Página não encontrada",
-  "changeLanguage": "Alterar idioma"
+  "changeLanguage": "Alterar idioma",
+  "readMore": "Ler mais",
+  "loading": "Carregando...",
+  "loadMore": "Carregar mais",
+  "tooltips": {
+    "author": "Autor",
+    "publishDate": "Data de publicação",
+    "readingInfo": "Número de palavras e tempo de leitura"
+  }
 }

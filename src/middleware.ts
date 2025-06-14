@@ -7,17 +7,14 @@ const lowercased = (str: string): boolean => {
 export const middleware = (request: NextRequest): NextResponse => {
   const { pathname } = request.nextUrl
 
-  if (lowercased(pathname)) {
-    return NextResponse.next()
+  if (!lowercased(pathname)) {
+    request.nextUrl.pathname = pathname.toLowerCase()
+    return NextResponse.redirect(request.nextUrl)
   }
 
-  request.nextUrl.pathname = pathname.toLowerCase()
-  return NextResponse.redirect(request.nextUrl)
+  return NextResponse.next()
 }
 
 export const config: MiddlewareConfig = {
-  matcher: [
-    '/((?!_next).*)',
-    '/((?!_vercel).*)'
-  ]
+  matcher: '/((?!_next|_vercel|images|robots.txt).*)'
 }

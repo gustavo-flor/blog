@@ -1,14 +1,17 @@
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
 
+import { useLang } from '@/hooks/useLang'
+
 interface Props {
   tags: string[];
 }
 
 const Tags = ({ tags }: Props) => {
+  const lang = useLang().code
   const params = useParams<{ tag?: string }>()
   const selectedTag = params?.tag 
-  const getLink = (tag: string) => !selectedTag || tag != selectedTag ? `/tags/${tag}` : '/'
+  const getLink = (tag: string) => !selectedTag || tag != selectedTag ? `/${lang}/tags/${tag}` : '/${lang}'
   const getLinkStyle = (tag: string) => selectedTag && tag != selectedTag ? 'cursor-text pointer-events-none' : ''
   const getStyle = (tag: string) => !selectedTag || tag != selectedTag 
     ? 'opacity-40 hover:opacity-100 hover:rounded-xl transition-all' 

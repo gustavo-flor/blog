@@ -2,5 +2,13 @@
   "justNow": "Just now",
   "today": "Today",
   "pageNotFound": "Page not found",
-  "changeLanguage": "Change language"
+  "changeLanguage": "Change language",
+  "readMore": "Read more",
+  "loading": "Loading...",
+  "loadMore": "Load more",
+  "tooltips": {
+    "author": "Author",
+    "publishDate": "Publication date",
+    "readingInfo": "Number of words and reading time"
+  }
 }
