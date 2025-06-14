@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 
 import { findBySlug, posts } from '@/repositories/post'
 import Article from '@/screens/Article'
-import { read } from '@/services/file'
+import { readFile } from '@/services/file'
 import { getLanguageByCode, supportedLanguages } from '@/services/lang'
 
 export const revalidate = false
@@ -35,7 +35,7 @@ export default async function Page({ params }: PageProps) {
     return notFound()
   }
 
-  const content = await read(`/markdown/${language.code}/${post.slug}.md`)
+  const content = await readFile(`/markdown/${language.code}/${post.slug}.md`)
   return <Article post={post} content={content} />
 }
 

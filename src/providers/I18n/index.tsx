@@ -2,19 +2,24 @@
 
 import { createContext, useContext, ReactNode } from 'react'
 
+import { Dictionary } from '@/services/dictionary' 
+
 interface I18nContextType {
   lang: string
+  dictionaries: Record<string, Dictionary>
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined)
 
 interface I18nProviderProps {
   lang: string
+  dictionaries: Record<string, Dictionary>
   children: ReactNode
 }
 
-export function I18nProvider({ lang, children }: I18nProviderProps) {
-  const value: I18nContextType = { lang }
+export function I18nProvider({ lang, dictionaries, children }: I18nProviderProps) {
+  const value: I18nContextType = { lang, dictionaries }
+  
   return (
     <I18nContext.Provider value={value}>
       {children}
