@@ -6,7 +6,7 @@ import { Dictionary } from '@/services/dictionary'
 
 interface I18nContextType {
   lang: string
-  dictionaries: Record<string, Dictionary>
+  t: (key: string, ns?: string) => string
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined)
@@ -18,7 +18,8 @@ interface I18nProviderProps {
 }
 
 export function I18nProvider({ lang, dictionaries, children }: I18nProviderProps) {
-  const value: I18nContextType = { lang, dictionaries }
+  const t = (key: string, ns: string = 'common') => dictionaries[ns][key]
+  const value: I18nContextType = { lang, t }
   
   return (
     <I18nContext.Provider value={value}>
