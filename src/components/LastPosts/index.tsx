@@ -6,12 +6,14 @@ import Card from '@/components/Card'
 import Trans from '@/components/Trans'
 import { findAll, findAllByTag } from '@/repositories/post'
 import { IPost } from '@/schemas/post'
+import { useI18n } from '@/providers/I18n'
 
 interface Props {
   tag?: string;
 }
 
 const LastPosts = ({ tag }: Props) => {
+  const { t } = useI18n()
   const [pageNumber, setPageNumber] = useState(1)
   const [nextPageNumber, setNextPageNumber] = useState<number | null>(null)
   const [loading, setLoading] = useState(false)
@@ -35,13 +37,13 @@ const LastPosts = ({ tag }: Props) => {
   }
 
   const LoadingButton = () => (
-    <Button className='animate-spin' title='Loading...' disabled variant='key-button'>
+    <Button className='animate-spin' title={t('loading')} disabled variant='key-button'>
       <CircleNotch size={48} />
     </Button>
   )
 
   const LoadMoreButton = () => (
-    <Button onClick={() => nextPage()} className='animate-bounce' title='Load More' variant='key-button'>
+    <Button onClick={() => nextPage()} className='animate-bounce' title={t('loadMore')} variant='key-button'>
       <ArrowCircleDown size={48} />
     </Button>
   )

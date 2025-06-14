@@ -2,6 +2,7 @@ import { CircleNotch } from 'phosphor-react'
 import React, { Suspense } from 'react'
 
 import Button from '@/components/Button'
+import { useI18n } from '@/providers/I18n'
 
 const Markdown = React.lazy(() => import('@/components/Markdown'))
 
@@ -10,9 +11,11 @@ interface Props {
 }
 
 const LazyMarkdown = ({ content }: Props) => {
+  const { t } = useI18n()
+  
   const Loading = () => (
     <div className='flex justify-center'>
-      <Button className='animate-spin bg-gray-200 text-purple-500' title='Loading...' disabled variant='key-button'>
+      <Button className='animate-spin bg-gray-200 text-purple-500' title={t('loading')} disabled variant='key-button'>
         <CircleNotch size={48} />
       </Button>
     </div>

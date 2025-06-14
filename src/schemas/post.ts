@@ -10,8 +10,6 @@ export interface IPostCover {
 
 export interface IPost {
   icon: string;
-  title: string;
-  description: string;
   cover: IPostCover;
   tags: string[];
   slug: string;

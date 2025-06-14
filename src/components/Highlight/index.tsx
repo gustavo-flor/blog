@@ -11,6 +11,8 @@ import { useI18n } from '@/providers/I18n'
 const Highlight = () => {
   const { t } = useI18n()
   const post = getHighlight()
+  const title = t(`${post.slug}.title`, { ns: 'posts' })
+  const description = t(`${post.slug}.description`, { ns: 'posts' })
   const lang = defaultLanguage
 
   return (
@@ -22,7 +24,7 @@ const Highlight = () => {
           </span>
           <Link href={`/posts/${post.slug}`} className='hover:opacity-60 cursor-pointer'>
             <h2 className='lg:w-11/12 text-3xl sm:text-5xl font-bold mt-4'>
-              {post.icon} {post.title}
+              {post.icon} {title}
             </h2>
           </Link>
           <figure className='mt-8'>
@@ -34,9 +36,11 @@ const Highlight = () => {
         </div>
         <aside className='lg:w-[30%] lg:pl-8 flex flex-col justify-start mt-4 lg:mt-0'>
           <Tags tags={post.tags} />
-          <p className='my-4'>{post.description}</p>
+          <p className='my-4'>{description}</p>
           <Link href={`/posts/${post.slug}`} className='transition-opacity hover:opacity-90 self-start'>
-            <Button className='w-full cursor-pointer' title='Ler mais'><ArrowRight weight='bold' width={32} /></Button>
+            <Button className='w-full cursor-pointer' title={t('readMore')}>
+              <ArrowRight weight='bold' width={32} />
+            </Button>
           </Link>
         </aside>
       </div>

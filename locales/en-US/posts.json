@@ -1,226 +1,226 @@
 {
   "56-scalability-and-elasticity": {
-    "title": "🪀 Scalability and Elasticity",
+    "title": "Scalability and Elasticity",
     "description": "Let's talk about scalability and elasticity — related but distinct concepts often incorrectly used as synonyms..."
   },
   "55-what-is-load-test": {
-    "title": "🚚 What is a load test?",
+    "title": "What is a load test?",
     "description": "Simulating different usage loads on a system, load tests help identify potential bottlenecks before they occur in production..."
   },
   "54-what-is-webhook": {
-    "title": "📟 What is a webhook?",
+    "title": "What is a webhook?",
     "description": "A webhook is a way of communication between systems through callbacks..."
   },
   "53-idempotent-api": {
-    "title": "🧦 Idempotency in your API",
+    "title": "Idempotency in your API",
     "description": "Idempotency is a computing term used to define operations that, when performed multiple times with the same input, produce the same result. Learn more..."
   },
   "52-backpressure": {
-    "title": "🦀 Managing flow and resources with Backpressure",
+    "title": "Managing flow and resources with Backpressure",
     "description": "Backpressure is a technique to ensure the correct operation of software when processing a data stream. It allows the application to manage..."
   },
   "51-kotlin-introduction": {
-    "title": "🧚‍♀️ Kotlin: Advantages, myths, tips, and core concepts",
+    "title": "Kotlin: Advantages, myths, tips, and core concepts",
     "description": "Let's talk about Kotlin! In this text, I want to share some things I learned in recent weeks, debunk some myths about the language, and provide practical examples for beginners..."
   },
   "50-circuit-breaker": {
-    "title": "🎒 How to use circuit breaker to make your service more resilient",
+    "title": "How to use circuit breaker to make your service more resilient",
     "description": "The Circuit Breaker pattern in microservices architecture allows an application to stay operational by avoiding cascading failures when facing communication issues with remote calls..."
   },
   "49-sdkman": {
-    "title": "🧑‍💼 SDKMan: SDK Management Tool",
+    "title": "SDKMan: SDK Management Tool",
     "description": "Let's talk about SDKMan, what this tool is, and its advantages. SDKMan is an SDK manager..."
   },
   "48-spring-and-openapi": {
-    "title": "📝 Spring: Documenting your HTTP API with OpenAPI",
+    "title": "Spring: Documenting your HTTP API with OpenAPI",
     "description": "OpenAPI, also known as Swagger, is a way to specify and document your HTTP API. It is a standardized, language-agnostic approach that allows you to expose service patterns and behaviors..."
   },
   "47-spring-mail": {
-    "title": "📮 Sending emails with Spring Mail",
+    "title": "Sending emails with Spring Mail",
     "description": "Sending emails is a crucial aspect for many applications, used for sending notifications, alerts, or communications to users."
   },
   "46-concurrency-and-parallelism": {
-    "title": "🏎️ Concurrency and Parallelism",
+    "title": "Concurrency and Parallelism",
     "description": "Concurrency and parallelism are related concepts in computing, often used interchangeably. However, they have different meanings. Understanding this difference can be crucial in efficient software design."
   },
   "45-acid-transactions": {
-    "title": "🕯️ What are ACID Transactions?",
+    "title": "What are ACID Transactions?",
     "description": "In a database system, a transaction represents a unit of work (logical operation)..."
   },
   "44-what-is-solid": {
-    "title": "🧱 What is SOLID?",
+    "title": "What is SOLID?",
     "description": "SOLID is an acronym for five object-oriented programming principles aimed at producing robust software (🥸)..."
   },
   "43-trailing-comma-java": {
-    "title": "☕️ Advantages of the trailing comma in multiline expressions",
+    "title": "Advantages of the trailing comma in multiline expressions",
     "description": "In this text, I intend to explain why the trailing comma at the end of multiline expressions is more than just a style convention..."
   },
   "42-testcontainers": {
-    "title": "🪢 What is Testcontainers?",
+    "title": "What is Testcontainers?",
     "description": "Testcontainers is an open-source library that provides instances of any application that can run in a container..."
   },
   "41-quicksort": {
-    "title": "⛵️ Algorithms: Quicksort",
+    "title": "Algorithms: Quicksort",
     "description": "Quicksort is an efficient sorting algorithm based on dividing the problem into smaller parts to solve the task..."
   },
   "40-aggregation-and-composition": {
-    "title": "☕️ Aggregation and Composition",
+    "title": "Aggregation and Composition",
     "description": "Aggregation and composition are two types of relationships in object-oriented programming (OOP). Both represent property associations between objects, but..."
   },
   "39-java-encapsulation": {
-    "title": "🎯 Java: Encapsulation",
+    "title": "Java: Encapsulation",
     "description": "Encapsulation is one of the pillars of Object-Oriented Programming (OOP). It refers to the action of grouping data (attributes) and behaviors (methods) into a single unit called an object..."
   },
   "38-interpreter-design-pattern": {
-    "title": "🤹 Design Patterns in 1 minute: Interpreter #23",
+    "title": "Design Patterns in 1 minute: Interpreter #23",
     "description": "The Interpreter design pattern provides a dynamic and clear way to transform languages or expressions into actions..."
   },
   "37-mediator-design-pattern": {
-    "title": "🚦 Design Patterns in 1 minute: Mediator #22",
+    "title": "Design Patterns in 1 minute: Mediator #22",
     "description": "The Mediator is a design pattern that helps reduce complexity in communication among multiple objects..."
   },
   "36-flyweight-design-pattern": {
-    "title": "🏗️ Design Patterns in 1 minute: Flyweight #21",
+    "title": "Design Patterns in 1 minute: Flyweight #21",
     "description": "The Flyweight design pattern optimizes memory usage in cases where the application needs to provide many objects containing similar content..."
   },
   "35-factory-method-design-pattern": {
-    "title": "🛋️ Design Patterns in 1 minute: Factory Method #20",
+    "title": "Design Patterns in 1 minute: Factory Method #20",
     "description": "The Factory Method design pattern provides a way to create objects that allows child classes to define the type of object that will be created in a method defined in the parent class..."
   },
   "34-template-method-design-pattern": {
-    "title": "🍽️ Design Patterns in 1 minute: Template Method #19",
+    "title": "Design Patterns in 1 minute: Template Method #19",
     "description": "The Template Method design pattern proposes that subclasses can override steps of a superclass behavior in a structured and adaptable way..."
   },
   "33-bridge-design-pattern": {
-    "title": "🌉 Design Patterns in 1 minute: Bridge #18",
+    "title": "Design Patterns in 1 minute: Bridge #18",
     "description": "The Bridge design pattern proposes separating the responsibilities of a class into two layers: abstraction and implementation..."
   },
   "32-iterator-design-pattern": {
-    "title": "🔄 Design Patterns in 1 minute: Iterator #17",
+    "title": "Design Patterns in 1 minute: Iterator #17",
     "description": "The Iterator design pattern allows traversing a collection of elements without exposing its implementation..."
   },
   "31-visitor-design-pattern": {
-    "title": "🚶 Design Patterns in 1 minute: Visitor #16",
+    "title": "Design Patterns in 1 minute: Visitor #16",
     "description": "The Visitor design pattern allows separating the behavior from the object on which it is executed, thus increasing modularity and adaptability of your application..."
   },
   "30-composite-design-pattern": {
-    "title": "🌳 Design Patterns in 1 minute: Composite #15",
+    "title": "Design Patterns in 1 minute: Composite #15",
     "description": "The Composite design pattern proposes that sets of objects be composed into tree structures, where each composite object delegates behavior to its nodes..."
   },
   "29-abstract-factory-design-pattern": {
-    "title": "🏭 Design Patterns in 1 minute: Abstract Factory #14",
+    "title": "Design Patterns in 1 minute: Abstract Factory #14",
     "description": "The Abstract Factory design pattern allows decoupling the creation of families of related and/or dependent objects without specifying their concrete classes..."
   },
   "28-memento-design-pattern": {
-    "title": "📃 Design Patterns in 1 minute: Memento #13",
+    "title": "Design Patterns in 1 minute: Memento #13",
     "description": "The Memento design pattern allows you to restore previous states of your object in a practical way without exposing its internal structure..."
   },
   "27-proxy-design-pattern": {
-    "title": "🎩 Design Patterns in 1 minute: Proxy #12",
+    "title": "Design Patterns in 1 minute: Proxy #12",
     "description": "The Proxy design pattern provides an access control layer to an object. This layer can be used to avoid..."
   },
   "26-state-design-pattern": {
-    "title": "🧑‍🔬 Design Patterns in 1 minute: State #11",
+    "title": "Design Patterns in 1 minute: State #11",
     "description": "The State design pattern allows your object to change behaviors when its internal state changes..."
   },
   "25-strategy-design-pattern": {
-    "title": "🛣️ Design Patterns in 1 minute: Strategy #10",
+    "title": "Design Patterns in 1 minute: Strategy #10",
     "description": "The Strategy design pattern allows defining an algorithm's behavior during the application's execution..."
   },
   "24-facade-design-pattern": {
-    "title": "🏛️ Design Patterns in 1 minute: Facade #9",
+    "title": "Design Patterns in 1 minute: Facade #9",
     "description": "The Facade design pattern provides a simplified interface for using a library, framework, or any other complex set of classes..."
   },
   "23-prototype-design-pattern": {
-    "title": "🤖 Design Patterns in 1 minute: Prototype / Clone #8",
+    "title": "Design Patterns in 1 minute: Prototype / Clone #8",
     "description": "Prototype (also known as Clone) is a design pattern that allows object cloning..."
   },
   "22-command-design-pattern": {
-    "title": "📮 Design Patterns in 1 minute: Command #7",
+    "title": "Design Patterns in 1 minute: Command #7",
     "description": "The Command design pattern allows grouping all the request data into a single object..."
   },
   "21-decorator-design-pattern": {
-    "title": "🪆 Design Patterns in 1 minute: Decorator #6",
+    "title": "Design Patterns in 1 minute: Decorator #6",
     "description": "The Decorator design pattern allows customizing object behaviors without overriding them..."
   },
   "20-chain-of-responsibility-design-pattern": {
-    "title": "🔗 Design Patterns in 1 minute: Chain of Responsibility #5",
+    "title": "Design Patterns in 1 minute: Chain of Responsibility #5",
     "description": "The Chain of Responsibility design pattern allows decoupling flow control by passing responsibility to a chain that..."
   },
   "19-singleton-design-pattern": {
-    "title": "🔮 Design Patterns in 1 minute: Singleton #4",
+    "title": "Design Patterns in 1 minute: Singleton #4",
     "description": "The Singleton design pattern ensures that a class has a single shared instance throughout the entire application..."
   },
   "18-adapter-design-pattern": {
-    "title": "🧬 Design Patterns in 1 minute: Adapter #3",
+    "title": "Design Patterns in 1 minute: Adapter #3",
     "description": "The Adapter design pattern allows incompatible interfaces to work together properly..."
   },
   "17-observer-design-pattern": {
-    "title": "👀 Design Patterns in 1 minute: Observer #2",
+    "title": "Design Patterns in 1 minute: Observer #2",
     "description": "The Observer design pattern enables creating an event-driven processing mechanism using pub/sub..."
   },
   "16-builder-design-pattern": {
-    "title": "👷 Design Patterns in 1 minute: Builder #1",
+    "title": "Design Patterns in 1 minute: Builder #1",
     "description": "The Builder design pattern aims to simplify and structure the creation of complex objects..."
   },
   "15-design-patterns": {
-    "title": "🥷 Design Patterns in 1 minute",
+    "title": "Design Patterns in 1 minute",
     "description": "Design patterns are standardized ways to solve common problems in software development..."
   },
   "14-distributed-tracing": {
-    "title": "🧶 Things you should know about distributed systems: Distributed Tracing",
+    "title": "Things you should know about distributed systems: Distributed Tracing",
     "description": "Distributed Tracing is a microservices architectural pattern used to facilitate and optimize observability in distributed systems..."
   },
   "13-how-spring-provides-di": {
-    "title": "🍃 How does Spring provide dependency injection?",
+    "title": "How does Spring provide dependency injection?",
     "description": "Spring's 'magic' dependency injection provides agility and simplicity in writing applications, but do you know how Spring manages and provides this feature for developers?"
   },
   "12-inversion-of-control": {
-    "title": "🕺 What is IoC?",
+    "title": "What is IoC?",
     "description": "IoC, short for Inversion of Control, is a software engineering principle that encourages inverting the application's flow of control, but what does that mean?"
   },
   "11-queues-and-stacks": {
-    "title": "🦉 Queues and Stacks",
+    "title": "Queues and Stacks",
     "description": "Queues and stacks are data structures commonly used when we need to chain elements in a collection. They are similar to linked queues but more restricted and specific to their use cases. Let's understand..."
   },
   "10-arrays-and-linked-lists": {
-    "title": "☀️ Arrays and Linked Lists",
+    "title": "Arrays and Linked Lists",
     "description": "Arrays and linked lists are data structures that store collections of elements but do so differently, with respective advantages and disadvantages."
   },
   "9-ideas-to-practice-programming": {
-    "title": "💡 6 Ideas to practice programming",
+    "title": "6 Ideas to practice programming",
     "description": "Written by a programmer for programmers or enthusiasts, this text offers ways and strategies to practice coding, from coding challenges to collaborative projects."
   },
   "8-git-commands": {
-    "title": "😸 Git: Key commands for developers",
+    "title": "Git: Key commands for developers",
     "description": "For modern developers, Git is an indispensable tool. Mastering its commands is essential to optimize the workflow. This reading contains some of the commands I use most during my development flow."
   },
   "7-avoid-exceptions": {
-    "title": "🚫 STOP using exceptions for flow control",
+    "title": "STOP using exceptions for flow control",
     "description": "Exceptions might be causing unnecessary performance impacts on your application — if you use them for flow control. Learn more..."
   },
   "6-code-review": {
-    "title": "🤝 Code Review: Creating an environment of collaboration and continuous learning",
+    "title": "Code Review: Creating an environment of collaboration and continuous learning",
     "description": "Code review is a crucial part of the software development process, where developers examine the source code written by others to provide suggestions on analyzed changes and..."
   },
   "5-hello-world": {
-    "title": "👋 Hello, I'm Flôr",
+    "title": "Hello, I'm Flôr",
     "description": "This is the place where I write what I would like to read, talk about what I'm studying, and publish musings about systems you use every day."
   },
   "4-what-is-hateoas": {
-    "title": "🥏 What is HATEOAS and its relation with REST?",
+    "title": "What is HATEOAS and its relation with REST?",
     "description": "We recently talked about REST, what it is, and its main features. However, one topic was left open for discussion. Now it's time to talk about what HATEOAS is..."
   },
   "3-cap-theorem": {
-    "title": "🌀 Things you should know about distributed systems: CAP Theorem",
+    "title": "Things you should know about distributed systems: CAP Theorem",
     "description": "The CAP theorem, also known as Brewer's theorem, is one of the fundamental principles of distributed systems. The theorem's premise is that no system with data distribution across a network..."
   },
   "2-what-is-json": {
-    "title": "What is JSON? 🏒",
+    "title": "What is JSON?",
     "description": "The acronym JSON stands for JavaScript Object Notation. It is a lightweight format for recording and transporting data, commonly used in client-server application communication. It is \"self-descriptive\" and easy to understand."
   },
   "1-what-is-rest": {
-    "title": "What is REST? 😴",
+    "title": "What is REST?",
     "description": "If you thought about rest, I'm sorry to inform you, but that won't be the topic of today's article. Instead, we'll talk about a software architecture style, also referred to in some literature as..."
   }
 }

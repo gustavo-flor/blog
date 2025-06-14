@@ -2,12 +2,8 @@
 
 import { createContext, useContext, ReactNode } from 'react'
 
-import { Dictionary } from '@/services/dictionary' 
-
-interface TranslateOptions {
-  ns?: string
-  values?: Record<string, string | number>
-}
+import { Dictionary } from '@/services/dictionary'
+import { withTranslation, TranslateOptions } from '@/services/i18n'
 
 export type TranslateFn = (key: string, options?: TranslateOptions) => string
 
@@ -24,24 +20,8 @@ interface I18nProviderProps {
   children: ReactNode
 } 
 
-const interpolate = (text: string, values?: Record<string, string | number>): string => {
-  if (!values) {
-    return text
-  }
-  
-  return Object.entries(values).reduce((result, [key, value]) => {
-    const regex = new RegExp(`{{${key}}}`, 'g')
-    return result.replace(regex, String(value))
-  }, text)
-}
-
 export function I18nProvider({ lang, dictionaries, children }: I18nProviderProps) {
-  const t: TranslateFn = (key: string, options?: TranslateOptions) => {
-    const ns = options?.ns || 'common'
-    const translation = dictionaries[ns]?.[key] || key
-    return interpolate(translation, options?.values)
-  }
-  
+  const t = withTranslation(dictionaries)
   const value: I18nContextType = { lang, t }
   
   return (

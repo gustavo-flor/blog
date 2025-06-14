@@ -5,8 +5,10 @@ import { findBySlug, posts } from '@/repositories/post'
 import Article from '@/screens/Article'
 import { readFile } from '@/services/file'
 import { getLanguageByCode, supportedLanguages } from '@/services/lang'
+import { loadDictionaries } from '@/services/dictionary'
+import { withTranslation } from '@/services/i18n'
 
-export const revalidate = false
+export const revalidate = false 
 
 export const generateStaticParams = async () => {
   return supportedLanguages.flatMap(language =>
@@ -43,13 +45,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang, slug } = await params
   const post = findBySlug(slug)
   const language = getLanguageByCode(lang)
-
+  
   if (!post || !language) {
     return notFound()
   }
 
+  const dictionaries = await loadDictionaries(language.code)
+  const t = withTranslation(dictionaries)
+  const title = t(`${post.slug}.title`, { ns: 'posts' })
+  const description = t(`${post.slug}.description`, { ns: 'posts' })
+
   return {
-    title: `${post.title} | Gustavo Flôr`,
-    description: post.description
+    title: `${title} | Gustavo Flôr`,
+    description: description
   }
 } 
