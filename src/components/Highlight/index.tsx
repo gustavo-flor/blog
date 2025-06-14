@@ -6,7 +6,10 @@ import Tags from '@/components/Tags'
 import { getHighlight } from '@/repositories/post'
 import { getPrettyDate } from '@/services/date'
 import { defaultLanguage } from '@/services/lang'
+import { useI18n } from '@/providers/I18n'
+
 const Highlight = () => {
+  const { t } = useI18n()
   const post = getHighlight()
   const lang = defaultLanguage
 
@@ -15,7 +18,7 @@ const Highlight = () => {
       <div className='container mx-auto px-8 flex flex-col lg:flex-row items-center mt-[-2.5rem]'>
         <div className='lg:w-[70%] lg:border-r pt-24 lg:pr-8'>
           <span className='text-xs opacity-80'>
-            {getPrettyDate(post.publishedAt, lang)}
+            {getPrettyDate(post.publishedAt, lang, t)}
           </span>
           <Link href={`/posts/${post.slug}`} className='hover:opacity-60 cursor-pointer'>
             <h2 className='lg:w-11/12 text-3xl sm:text-5xl font-bold mt-4'>
@@ -25,7 +28,7 @@ const Highlight = () => {
           <figure className='mt-8'>
             <img 
               src={`${post.cover.href}?q=768&w=1024`} 
-              alt={`Fotografia de ${post.cover.author.name}`} 
+              alt={t('cover.alt', { ns: 'highlight', values: { authorName: post.cover.author.name } })} 
             />
           </figure>
         </div>

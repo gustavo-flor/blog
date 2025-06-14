@@ -9,6 +9,7 @@ import { getReadTime, getNumberOfWords } from '@/repositories/post'
 import { IPost } from '@/schemas/post'
 import { getPrettyDate } from '@/services/date'
 import { defaultLanguage } from '@/services/lang'
+import { useI18n } from '@/providers/I18n'
 
 interface ArticleProps {
   post: IPost,
@@ -16,6 +17,7 @@ interface ArticleProps {
 }
 
 const Article = ({ post, content }: ArticleProps) => {
+  const { t } = useI18n()
   const lang = defaultLanguage
   const numberOfWords = getNumberOfWords(content)
   const readTime = getReadTime(numberOfWords)
@@ -27,7 +29,7 @@ const Article = ({ post, content }: ArticleProps) => {
           <figure>
             <img 
               src={`${post.cover.href}?q=85&w=768`} 
-              alt={`Fotografia de ${post.cover.author.name}`} 
+              alt={t('cover.alt', { ns: 'article', values: { authorName: post.cover.author.name } })} 
             />
             <figcaption className='text-center text-gray-400 text-sm mt-4'>
               Fotografia de <Anchor className='text-purple-500 underline' href={post.cover.author.href}>{post.cover.author.name}</Anchor>
@@ -51,10 +53,10 @@ const Article = ({ post, content }: ArticleProps) => {
                 Gustavo Flôr
               </li>
               <li title='Data de publicação' className='text-xs opacity-80'>
-                {getPrettyDate(post.publishedAt, lang)}
+                {getPrettyDate(post.publishedAt, lang, t)}
               </li>
               <li title='Número de palavras e tempo de leitura' className='text-xs'>
-                {`${numberOfWords} palavras | ${readTime} min. de leitura`}
+                {t('readTime', { ns: 'article', values: { numberOfWords, readTime } })}
               </li>
             </ul>
           </div>
