@@ -5,7 +5,6 @@ import { Metadata } from 'next'
 import './style.css'
 import { I18nProvider } from '@/providers/I18n'
 import NotFound from '@/screens/NotFound'
-import { loadDictionaries } from '@/services/dictionary'
 import { defaultLanguage, getLanguageByCode, Language, LanguageCode, supportedLanguages } from '@/services/lang'
 
 interface LayoutProps {
@@ -56,20 +55,17 @@ interface RootProps {
   language: Language,
 }
 
-const Root = async ({ content, language }: RootProps) => {
-  const dictionaries = await loadDictionaries(language.code)
-  return (
-    <html lang={language.code}>
-      <body>
-        <I18nProvider lang={language.code} dictionaries={dictionaries}>
-          {content}
-        </I18nProvider>
-        <Analytics />
-        <SpeedInsights />
-      </body>
-    </html>
-  )
-}
+const Root = async ({ content, language }: RootProps) => (
+  <html lang={language.code}>
+    <body>
+      <I18nProvider lang={language.code}>
+        {content}
+      </I18nProvider>
+      <Analytics />
+      <SpeedInsights />
+    </body>
+  </html>
+)
 
 export default async function Layout({ children, params }: LayoutProps) {
   const { lang } = await params

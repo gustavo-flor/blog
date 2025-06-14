@@ -1,8 +1,7 @@
-import Trans from '@/components/Trans'
-import { useI18n } from '@/providers/I18n'
+import { Trans, useTranslation } from 'react-i18next'
 
 const Presentation = () => {
-  const { t } = useI18n()
+  const { t } = useTranslation()
   
   return (
     <main>

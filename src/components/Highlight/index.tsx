@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import { ArrowRight } from 'phosphor-react'
+import { useTranslation } from 'react-i18next'
 
 import Button from '@/components/Button'
 import Tags from '@/components/Tags'
 import { getHighlight } from '@/repositories/post'
 import { getPrettyDate } from '@/services/date'
 import { defaultLanguage } from '@/services/lang'
-import { useI18n } from '@/providers/I18n'
 
 const Highlight = () => {
-  const { t } = useI18n()
+  const { t } = useTranslation()
   const post = getHighlight()
   const title = t(`${post.slug}.title`, { ns: 'posts' })
   const description = t(`${post.slug}.description`, { ns: 'posts' })

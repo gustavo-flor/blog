@@ -1,15 +1,15 @@
 import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
 
 import Tags from '@/components/Tags'
 import { IPost } from '@/schemas/post'
-import { useI18n } from '@/providers/I18n'
 
 interface Props {
   post: IPost
 }
 
 const Card = ({ post }: Props) => {
-  const { t } = useI18n()
+  const { t } = useTranslation()
   const title = t(`${post.slug}.title`, { ns: 'posts' })
   const description = t(`${post.slug}.description`, { ns: 'posts' })
   

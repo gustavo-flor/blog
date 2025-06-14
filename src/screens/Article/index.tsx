@@ -1,16 +1,16 @@
 'use client'
 
+import { Trans, useTranslation } from 'react-i18next'
+
 import Anchor from '@/components/Anchor'
 import AppBar from '@/components/AppBar'
 import Footer from '@/components/Footer'
 import Markdown from '@/components/LazyMarkdown'
 import Tags from '@/components/Tags'
-import Trans from '@/components/Trans'
 import { getReadTime, getNumberOfWords } from '@/repositories/post'
 import { IPost } from '@/schemas/post'
 import { getPrettyDate } from '@/services/date'
 import { defaultLanguage } from '@/services/lang'
-import { useI18n } from '@/providers/I18n'
 
 interface ArticleProps {
   post: IPost,
@@ -18,7 +18,7 @@ interface ArticleProps {
 }
 
 const Article = ({ post, content }: ArticleProps) => {
-  const { t } = useI18n()
+  const { t } = useTranslation()
   const title = t(`${post.slug}.title`, { ns: 'posts' })
   const lang = defaultLanguage
   const numberOfWords = getNumberOfWords(content)

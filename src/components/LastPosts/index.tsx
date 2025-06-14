@@ -1,19 +1,18 @@
 import { ArrowCircleDown, CircleNotch } from 'phosphor-react'
 import { useEffect, useState } from 'react'
+import { Trans, useTranslation } from 'react-i18next'
 
 import Button from '@/components/Button'
 import Card from '@/components/Card'
-import Trans from '@/components/Trans'
 import { findAll, findAllByTag } from '@/repositories/post'
 import { IPost } from '@/schemas/post'
-import { useI18n } from '@/providers/I18n'
 
 interface Props {
   tag?: string;
 }
 
 const LastPosts = ({ tag }: Props) => {
-  const { t } = useI18n()
+  const { t } = useTranslation()
   const [pageNumber, setPageNumber] = useState(1)
   const [nextPageNumber, setNextPageNumber] = useState<number | null>(null)
   const [loading, setLoading] = useState(false)

@@ -1,8 +1,9 @@
+import { useTranslation } from 'react-i18next'
+
 import Brand from '@/components/Brand'
-import { useI18n } from '@/providers/I18n'
 
 const Footer = () => {
-  const { t } = useI18n()
+  const { t } = useTranslation()
   return (
     <footer className='w-full bg-zinc-900 text-gray-200'>
       <div className='container mx-auto p-8 flex flex-row justify-center items-center'>

@@ -1,27 +1,32 @@
-import { Dictionary } from './dictionary'
+import path from 'path'
 
-export interface TranslateOptions {
-  ns?: string
-  values?: Record<string, string | number>
+import { ResourceKey, ResourceLanguage } from 'i18next'
+
+import { readDir, readFile } from '@/services/file'
+
+const cache = new Map<string, ResourceLanguage>()
+
+const getResource = async (filepath: string): Promise<[string, ResourceKey]> => {
+  const data = await readFile(filepath).then(JSON.parse) as ResourceKey
+  const namespace = path.basename(filepath, '.json')
+  return [namespace, data]
 }
 
-export const withTranslation = (dictionaries: Record<string, Dictionary>) => {
-  const interpolateVariables = (text: string, values: Record<string, string | number> = {}): string => {
-    return text.replace(/\{\{(\w+)\}\}/g, (match, key) => {
-      return values[key]?.toString() || match
-    })
+export const loadResources = async (lang: string): Promise<ResourceLanguage> => {
+  if (cache.has(lang)) {
+    return cache.get(lang)!
   }
 
-  const t = (key: string, options: TranslateOptions = {}): string => {
-    const { ns = 'common', values } = options
-    const translation = dictionaries[ns]?.[key] || key
-    
-    if (values) {
-      return interpolateVariables(translation, values)
-    }
-    
-    return translation
-  }
+  const localesPath = `locales/${lang}`
+  const files = await readDir(localesPath)
+  const modules = await Promise.all(files.map(file => getResource(`${localesPath}/${file}`)))
+  
+  const resources = modules.reduce((acc, [namespace, data]) => ({
+    ...acc,
+    [namespace]: data
+  }), {})
+  
+  cache.set(lang, resources)
 
-  return t
-} 
+  return resources
+}

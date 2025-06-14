@@ -1,8 +1,8 @@
 import { CircleNotch } from 'phosphor-react'
 import React, { Suspense } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import Button from '@/components/Button'
-import { useI18n } from '@/providers/I18n'
 
 const Markdown = React.lazy(() => import('@/components/Markdown'))
 
@@ -11,7 +11,7 @@ interface Props {
 }
 
 const LazyMarkdown = ({ content }: Props) => {
-  const { t } = useI18n()
+  const { t } = useTranslation()
   
   const Loading = () => (
     <div className='flex justify-center'>

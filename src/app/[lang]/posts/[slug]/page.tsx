@@ -1,12 +1,11 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { useTranslation } from 'react-i18next'
 
 import { findBySlug, posts } from '@/repositories/post'
 import Article from '@/screens/Article'
 import { readFile } from '@/services/file'
 import { getLanguageByCode, supportedLanguages } from '@/services/lang'
-import { loadDictionaries } from '@/services/dictionary'
-import { withTranslation } from '@/services/i18n'
 
 export const revalidate = false 
 
@@ -50,8 +49,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return notFound()
   }
 
-  const dictionaries = await loadDictionaries(language.code)
-  const t = withTranslation(dictionaries)
+  const { t } = useTranslation()
   const title = t(`${post.slug}.title`, { ns: 'posts' })
   const description = t(`${post.slug}.description`, { ns: 'posts' })
 
