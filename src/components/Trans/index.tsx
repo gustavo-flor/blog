@@ -11,11 +11,9 @@ interface TransProps {
   children?: ReactNode
 }
 
-// Helper function to process named components
 const processComponents = (text: string, components?: Record<string, ReactElement>): ReactNode => {
   if (!components || Object.keys(components).length === 0) return text
 
-  // Create a single regex that matches all component tags
   const componentNames = Object.keys(components)
   const regex = new RegExp(`<(${componentNames.join('|')})>(.*?)<\/\\1>`, 'g')
   
