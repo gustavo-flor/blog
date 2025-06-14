@@ -76,7 +76,7 @@ const Article = ({ post, content }: ArticleProps) => {
                 {getPrettyDate(post.publishedAt, lang, t)}
               </li>
               <li title={t('tooltips.readingInfo')} className='text-xs'>
-                {t('readTime', { ns: 'article', values: { numberOfWords, readTime } })}
+                {t('readTime', { ns: 'article', numberOfWords, readTime })}
               </li>
             </ul>
           </div>
