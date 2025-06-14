@@ -4,38 +4,47 @@ import { notFound } from 'next/navigation'
 import { findBySlug, posts } from '@/repositories/post'
 import Article from '@/screens/Article'
 import { read } from '@/services/file'
-import { defaultLanguage } from '@/services/lang'
+import { getLanguageByCode, supportedLanguages } from '@/services/lang'
 
 export const revalidate = false
 
 export const generateStaticParams = async () => {
-  return posts.map(({ slug }) => ({ slug }))
+  return supportedLanguages.flatMap(language =>
+    posts.map(post => ({
+      lang: language.code.toLowerCase(),
+      slug: post.slug
+    }))
+  )
 }
 
 export const dynamicParams = false
 
 interface PageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ 
+    lang: string
+    slug: string 
+  }>
 }
 
 export default async function Page({ params }: PageProps) {
-  const { slug } = await params
+  const { lang, slug } = await params
   const post = findBySlug(slug)
+  const language = getLanguageByCode(lang)
 
-  if (post === undefined) {
+  if (!post || !language) {
     return notFound()
   }
 
-  const lang = defaultLanguage
-  const content = await read(`/markdown/${lang.code}/${post.slug}.md`)
+  const content = await read(`/markdown/${language.code}/${post.slug}.md`)
   return <Article post={post} content={content} />
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params
+  const { lang, slug } = await params
   const post = findBySlug(slug)
+  const language = getLanguageByCode(lang)
 
-  if (post === undefined) {
+  if (!post || !language) {
     return notFound()
   }
 
@@ -43,4 +52,4 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${post.title} | Gustavo Flôr`,
     description: post.description
   }
-}
+} 
