@@ -27,7 +27,7 @@ const Article = ({ post, content }: ArticleProps) => {
   
   return (
     <>
-      <AppBar center />
+      <AppBar />
       <main className='container lg:max-w-3xl mx-auto px-8 py-8 sm:py-16 md:pb-20'>
         {post.cover != undefined && 
           <figure>
@@ -76,7 +76,7 @@ const Article = ({ post, content }: ArticleProps) => {
                 {getPrettyDate(post.publishedAt, lang, t)}
               </li>
               <li title={t('tooltips.readingInfo')} className='text-xs'>
-                {t('readTime', { ns: 'article', values: { numberOfWords, readTime } })}
+                {t('readTime', { ns: 'article', numberOfWords, readTime })}
               </li>
             </ul>
           </div>
