@@ -1,6 +1,6 @@
 import { Trans } from 'react-i18next'
 
-import { useTranslation } from '@/providers/I18n'
+import { useTranslation } from '@/hooks/useTranslation'
 
 const Presentation = () => {
   const { i18n, t } = useTranslation()

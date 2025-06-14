@@ -61,7 +61,7 @@ const Root = async ({ content, language }: RootProps) => {
   return (
     <html lang={language.code}>
       <body>
-        <I18nProvider options={options}>
+        <I18nProvider language={language} options={options}>
           {content}
         </I18nProvider>
         <Analytics />

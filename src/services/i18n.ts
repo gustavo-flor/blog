@@ -1,6 +1,6 @@
 import path from 'path'
 
-import { InitOptions, ResourceKey, ResourceLanguage } from 'i18next'
+import i18next, { i18n, InitOptions, ResourceKey, ResourceLanguage } from 'i18next'
 
 import { readDir, readFile } from '@/services/file'
 
@@ -41,3 +41,10 @@ export const getOptions = async (lang: string): Promise<InitOptions> => ({
     escapeValue: false
   }
 })
+
+export const createInstance = async (lang: string): Promise<i18n> => {
+  const options = await getOptions(lang)
+  const i18n = i18next.createInstance(options)
+  await i18n.init()
+  return i18n
+}

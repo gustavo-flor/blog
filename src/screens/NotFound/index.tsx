@@ -3,7 +3,7 @@
 
 import AppBar from '@/components/AppBar'
 import Footer from '@/components/Footer'
-import { useTranslation } from '@/providers/I18n'
+import { useTranslation } from '@/hooks/useTranslation'
 
 const NotFound = () => {
   const { t } = useTranslation()

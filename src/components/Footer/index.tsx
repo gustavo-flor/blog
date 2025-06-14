@@ -1,5 +1,5 @@
 import Brand from '@/components/Brand'
-import { useTranslation } from '@/providers/I18n'
+import { useTranslation } from '@/hooks/useTranslation'
 
 
 const Footer = () => {

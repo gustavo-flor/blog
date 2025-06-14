@@ -1,11 +1,10 @@
-import i18next from 'i18next'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import { findBySlug, posts } from '@/repositories/post'
 import Article from '@/screens/Article'
 import { readFile } from '@/services/file'
-import { getOptions } from '@/services/i18n'
+import { createInstance } from '@/services/i18n'
 import { getLanguageByCode, supportedLanguages } from '@/services/lang'
 
 export const revalidate = false 
@@ -50,7 +49,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return notFound()
   }
 
-  const { t } = await getOptions(language.code).then(i18next.createInstance)
+  const { t } = await createInstance(language.code)
+
   const title = t(`${post.slug}.title`, { ns: 'posts' })
   const description = t(`${post.slug}.description`, { ns: 'posts' })
 

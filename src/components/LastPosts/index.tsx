@@ -4,7 +4,7 @@ import { Trans } from 'react-i18next'
 
 import Button from '@/components/Button'
 import Card from '@/components/Card'
-import { useTranslation } from '@/providers/I18n'
+import { useTranslation } from '@/hooks/useTranslation'
 import { findAll, findAllByTag } from '@/repositories/post'
 import { IPost } from '@/schemas/post'
 
