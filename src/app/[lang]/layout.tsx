@@ -1,10 +1,12 @@
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import i18next from 'i18next'
 import { Metadata } from 'next'
 
 import './style.css'
 import { I18nProvider } from '@/providers/I18n'
 import NotFound from '@/screens/NotFound'
+import { getOptions } from '@/services/i18n'
 import { defaultLanguage, getLanguageByCode, Language, LanguageCode, supportedLanguages } from '@/services/lang'
 
 interface LayoutProps {
@@ -55,17 +57,22 @@ interface RootProps {
   language: Language,
 }
 
-const Root = async ({ content, language }: RootProps) => (
-  <html lang={language.code}>
-    <body>
-      <I18nProvider lang={language.code}>
-        {content}
-      </I18nProvider>
-      <Analytics />
-      <SpeedInsights />
-    </body>
-  </html>
-)
+const Root = async ({ content, language }: RootProps) => {
+  const options = await getOptions(language.code)
+  await i18next.init(options)
+  
+  return (
+    <html lang={language.code}>
+      <body>
+        <I18nProvider i18n={i18next}>
+          {content}
+        </I18nProvider>
+        <Analytics />
+        <SpeedInsights />
+      </body>
+    </html>
+  )
+}
 
 export default async function Layout({ children, params }: LayoutProps) {
   const { lang } = await params

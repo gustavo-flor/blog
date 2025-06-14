@@ -12,7 +12,7 @@ const getResource = async (filepath: string): Promise<[string, ResourceKey]> => 
   return [namespace, data]
 }
 
-export const loadResources = async (lang: string): Promise<ResourceLanguage> => {
+const loadResources = async (lang: string): Promise<ResourceLanguage> => {
   if (cache.has(lang)) {
     return cache.get(lang)!
   }
@@ -30,3 +30,13 @@ export const loadResources = async (lang: string): Promise<ResourceLanguage> => 
 
   return resources
 }
+
+export const getOptions = async (lang: string) => ({
+  lng: lang,
+  resources: {
+    [lang]: await loadResources(lang)
+  },
+  interpolation: {
+    escapeValue: false
+  }
+})
