@@ -36,6 +36,7 @@ export const getOptions = async (lang: string) => ({
   resources: {
     [lang]: await loadResources(lang)
   },
+  defaultNS: 'common',
   interpolation: {
     escapeValue: false
   }

@@ -7,7 +7,7 @@ interface I18nProviderProps extends I18nextProviderProps {
 
 export function I18nProvider({ i18n, children, ...rest }: I18nProviderProps) {
   return (
-    <I18nextProvider i18n={i18n} defaultNS={'common'} {...rest}>
+    <I18nextProvider i18n={i18n} {...rest}>
       {children}
     </I18nextProvider>
   )
