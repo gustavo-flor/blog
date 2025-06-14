@@ -5,6 +5,7 @@ import AppBar from '@/components/AppBar'
 import Footer from '@/components/Footer'
 import Markdown from '@/components/LazyMarkdown'
 import Tags from '@/components/Tags'
+import Trans from '@/components/Trans'
 import { getReadTime, getNumberOfWords } from '@/repositories/post'
 import { IPost } from '@/schemas/post'
 import { getPrettyDate } from '@/services/date'
@@ -21,6 +22,7 @@ const Article = ({ post, content }: ArticleProps) => {
   const lang = defaultLanguage
   const numberOfWords = getNumberOfWords(content)
   const readTime = getReadTime(numberOfWords)
+  
   return (
     <>
       <AppBar center />
@@ -32,7 +34,14 @@ const Article = ({ post, content }: ArticleProps) => {
               alt={t('cover.alt', { ns: 'article', values: { authorName: post.cover.author.name } })} 
             />
             <figcaption className='text-center text-gray-400 text-sm mt-4'>
-              Fotografia de <Anchor className='text-purple-500 underline' href={post.cover.author.href}>{post.cover.author.name}</Anchor>
+              <Trans 
+                i18nKey="cover.description" 
+                ns="article"
+                values={{ authorName: post.cover.author.name }}
+                components={{
+                  link: <Anchor className='text-purple-500 underline' href={post.cover.author.href} />
+                }}
+              />
             </figcaption>
           </figure>
         }
@@ -41,7 +50,14 @@ const Article = ({ post, content }: ArticleProps) => {
           <h1 className='text-3xl sm:text-5xl font-bold mt-4'>{post.icon} {post.title}</h1>
           {post.origin != undefined && 
             <span className='text-xs opacity-40 mt-4 block'>
-              Publicado em <Anchor className='text-purple-500 underline' href={post.origin.href}>{post.origin.hostname}</Anchor>
+              <Trans 
+                i18nKey="origin.description" 
+                ns="article"
+                values={{ site: post.origin.hostname }}
+                components={{
+                  'link': <Anchor className='text-purple-500 underline' href={post.origin.href} />
+                }}
+              />
             </span>
           }
           <div className='flex items-center gap-x-2 mt-8'>

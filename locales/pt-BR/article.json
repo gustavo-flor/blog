@@ -1,6 +1,6 @@
 {
   "cover": {
-    "description": "Fotografia de <author-anchor>{{authorName}}</author-anchor>",
+    "description": "Fotografia de <link>{{authorName}}</link>",
     "alt": "Fotografia de {{authorName}}"
   },
   "origin": {
