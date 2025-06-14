@@ -1,10 +1,10 @@
 import Link from 'next/link'
 
 import Tags from '@/components/Tags'
-import { Post } from '@/services/post'
+import { IPost } from '@/schemas/post'
 
 interface Props {
-  post: Post
+  post: IPost
 }
 
 const Card = ({ post }: Props) => {

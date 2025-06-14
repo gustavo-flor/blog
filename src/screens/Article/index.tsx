@@ -1,28 +1,24 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-
 import Anchor from '@/components/Anchor'
 import AppBar from '@/components/AppBar'
 import Footer from '@/components/Footer'
 import Markdown from '@/components/LazyMarkdown'
 import Tags from '@/components/Tags'
-import { Post, getNumberOfWords, getPublishedAt, getReadTime } from '@/services/post'
+import { getReadTime, getNumberOfWords } from '@/repositories/post'
+import { IPost } from '@/schemas/post'
+import { getPrettyDate } from '@/services/date'
+import { defaultLanguage } from '@/services/lang'
 
 interface ArticleProps {
-  post: Post,
-  content: string,
+  post: IPost,
+  content: string
 }
 
 const Article = ({ post, content }: ArticleProps) => {
-  const [numberOfWords, setNumberOfWords] = useState(0)
-  const [readTime, setReadTime] = useState(1)
-
-  useEffect(() => {
-    setNumberOfWords(getNumberOfWords(content))
-    setReadTime(getReadTime(content))
-  }, [content])
-
+  const lang = defaultLanguage
+  const numberOfWords = getNumberOfWords(content)
+  const readTime = getReadTime(numberOfWords)
   return (
     <>
       <AppBar center />
@@ -55,7 +51,7 @@ const Article = ({ post, content }: ArticleProps) => {
                 Gustavo Flôr
               </li>
               <li title='Data de publicação' className='text-xs opacity-80'>
-                {getPublishedAt(post)}
+                {getPrettyDate(post.publishedAt, lang)}
               </li>
               <li title='Número de palavras e tempo de leitura' className='text-xs'>
                 {`${numberOfWords} palavras | ${readTime} min. de leitura`}

@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react'
 
 import Button from '@/components/Button'
 import Card from '@/components/Card'
-import { Post, findAll, findAllByTag } from '@/services/post'
+import { findAll, findAllByTag } from '@/repositories/post'
+import { IPost } from '@/schemas/post'
 
 interface Props {
   tag?: string;
@@ -13,7 +14,7 @@ const LastPosts = ({ tag }: Props) => {
   const [pageNumber, setPageNumber] = useState(1)
   const [nextPageNumber, setNextPageNumber] = useState<number | null>(null)
   const [loading, setLoading] = useState(false)
-  const [posts, setPosts] = useState<Post[]>([])
+  const [posts, setPosts] = useState<IPost[]>([])
 
   useEffect(() => {
     const page = tag != undefined 

@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
+import { findBySlug, posts } from '@/repositories/post'
 import Article from '@/screens/Article'
 import { read } from '@/services/file'
 import { defaultLanguage } from '@/services/lang'
-import { findBySlug, posts } from '@/services/post'
 
 export const revalidate = false
 
@@ -28,7 +28,6 @@ export default async function Page({ params }: PageProps) {
 
   const lang = defaultLanguage
   const content = await read(`/markdown/${lang.code}/${post.slug}.md`)
-
   return <Article post={post} content={content} />
 }
 

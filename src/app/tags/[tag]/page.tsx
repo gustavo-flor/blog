@@ -1,4 +1,5 @@
 import PostsByTag from '@/screens/PostsByTag'
+
 import { Tag } from '@/services/post'
 
 export const revalidate = false

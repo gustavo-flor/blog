@@ -3,17 +3,19 @@ import { ArrowRight } from 'phosphor-react'
 
 import Button from '@/components/Button'
 import Tags from '@/components/Tags'
-import { getHighlight, getPublishedAt } from '@/services/post'
-
+import { getHighlight } from '@/repositories/post'
+import { getPrettyDate } from '@/services/date'
+import { defaultLanguage } from '@/services/lang'
 const Highlight = () => {
   const post = getHighlight()
+  const lang = defaultLanguage
 
   return (
     <section className='border-b pb-16 lg:pb-0'>
       <div className='container mx-auto px-8 flex flex-col lg:flex-row items-center mt-[-2.5rem]'>
         <div className='lg:w-[70%] lg:border-r pt-24 lg:pr-8'>
           <span className='text-xs opacity-80'>
-            {getPublishedAt(post)}
+            {getPrettyDate(post.publishedAt, lang)}
           </span>
           <Link href={`/posts/${post.slug}`} className='hover:opacity-60 cursor-pointer'>
             <h2 className='lg:w-11/12 text-3xl sm:text-5xl font-bold mt-4'>
