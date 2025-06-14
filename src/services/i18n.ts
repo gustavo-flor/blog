@@ -1,6 +1,6 @@
 import path from 'path'
 
-import { ResourceKey, ResourceLanguage } from 'i18next'
+import { InitOptions, ResourceKey, ResourceLanguage } from 'i18next'
 
 import { readDir, readFile } from '@/services/file'
 
@@ -31,7 +31,7 @@ const loadResources = async (lang: string): Promise<ResourceLanguage> => {
   return resources
 }
 
-export const getOptions = async (lang: string) => ({
+export const getOptions = async (lang: string): Promise<InitOptions> => ({
   lng: lang,
   resources: {
     [lang]: await loadResources(lang)

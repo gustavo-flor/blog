@@ -1,9 +1,9 @@
 'use client'
 
-import { useTranslation } from 'react-i18next'
 
 import AppBar from '@/components/AppBar'
 import Footer from '@/components/Footer'
+import { useTranslation } from '@/providers/I18n'
 
 const NotFound = () => {
   const { t } = useTranslation()

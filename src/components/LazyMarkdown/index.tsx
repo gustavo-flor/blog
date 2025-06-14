@@ -1,8 +1,9 @@
 import { CircleNotch } from 'phosphor-react'
 import React, { Suspense } from 'react'
-import { useTranslation } from 'react-i18next'
 
 import Button from '@/components/Button'
+import { useTranslation } from '@/providers/I18n'
+
 
 const Markdown = React.lazy(() => import('@/components/Markdown'))
 

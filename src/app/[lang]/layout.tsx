@@ -1,6 +1,5 @@
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
-import i18next from 'i18next'
 import { Metadata } from 'next'
 
 import './style.css'
@@ -59,12 +58,10 @@ interface RootProps {
 
 const Root = async ({ content, language }: RootProps) => {
   const options = await getOptions(language.code)
-  await i18next.init(options)
-  
   return (
     <html lang={language.code}>
       <body>
-        <I18nProvider i18n={i18next}>
+        <I18nProvider options={options}>
           {content}
         </I18nProvider>
         <Analytics />

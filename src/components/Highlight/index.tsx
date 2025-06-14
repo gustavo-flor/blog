@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { ArrowRight } from 'phosphor-react'
-import { useTranslation } from 'react-i18next'
 
 import Button from '@/components/Button'
 import Tags from '@/components/Tags'
+import { useTranslation } from '@/providers/I18n'
 import { getHighlight } from '@/repositories/post'
 import { getPrettyDate } from '@/services/date'
 import { defaultLanguage } from '@/services/lang'

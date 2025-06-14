@@ -1,7 +1,9 @@
-import { Trans, useTranslation } from 'react-i18next'
+import { Trans } from 'react-i18next'
+
+import { useTranslation } from '@/providers/I18n'
 
 const Presentation = () => {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
   
   return (
     <main>
@@ -9,6 +11,7 @@ const Presentation = () => {
         <div className='container mx-auto flex items-center px-8 py-8 sm:py-16 md:py-20'>
           <h1 className='lg:w-2/3 text-2xl sm:text-3xl text-gray-400'>
             <Trans 
+              i18n={i18n}
               i18nKey="title" 
               ns="presentation"
               components={{

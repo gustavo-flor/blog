@@ -1,9 +1,10 @@
 import { ArrowCircleDown, CircleNotch } from 'phosphor-react'
 import { useEffect, useState } from 'react'
-import { Trans, useTranslation } from 'react-i18next'
+import { Trans } from 'react-i18next'
 
 import Button from '@/components/Button'
 import Card from '@/components/Card'
+import { useTranslation } from '@/providers/I18n'
 import { findAll, findAllByTag } from '@/repositories/post'
 import { IPost } from '@/schemas/post'
 
@@ -12,7 +13,7 @@ interface Props {
 }
 
 const LastPosts = ({ tag }: Props) => {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
   const [pageNumber, setPageNumber] = useState(1)
   const [nextPageNumber, setNextPageNumber] = useState<number | null>(null)
   const [loading, setLoading] = useState(false)
@@ -51,6 +52,7 @@ const LastPosts = ({ tag }: Props) => {
     <section className='container mx-auto px-8 pt-8 pb-16 sm:py-16 md:py-20'>
       <h2 className='text-2xl'>
         <Trans 
+          i18n={i18n}
           i18nKey="title" 
           ns="last-posts"
           components={{

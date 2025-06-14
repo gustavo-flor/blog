@@ -1,6 +1,6 @@
-import { useTranslation } from 'react-i18next'
-
 import Brand from '@/components/Brand'
+import { useTranslation } from '@/providers/I18n'
+
 
 const Footer = () => {
   const { t } = useTranslation()

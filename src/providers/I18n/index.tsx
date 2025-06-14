@@ -1,14 +1,37 @@
-import { ReactNode } from 'react'
-import { I18nextProvider, I18nextProviderProps } from 'react-i18next'
+'use client'
 
-interface I18nProviderProps extends I18nextProviderProps {
-  children: ReactNode
+import i18next, { i18n, InitOptions, TFunction } from 'i18next'
+import { createContext, ReactNode, useContext } from 'react'
+
+interface I18nContextType {
+  i18n: i18n
+  t: TFunction
+  options: InitOptions
 }
 
-export function I18nProvider({ i18n, children, ...rest }: I18nProviderProps) {
+const I18nContext = createContext<I18nContextType>({} as I18nContextType)
+
+interface I18nProviderProps {
+  children: ReactNode
+  options: InitOptions
+}
+
+export function I18nProvider({ options, children }: I18nProviderProps) {
+  const i18n = i18next.createInstance(options)
+
+  i18n.init()
+
   return (
-    <I18nextProvider i18n={i18n} {...rest}>
+    <I18nContext.Provider value={{ i18n, t: i18n.t, options }}>
       {children}
-    </I18nextProvider>
+    </I18nContext.Provider>
   )
+}
+
+export function useTranslation() {
+  const context = useContext(I18nContext)
+  if (!context.i18n) {
+    throw new Error('useTranslation must be used within an I18nProvider')
+  }
+  return context
 }

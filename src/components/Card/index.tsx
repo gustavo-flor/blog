@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { useTranslation } from 'react-i18next'
 
 import Tags from '@/components/Tags'
+import { useTranslation } from '@/providers/I18n'
 import { IPost } from '@/schemas/post'
 
 interface Props {

@@ -1,12 +1,13 @@
 'use client'
 
-import { Trans, useTranslation } from 'react-i18next'
+import { Trans } from 'react-i18next'
 
 import Anchor from '@/components/Anchor'
 import AppBar from '@/components/AppBar'
 import Footer from '@/components/Footer'
 import Markdown from '@/components/LazyMarkdown'
 import Tags from '@/components/Tags'
+import { useTranslation } from '@/providers/I18n'
 import { getReadTime, getNumberOfWords } from '@/repositories/post'
 import { IPost } from '@/schemas/post'
 import { getPrettyDate } from '@/services/date'
@@ -18,7 +19,7 @@ interface ArticleProps {
 }
 
 const Article = ({ post, content }: ArticleProps) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const title = t(`${post.slug}.title`, { ns: 'posts' })
   const lang = defaultLanguage
   const numberOfWords = getNumberOfWords(content)
@@ -36,6 +37,7 @@ const Article = ({ post, content }: ArticleProps) => {
             />
             <figcaption className='text-center text-gray-400 text-sm mt-4'>
               <Trans 
+                i18n={i18n}
                 i18nKey="cover.description" 
                 ns="article"
                 values={{ authorName: post.cover.author.name }}
@@ -52,6 +54,7 @@ const Article = ({ post, content }: ArticleProps) => {
           {post.origin != undefined && 
             <span className='text-xs opacity-40 mt-4 block'>
               <Trans 
+                i18n={i18n}
                 i18nKey="origin.description" 
                 ns="article"
                 values={{ site: post.origin.hostname }}
