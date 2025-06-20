@@ -1,4 +1,8 @@
 {
+  "57-state-monad": {
+    "title": "State Monad: um guia no estilo Refactoring Guru",
+    "description": "State Monad é um padrão de programação funcional que ajuda a gerenciar estado mutável de forma pura e combinável..."
+  },
   "56-scalability-and-elasticity": {
     "title": "Escalabilidade e Elasticidade",
     "description": "Vamos falar sobre escalabilidade e elasticidade — conceitos relacionados, porém distintos, que muitas vezes são utilizados de forma incorreta como sinônimos...."

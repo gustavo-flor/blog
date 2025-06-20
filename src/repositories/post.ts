@@ -14,6 +14,22 @@ export const getReadTime = (numberOfWords: number) => {
   return Math.ceil(minutes)
 }
 
+const stateMonad: IPost = {
+  icon: '🐒',
+  cover: {
+    href: 'https://images.unsplash.com/photo-1515073883629-5e2924e3e106',
+    author: {
+      name: 'Lodewijk Hertog',
+      href: 'https://unsplash.com/@lue101'
+    }
+  },
+  tags: [Tag.CLOJURE, Tag.FUNCTIONAL_PROGRAMMING],
+  slug: Slug.STATE_MONAD,
+  publishedAt: new Date(2025, 6, 15, 6, 0),
+  listed: true,
+  availableLanguages: [LanguageCode.PT_BR, LanguageCode.EN_US]
+}
+
 const scalabilityAndElasticity: IPost = {
   icon: '🪀',
   cover: {
@@ -915,6 +931,7 @@ const rest: IPost = {
 }
 
 export const posts: IPost[] = [
+  stateMonad,
   scalabilityAndElasticity,
   loadTests,
   webhook,
@@ -978,7 +995,7 @@ const postsBySlug = posts.reduce((posts, post) => {
   return posts
 }, {} as Record<string, IPost>)
 
-export const highlight = scalabilityAndElasticity
+export const highlight = stateMonad
 
 const paginate = (posts: IPost[], page: number = 1, size: number = 6): IPage<IPost> => {
   const offset = size * (page - 1)

@@ -1,4 +1,5 @@
 enum Slug {
+  STATE_MONAD = '57-state-monad',
   SCALABILITY_AND_ELASTICITY = '56-scalability-and-elasticity',
   WHAT_IS_LOAD_TEST = '55-what-is-load-test',
   WHAT_IS_WEBHOOK = '54-what-is-webhook',

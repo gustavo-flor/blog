@@ -19,6 +19,8 @@ enum Tag {
   DATABASE_SYSTEMS = 'databasesystems',
   TOOLS = 'tools',
   CLOUD = 'cloud',
+  FUNCTIONAL_PROGRAMMING = 'functionalprogramming',
+  CLOJURE = 'clojure',
 }
 
 export default Tag
