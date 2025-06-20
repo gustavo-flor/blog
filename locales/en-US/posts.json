@@ -1,4 +1,8 @@
 {
+  "57-state-monad": {
+    "title": "State Monad: a Refactoring Guru like guide",
+    "description": "State Monad is a functional programming pattern that helps manage mutable state in a pure and composable way..."
+  },
   "56-scalability-and-elasticity": {
     "title": "Scalability and Elasticity",
     "description": "Let's talk about scalability and elasticity — related but distinct concepts often incorrectly used as synonyms..."

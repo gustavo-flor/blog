@@ -1,5 +1,6 @@
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import bash from 'react-syntax-highlighter/dist/esm/languages/prism/bash'
+import clojure from 'react-syntax-highlighter/dist/esm/languages/prism/clojure'
 import groovy from 'react-syntax-highlighter/dist/esm/languages/prism/groovy'
 import java from 'react-syntax-highlighter/dist/esm/languages/prism/java'
 import json from 'react-syntax-highlighter/dist/esm/languages/prism/json'
@@ -13,6 +14,8 @@ SyntaxHighlighter.registerLanguage('kotlin', kotlin)
 SyntaxHighlighter.registerLanguage('groovy', groovy)
 SyntaxHighlighter.registerLanguage('yaml', yaml)
 SyntaxHighlighter.registerLanguage('bash', bash)
+SyntaxHighlighter.registerLanguage('clojure', clojure)
+SyntaxHighlighter.alias('clojure', 'clj')
 
 const CodeBlock = ({ children, className, ...rest }: React.HTMLAttributes<HTMLElement>) => {
   const lang = /language-(\w+)/.exec(className || '')
