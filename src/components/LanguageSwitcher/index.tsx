@@ -11,18 +11,18 @@ const LanguageSwitcher = () => {
   const pathname = usePathname()
 
   const changeLanguage = (langCode: string) => {
-    const segments = [langCode, ...pathname.split('/').slice(2)]
+    const segments = [langCode.toLowerCase(), ...pathname.split('/').slice(2)]
     redirect(`/${segments.join('/')}`)
   }
 
   return (
-    <select 
+    <select
       value={lang.code}
       onChange={event => changeLanguage(event.target.value)}
       className='appearance-none bg-transparent outline-none text-xl py-1 px-1 md:px-4'
       title={t('changeLanguage')}
     >
-      {supportedLanguages.map(lang => 
+      {supportedLanguages.map(lang =>
         <option key={lang.code} value={lang.code} title={lang.displayName}>
           {lang.flag}
         </option>
