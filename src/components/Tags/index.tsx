@@ -8,13 +8,13 @@ interface Props {
 }
 
 const Tags = ({ tags }: Props) => {
-  const lang = useLang().code
+  const lang = useLang().code.toLowerCase()
   const params = useParams<{ tag?: string }>()
-  const selectedTag = params?.tag 
+  const selectedTag = params?.tag
   const getLink = (tag: string) => !selectedTag || tag != selectedTag ? `/${lang}/tags/${tag}` : `/${lang}`
   const getLinkStyle = (tag: string) => selectedTag && tag != selectedTag ? 'cursor-text pointer-events-none' : ''
-  const getStyle = (tag: string) => !selectedTag || tag != selectedTag 
-    ? 'opacity-40 hover:opacity-100 hover:rounded-xl transition-all' 
+  const getStyle = (tag: string) => !selectedTag || tag != selectedTag
+    ? 'opacity-40 hover:opacity-100 hover:rounded-xl transition-all'
     : ''
   return (
     <ul className='flex flex-wrap gap-x-2'>{tags.map(tag =>
@@ -24,7 +24,7 @@ const Tags = ({ tags }: Props) => {
             <strong className='font-normal text-purple-500'>#</strong>{tag}
           </div>
         </Link>
-      </li> 
+      </li>
     )}</ul>
   )
 }

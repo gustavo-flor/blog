@@ -10,6 +10,7 @@ import { getPrettyDate } from '@/services/date'
 
 const Highlight = () => {
   const lang = useLang()
+  const langCode = lang.code.toLowerCase()
   const { t } = useTranslation()
   const post = getHighlight()
   const title = t(`${post.slug}.title`, { ns: 'posts' })
@@ -22,22 +23,22 @@ const Highlight = () => {
           <span className='text-xs opacity-80'>
             {getPrettyDate(post.publishedAt, lang, t)}
           </span>
-          <Link href={`/${lang.code}/posts/${post.slug}`} className='hover:opacity-60 cursor-pointer'>
+          <Link href={`/${langCode}/posts/${post.slug}`} className='hover:opacity-60 cursor-pointer'>
             <h2 className='lg:w-11/12 text-3xl sm:text-5xl font-bold mt-4'>
               {post.icon} {title}
             </h2>
           </Link>
           <figure className='mt-8'>
-            <img 
-              src={`${post.cover.href}?q=768&w=1024`} 
-              alt={t('cover.alt', { ns: 'highlight', values: { authorName: post.cover.author.name } })} 
+            <img
+              src={`${post.cover.href}?q=768&w=1024`}
+              alt={t('cover.alt', { ns: 'highlight', values: { authorName: post.cover.author.name } })}
             />
           </figure>
         </div>
         <aside className='lg:w-[30%] lg:pl-8 flex flex-col justify-start mt-4 lg:mt-0'>
           <Tags tags={post.tags} />
           <p className='my-4'>{description}</p>
-          <Link href={`/${lang.code}/posts/${post.slug}`} className='transition-opacity hover:opacity-90 self-start'>
+          <Link href={`/${langCode}/posts/${post.slug}`} className='transition-opacity hover:opacity-90 self-start'>
             <Button className='w-full cursor-pointer' title={t('readMore')}>
               <ArrowRight weight='bold' width={32} />
             </Button>
