@@ -13,8 +13,8 @@ const Card = ({ post }: Props) => {
   const { t } = useTranslation()
   const title = t(`${post.slug}.title`, { ns: 'posts' })
   const description = t(`${post.slug}.description`, { ns: 'posts' })
-  const lang = useLang().code
-  
+  const lang = useLang().code.toLowerCase()
+
   return (
     <div>
       <Tags tags={post.tags} />
